@@ -15,13 +15,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCs-0i-Dxm">
-                                <rect key="frame" x="51" y="723" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCs-0i-Dxm">
+                                <rect key="frame" x="0.0" y="781.5" width="414" height="80.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="545-qG-j13">
+                                        <rect key="frame" x="28" y="8" width="358" height="66.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="321-Mp-Rq8">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="66.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="321-Mp-Rq8" secondAttribute="height" multiplier="1.1525" id="WWU-82-14Y"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="Questions"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nux-CZ-9Jr">
+                                                <rect key="frame" x="94" y="0.0" width="76.5" height="66.5"/>
+                                                <state key="normal" backgroundImage="leaderboard"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hM-6u-fAj">
+                                                <rect key="frame" x="187.5" y="0.0" width="77" height="66.5"/>
+                                                <state key="normal" backgroundImage="story"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddo-HK-617">
+                                                <rect key="frame" x="281.5" y="0.0" width="76.5" height="66.5"/>
+                                                <state key="normal" backgroundImage="profile"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="545-qG-j13" secondAttribute="trailing" constant="28" id="1jo-Lw-aLt"/>
+                                    <constraint firstItem="545-qG-j13" firstAttribute="leading" secondItem="XCs-0i-Dxm" secondAttribute="leading" constant="28" id="Fcy-w8-GXM"/>
+                                    <constraint firstItem="545-qG-j13" firstAttribute="top" secondItem="XCs-0i-Dxm" secondAttribute="top" constant="8" id="O8D-Tt-UXZ"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.1764705882352941" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XCs-0i-Dxm" secondAttribute="bottom" id="1UZ-gw-zaf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XCs-0i-Dxm" secondAttribute="trailing" id="o3z-e7-ZFy"/>
+                            <constraint firstItem="XCs-0i-Dxm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09" id="s1o-SZ-lfI"/>
+                            <constraint firstItem="XCs-0i-Dxm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sxi-fX-Vca"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -30,4 +66,10 @@
             <point key="canvasLocation" x="139" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Questions" width="68" height="59"/>
+        <image name="leaderboard" width="68" height="59"/>
+        <image name="profile" width="68" height="59"/>
+        <image name="story" width="68" height="59"/>
+    </resources>
 </document>
