@@ -39,6 +39,7 @@
 		5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
 		5BABB77024FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
 		5BABB77124FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB77324FAD063006D5541 /* Inconsolata.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		5BABB75624FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-SemiBold.ttf"; sourceTree = "<group>"; };
 		5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Thin.ttf"; sourceTree = "<group>"; };
 		5BABB76E24FACDD9006D5541 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5BABB77324FAD063006D5541 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 		5BABB75024FACCB9006D5541 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				5BABB77324FAD063006D5541 /* Inconsolata.otf */,
 				5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */,
 				5BABB75524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf */,
 				5BABB75324FACDA8006D5541 /* IBMPlexMono-Light.ttf */,
@@ -327,6 +330,7 @@
 				5BABB75824FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */,
 				5BABB75E24FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */,
 				5BABB72824FACA01006D5541 /* LaunchScreen.storyboard in Resources */,
+				5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */,
 				5BABB72524FACA01006D5541 /* Assets.xcassets in Resources */,
 				5BABB76A24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */,
 				5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */,
