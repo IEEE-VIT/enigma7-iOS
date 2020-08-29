@@ -15,6 +15,31 @@
 		5BABB72824FACA01006D5541 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */; };
 		5BABB73324FACA02006D5541 /* EnigmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB73224FACA02006D5541 /* EnigmaTests.swift */; };
 		5BABB73E24FACA02006D5541 /* EnigmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB73D24FACA02006D5541 /* EnigmaUITests.swift */; };
+		5BABB75824FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75124FACDA8006D5541 /* IBMPlexMono-Regular.ttf */; };
+		5BABB75924FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75124FACDA8006D5541 /* IBMPlexMono-Regular.ttf */; };
+		5BABB75A24FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75124FACDA8006D5541 /* IBMPlexMono-Regular.ttf */; };
+		5BABB75B24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75224FACDA8006D5541 /* IBMPlexMono-Medium.ttf */; };
+		5BABB75C24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75224FACDA8006D5541 /* IBMPlexMono-Medium.ttf */; };
+		5BABB75D24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75224FACDA8006D5541 /* IBMPlexMono-Medium.ttf */; };
+		5BABB75E24FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75324FACDA8006D5541 /* IBMPlexMono-Light.ttf */; };
+		5BABB75F24FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75324FACDA8006D5541 /* IBMPlexMono-Light.ttf */; };
+		5BABB76024FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75324FACDA8006D5541 /* IBMPlexMono-Light.ttf */; };
+		5BABB76124FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */; };
+		5BABB76224FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */; };
+		5BABB76324FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */; };
+		5BABB76424FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf */; };
+		5BABB76524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf */; };
+		5BABB76624FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf */; };
+		5BABB76724FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75624FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf */; };
+		5BABB76824FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75624FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf */; };
+		5BABB76924FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75624FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf */; };
+		5BABB76A24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
+		5BABB76B24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
+		5BABB76C24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
+		5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5BABB77024FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5BABB77124FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB77324FAD063006D5541 /* Inconsolata.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +74,15 @@
 		5BABB73924FACA02006D5541 /* EnigmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnigmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB73D24FACA02006D5541 /* EnigmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnigmaUITests.swift; sourceTree = "<group>"; };
 		5BABB73F24FACA02006D5541 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BABB75124FACDA8006D5541 /* IBMPlexMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Regular.ttf"; sourceTree = "<group>"; };
+		5BABB75224FACDA8006D5541 /* IBMPlexMono-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Medium.ttf"; sourceTree = "<group>"; };
+		5BABB75324FACDA8006D5541 /* IBMPlexMono-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Light.ttf"; sourceTree = "<group>"; };
+		5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Bold.ttf"; sourceTree = "<group>"; };
+		5BABB75524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-ExtraLight.ttf"; sourceTree = "<group>"; };
+		5BABB75624FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-SemiBold.ttf"; sourceTree = "<group>"; };
+		5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Thin.ttf"; sourceTree = "<group>"; };
+		5BABB76E24FACDD9006D5541 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5BABB77324FAD063006D5541 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +133,11 @@
 		5BABB71A24FAC9F8006D5541 /* Enigma */ = {
 			isa = PBXGroup;
 			children = (
-				5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */,
-				5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */,
-				5BABB71F24FAC9F8006D5541 /* ViewController.swift */,
-				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
+				5BABB74E24FACB68006D5541 /* Utilities */,
+				5BABB74D24FACB2A006D5541 /* Controller */,
+				5BABB74C24FACB28006D5541 /* View */,
+				5BABB74B24FACB24006D5541 /* Model */,
 				5BABB72424FACA01006D5541 /* Assets.xcassets */,
-				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
 				5BABB72924FACA01006D5541 /* Info.plist */,
 			);
 			path = Enigma;
@@ -126,6 +159,64 @@
 				5BABB73F24FACA02006D5541 /* Info.plist */,
 			);
 			path = EnigmaUITests;
+			sourceTree = "<group>";
+		};
+		5BABB74B24FACB24006D5541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BABB74C24FACB28006D5541 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
+				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BABB74D24FACB2A006D5541 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB71F24FAC9F8006D5541 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BABB74E24FACB68006D5541 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB75024FACCB9006D5541 /* Fonts */,
+				5BABB74F24FACBE4006D5541 /* Helpers */,
+				5BABB76E24FACDD9006D5541 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5BABB74F24FACBE4006D5541 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */,
+				5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5BABB75024FACCB9006D5541 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB77324FAD063006D5541 /* Inconsolata.otf */,
+				5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */,
+				5BABB75524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf */,
+				5BABB75324FACDA8006D5541 /* IBMPlexMono-Light.ttf */,
+				5BABB75224FACDA8006D5541 /* IBMPlexMono-Medium.ttf */,
+				5BABB75124FACDA8006D5541 /* IBMPlexMono-Regular.ttf */,
+				5BABB75624FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf */,
+				5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +323,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BABB75B24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */,
+				5BABB76424FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
+				5BABB76124FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */,
+				5BABB76724FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */,
+				5BABB75824FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */,
+				5BABB75E24FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */,
 				5BABB72824FACA01006D5541 /* LaunchScreen.storyboard in Resources */,
+				5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */,
 				5BABB72524FACA01006D5541 /* Assets.xcassets in Resources */,
+				5BABB76A24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */,
 				5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +341,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BABB76824FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */,
+				5BABB76224FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */,
+				5BABB75C24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */,
+				5BABB75924FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */,
+				5BABB75F24FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */,
+				5BABB76B24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */,
+				5BABB76524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +355,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BABB76924FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */,
+				5BABB76324FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */,
+				5BABB75D24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */,
+				5BABB75A24FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */,
+				5BABB76024FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */,
+				5BABB76C24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */,
+				5BABB76624FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +375,7 @@
 				5BABB72024FAC9F8006D5541 /* ViewController.swift in Sources */,
 				5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */,
 				5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */,
+				5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BABB73324FACA02006D5541 /* EnigmaTests.swift in Sources */,
+				5BABB77024FACDD9006D5541 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BABB73E24FACA02006D5541 /* EnigmaUITests.swift in Sources */,
+				5BABB77124FACDD9006D5541 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
