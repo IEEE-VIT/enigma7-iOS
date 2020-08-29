@@ -99,12 +99,11 @@
 		5BABB71A24FAC9F8006D5541 /* Enigma */ = {
 			isa = PBXGroup;
 			children = (
-				5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */,
-				5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */,
-				5BABB71F24FAC9F8006D5541 /* ViewController.swift */,
-				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
+				5BABB74E24FACB68006D5541 /* Utilities */,
+				5BABB74D24FACB2A006D5541 /* Controller */,
+				5BABB74C24FACB28006D5541 /* View */,
+				5BABB74B24FACB24006D5541 /* Model */,
 				5BABB72424FACA01006D5541 /* Assets.xcassets */,
-				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
 				5BABB72924FACA01006D5541 /* Info.plist */,
 			);
 			path = Enigma;
@@ -126,6 +125,47 @@
 				5BABB73F24FACA02006D5541 /* Info.plist */,
 			);
 			path = EnigmaUITests;
+			sourceTree = "<group>";
+		};
+		5BABB74B24FACB24006D5541 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BABB74C24FACB28006D5541 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
+				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BABB74D24FACB2A006D5541 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB71F24FAC9F8006D5541 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BABB74E24FACB68006D5541 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB74F24FACBE4006D5541 /* Helpers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5BABB74F24FACBE4006D5541 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */,
+				5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
