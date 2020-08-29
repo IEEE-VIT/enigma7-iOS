@@ -13,9 +13,14 @@ class TabbarController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var containerView: UIView!
     
+    var HomeViewController: UIViewController!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           HomeViewController = storyboard.instantiateViewController(identifier: "HomeViewController")
+        setupView(HomeViewController)
     }
     
     
@@ -23,6 +28,14 @@ class TabbarController: UIViewController {
         
     }
     
+    func setupView(_ viewController : UIViewController){
+        viewController.view.frame = containerView.bounds
+        viewController.view.layer.cornerRadius = 4
+        viewController.view.layer.borderWidth = 3
+        viewController.view.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        containerView.addSubview(viewController.view)
+        viewController.didMove(toParent: self)
+    }
 
 
 }

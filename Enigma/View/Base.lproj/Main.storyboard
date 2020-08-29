@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,7 +65,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5x-1B-A1u">
                                 <rect key="frame" x="18" y="62" width="378" height="709.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.16868865490000001" green="0.1765033603" blue="0.16006857159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.1764705882352941" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,11 +93,29 @@
             </objects>
             <point key="canvasLocation" x="139" y="130"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="HWl-yn-kGM">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="huf-Oc-YyW" customClass="HomeViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0E-Ng-NXG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="dark"/>
+                        <viewLayoutGuide key="safeArea" id="DYC-0i-PmK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6l-il-lbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1074" y="130"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Questions" width="68" height="59"/>
         <image name="leaderboard" width="68" height="59"/>
         <image name="profile" width="68" height="59"/>
         <image name="story" width="68" height="59"/>
+        <namedColor name="dark">
+            <color red="0.030999999493360519" green="0.054999999701976776" blue="0.030999999493360519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
