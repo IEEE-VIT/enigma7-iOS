@@ -26,13 +26,16 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-           let viewController  = storyboard.instantiateViewController(identifier: "UserNameViewController")
+
+           let viewController  = storyBoard.instantiateViewController(identifier: "UserNameViewController")
         viewController.view.frame = self.view.bounds
            viewController.view.layer.cornerRadius = 4
            viewController.view.layer.borderWidth = 3
            viewController.view.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        
+        viewController.willMove(toParent: self)
         self.view.addSubview(viewController.view)
+        self.addChild(viewController)
         viewController.didMove(toParent: self)
     }
     

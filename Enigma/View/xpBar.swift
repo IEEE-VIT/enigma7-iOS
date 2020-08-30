@@ -57,8 +57,8 @@ final class xpBar: CAShapeLayer, CAAnimationDelegate {
         
         gradient.colors = [ UIColor.secondary.cgColor, UIColor.quaternary.cgColor ]
         gradient.frame = view.bounds
-        gradient.startPoint = CGPoint(x: 0.25, y: 0.5)
-        gradient.endPoint = CGPoint(x: 0.75 * end, y: 0.5)
+        gradient.startPoint = CGPoint(x: 0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1 * end, y: 0.5)
         gradient.mask = progress
         
         self.insertSublayer(gradient, above: self)
