@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ydA-HJ-Uxv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="IBMPlexMono-Medium.ttf">
+            <string>IBMPlexMono-Medium</string>
+        </array>
         <array key="IBMPlexMono-Regular.ttf">
             <string>IBMPlexMono</string>
         </array>
@@ -290,19 +293,93 @@
                                 <color key="textColor" name="quaternary"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-CL-5Iw">
+                                <rect key="frame" x="83" y="418" width="248" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myk-ef-Fs3">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.093999996781349182" green="0.18400000035762787" blue="0.14100000262260437" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="myk-ef-Fs3" secondAttribute="height" id="0Pj-gJ-7KB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="36"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-wk-DCZ">
+                                        <rect key="frame" x="188" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.094117647060000004" green="0.1843137255" blue="0.14117647059999999" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="36"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24W-PJ-t0o">
+                                        <rect key="frame" x="94" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.093999996781349182" green="0.18400000035762787" blue="0.14100000262260437" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="24W-PJ-t0o" secondAttribute="height" id="Y7b-yi-ADQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="36"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuq-MA-p28">
+                                        <rect key="frame" x="60" y="0.0" width="34" height="60"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="36"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oul-gS-ztI">
+                                        <rect key="frame" x="154" y="0.0" width="34" height="60"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="36"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="24W-PJ-t0o" firstAttribute="height" secondItem="Jwj-CL-5Iw" secondAttribute="height" id="4LP-IO-G33"/>
+                                    <constraint firstAttribute="trailing" secondItem="6tC-wk-DCZ" secondAttribute="trailing" id="7KY-VO-hs0"/>
+                                    <constraint firstItem="24W-PJ-t0o" firstAttribute="leading" secondItem="Nuq-MA-p28" secondAttribute="trailing" id="7T3-L8-blK"/>
+                                    <constraint firstItem="myk-ef-Fs3" firstAttribute="centerY" secondItem="Jwj-CL-5Iw" secondAttribute="centerY" id="8tv-du-y9O"/>
+                                    <constraint firstItem="24W-PJ-t0o" firstAttribute="centerX" secondItem="Jwj-CL-5Iw" secondAttribute="centerX" id="JVh-kE-REe"/>
+                                    <constraint firstItem="6tC-wk-DCZ" firstAttribute="centerY" secondItem="Jwj-CL-5Iw" secondAttribute="centerY" id="Nhk-06-1Ms"/>
+                                    <constraint firstAttribute="height" constant="60" id="P20-ph-UmP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oul-gS-ztI" secondAttribute="bottom" id="UJS-GS-D6q"/>
+                                    <constraint firstItem="24W-PJ-t0o" firstAttribute="centerY" secondItem="Jwj-CL-5Iw" secondAttribute="centerY" id="akQ-SS-Rdu"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nuq-MA-p28" secondAttribute="bottom" id="cAj-aZ-neZ"/>
+                                    <constraint firstItem="6tC-wk-DCZ" firstAttribute="leading" secondItem="Oul-gS-ztI" secondAttribute="trailing" id="dtM-P4-5iT"/>
+                                    <constraint firstItem="Oul-gS-ztI" firstAttribute="leading" secondItem="24W-PJ-t0o" secondAttribute="trailing" id="eLj-2U-Z0g"/>
+                                    <constraint firstItem="Oul-gS-ztI" firstAttribute="top" secondItem="Jwj-CL-5Iw" secondAttribute="top" id="gmn-lI-qmZ"/>
+                                    <constraint firstItem="6tC-wk-DCZ" firstAttribute="width" secondItem="6tC-wk-DCZ" secondAttribute="height" id="h4s-ZJ-mPB"/>
+                                    <constraint firstItem="Nuq-MA-p28" firstAttribute="top" secondItem="Jwj-CL-5Iw" secondAttribute="top" id="hZY-dd-YQh"/>
+                                    <constraint firstItem="Nuq-MA-p28" firstAttribute="leading" secondItem="myk-ef-Fs3" secondAttribute="trailing" id="ljw-RC-2QJ"/>
+                                    <constraint firstItem="myk-ef-Fs3" firstAttribute="leading" secondItem="Jwj-CL-5Iw" secondAttribute="leading" id="nIR-zu-Vkx"/>
+                                    <constraint firstItem="6tC-wk-DCZ" firstAttribute="height" secondItem="Jwj-CL-5Iw" secondAttribute="height" id="qra-0s-b6P"/>
+                                    <constraint firstItem="myk-ef-Fs3" firstAttribute="height" secondItem="Jwj-CL-5Iw" secondAttribute="height" id="txb-pm-2pZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="dark"/>
                         <constraints>
                             <constraint firstItem="xdS-cb-BOp" firstAttribute="trailing" secondItem="Zjl-WV-9eQ" secondAttribute="trailing" constant="20" id="7dB-Dc-hUP"/>
                             <constraint firstItem="Zjl-WV-9eQ" firstAttribute="leading" secondItem="xdS-cb-BOp" secondAttribute="leading" constant="20" id="AGR-Uy-6Hz"/>
                             <constraint firstItem="Zjl-WV-9eQ" firstAttribute="top" secondItem="xdS-cb-BOp" secondAttribute="top" constant="150" id="CSD-Di-xNB"/>
+                            <constraint firstItem="Jwj-CL-5Iw" firstAttribute="centerX" secondItem="4lk-St-dPV" secondAttribute="centerX" id="V9Y-SW-vzg"/>
+                            <constraint firstItem="Jwj-CL-5Iw" firstAttribute="width" secondItem="4lk-St-dPV" secondAttribute="width" multiplier="0.6" id="pvA-aR-FTq"/>
+                            <constraint firstItem="Jwj-CL-5Iw" firstAttribute="centerY" secondItem="4lk-St-dPV" secondAttribute="centerY" id="wHS-Jt-Pdi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xdS-cb-BOp"/>
                     </view>
+                    <connections>
+                        <outlet property="dayLabel" destination="myk-ef-Fs3" id="WwW-RL-JVc"/>
+                        <outlet property="hourLabel" destination="24W-PJ-t0o" id="iT9-KT-jUF"/>
+                        <outlet property="minutLabel" destination="6tC-wk-DCZ" id="fVe-ld-xBp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6M-3L-vr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2506" y="130"/>
+            <point key="canvasLocation" x="2505.7971014492755" y="129.91071428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="h7c-BQ-B2Z">
