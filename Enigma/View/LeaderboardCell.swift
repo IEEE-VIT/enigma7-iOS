@@ -10,6 +10,11 @@ import UIKit
 
 class LeaderboardCell: UITableViewCell {
 
+    @IBOutlet weak var rank: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var solved: UILabel!
+    @IBOutlet weak var score: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,8 +22,6 @@ class LeaderboardCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

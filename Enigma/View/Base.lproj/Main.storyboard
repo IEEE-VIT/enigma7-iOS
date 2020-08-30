@@ -759,7 +759,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="0L2-hP-Xh9" customClass="LeaderboardCell" customModule="Enigma" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leadercell" rowHeight="60" id="0L2-hP-Xh9" customClass="LeaderboardCell" customModule="Enigma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="82" width="384" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0L2-hP-Xh9" id="Rm9-7y-sxT">
@@ -815,6 +815,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="3oM-Us-vNt" secondAttribute="trailing" id="x5f-tp-WiV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rank" destination="lcP-uq-m7T" id="GFZ-9s-rFo"/>
+                                            <outlet property="score" destination="3oM-Us-vNt" id="iPo-WV-43W"/>
+                                            <outlet property="solved" destination="QIo-KI-TWZ" id="Toe-di-3Of"/>
+                                            <outlet property="userName" destination="x2p-RO-ylc" id="XRj-9Z-vQQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
