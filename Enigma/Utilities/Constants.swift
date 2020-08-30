@@ -16,3 +16,6 @@ extension UIColor {
     static let quaternary = #colorLiteral(red: 0.1490196078, green: 0.8745098039, blue: 0.1294117647, alpha: 1)
     static let light = #colorLiteral(red: 0.9333333333, green: 0.9568627451, blue: 0.9098039216, alpha: 1)
 }
+
+let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+

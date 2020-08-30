@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ydA-HJ-Uxv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -74,25 +74,59 @@
                                     <constraint firstItem="545-qG-j13" firstAttribute="top" secondItem="XCs-0i-Dxm" secondAttribute="top" constant="8" id="O8D-Tt-UXZ"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejb-5D-onM">
-                                <rect key="frame" x="18" y="62" width="378" height="710"/>
-                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTk-pk-dCY">
+                                <rect key="frame" x="18" y="62" width="378" height="709.5"/>
+                                <color key="backgroundColor" red="0.16868865490000001" green="0.1765033603" blue="0.16006857159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIz-a1-mdp">
+                                <rect key="frame" x="18" y="62" width="378" height="55"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Enigma" translatesAutoresizingMaskIntoConstraints="NO" id="7Ly-zm-Gru">
+                                        <rect key="frame" x="113" y="11" width="152.5" height="33"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYG-UN-GaR">
+                                        <rect key="frame" x="329" y="12" width="31" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lYG-UN-GaR" secondAttribute="height" id="EyJ-0s-CCI"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Hint"/>
+                                        <connections>
+                                            <action selector="infoClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5X-sn-hj8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.093999996781349182" green="0.18400000035762787" blue="0.14100000262260437" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="lYG-UN-GaR" secondAttribute="bottom" constant="12" id="0rX-oF-OS0"/>
+                                    <constraint firstItem="lYG-UN-GaR" firstAttribute="top" secondItem="jIz-a1-mdp" secondAttribute="top" constant="12" id="6df-4w-hDF"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Ly-zm-Gru" secondAttribute="bottom" constant="11" id="IWo-jI-hiZ"/>
+                                    <constraint firstItem="7Ly-zm-Gru" firstAttribute="centerY" secondItem="jIz-a1-mdp" secondAttribute="centerY" id="VST-vA-Ab5"/>
+                                    <constraint firstItem="7Ly-zm-Gru" firstAttribute="top" secondItem="jIz-a1-mdp" secondAttribute="top" constant="11" id="YFE-ee-iFF"/>
+                                    <constraint firstAttribute="trailing" secondItem="lYG-UN-GaR" secondAttribute="trailing" constant="18" id="ZmY-aM-9sF"/>
+                                    <constraint firstItem="7Ly-zm-Gru" firstAttribute="centerX" secondItem="jIz-a1-mdp" secondAttribute="centerX" id="m3r-f1-euu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.1764705882352941" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XCs-0i-Dxm" firstAttribute="top" secondItem="VTk-pk-dCY" secondAttribute="bottom" constant="10" id="01K-BN-QHv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XCs-0i-Dxm" secondAttribute="bottom" id="1UZ-gw-zaf"/>
-                            <constraint firstItem="ejb-5D-onM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="FBk-ng-7Ht"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ejb-5D-onM" secondAttribute="trailing" constant="18" id="RBk-q0-5b0"/>
-                            <constraint firstItem="ejb-5D-onM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="bEG-KY-Cuu"/>
-                            <constraint firstItem="XCs-0i-Dxm" firstAttribute="top" secondItem="ejb-5D-onM" secondAttribute="bottom" constant="10" id="nG7-Ka-BWA"/>
+                            <constraint firstItem="jIz-a1-mdp" firstAttribute="trailing" secondItem="VTk-pk-dCY" secondAttribute="trailing" id="9cl-mz-VeL"/>
+                            <constraint firstItem="VTk-pk-dCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="AH9-Im-pQV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VTk-pk-dCY" secondAttribute="trailing" constant="18" id="GVd-ZJ-Ms7"/>
+                            <constraint firstItem="VTk-pk-dCY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="cia-1g-ABn"/>
+                            <constraint firstItem="jIz-a1-mdp" firstAttribute="leading" secondItem="VTk-pk-dCY" secondAttribute="leading" id="dFV-DU-lb4"/>
+                            <constraint firstItem="jIz-a1-mdp" firstAttribute="height" secondItem="VTk-pk-dCY" secondAttribute="height" multiplier="0.0775194" id="nJt-Dp-eII"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XCs-0i-Dxm" secondAttribute="trailing" id="o3z-e7-ZFy"/>
+                            <constraint firstItem="jIz-a1-mdp" firstAttribute="top" secondItem="VTk-pk-dCY" secondAttribute="top" id="qAy-aX-QQa"/>
                             <constraint firstItem="XCs-0i-Dxm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09" id="s1o-SZ-lfI"/>
                             <constraint firstItem="XCs-0i-Dxm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sxi-fX-Vca"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="ejb-5D-onM" id="Cqj-4H-mvC"/>
+                        <outlet property="containerView" destination="VTk-pk-dCY" id="Apl-uw-coZ"/>
+                        <outlet property="header" destination="jIz-a1-mdp" id="WHP-dc-lrG"/>
                         <outletCollection property="buttons" destination="321-Mp-Rq8" collectionClass="NSMutableArray" id="M6e-Fc-BgI"/>
                         <outletCollection property="buttons" destination="Nux-CZ-9Jr" collectionClass="NSMutableArray" id="uqX-Rr-NFq"/>
                         <outletCollection property="buttons" destination="9hM-6u-fAj" collectionClass="NSMutableArray" id="Hdo-di-qfd"/>
@@ -399,7 +433,7 @@
         <!--Story View Controller-->
         <scene sceneID="Qz7-c0-Vbj">
             <objects>
-                <viewController id="nlz-mK-WIn" customClass="StoryViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoryViewController" id="nlz-mK-WIn" customClass="StoryViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pPR-C8-8GH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,7 +448,7 @@
         <!--Profile View Controller-->
         <scene sceneID="ps8-uZ-Qjp">
             <objects>
-                <viewController id="6W7-zj-YS8" customClass="ProfileViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="6W7-zj-YS8" customClass="ProfileViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oag-Mo-AO7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,7 +463,7 @@
         <!--Play View Controller-->
         <scene sceneID="hN4-BU-F7b">
             <objects>
-                <viewController id="5eb-eE-DVo" customClass="PlayViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayViewController" id="5eb-eE-DVo" customClass="PlayViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S6d-6A-Gig">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -444,7 +478,7 @@
         <!--Leaderboard View Controller-->
         <scene sceneID="lht-ki-Y3p">
             <objects>
-                <viewController id="5ay-EG-bnO" customClass="LeaderboardViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeaderboardViewController" id="5ay-EG-bnO" customClass="LeaderboardViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zeF-au-wyX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -458,6 +492,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Enigma" width="152.5" height="24"/>
+        <image name="Hint" width="21" height="21"/>
         <image name="Questions" width="68" height="59"/>
         <image name="Union" width="235.5" height="39.5"/>
         <image name="leaderboard" width="68" height="59"/>
