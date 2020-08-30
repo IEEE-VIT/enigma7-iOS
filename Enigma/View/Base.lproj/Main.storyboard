@@ -521,13 +521,134 @@
                     <view key="view" contentMode="scaleToFill" id="oag-Mo-AO7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBx-ig-sAq">
+                                <rect key="frame" x="20" y="124" width="109.5" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="iVa-eZ-Kli"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="26"/>
+                                <color key="textColor" name="quaternary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhV-sk-H9h">
+                                <rect key="frame" x="25" y="195" width="126" height="27.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ValidUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNF-eN-z1K">
+                                <rect key="frame" x="42" y="222.5" width="156" height="26"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBh-db-Fvb">
+                                <rect key="frame" x="25" y="293.5" width="113.5" height="28"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions Solved:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivB-wi-6HP">
+                                <rect key="frame" x="25" y="397.5" width="215" height="28"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dpdcnf87nu@appleid.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ty6-zw-KfM">
+                                <rect key="frame" x="42" y="321.5" width="362" height="26"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDs-bG-EA9">
+                                <rect key="frame" x="25" y="465.5" width="64" height="28"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCK-ic-xl0">
+                                <rect key="frame" x="89" y="466" width="25.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZc-Yn-lUk">
+                                <rect key="frame" x="25" y="533.5" width="76" height="28"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ta8-sc-iUI">
+                                <rect key="frame" x="101" y="534" width="38" height="27.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bp-Op-LdI">
+                                <rect key="frame" x="138.5" y="746.5" width="137" height="45.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3bp-Op-LdI" secondAttribute="height" multiplier="3" id="9uF-xC-hRv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="21"/>
+                                <state key="normal" title="Sign out">
+                                    <color key="titleColor" name="tertiary"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="6W7-zj-YS8" eventType="touchUpInside" id="R24-ug-OqI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2f-vf-2hn">
+                                <rect key="frame" x="240" y="349.5" width="13" height="124"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" name="dark"/>
+                        <constraints>
+                            <constraint firstItem="ty6-zw-KfM" firstAttribute="top" secondItem="DBh-db-Fvb" secondAttribute="bottom" id="0CK-ap-3UI"/>
+                            <constraint firstAttribute="trailing" secondItem="ty6-zw-KfM" secondAttribute="trailing" constant="10" id="0DC-cf-PAI"/>
+                            <constraint firstItem="Ta8-sc-iUI" firstAttribute="leading" secondItem="BZc-Yn-lUk" secondAttribute="trailing" id="0ux-bZ-uzH"/>
+                            <constraint firstItem="lhV-sk-H9h" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="25" id="2y3-75-IyR"/>
+                            <constraint firstItem="Ta8-sc-iUI" firstAttribute="centerY" secondItem="BZc-Yn-lUk" secondAttribute="centerY" id="3D3-Sj-yYt"/>
+                            <constraint firstItem="ty6-zw-KfM" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="42" id="5F4-lC-knQ"/>
+                            <constraint firstItem="Q2f-vf-2hn" firstAttribute="top" secondItem="ty6-zw-KfM" secondAttribute="bottom" constant="2" id="5sh-cH-QSB"/>
+                            <constraint firstItem="3bp-Op-LdI" firstAttribute="centerX" secondItem="oag-Mo-AO7" secondAttribute="centerX" id="7Ey-8l-FwO"/>
+                            <constraint firstItem="lhV-sk-H9h" firstAttribute="top" secondItem="fBx-ig-sAq" secondAttribute="bottom" constant="34" id="7Qg-0q-MLw"/>
+                            <constraint firstItem="BZc-Yn-lUk" firstAttribute="top" secondItem="VDs-bG-EA9" secondAttribute="bottom" constant="40" id="8LA-pU-rn6"/>
+                            <constraint firstItem="wCK-ic-xl0" firstAttribute="centerY" secondItem="VDs-bG-EA9" secondAttribute="centerY" id="CRk-hs-s7O"/>
+                            <constraint firstItem="hNF-eN-z1K" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="42" id="Gsd-r0-m4v"/>
+                            <constraint firstItem="fBx-ig-sAq" firstAttribute="top" secondItem="T60-ww-clu" secondAttribute="top" constant="80" id="KmY-oR-2ku"/>
+                            <constraint firstItem="DBh-db-Fvb" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="25" id="OeF-7F-wAM"/>
+                            <constraint firstItem="ivB-wi-6HP" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="25" id="V51-sG-Ofr"/>
+                            <constraint firstItem="Q2f-vf-2hn" firstAttribute="leading" secondItem="ivB-wi-6HP" secondAttribute="trailing" id="XR0-86-5C6"/>
+                            <constraint firstItem="VDs-bG-EA9" firstAttribute="top" secondItem="ivB-wi-6HP" secondAttribute="bottom" constant="40" id="cIF-kO-DIi"/>
+                            <constraint firstItem="Q2f-vf-2hn" firstAttribute="centerY" secondItem="ivB-wi-6HP" secondAttribute="centerY" id="d5f-M0-ENr"/>
+                            <constraint firstItem="fBx-ig-sAq" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="20" id="e8o-vd-u58"/>
+                            <constraint firstItem="T60-ww-clu" firstAttribute="bottom" secondItem="3bp-Op-LdI" secondAttribute="bottom" constant="70" id="gDq-pP-aMz"/>
+                            <constraint firstItem="3bp-Op-LdI" firstAttribute="width" secondItem="oag-Mo-AO7" secondAttribute="width" multiplier="0.33" id="gWV-2G-fhA"/>
+                            <constraint firstItem="BZc-Yn-lUk" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="25" id="gXB-PQ-7P1"/>
+                            <constraint firstItem="wCK-ic-xl0" firstAttribute="leading" secondItem="VDs-bG-EA9" secondAttribute="trailing" id="hhZ-br-UoL"/>
+                            <constraint firstItem="DBh-db-Fvb" firstAttribute="top" secondItem="hNF-eN-z1K" secondAttribute="bottom" constant="45" id="jSt-8r-sNe"/>
+                            <constraint firstItem="ivB-wi-6HP" firstAttribute="top" secondItem="ty6-zw-KfM" secondAttribute="bottom" constant="50" id="qmZ-Bp-nvF"/>
+                            <constraint firstItem="hNF-eN-z1K" firstAttribute="top" secondItem="lhV-sk-H9h" secondAttribute="bottom" id="tzx-4F-Vh6"/>
+                            <constraint firstItem="VDs-bG-EA9" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="25" id="w7c-mW-Xi1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="T60-ww-clu"/>
                     </view>
+                    <connections>
+                        <outlet property="emailId" destination="ty6-zw-KfM" id="HsK-Zp-BcC"/>
+                        <outlet property="questionsSolved" destination="Q2f-vf-2hn" id="hSF-HE-85P"/>
+                        <outlet property="rank" destination="wCK-ic-xl0" id="H35-8L-mEa"/>
+                        <outlet property="score" destination="Ta8-sc-iUI" id="eBm-Aj-xeP"/>
+                        <outlet property="signoutButton" destination="3bp-Op-LdI" id="W26-lo-hVL"/>
+                        <outlet property="username" destination="hNF-eN-z1K" id="8kv-tK-Kt4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vh-x2-1u8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5699" y="666"/>
+            <point key="canvasLocation" x="5698.5507246376819" y="665.625"/>
         </scene>
         <!--Play View Controller-->
         <scene sceneID="hN4-BU-F7b">

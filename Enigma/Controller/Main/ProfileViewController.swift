@@ -9,22 +9,24 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var emailId: UILabel!
+    @IBOutlet weak var questionsSolved: UILabel!
+    @IBOutlet weak var rank: UILabel!
+    @IBOutlet weak var score: UILabel!
+    
+    @IBOutlet weak var signoutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        signoutButton.addBorder(width: 2, .tertiary)
     }
-    */
-
+    
+    @IBAction func logout(_ sender: Any) {
+        
+    }
+    
 }
