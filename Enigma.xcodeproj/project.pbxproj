@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
+		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
+		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
+		5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867C24FB6AB400FE2EEC /* PlayViewController.swift */; };
+		5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867E24FB6AC000FE2EEC /* LeaderboardViewController.swift */; };
+		5B32868124FB6AC700FE2EEC /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868024FB6AC700FE2EEC /* StoryViewController.swift */; };
+		5B32868324FB6ACE00FE2EEC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868224FB6ACE00FE2EEC /* ProfileViewController.swift */; };
+		5B32868724FB6B4700FE2EEC /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868624FB6B4700FE2EEC /* RulesViewController.swift */; };
+		5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868824FB949200FE2EEC /* CustomTextField.swift */; };
 		5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */; };
 		5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */; };
 		5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB72124FAC9F8006D5541 /* Main.storyboard */; };
@@ -63,6 +71,14 @@
 
 /* Begin PBXFileReference section */
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
+		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		5B32867C24FB6AB400FE2EEC /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		5B32867E24FB6AC000FE2EEC /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		5B32868024FB6AC700FE2EEC /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		5B32868224FB6ACE00FE2EEC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5B32868624FB6B4700FE2EEC /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		5B32868824FB949200FE2EEC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +136,28 @@
 				5B32867624FB619F00FE2EEC /* Button.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B32868424FB6AD500FE2EEC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */,
+				5B32867824FB671200FE2EEC /* UserNameViewController.swift */,
+				5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5B32868524FB6ADF00FE2EEC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B32867C24FB6AB400FE2EEC /* PlayViewController.swift */,
+				5B32867E24FB6AC000FE2EEC /* LeaderboardViewController.swift */,
+				5B32868024FB6AC700FE2EEC /* StoryViewController.swift */,
+				5B32868224FB6ACE00FE2EEC /* ProfileViewController.swift */,
+				5B32868624FB6B4700FE2EEC /* RulesViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		5BABB70F24FAC9F8006D5541 = {
@@ -185,6 +223,7 @@
 			children = (
 				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
 				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
+				5B32868824FB949200FE2EEC /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,8 +231,9 @@
 		5BABB74D24FACB2A006D5541 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B32868524FB6ADF00FE2EEC /* Main */,
+				5B32868424FB6AD500FE2EEC /* Login */,
 				5BABB7B924FADEEB006D5541 /* TabbarController.swift */,
-				5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -386,11 +426,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */,
+				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
+				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
+				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
 				5B32867724FB619F00FE2EEC /* Button.swift in Sources */,
 				5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */,
+				5B32868324FB6ACE00FE2EEC /* ProfileViewController.swift in Sources */,
+				5B32868724FB6B4700FE2EEC /* RulesViewController.swift in Sources */,
 				5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */,
 				5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */,
+				5B32868124FB6AC700FE2EEC /* StoryViewController.swift in Sources */,
+				5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */,
 				5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

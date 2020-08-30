@@ -21,6 +21,7 @@ class TabbarController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
            HomeViewController = storyboard.instantiateViewController(identifier: "HomeViewController")
         setupView(HomeViewController)
+        containerFrame = containerView.frame
     }
     
     
@@ -39,3 +40,5 @@ class TabbarController: UIViewController {
 
 
 }
+
+var containerFrame = CGRect()
