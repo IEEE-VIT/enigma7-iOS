@@ -9,8 +9,8 @@
 import Foundation
 
 struct LeaderboardModel {
-    let rank : String
+    let rank : Int = 0
     let userName : String
-    let solved : String
-    let score : String
+    let solved : Int
+    let score : Int
 }
