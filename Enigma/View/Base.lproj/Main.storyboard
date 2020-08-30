@@ -477,9 +477,38 @@
                     <view key="view" contentMode="scaleToFill" id="pPR-C8-8GH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTG-0h-Lmx">
+                                <rect key="frame" x="20" y="124" width="78" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="zQZ-9g-2tq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="26"/>
+                                <color key="textColor" name="quaternary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QDO-Qs-blk">
+                                <rect key="frame" x="20" y="178" width="369" height="634"/>
+                                <string key="text">Etiam fermentum ut bibendum egestas id maecenas aliquam lacinia nulla.                     Tempor enim viverra eu laoreet.                      </string>
+                                <color key="textColor" name="tertiary"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" name="dark"/>
+                        <constraints>
+                            <constraint firstItem="dpK-s0-62v" firstAttribute="bottom" secondItem="QDO-Qs-blk" secondAttribute="bottom" constant="50" id="BhC-08-AcV"/>
+                            <constraint firstItem="dpK-s0-62v" firstAttribute="trailing" secondItem="QDO-Qs-blk" secondAttribute="trailing" constant="25" id="cPR-mG-vCr"/>
+                            <constraint firstItem="QDO-Qs-blk" firstAttribute="leading" secondItem="dpK-s0-62v" secondAttribute="leading" constant="20" id="fbi-EH-yHc"/>
+                            <constraint firstItem="QDO-Qs-blk" firstAttribute="top" secondItem="LTG-0h-Lmx" secondAttribute="bottom" constant="17" id="jO7-vo-p3F"/>
+                            <constraint firstItem="LTG-0h-Lmx" firstAttribute="top" secondItem="dpK-s0-62v" secondAttribute="top" constant="80" id="lHi-c0-6Oi"/>
+                            <constraint firstItem="LTG-0h-Lmx" firstAttribute="leading" secondItem="dpK-s0-62v" secondAttribute="leading" constant="20" id="ojE-e5-sqZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dpK-s0-62v"/>
                     </view>
+                    <connections>
+                        <outlet property="storyTextView" destination="QDO-Qs-blk" id="iY4-qS-gPk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx3-ee-rur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
