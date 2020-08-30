@@ -18,7 +18,8 @@ class TabbarController: UIViewController {
     var PlayViewController : UIViewController!
     var LeaderboardViewController : UIViewController!
     var StoryViewController : UIViewController!
-    var ProfileViewController : ProfileViewController!
+    var ProfileViewController : UIViewController!
+    var RulesViewController : UIViewController!
     
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 0
@@ -37,8 +38,7 @@ class TabbarController: UIViewController {
     
     
     @IBAction func tabSelected(_ sender: UIButton) {
-        header.isHidden = false
-        
+        header.isHidden = (sender.tag == 4)
         let previousIndex = selectedIndex
         selectedIndex = sender.tag
         buttons[previousIndex].isSelected = false
@@ -70,7 +70,9 @@ class TabbarController: UIViewController {
         StoryViewController = storyBoard.instantiateViewController(identifier: "StoryViewController")
         ProfileViewController = storyBoard.instantiateViewController(identifier: "ProfileViewController")
         
-        viewControllers = [PlayViewController,LeaderboardViewController,StoryViewController,ProfileViewController]
+        RulesViewController = storyBoard.instantiateViewController(identifier: "RulesViewController")
+        
+        viewControllers = [PlayViewController,LeaderboardViewController,StoryViewController,ProfileViewController,RulesViewController]
     }
     
     

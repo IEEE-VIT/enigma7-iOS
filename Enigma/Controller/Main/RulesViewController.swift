@@ -10,21 +10,13 @@ import UIKit
 
 class RulesViewController: UIViewController {
 
+    @IBOutlet weak var rulesTextView: UITextView!
+    
+    let rules = "Etiam fermentum ut bibendum egestas id maecenas aliquam lacinia nulla.\n\nTempor enim viverra eu laoreet.\n\nOrnare iaculis sed adipiscing fringilla tincidunt arcu eget morbi at odio nisi ipsum sit congue vivamus ut euismod euismod nec augue"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        rulesTextView.text = rules
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

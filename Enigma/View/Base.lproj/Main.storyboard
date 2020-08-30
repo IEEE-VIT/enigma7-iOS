@@ -84,7 +84,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Enigma" translatesAutoresizingMaskIntoConstraints="NO" id="7Ly-zm-Gru">
                                         <rect key="frame" x="113" y="11" width="152.5" height="33"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYG-UN-GaR">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYG-UN-GaR">
                                         <rect key="frame" x="329" y="12" width="31" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="lYG-UN-GaR" secondAttribute="height" id="EyJ-0s-CCI"/>
@@ -92,6 +92,7 @@
                                         <state key="normal" backgroundImage="Hint"/>
                                         <connections>
                                             <action selector="infoClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5X-sn-hj8"/>
+                                            <action selector="tabSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tcF-Vz-Wxu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -131,6 +132,7 @@
                         <outletCollection property="buttons" destination="Nux-CZ-9Jr" collectionClass="NSMutableArray" id="uqX-Rr-NFq"/>
                         <outletCollection property="buttons" destination="9hM-6u-fAj" collectionClass="NSMutableArray" id="Hdo-di-qfd"/>
                         <outletCollection property="buttons" destination="ddo-HK-617" collectionClass="NSMutableArray" id="66V-Jm-5tJ"/>
+                        <outletCollection property="buttons" destination="lYG-UN-GaR" collectionClass="NSMutableArray" id="HZv-Ne-bcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -415,16 +417,51 @@
             </objects>
             <point key="canvasLocation" x="2505.7971014492755" y="129.91071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Rules View Controller-->
         <scene sceneID="h7c-BQ-B2Z">
             <objects>
-                <viewController id="oGZ-F6-fVj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RulesViewController" id="oGZ-F6-fVj" customClass="RulesViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wey-Vt-Kat">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-Hu-tA8">
+                                <rect key="frame" x="20" y="84" width="188" height="34"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="26"/>
+                                <color key="textColor" name="quaternary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kXG-0c-H3q">
+                                <rect key="frame" x="20" y="163" width="374" height="590.5"/>
+                                <string key="text">Etiam fermentum ut bibendum egestas id maecenas aliquam lacinia nulla.                     Tempor enim viverra eu laoreet.                      </string>
+                                <color key="textColor" name="tertiary"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Press the play button]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-sa-Pwa">
+                                <rect key="frame" x="25" y="803.5" width="364" height="27.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
+                                <color key="textColor" name="quaternary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" name="dark"/>
+                        <constraints>
+                            <constraint firstItem="bsi-Hu-tA8" firstAttribute="leading" secondItem="gUc-Q9-t4L" secondAttribute="leading" constant="20" id="G8k-6h-q3N"/>
+                            <constraint firstItem="kXG-0c-H3q" firstAttribute="top" secondItem="bsi-Hu-tA8" secondAttribute="bottom" constant="45" id="Gir-Ja-jdV"/>
+                            <constraint firstItem="kXG-0c-H3q" firstAttribute="leading" secondItem="gUc-Q9-t4L" secondAttribute="leading" constant="20" id="VOb-sW-Ay0"/>
+                            <constraint firstItem="gUc-Q9-t4L" firstAttribute="trailing" secondItem="rNH-sa-Pwa" secondAttribute="trailing" constant="25" id="WPX-Qe-tqO"/>
+                            <constraint firstItem="bsi-Hu-tA8" firstAttribute="top" secondItem="gUc-Q9-t4L" secondAttribute="top" constant="40" id="WXj-FE-AeP"/>
+                            <constraint firstItem="rNH-sa-Pwa" firstAttribute="top" secondItem="kXG-0c-H3q" secondAttribute="bottom" constant="50" id="efc-HS-JRG"/>
+                            <constraint firstItem="rNH-sa-Pwa" firstAttribute="leading" secondItem="gUc-Q9-t4L" secondAttribute="leading" constant="25" id="fzQ-Rm-JcV"/>
+                            <constraint firstItem="gUc-Q9-t4L" firstAttribute="trailing" secondItem="kXG-0c-H3q" secondAttribute="trailing" constant="20" id="tdk-KJ-nI9"/>
+                            <constraint firstItem="gUc-Q9-t4L" firstAttribute="bottom" secondItem="rNH-sa-Pwa" secondAttribute="bottom" constant="31" id="vXL-Om-G1v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gUc-Q9-t4L"/>
                     </view>
+                    <connections>
+                        <outlet property="rulesTextView" destination="kXG-0c-H3q" id="2IJ-Lr-Raz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2sx-jJ-UhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
