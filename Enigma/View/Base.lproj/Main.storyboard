@@ -708,59 +708,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q9-2v-QBm">
-                                <rect key="frame" x="20" y="124" width="172" height="34"/>
+                                <rect key="frame" x="20" y="124" width="172" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="elO-oH-fyq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="26"/>
                                 <color key="textColor" name="quaternary"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i03-Bm-zDU">
-                                <rect key="frame" x="15" y="168" width="384" height="664"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="UUD-GU-fD9">
-                                    <rect key="frame" x="0.0" y="0.0" width="384" height="54"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-fs-Fgk">
-                                            <rect key="frame" x="0.0" y="15.5" width="41" height="23"/>
-                                            <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
-                                            <color key="textColor" name="quaternary"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANL-z4-NqQ">
-                                            <rect key="frame" x="66" y="15.5" width="153.5" height="23"/>
-                                            <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
-                                            <color key="textColor" name="quaternary"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UX8-Vz-PZf">
-                                            <rect key="frame" x="245" y="15.5" width="62" height="23"/>
-                                            <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
-                                            <color key="textColor" name="quaternary"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2DO-aU-iIo">
-                                            <rect key="frame" x="332" y="15.5" width="52" height="23"/>
-                                            <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
-                                            <color key="textColor" name="quaternary"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    <constraints>
-                                        <constraint firstItem="rS3-fs-Fgk" firstAttribute="leading" secondItem="UUD-GU-fD9" secondAttribute="leading" id="6c8-jW-k9m"/>
-                                        <constraint firstItem="2DO-aU-iIo" firstAttribute="leading" secondItem="UX8-Vz-PZf" secondAttribute="trailing" constant="25" id="8Ym-Lp-Q5E"/>
-                                        <constraint firstItem="ANL-z4-NqQ" firstAttribute="width" secondItem="UUD-GU-fD9" secondAttribute="width" multiplier="0.4" id="HPZ-EO-EX1"/>
-                                        <constraint firstItem="ANL-z4-NqQ" firstAttribute="leading" secondItem="rS3-fs-Fgk" secondAttribute="trailing" constant="25" id="Hzy-Ou-N1P"/>
-                                        <constraint firstAttribute="trailing" secondItem="2DO-aU-iIo" secondAttribute="trailing" id="RAG-p9-zuR"/>
-                                        <constraint firstItem="2DO-aU-iIo" firstAttribute="centerY" secondItem="UUD-GU-fD9" secondAttribute="centerY" id="Sgu-TD-Mp2"/>
-                                        <constraint firstItem="UX8-Vz-PZf" firstAttribute="centerY" secondItem="UUD-GU-fD9" secondAttribute="centerY" id="aPZ-he-Bep"/>
-                                        <constraint firstItem="rS3-fs-Fgk" firstAttribute="centerY" secondItem="UUD-GU-fD9" secondAttribute="centerY" id="hWd-Ix-G2g"/>
-                                        <constraint firstItem="ANL-z4-NqQ" firstAttribute="centerY" secondItem="UUD-GU-fD9" secondAttribute="centerY" id="rEz-bV-jOf"/>
-                                    </constraints>
-                                </view>
+                                <rect key="frame" x="15" y="261" width="384" height="571"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leadercell" rowHeight="60" id="0L2-hP-Xh9" customClass="LeaderboardCell" customModule="Enigma" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="82" width="384" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="384" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0L2-hP-Xh9" id="Rm9-7y-sxT">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
@@ -815,6 +776,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="3oM-Us-vNt" secondAttribute="trailing" id="x5f-tp-WiV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="dark"/>
                                         <connections>
                                             <outlet property="rank" destination="lcP-uq-m7T" id="GFZ-9s-rFo"/>
                                             <outlet property="score" destination="3oM-Us-vNt" id="iPo-WV-43W"/>
@@ -823,19 +785,83 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="5ay-EG-bnO" id="wgl-2H-EaR"/>
                                     <outlet property="delegate" destination="5ay-EG-bnO" id="Fof-4F-nAY"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQ5-H0-VDg">
+                                <rect key="frame" x="15" y="161" width="384" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-fs-Fgk">
+                                        <rect key="frame" x="0.0" y="38.5" width="41" height="23"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CaD-15-3Wx">
+                                        <rect key="frame" x="332" y="38.5" width="52" height="23"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aB9-Gu-NBL">
+                                        <rect key="frame" x="245" y="38.5" width="62" height="23"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_____________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWw-ih-cUm">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_____________________________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhJ-t3-yRY">
+                                        <rect key="frame" x="0.0" y="56.5" width="384" height="23"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsV-UR-YKf">
+                                        <rect key="frame" x="66" y="38.5" width="82" height="23"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
+                                        <color key="textColor" name="quaternary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BWw-ih-cUm" firstAttribute="top" secondItem="cQ5-H0-VDg" secondAttribute="top" id="1ct-gw-PPD"/>
+                                    <constraint firstItem="rS3-fs-Fgk" firstAttribute="centerY" secondItem="cQ5-H0-VDg" secondAttribute="centerY" id="Ax3-Jx-BWi"/>
+                                    <constraint firstItem="lsV-UR-YKf" firstAttribute="centerY" secondItem="cQ5-H0-VDg" secondAttribute="centerY" id="HLd-vx-2Vz"/>
+                                    <constraint firstAttribute="trailing" secondItem="rhJ-t3-yRY" secondAttribute="trailing" id="Ixf-5Z-tY1"/>
+                                    <constraint firstItem="rS3-fs-Fgk" firstAttribute="leading" secondItem="cQ5-H0-VDg" secondAttribute="leading" id="J5T-ke-VRN"/>
+                                    <constraint firstItem="lsV-UR-YKf" firstAttribute="leading" secondItem="rS3-fs-Fgk" secondAttribute="trailing" constant="25" id="J6H-3e-YrF"/>
+                                    <constraint firstItem="rhJ-t3-yRY" firstAttribute="leading" secondItem="cQ5-H0-VDg" secondAttribute="leading" id="ROX-IR-DW9"/>
+                                    <constraint firstItem="rhJ-t3-yRY" firstAttribute="top" secondItem="rS3-fs-Fgk" secondAttribute="bottom" constant="-5" id="RQF-6f-28T"/>
+                                    <constraint firstAttribute="trailing" secondItem="CaD-15-3Wx" secondAttribute="trailing" id="RYc-gh-sR6"/>
+                                    <constraint firstItem="aB9-Gu-NBL" firstAttribute="centerY" secondItem="cQ5-H0-VDg" secondAttribute="centerY" id="S6N-f8-aSI"/>
+                                    <constraint firstItem="CaD-15-3Wx" firstAttribute="leading" secondItem="aB9-Gu-NBL" secondAttribute="trailing" constant="25" id="ZIg-wq-1Vw"/>
+                                    <constraint firstItem="CaD-15-3Wx" firstAttribute="centerY" secondItem="cQ5-H0-VDg" secondAttribute="centerY" id="Zsb-zq-2Qm"/>
+                                    <constraint firstItem="BWw-ih-cUm" firstAttribute="leading" secondItem="cQ5-H0-VDg" secondAttribute="leading" id="bkd-qz-1j8"/>
+                                    <constraint firstAttribute="trailing" secondItem="BWw-ih-cUm" secondAttribute="trailing" id="hgo-Wf-OMR"/>
+                                    <constraint firstItem="rS3-fs-Fgk" firstAttribute="top" secondItem="BWw-ih-cUm" secondAttribute="bottom" constant="11" id="pgT-6L-Od0"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="dark"/>
                         <constraints>
+                            <constraint firstItem="cQ5-H0-VDg" firstAttribute="leading" secondItem="i03-Bm-zDU" secondAttribute="leading" id="16W-53-4gS"/>
+                            <constraint firstItem="lnn-6Q-YqO" firstAttribute="trailing" secondItem="i03-Bm-zDU" secondAttribute="trailing" constant="15" id="5tX-xJ-Vxu"/>
                             <constraint firstItem="1q9-2v-QBm" firstAttribute="top" secondItem="lnn-6Q-YqO" secondAttribute="top" constant="80" id="B2R-Rh-227"/>
-                            <constraint firstItem="lnn-6Q-YqO" firstAttribute="trailing" secondItem="i03-Bm-zDU" secondAttribute="trailing" constant="15" id="OJ7-pW-fjM"/>
                             <constraint firstItem="lnn-6Q-YqO" firstAttribute="bottom" secondItem="i03-Bm-zDU" secondAttribute="bottom" constant="30" id="PcF-Uq-hJ9"/>
-                            <constraint firstItem="i03-Bm-zDU" firstAttribute="top" secondItem="1q9-2v-QBm" secondAttribute="bottom" constant="10" id="Qhq-xf-muU"/>
+                            <constraint firstItem="i03-Bm-zDU" firstAttribute="top" secondItem="1q9-2v-QBm" secondAttribute="bottom" constant="100" id="Qhq-xf-muU"/>
+                            <constraint firstItem="i03-Bm-zDU" firstAttribute="top" secondItem="cQ5-H0-VDg" secondAttribute="bottom" id="UOR-cP-0hF"/>
                             <constraint firstItem="i03-Bm-zDU" firstAttribute="leading" secondItem="lnn-6Q-YqO" secondAttribute="leading" constant="15" id="ZVu-VC-y5n"/>
+                            <constraint firstItem="cQ5-H0-VDg" firstAttribute="top" secondItem="1q9-2v-QBm" secondAttribute="bottom" id="b5b-1g-qGb"/>
+                            <constraint firstItem="cQ5-H0-VDg" firstAttribute="trailing" secondItem="i03-Bm-zDU" secondAttribute="trailing" id="bRe-JT-7Bg"/>
                             <constraint firstItem="1q9-2v-QBm" firstAttribute="leading" secondItem="lnn-6Q-YqO" secondAttribute="leading" constant="20" id="i6h-OR-Jd9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lnn-6Q-YqO"/>
