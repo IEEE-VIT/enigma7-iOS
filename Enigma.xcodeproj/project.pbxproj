@@ -18,6 +18,9 @@
 		5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868824FB949200FE2EEC /* CustomTextField.swift */; };
 		5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
 		5B32868D24FBA02600FE2EEC /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868C24FBA02600FE2EEC /* View.swift */; };
+		5B32868F24FBD97900FE2EEC /* xpBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868E24FBD97900FE2EEC /* xpBar.swift */; };
+		5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32869024FC0A4D00FE2EEC /* HintAlert.xib */; };
+		5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869424FC0E9400FE2EEC /* HintAlert.swift */; };
 		5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */; };
 		5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */; };
 		5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB72124FAC9F8006D5541 /* Main.storyboard */; };
@@ -83,6 +86,9 @@
 		5B32868824FB949200FE2EEC /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5B32868A24FB9AC000FE2EEC /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		5B32868C24FBA02600FE2EEC /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		5B32868E24FBD97900FE2EEC /* xpBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xpBar.swift; sourceTree = "<group>"; };
+		5B32869024FC0A4D00FE2EEC /* HintAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintAlert.xib; sourceTree = "<group>"; };
+		5B32869424FC0E9400FE2EEC /* HintAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintAlert.swift; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +236,9 @@
 				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
 				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
 				5B32868824FB949200FE2EEC /* CustomTextField.swift */,
+				5B32868E24FBD97900FE2EEC /* xpBar.swift */,
+				5B32869024FC0A4D00FE2EEC /* HintAlert.xib */,
+				5B32869424FC0E9400FE2EEC /* HintAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BABB75B24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */,
+				5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */,
 				5BABB76424FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
 				5BABB76124FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */,
 				5BABB76724FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */,
@@ -439,6 +449,7 @@
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
+				5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */,
 				5B32867724FB619F00FE2EEC /* Button.swift in Sources */,
 				5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */,
 				5B32868324FB6ACE00FE2EEC /* ProfileViewController.swift in Sources */,
@@ -448,6 +459,7 @@
 				5B32868124FB6AC700FE2EEC /* StoryViewController.swift in Sources */,
 				5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */,
 				5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */,
+				5B32868F24FBD97900FE2EEC /* xpBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
