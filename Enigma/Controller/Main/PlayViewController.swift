@@ -56,7 +56,12 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func hintTapped(_ sender: Any) {
-        
+        print("TAPPED")
+      let headerView = HintAlert()
+        self.addChild(headerView)
+        self.view.addSubview(headerView.view)
+        headerView.didMove(toParent: self)
+        headerView.view.frame = self.view.frame
     }
     
     func showProgress(){

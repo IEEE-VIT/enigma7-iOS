@@ -587,7 +587,7 @@
                                                     <constraint firstAttribute="width" secondItem="3pS-Lr-plb" secondAttribute="height" multiplier="2:1" id="SRv-lk-bzS"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[ Use hint ]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-k0-9xg">
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[ Use hint ]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-k0-9xg">
                                                 <rect key="frame" x="36.5" y="236" width="293" height="21"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
