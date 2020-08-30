@@ -589,9 +589,13 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[ Use hint ]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-k0-9xg">
                                                 <rect key="frame" x="36.5" y="269.5" width="293" height="23.5"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="w0O-gk-q1D" appends="YES" id="Wi9-g1-Dem"/>
+                                                </connections>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="someUserName" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-Qd-Elv" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="328" width="366" height="39"/>
@@ -609,6 +613,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s76-d7-9L3">
                                                 <rect key="frame" x="128" y="397" width="110" height="37"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="s76-d7-9L3" secondAttribute="height" multiplier="3" id="kZl-0C-cov"/>
                                                 </constraints>
@@ -616,6 +621,9 @@
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" name="tertiary"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="submitTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="LA7-Z5-GwD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="dark"/>
@@ -683,6 +691,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7P-3b-fYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="w0O-gk-q1D">
+                    <connections>
+                        <action selector="hintTapped:" destination="5eb-eE-DVo" id="jqI-Nc-xQD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4347.826086956522" y="-471.42857142857139"/>
         </scene>

@@ -21,6 +21,8 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     
     var previousTag : Int = 0
+    
+    let hint = "Vitae habitasse fames feugiat morbi."
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,11 @@ class PlayViewController: UIViewController {
     }
     
     
+    @IBAction func submitTapped(_ sender: Any) {
+        
+    }
+    
+    
     @IBAction func powerupTapped(_ sender: UIButton) {
         let powerup = sender.tag
         let powerupButton = powerupButtons[powerup]
@@ -45,6 +52,11 @@ class PlayViewController: UIViewController {
         setButton(powerupButton, true)
         
         self.previousTag = sender.tag
+    }
+    
+    
+    @IBAction func hintTapped(_ sender: Any) {
+        
     }
     
     func showProgress(){
