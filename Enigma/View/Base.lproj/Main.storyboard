@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inconsolata.otf">
+            <string>Inconsolata</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tabbar Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -100,22 +105,95 @@
                     <view key="view" contentMode="scaleToFill" id="q0E-Ng-NXG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.25" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1wd-m8-bNK">
+                                <rect key="frame" x="93" y="66" width="228" height="566"/>
+                                <color key="backgroundColor" name="dark"/>
+                                <mutableString key="text">10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001</mutableString>
+                                <color key="textColor" name="secondary"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Union" translatesAutoresizingMaskIntoConstraints="NO" id="9MQ-3W-YRN">
+                                <rect key="frame" x="50" y="136" width="314" height="53.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9MQ-3W-YRN" secondAttribute="height" multiplier="5.875" id="jUL-l5-VZ7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online cryptic hunt" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-oY-q0g">
+                                <rect key="frame" x="71" y="209.5" width="272" height="18"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-gN-ODh">
+                                <rect key="frame" x="62" y="757.5" width="290" height="54.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="height" multiplier="5.32" id="Dww-4f-thQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
+                                <state key="normal" title="Sign up with Google">
+                                    <color key="titleColor" name="quaternary"/>
+                                </state>
+                                <connections>
+                                    <action selector="signinWithGoogle:" destination="huf-Oc-YyW" eventType="touchUpInside" id="ufC-dA-XlY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-he-vho">
+                                <rect key="frame" x="62" y="682" width="290" height="54.5"/>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
+                                <state key="normal" title="Sign up with Apple">
+                                    <color key="titleColor" name="quaternary"/>
+                                </state>
+                                <connections>
+                                    <action selector="signinWithApple:" destination="huf-Oc-YyW" eventType="touchUpInside" id="Tiv-4F-xUe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" name="dark"/>
+                        <constraints>
+                            <constraint firstItem="Bu5-he-vho" firstAttribute="top" secondItem="1wd-m8-bNK" secondAttribute="bottom" constant="50" id="0jg-W7-P7Q"/>
+                            <constraint firstItem="9MQ-3W-YRN" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="92" id="2YX-tq-Hic"/>
+                            <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="height" multiplier="5.32" id="39M-bx-uwU"/>
+                            <constraint firstItem="1wd-m8-bNK" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.55" id="AoL-dI-SqR"/>
+                            <constraint firstItem="1wd-m8-bNK" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="22" id="CJS-jc-T7t"/>
+                            <constraint firstItem="9MQ-3W-YRN" firstAttribute="leading" secondItem="DYC-0i-PmK" secondAttribute="leading" constant="50" id="E3q-do-7Fb"/>
+                            <constraint firstItem="dVM-gN-ODh" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="FWu-f1-T5R"/>
+                            <constraint firstItem="dVM-gN-ODh" firstAttribute="top" secondItem="Bu5-he-vho" secondAttribute="bottom" constant="21" id="GZN-DG-NOj"/>
+                            <constraint firstItem="DIE-oY-q0g" firstAttribute="width" secondItem="9MQ-3W-YRN" secondAttribute="width" multiplier="0.866242" id="KjY-6v-gS9"/>
+                            <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" id="OJB-Eq-Jqf"/>
+                            <constraint firstItem="DYC-0i-PmK" firstAttribute="trailing" secondItem="9MQ-3W-YRN" secondAttribute="trailing" constant="50" id="Yno-Qx-5xW"/>
+                            <constraint firstItem="Bu5-he-vho" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dA4-2m-ouD"/>
+                            <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" id="dvY-VV-vgg"/>
+                            <constraint firstItem="1wd-m8-bNK" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="kcI-YO-wDg"/>
+                            <constraint firstItem="DIE-oY-q0g" firstAttribute="top" secondItem="9MQ-3W-YRN" secondAttribute="bottom" constant="20" id="mOa-xi-chA"/>
+                            <constraint firstItem="DYC-0i-PmK" firstAttribute="bottom" secondItem="dVM-gN-ODh" secondAttribute="bottom" constant="50" id="qyD-OV-yU7"/>
+                            <constraint firstItem="DIE-oY-q0g" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="zNs-WU-EoW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DYC-0i-PmK"/>
                     </view>
+                    <connections>
+                        <outlet property="appleButton" destination="Bu5-he-vho" id="9VW-fg-YNl"/>
+                        <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6l-il-lbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="130"/>
+            <point key="canvasLocation" x="1073.913043478261" y="129.91071428571428"/>
         </scene>
     </scenes>
     <resources>
         <image name="Questions" width="68" height="59"/>
+        <image name="Union" width="235.5" height="39.5"/>
         <image name="leaderboard" width="68" height="59"/>
+        <image name="online cryptic hunt" width="203" height="17.5"/>
         <image name="profile" width="68" height="59"/>
         <image name="story" width="68" height="59"/>
         <namedColor name="dark">
             <color red="0.030999999493360519" green="0.054999999701976776" blue="0.030999999493360519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="quaternary">
+            <color red="0.14900000393390656" green="0.875" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.078000001609325409" green="0.36899998784065247" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

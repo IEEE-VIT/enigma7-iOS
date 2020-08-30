@@ -9,11 +9,26 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
+    ///OUTLETS
+    @IBOutlet weak var appleButton: UIButton!
+    @IBOutlet weak var googleButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        appleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
+        googleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
+    }
+    
+    @IBAction func signinWithApple(_ sender: UIButton) {
+    }
+    
+    @IBAction func signinWithGoogle(_ sender: Any) {
+    }
+    
 }
