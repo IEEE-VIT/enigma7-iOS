@@ -57,11 +57,10 @@ class PlayViewController: UIViewController {
     
     @IBAction func hintTapped(_ sender: Any) {
         print("TAPPED")
-      let headerView = HintAlert()
-        self.addChild(headerView)
-        self.view.addSubview(headerView.view)
-        headerView.didMove(toParent: self)
-        headerView.view.frame = self.view.frame
+        let headerView = HintAlert()
+        headerView.modalPresentationStyle = .overFullScreen
+        headerView.delegate = self
+        self.present(headerView, animated: false, completion: nil)
     }
     
     func showProgress(){
@@ -79,4 +78,12 @@ class PlayViewController: UIViewController {
         }
     }
     
+}
+
+extension PlayViewController : AlertDelegate{
+    func hintUsed() {
+        hintLabel.isUserInteractionEnabled = false
+        hintLabel.text = self.hint
+        hintLabel.textAlignment = .left
+    }
 }

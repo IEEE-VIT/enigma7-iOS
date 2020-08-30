@@ -29,29 +29,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgW-qN-xay">
-                    <rect key="frame" x="25" y="326.5" width="364" height="243"/>
+                    <rect key="frame" x="31" y="330.5" width="352" height="235"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zt5-DA-r1Z">
-                            <rect key="frame" x="0.0" y="0.0" width="364" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="352" height="42.5"/>
                             <color key="backgroundColor" red="0.094117647060000004" green="0.1843137255" blue="0.14117647059999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to use hint?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe5-sk-W86">
-                            <rect key="frame" x="25" y="54" width="314" height="52"/>
+                            <rect key="frame" x="25" y="52.5" width="302" height="52"/>
                             <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                             <color key="textColor" name="light"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[ this will deduct points ]" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TX-Rr-Kcw">
-                            <rect key="frame" x="20" y="111" width="324" height="21"/>
+                            <rect key="frame" x="20" y="109.5" width="312" height="21"/>
                             <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="16"/>
                             <color key="textColor" name="light"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6l-jH-ceX">
-                            <rect key="frame" x="72.5" y="188" width="219" height="32"/>
+                            <rect key="frame" x="70.5" y="181" width="211" height="31"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4k-Aq-PvL">
-                                    <rect key="frame" x="0.0" y="0.0" width="80.5" height="32"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="77.5" height="31"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="j4k-Aq-PvL" secondAttribute="height" multiplier="2.5" id="XPT-2e-tfd"/>
                                     </constraints>
@@ -63,7 +63,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vuc-Jb-ZGe">
-                                    <rect key="frame" x="138.5" y="0.0" width="80.5" height="32"/>
+                                    <rect key="frame" x="133.5" y="0.0" width="77.5" height="31"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="Vuc-Jb-ZGe" secondAttribute="height" multiplier="2.5" id="Wn4-UQ-pmL"/>
                                     </constraints>
@@ -109,7 +109,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="hgW-qN-xay" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8UE-ll-Qey"/>
-                <constraint firstItem="hgW-qN-xay" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.88" id="KLf-f9-mTO"/>
+                <constraint firstItem="hgW-qN-xay" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.85" id="KLf-f9-mTO"/>
                 <constraint firstItem="hgW-qN-xay" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pym-B4-UHH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

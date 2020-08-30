@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol AlertDelegate {
+protocol AlertDelegate : class {
     func hintUsed()
 }
 
@@ -35,15 +35,16 @@ class HintAlert: UIViewController {
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
     
-    weak var delegate : AlertDelegate!
+    weak var delegate : AlertDelegate?
     
     
     @IBAction func yesTapped(_ sender: Any) {
-        delegate.hintUsed()
+        delegate?.hintUsed()
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     
