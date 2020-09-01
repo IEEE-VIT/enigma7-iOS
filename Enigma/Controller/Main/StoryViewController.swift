@@ -10,8 +10,12 @@ import UIKit
 
 class StoryViewController: UIViewController {
 
+    @IBOutlet weak var storyTextView: UITextView!
+    
+    let story = "Imperdiet vitae praesent ultrices libero tincidunt magna.\n\nImperdiet vitae praesent ultrices libero tincidunt magna.\n\nImperdiet vitae praesent ultrices libero tincidunt magna.\n\nImperdiet vitae praesent ultrices libero tincidunt magna.\n\nImperdiet vitae praesent ultrices libero tincidunt magna.\nImperdiet vitae praesent ultrices libero tincidunt magna."
     override func viewDidLoad() {
         super.viewDidLoad()
+        storyTextView.text = story
     }
     
 }

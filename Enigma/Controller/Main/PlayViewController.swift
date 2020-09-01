@@ -20,16 +20,23 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var answerTextField: CustomTextField!
     @IBOutlet weak var submitButton: UIButton!
     
+    @IBOutlet weak var scroll: UIScrollView!
+    
     var previousTag : Int = 0
     
     let hint = "Vitae habitasse fames feugiat morbi."
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         for button in powerupButtons{
             setButton(button,false)
         }
-        
+        submitButton.addBorder(width: 2, .tertiary)
+        questionImageView.addBorder(width: 2, .tertiary)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,7 +47,6 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func submitTapped(_ sender: Any) {
-        
     }
     
     
@@ -64,7 +70,7 @@ class PlayViewController: UIViewController {
     }
     
     func showProgress(){
-        let progress = xpBar(for: progressBar, duration: 2, startValue: 0.0, endValue: 0.5)
+        let progress = xpBar(for: progressBar, duration: 1.5, startValue: 0.0, endValue: 0.6)
         self.progressBar.layer.insertSublayer(progress, above: self.progressBar.layer)
     }
     
@@ -78,6 +84,20 @@ class PlayViewController: UIViewController {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+}
+
+extension PlayViewController : UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 1) {
+            let scrollPoint = CGPoint(x: 0, y: 80)
+            self.scroll.setContentOffset(scrollPoint, animated: true)
+        }
+    }
+    
 }
 
 extension PlayViewController : AlertDelegate{
@@ -87,3 +107,4 @@ extension PlayViewController : AlertDelegate{
         hintLabel.textAlignment = .left
     }
 }
+
