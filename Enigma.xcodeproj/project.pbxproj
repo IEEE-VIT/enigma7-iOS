@@ -240,9 +240,9 @@
 			children = (
 				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
 				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
+				5B32869024FC0A4D00FE2EEC /* HintAlert.xib */,
 				5B32868824FB949200FE2EEC /* CustomTextField.swift */,
 				5B32868E24FBD97900FE2EEC /* xpBar.swift */,
-				5B32869024FC0A4D00FE2EEC /* HintAlert.xib */,
 				5B32869424FC0E9400FE2EEC /* HintAlert.swift */,
 				5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */,
 			);

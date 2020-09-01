@@ -11,14 +11,11 @@ import UIKit
 //MARK: Extension for UIBUTTON
 
 extension UIButton {
-    
-//    ///`Function To add Border to Button`
-//    /// color - the borderColor of the button
-//    /// width - the borderWidth of the button ( Default = 1 px )
-//    func addBorder(width : CGFloat = 1,_ color : UIColor, alpha : CGFloat = 1){
-//        self.layer.borderWidth = width
-//        let borderColor = color.withAlphaComponent(alpha).cgColor
-//        self.layer.borderColor = borderColor
-//    }
-    
+    func bottomShadow(_ value : CGFloat){
+        self.layer.shadowColor = #colorLiteral(red: 0.07450980392, green: 0.07843137255, blue: 0.07450980392, alpha: 1).cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: value)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0
+        self.layer.masksToBounds = false
+    }
 }

@@ -29,12 +29,14 @@ class TabbarController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-           HomeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController")
-        
+        HomeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController")
+        setupButtons()
         instantiateViews()
         setupHeader()
         setupView(HomeViewController)
     }
+    
+    
     
     
     @IBAction func tabSelected(_ sender: UIButton) {
@@ -42,6 +44,11 @@ class TabbarController: UIViewController {
         let previousIndex = selectedIndex
         selectedIndex = sender.tag
         buttons[previousIndex].isSelected = false
+        UIView.animate(withDuration: 0.4) {
+            self.buttons[previousIndex].bottomShadow(8)
+            self.buttons[self.selectedIndex].bottomShadow(2)
+        }
+        
         let previousVC = viewControllers[previousIndex]
         previousVC.willMove(toParent: nil)
         previousVC.view.removeFromSuperview()
@@ -84,6 +91,10 @@ class TabbarController: UIViewController {
         containerView.addSubview(viewController.view)
         viewController.didMove(toParent: self)
     }
-
-
+    
+    func setupButtons(){
+        for button in buttons{
+            button.bottomShadow(8)
+        }
+    }
 }
