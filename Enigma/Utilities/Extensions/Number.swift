@@ -12,4 +12,9 @@ extension Int{
     var stringValue : String{
         return String(self)
     }
+    
+    var timeValue : String{
+        let time = (stringValue.count == 1) ? "0"+stringValue : stringValue
+        return time
+    }
 }
