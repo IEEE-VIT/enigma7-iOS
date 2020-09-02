@@ -555,10 +555,15 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QDO-Qs-blk">
                                 <rect key="frame" x="20" y="178" width="369" height="634"/>
+                                <gestureRecognizers/>
                                 <string key="text">Etiam fermentum ut bibendum egestas id maecenas aliquam lacinia nulla.                     Tempor enim viverra eu laoreet.                      </string>
                                 <color key="textColor" name="tertiary"/>
                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nlz-mK-WIn" id="v7l-Bb-0qx"/>
+                                    <outletCollection property="gestureRecognizers" destination="UCe-ov-QnF" appends="YES" id="Zp9-fJ-SRU"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" name="dark"/>
@@ -578,6 +583,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx3-ee-rur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UCe-ov-QnF">
+                    <connections>
+                        <action selector="textTappedd:" destination="nlz-mK-WIn" id="z6A-6A-cQm"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4346" y="666"/>
         </scene>
