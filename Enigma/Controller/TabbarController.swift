@@ -20,13 +20,9 @@ class TabbarController: UIViewController {
     var StoryViewController : UIViewController!
     var ProfileViewController : UIViewController!
     var RulesViewController : UIViewController!
-    
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 0
 
-    
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         HomeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController")

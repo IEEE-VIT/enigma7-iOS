@@ -36,16 +36,7 @@ class UserNameViewController: UIViewController {
     }
     
     func gotoTimer(){
-        let viewController  = storyBoard.instantiateViewController(identifier: "CountdownViewController")
-            viewController.view.frame = self.view.bounds
-               viewController.view.layer.cornerRadius = 4
-               viewController.view.layer.borderWidth = 3
-               viewController.view.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-            
-            viewController.willMove(toParent: self)
-            self.view.addSubview(viewController.view)
-            self.addChild(viewController)
-            viewController.didMove(toParent: self)
+        present("CountdownViewController")
     }
     
     func validate()->Bool{
@@ -66,7 +57,7 @@ extension UserNameViewController : UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text != ""{
             nextButton.isHidden = false
-            print(textField.text)
+            print(textField.text ?? "YO")
         }
     }
 }

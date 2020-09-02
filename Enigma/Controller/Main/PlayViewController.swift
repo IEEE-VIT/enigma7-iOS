@@ -62,7 +62,6 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func hintTapped(_ sender: Any) {
-        print("TAPPED")
         let headerView = HintAlert()
         headerView.modalPresentationStyle = .overFullScreen
         headerView.delegate = self

@@ -26,20 +26,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
-
-           let viewController  = storyBoard.instantiateViewController(identifier: "UserNameViewController")
-        viewController.view.frame = self.view.bounds
-           viewController.view.layer.cornerRadius = 4
-           viewController.view.layer.borderWidth = 3
-           viewController.view.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        
-        viewController.willMove(toParent: self)
-        self.view.addSubview(viewController.view)
-        self.addChild(viewController)
-        viewController.didMove(toParent: self)
+        present("UserNameViewController")
     }
     
     @IBAction func signinWithGoogle(_ sender: Any) {
+        present("UserNameViewController")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
