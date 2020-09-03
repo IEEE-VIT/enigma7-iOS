@@ -29,6 +29,7 @@ class StoryViewController: UIViewController {
     @IBAction func textTappedd(_ sender: Any) {
         storyTextView.text = story
         timer?.invalidate()
+        timer = nil
     }
     
     
@@ -37,7 +38,9 @@ class StoryViewController: UIViewController {
         for letter in story {
             let time = 0.1 * charIndex
             timer = Timer.scheduledTimer(withTimeInterval: time, repeats: false) { (_) in
+                if self.timer != nil {
                 self.storyTextView.text?.append(letter)
+                }
             }
             charIndex += 1
         }
