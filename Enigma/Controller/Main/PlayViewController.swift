@@ -53,6 +53,10 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func submitTapped(_ sender: Any) {
+        let vie = AKAlert()
+        vie.frame = CGRect(x: 0, y: 0, width: 300, height: 100)
+        self.view.addSubview(vie)
+        vie.center = self.view.center
     }
     
     
