@@ -26,8 +26,15 @@ class AKAlert: UIView {
     }
     
     init(s: String, i: Int) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        super.init(frame: CGRect())
         self.initSubViews()
+    }
+    
+    enum ALertType {
+        case success
+        case failure
+        case close
+        
     }
     
     private func initSubViews() {

@@ -53,7 +53,7 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func submitTapped(_ sender: Any) {
-        let vie = AKAlert()
+        let vie = AKAlert(s: "", i: 3)
         let width = UIScreen.main.bounds.width * 0.8
         let height = width / 3.33
         vie.frame = CGRect(x: 0, y: 0, width: width, height: height)
