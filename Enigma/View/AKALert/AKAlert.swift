@@ -35,6 +35,20 @@ class AKAlert: UIView {
         case failure
         case close
         
+        var message : String{
+            switch self {
+            case .success:
+                return "Correct Response"
+            case .failure:
+                return "Try again !"
+            case .close:
+                return "Response is close to the answer"
+            }
+        }
+        
+        var icon : UIImage?{
+            return UIImage(named: message)
+        }
     }
     
     private func initSubViews() {
