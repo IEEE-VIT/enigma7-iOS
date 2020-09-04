@@ -57,6 +57,7 @@
 		5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB77324FAD063006D5541 /* Inconsolata.otf */; };
 		5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7B924FADEEB006D5541 /* TabbarController.swift */; };
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
+		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83A0124FEAFC900A93885 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		5BABB77324FAD063006D5541 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AKAlert.xib; sourceTree = "<group>"; };
 		5BF83A0124FEAFC900A93885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +250,7 @@
 				5B32868E24FBD97900FE2EEC /* xpBar.swift */,
 				5B32869424FC0E9400FE2EEC /* HintAlert.swift */,
 				5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */,
+				5BE7D7E02501F38100222707 /* AKAlert.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */,
 				5BABB75B24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */,
 				5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */,
 				5BABB76424FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
@@ -684,6 +688,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = EnigmaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -705,6 +710,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = EnigmaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -725,6 +731,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = EnigmaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -744,6 +751,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = EnigmaUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
