@@ -25,11 +25,17 @@ class AKAlert: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    init(s: String, i: Int) {
+        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        self.initSubViews()
+    }
+    
     private func initSubViews() {
         let nib = UINib (nibName: String (describing: type(of: self) ), bundle: Bundle ( for: type(of: self) ))
         nib.instantiate (withOwner: self, options: nil)
         AKAlertView.translatesAutoresizingMaskIntoConstraints = false
         addSubview (AKAlertView)
+        AKAlertView.addBorder(width: 4, .primary, alpha: 0.8)
         self.addConstraints()
     }
     

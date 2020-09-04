@@ -120,7 +120,7 @@
 		5BABB77324FAD063006D5541 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AKAlert.xib; sourceTree = "<group>"; };
+		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF83A0124FEAFC900A93885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,14 +246,12 @@
 			isa = PBXGroup;
 			children = (
 				5BABB72124FAC9F8006D5541 /* Main.storyboard */,
+				5BE7D7E52501FDFC00222707 /* HintAlert */,
+				5BE7D7E42501FDF100222707 /* AKALert */,
 				5BABB72624FACA01006D5541 /* LaunchScreen.storyboard */,
-				5B32869024FC0A4D00FE2EEC /* HintAlert.xib */,
 				5B32868824FB949200FE2EEC /* CustomTextField.swift */,
 				5B32868E24FBD97900FE2EEC /* xpBar.swift */,
-				5B32869424FC0E9400FE2EEC /* HintAlert.swift */,
 				5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */,
-				5BE7D7E02501F38100222707 /* AKAlert.xib */,
-				5BE7D7E22501F52700222707 /* AKAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +299,24 @@
 				5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5BE7D7E42501FDF100222707 /* AKALert */ = {
+			isa = PBXGroup;
+			children = (
+				5BE7D7E02501F38100222707 /* AKAlert.xib */,
+				5BE7D7E22501F52700222707 /* AKAlert.swift */,
+			);
+			path = AKALert;
+			sourceTree = "<group>";
+		};
+		5BE7D7E52501FDFC00222707 /* HintAlert */ = {
+			isa = PBXGroup;
+			children = (
+				5B32869024FC0A4D00FE2EEC /* HintAlert.xib */,
+				5B32869424FC0E9400FE2EEC /* HintAlert.swift */,
+			);
+			path = HintAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
