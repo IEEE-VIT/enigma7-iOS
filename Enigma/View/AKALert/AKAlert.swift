@@ -25,12 +25,14 @@ class AKAlert: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(s: String, i: Int) {
+    init(type : ALertType) {
         super.init(frame: CGRect())
         self.initSubViews()
+        self.alertMessage.text = type.message
+        self.alertIcon.image = type.icon
     }
     
-    enum ALertType {
+    enum ALertType : String{
         case success
         case failure
         case close
@@ -47,7 +49,7 @@ class AKAlert: UIView {
         }
         
         var icon : UIImage?{
-            return UIImage(named: message)
+            return UIImage(named: self.rawValue)
         }
     }
     
