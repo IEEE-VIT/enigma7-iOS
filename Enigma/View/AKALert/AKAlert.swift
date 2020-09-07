@@ -32,6 +32,11 @@ class AKAlert: UIView {
         self.alertIcon.image = type.icon
     }
     
+    func dismissAlert(){
+        self.AKAlertView.removeFromSuperview()
+        self.removeFromSuperview()
+    }
+    
     enum ALertType : String{
         case success
         case failure
