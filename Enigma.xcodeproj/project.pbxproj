@@ -31,6 +31,7 @@
 		5B8F72302506954600C427F7 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722F2506954600C427F7 /* AuthenticationServices.framework */; };
 		5B8F72322506955800C427F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72312506955800C427F7 /* SystemConfiguration.framework */; };
 		5B8F7234250695ED00C427F7 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F7233250695ED00C427F7 /* credentials.plist */; };
+		5B8F7238250696C400C427F7 /* Google+Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7237250696C400C427F7 /* Google+Signin.swift */; };
 		5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */; };
 		5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */; };
 		5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB72124FAC9F8006D5541 /* Main.storyboard */; };
@@ -113,6 +114,7 @@
 		5B8F722F2506954600C427F7 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		5B8F72312506955800C427F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5B8F7233250695ED00C427F7 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		5B8F7237250696C400C427F7 /* Google+Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Google+Signin.swift"; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B8F7235250696B200C427F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5B8F7237250696C400C427F7 /* Google+Signin.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5BABB70F24FAC9F8006D5541 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		5BABB71A24FAC9F8006D5541 /* Enigma */ = {
 			isa = PBXGroup;
 			children = (
+				5B8F7235250696B200C427F7 /* Services */,
 				5B8F72222506928D00C427F7 /* Google */,
 				5BABB74E24FACB68006D5541 /* Utilities */,
 				5BABB74D24FACB2A006D5541 /* Controller */,
@@ -544,6 +555,7 @@
 				5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */,
 				5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */,
 				5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */,
+				5B8F7238250696C400C427F7 /* Google+Signin.swift in Sources */,
 				5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */,
 				5B32868F24FBD97900FE2EEC /* xpBar.swift in Sources */,
 			);
