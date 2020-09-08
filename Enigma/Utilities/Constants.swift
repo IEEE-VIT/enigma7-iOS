@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+
 extension UIColor {
     static let dark = #colorLiteral(red: 0.03137254902, green: 0.05490196078, blue: 0.03137254902, alpha: 1)
     static let primary = #colorLiteral(red: 0.09411764706, green: 0.1843137255, blue: 0.1411764706, alpha: 1)
@@ -17,5 +20,12 @@ extension UIColor {
     static let light = #colorLiteral(red: 0.9333333333, green: 0.9568627451, blue: 0.9098039216, alpha: 1)
 }
 
-let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+enum httpMethod: String {
+    case PUT
+    case POST
+    case GET
+}
 
+class Keys {
+    static let token = "EnigmaToken"
+}
