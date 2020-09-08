@@ -11,6 +11,14 @@ import Foundation
 class PostController {
     static let shared: PostController = PostController()
     
-    func signup(type: SignupType,completion: @escaping(Bool,String?) -> ()) {
+    func signup(type: SignupType,body:SignupRequest,completion: @escaping(Bool,SignupResponse?,String) -> ()) {
+        WebHelper.sendPOSTRequest(url: type.url, responseType: SignupResponse.self, body: body) { (response, error) in
+            if let response = response{
+                completion(true,response,"success")
+            }else{
+                completion(false,nil,error?.localizedDescription ?? "Error")
+            }
+        }
     }
+    
 }
