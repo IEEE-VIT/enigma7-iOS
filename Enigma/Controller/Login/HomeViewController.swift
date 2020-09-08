@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class HomeViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        googleSetup()
     }
     
     override func viewDidLayoutSubviews() {
@@ -30,7 +32,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithGoogle(_ sender: Any) {
-        present("UserNameViewController")
+        GIDSignIn.sharedInstance().signIn()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
