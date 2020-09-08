@@ -27,6 +27,7 @@ extension HomeViewController: GIDSignInDelegate {
         }
         
         guard let code = user.serverAuthCode else { return }
+        print(code)
         //TODO send post request
     }
     

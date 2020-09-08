@@ -39,6 +39,7 @@
 		5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
 		5B921FE72507505200B2AFF4 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE62507505200B2AFF4 /* PostController.swift */; };
 		5B921FEB2507516E00B2AFF4 /* Signup Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FEA2507516E00B2AFF4 /* Signup Request.swift */; };
+		5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FEE250752F500B2AFF4 /* Signup Response.swift */; };
 		5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */; };
 		5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */; };
 		5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB72124FAC9F8006D5541 /* Main.storyboard */; };
@@ -129,6 +130,7 @@
 		5B921FE42507503000B2AFF4 /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
 		5B921FE62507505200B2AFF4 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		5B921FEA2507516E00B2AFF4 /* Signup Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup Request.swift"; sourceTree = "<group>"; };
+		5B921FEE250752F500B2AFF4 /* Signup Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup Response.swift"; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			children = (
 				5B32869824FC27F100FE2EEC /* LeaderboardModel.swift */,
 				5B921FE0250749D900B2AFF4 /* Error.swift */,
+				5B921FEE250752F500B2AFF4 /* Signup Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
+				5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
 				5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */,
 				5B32867724FB619F00FE2EEC /* Button.swift in Sources */,

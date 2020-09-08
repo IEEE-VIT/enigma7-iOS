@@ -11,4 +11,6 @@ import Foundation
 class PostController {
     static let shared: PostController = PostController()
     
+    func signup(type: SignupType,completion: @escaping(Bool,String?) -> ()) {
+    }
 }
