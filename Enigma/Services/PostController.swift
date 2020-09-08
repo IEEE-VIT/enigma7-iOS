@@ -13,7 +13,7 @@ class PostController {
     
     func signup(type: SignupType,body:SignupRequest,completion: @escaping(Bool,SignupResponse?,String) -> ()) {
         WebHelper.sendPOSTRequest(url: type.url, responseType: SignupResponse.self, body: body) { (response, error) in
-            if let response = response{
+            if let response = response,let _ = response.key{
                 completion(true,response,"success")
             }else{
                 completion(false,nil,error?.localizedDescription ?? "Error")
