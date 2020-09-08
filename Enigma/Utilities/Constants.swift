@@ -17,5 +17,11 @@ extension UIColor {
     static let light = #colorLiteral(red: 0.9333333333, green: 0.9568627451, blue: 0.9098039216, alpha: 1)
 }
 
+enum httpMethod: String {
+    case PUT
+    case POST
+    case GET
+}
+
 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 
