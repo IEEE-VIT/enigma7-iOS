@@ -306,7 +306,6 @@
 			children = (
 				5B32869824FC27F100FE2EEC /* LeaderboardModel.swift */,
 				5B921FE0250749D900B2AFF4 /* Error.swift */,
-				5B921FE225074EAC00B2AFF4 /* Defaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +341,7 @@
 				5BABB75024FACCB9006D5541 /* Fonts */,
 				5BABB74F24FACBE4006D5541 /* Helpers */,
 				5BABB76E24FACDD9006D5541 /* Constants.swift */,
+				5B921FE225074EAC00B2AFF4 /* Defaults.swift */,
 				5B921FDC250745A900B2AFF4 /* Network Constants.swift */,
 				5B921FDE250748BE00B2AFF4 /* Web Helper.swift */,
 			);
