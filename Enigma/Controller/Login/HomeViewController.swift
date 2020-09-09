@@ -28,6 +28,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
+        Haptic.hapticFeedback(.haptic(.success))
         present("UserNameViewController")
     }
     
