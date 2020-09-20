@@ -25,12 +25,7 @@ extension HomeViewController: GIDSignInDelegate {
             //TODO
             return
         }
-        
-        let request = SignupRequest(code: user.serverAuthCode, type: .google)
-        PostController.shared.signup(type: .google, body: request) { (success, response, error) in
-            print(success,response,error)
-            //TODO proceed
-        }
+        signinWithBackend(type:.google, code:user.serverAuthCode)
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {

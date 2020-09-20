@@ -36,13 +36,9 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-    
             guard let data = appleIDCredential.authorizationCode else { return }
             guard let code = String(data: data, encoding: .utf8) else { return }
-            
-            print(code)
-            
-            //TODO send to backend
+            signinWithBackend(type: .apple, code: code)
         }
     }
     

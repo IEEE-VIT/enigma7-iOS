@@ -40,6 +40,13 @@ class HomeViewController: UIViewController {
         
     }
     
+    func signinWithBackend(type : SignupType, code : String){
+        let request = SignupRequest(code: code, type: type)
+        PostController.shared.signup(type: type, body: request) { (success, response, error) in
+            //TODO
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let userVC = segue.destination as? UserNameViewController{
             userVC.view.frame = self.view.frame
