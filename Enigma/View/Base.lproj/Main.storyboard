@@ -114,7 +114,7 @@
                         <color key="backgroundColor" red="0.16862745098039217" green="0.1764705882352941" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XCs-0i-Dxm" firstAttribute="top" secondItem="VTk-pk-dCY" secondAttribute="bottom" constant="10" id="01K-BN-QHv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XCs-0i-Dxm" secondAttribute="bottom" id="1UZ-gw-zaf"/>
+                            <constraint firstAttribute="bottom" secondItem="XCs-0i-Dxm" secondAttribute="bottom" constant="34" id="1UZ-gw-zaf"/>
                             <constraint firstItem="jIz-a1-mdp" firstAttribute="trailing" secondItem="VTk-pk-dCY" secondAttribute="trailing" id="9cl-mz-VeL"/>
                             <constraint firstItem="VTk-pk-dCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="AH9-Im-pQV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VTk-pk-dCY" secondAttribute="trailing" constant="18" id="GVd-ZJ-Ms7"/>
@@ -153,7 +153,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.25" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1wd-m8-bNK">
                                 <rect key="frame" x="93" y="66" width="228" height="491"/>
                                 <color key="backgroundColor" name="dark"/>
-                                <string key="text">10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001</string>
+                                <mutableString key="text">10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001</mutableString>
                                 <color key="textColor" name="secondary"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -236,7 +236,6 @@
                         <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
                         <outlet property="instagramButton" destination="CfQ-eL-TQp" id="ceY-5N-kVu"/>
                         <segue destination="rM5-1r-zw8" kind="showDetail" identifier="profilesetup" id="N1a-Vg-j9l"/>
-                        <segue destination="prk-ES-iZW" kind="show" id="YCx-bQ-8wM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6l-il-lbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -248,11 +247,11 @@
             <objects>
                 <viewController storyboardIdentifier="WebView" id="prk-ES-iZW" customClass="WebViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aEs-hP-SeL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLG-ws-gaA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>

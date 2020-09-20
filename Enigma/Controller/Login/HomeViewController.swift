@@ -46,7 +46,11 @@ class HomeViewController: UIViewController {
     func signinWithBackend(type : SignupType, code : String){
         let request = SignupRequest(code: code, type: type)
         PostController.shared.signup(type: type, body: request) { (success, response, error) in
-            //TODO
+            if success && response?.key != nil{
+                self.present("UserNameViewController")
+            } else {
+                //TODO show error
+            }
         }
     }
     

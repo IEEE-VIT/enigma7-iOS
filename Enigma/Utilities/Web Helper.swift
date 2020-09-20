@@ -74,6 +74,7 @@ class WebHelper {
                 }
                 return
             }
+            DebugRequest(url, request : postData, response : data)
             let decoder = JSONDecoder()
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
