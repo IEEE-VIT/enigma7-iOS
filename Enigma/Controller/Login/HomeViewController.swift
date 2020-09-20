@@ -18,9 +18,6 @@ class HomeViewController: UIViewController {
     
     ///VARIABLES
     var instagramApi = InstagramApi.shared
-    var testUserData = InstagramTestUser(access_token: "", user_id: 0)
-    var instagramUser: InstagramUser?
-    var signedIn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +40,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithInstagram(_ sender: UIButton) {
-        
+        InstagramSignin()
     }
     
     func signinWithBackend(type : SignupType, code : String){

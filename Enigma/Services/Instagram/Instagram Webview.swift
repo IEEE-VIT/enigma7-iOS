@@ -30,19 +30,19 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-      let request = navigationAction.request
-      self.instagramApi?.getTestUserIDAndToken(request: request) { [weak self] (instagramTestUser) in
-        self?.testUserData = instagramTestUser
-        DispatchQueue.main.async {
-          self?.dismissViewController()
+        let request = navigationAction.request
+        self.instagramApi?.getTestUserIDAndToken(request: request) { [weak self] (instagramTestUser) in
+            self?.testUserData = instagramTestUser
+            DispatchQueue.main.async {
+                self?.dismissViewController()
+            }
         }
-      }
-      decisionHandler(WKNavigationActionPolicy.allow)
+        decisionHandler(WKNavigationActionPolicy.allow)
     }
     func dismissViewController() {
         self.dismiss(animated: true) {
-            self.mainVC?.testUserData = self.testUserData!
+            print(self.testUserData)
         }
-}
+    }
 }
 
