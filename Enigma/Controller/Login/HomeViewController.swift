@@ -16,6 +16,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
     
+    ///VARIABLES
+    var instagramApi = InstagramApi.shared
+    var testUserData = InstagramTestUser(access_token: "", user_id: 0)
+    var instagramUser: InstagramUser?
+    var signedIn = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         googleSetup()
