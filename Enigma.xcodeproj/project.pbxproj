@@ -23,6 +23,7 @@
 		5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869424FC0E9400FE2EEC /* HintAlert.swift */; };
 		5B32869724FC256E00FE2EEC /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */; };
 		5B32869924FC27F100FE2EEC /* LeaderboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* LeaderboardModel.swift */; };
+		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
 		5B8F72262506929E00C427F7 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72232506929D00C427F7 /* GoogleSignIn.framework */; };
 		5B8F72272506929E00C427F7 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */; };
 		5B8F72282506929E00C427F7 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
@@ -114,6 +115,7 @@
 		5B32869424FC0E9400FE2EEC /* HintAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintAlert.swift; sourceTree = "<group>"; };
 		5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
 		5B32869824FC27F100FE2EEC /* LeaderboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardModel.swift; sourceTree = "<group>"; };
+		5B4AC2AE2517887600534934 /* Apple Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apple Signin.swift"; sourceTree = "<group>"; };
 		5B8F72232506929D00C427F7 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
 		5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
@@ -227,9 +229,18 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		5B4AC2AD2517886B00534934 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				5B4AC2AE2517887600534934 /* Apple Signin.swift */,
+			);
+			path = Apple;
+			sourceTree = "<group>";
+		};
 		5B8F72222506928D00C427F7 /* Google */ = {
 			isa = PBXGroup;
 			children = (
+				5B8F7237250696C400C427F7 /* Google+Signin.swift */,
 				5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */,
 				5B8F72232506929D00C427F7 /* GoogleSignIn.framework */,
 				5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */,
@@ -251,7 +262,7 @@
 		5B8F7235250696B200C427F7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				5B8F7237250696C400C427F7 /* Google+Signin.swift */,
+				5B4AC2AD2517886B00534934 /* Apple */,
 				5B921FE42507503000B2AFF4 /* ServiceController.swift */,
 				5B921FE62507505200B2AFF4 /* PostController.swift */,
 			);
@@ -587,6 +598,7 @@
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
+				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,
 				5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
 				5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */,
