@@ -16,6 +16,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
     
+    ///VARIABLES
+    var instagramApi = InstagramApi.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         googleSetup()
@@ -37,7 +40,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithInstagram(_ sender: UIButton) {
-        
+        InstagramSignin()
     }
     
     func signinWithBackend(type : SignupType, code : String){
