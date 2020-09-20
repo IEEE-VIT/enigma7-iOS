@@ -26,6 +26,7 @@
 		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
 		5B4AC2B42517908600534934 /* Instagram Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B32517908600534934 /* Instagram Signin.swift */; };
 		5B4AC2B6251790AC00534934 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B5251790AC00534934 /* InstagramAPI.swift */; };
+		5B4AC2B82517910B00534934 /* Instagram Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B72517910B00534934 /* Instagram Webview.swift */; };
 		5B8F72262506929E00C427F7 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72232506929D00C427F7 /* GoogleSignIn.framework */; };
 		5B8F72272506929E00C427F7 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */; };
 		5B8F72282506929E00C427F7 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
@@ -121,6 +122,7 @@
 		5B4AC2B025178A7E00534934 /* Enigma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enigma.entitlements; sourceTree = "<group>"; };
 		5B4AC2B32517908600534934 /* Instagram Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instagram Signin.swift"; sourceTree = "<group>"; };
 		5B4AC2B5251790AC00534934 /* InstagramAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
+		5B4AC2B72517910B00534934 /* Instagram Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instagram Webview.swift"; sourceTree = "<group>"; };
 		5B8F72232506929D00C427F7 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
 		5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				5B4AC2B32517908600534934 /* Instagram Signin.swift */,
 				5B4AC2B5251790AC00534934 /* InstagramAPI.swift */,
+				5B4AC2B72517910B00534934 /* Instagram Webview.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -610,6 +613,7 @@
 				5B921FDD250745A900B2AFF4 /* Network Constants.swift in Sources */,
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
 				5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */,
+				5B4AC2B82517910B00534934 /* Instagram Webview.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
