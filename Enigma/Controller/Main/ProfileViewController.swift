@@ -15,7 +15,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var rank: UILabel!
     @IBOutlet weak var score: UILabel!
     
+    @IBOutlet weak var profileTableView: UITableView!
+    
     @IBOutlet weak var signoutButton: UIButton!
+    
+    var tableHeight : CGFloat = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
