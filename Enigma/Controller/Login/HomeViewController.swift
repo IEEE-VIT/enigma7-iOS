@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
-        
+        appleSignin()
     }
     
     @IBAction func signinWithGoogle(_ sender: Any) {
