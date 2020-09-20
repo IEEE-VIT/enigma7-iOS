@@ -151,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.25" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1wd-m8-bNK">
-                                <rect key="frame" x="93" y="66" width="228" height="566"/>
+                                <rect key="frame" x="93" y="66" width="228" height="491"/>
                                 <color key="backgroundColor" name="dark"/>
                                 <string key="text">10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001 10010010101101010100101001</string>
                                 <color key="textColor" name="secondary"/>
@@ -168,7 +168,7 @@
                                 <rect key="frame" x="71" y="209.5" width="272" height="18"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-gN-ODh">
-                                <rect key="frame" x="62" y="757.5" width="290" height="54.5"/>
+                                <rect key="frame" x="62" y="682.5" width="290" height="54.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="height" multiplier="5.32" id="Dww-4f-thQ"/>
                                 </constraints>
@@ -181,13 +181,26 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-he-vho">
-                                <rect key="frame" x="62" y="682" width="290" height="54.5"/>
+                                <rect key="frame" x="62" y="607" width="290" height="54.5"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
                                 <state key="normal" title="Sign up with Apple">
                                     <color key="titleColor" name="quaternary"/>
                                 </state>
                                 <connections>
                                     <action selector="signinWithApple:" destination="huf-Oc-YyW" eventType="touchUpInside" id="Tiv-4F-xUe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-eL-TQp">
+                                <rect key="frame" x="62" y="758" width="290" height="54.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CfQ-eL-TQp" secondAttribute="height" multiplier="5.32" id="ca7-AS-Sjw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
+                                <state key="normal" title="Sign up with Instagram">
+                                    <color key="titleColor" name="quaternary"/>
+                                </state>
+                                <connections>
+                                    <action selector="signinWithInstagram:" destination="huf-Oc-YyW" eventType="touchUpInside" id="znv-jw-NWP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,16 +212,21 @@
                             <constraint firstItem="1wd-m8-bNK" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.55" id="AoL-dI-SqR"/>
                             <constraint firstItem="1wd-m8-bNK" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="22" id="CJS-jc-T7t"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="leading" secondItem="DYC-0i-PmK" secondAttribute="leading" constant="50" id="E3q-do-7Fb"/>
+                            <constraint firstItem="DYC-0i-PmK" firstAttribute="bottom" secondItem="CfQ-eL-TQp" secondAttribute="bottom" constant="49.5" id="Egl-Je-TUJ"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="FWu-f1-T5R"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="top" secondItem="Bu5-he-vho" secondAttribute="bottom" constant="21" id="GZN-DG-NOj"/>
+                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="width" secondItem="CfQ-eL-TQp" secondAttribute="height" multiplier="5.32" id="JlA-4E-ruL"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="width" secondItem="9MQ-3W-YRN" secondAttribute="width" multiplier="0.866242" id="KjY-6v-gS9"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" id="OJB-Eq-Jqf"/>
                             <constraint firstItem="DYC-0i-PmK" firstAttribute="trailing" secondItem="9MQ-3W-YRN" secondAttribute="trailing" constant="50" id="Yno-Qx-5xW"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dA4-2m-ouD"/>
+                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dkh-dK-qSu"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" id="dvY-VV-vgg"/>
+                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="top" secondItem="dVM-gN-ODh" secondAttribute="bottom" constant="21" id="fBM-Eo-Hbm"/>
                             <constraint firstItem="1wd-m8-bNK" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="kcI-YO-wDg"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="top" secondItem="9MQ-3W-YRN" secondAttribute="bottom" constant="20" id="mOa-xi-chA"/>
-                            <constraint firstItem="DYC-0i-PmK" firstAttribute="bottom" secondItem="dVM-gN-ODh" secondAttribute="bottom" constant="50" id="qyD-OV-yU7"/>
+                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="width" id="mef-qE-uQr"/>
+                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="height" secondItem="dVM-gN-ODh" secondAttribute="height" id="qEm-6C-mM3"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="zNs-WU-EoW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DYC-0i-PmK"/>
@@ -216,6 +234,7 @@
                     <connections>
                         <outlet property="appleButton" destination="Bu5-he-vho" id="9VW-fg-YNl"/>
                         <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
+                        <outlet property="instagramButton" destination="CfQ-eL-TQp" id="ceY-5N-kVu"/>
                         <segue destination="rM5-1r-zw8" kind="showDetail" identifier="profilesetup" id="N1a-Vg-j9l"/>
                     </connections>
                 </viewController>

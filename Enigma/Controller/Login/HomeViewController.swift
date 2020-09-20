@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     ///OUTLETS
     @IBOutlet weak var appleButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
-    
+    @IBOutlet weak var instagramButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +25,26 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         appleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
         googleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
+        instagramButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
-        Haptic.hapticFeedback(.haptic(.success))
-        present("UserNameViewController")
+        appleSignin()
     }
     
     @IBAction func signinWithGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
+    }
+    
+    @IBAction func signinWithInstagram(_ sender: UIButton) {
+        
+    }
+    
+    func signinWithBackend(type : SignupType, code : String){
+        let request = SignupRequest(code: code, type: type)
+        PostController.shared.signup(type: type, body: request) { (success, response, error) in
+            //TODO
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
