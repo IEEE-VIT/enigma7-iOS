@@ -199,6 +199,9 @@
                                 <state key="normal" title="Sign up with Instagram">
                                     <color key="titleColor" name="quaternary"/>
                                 </state>
+                                <connections>
+                                    <action selector="signinWithInstagram:" destination="huf-Oc-YyW" eventType="touchUpInside" id="znv-jw-NWP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="dark"/>
@@ -231,6 +234,7 @@
                     <connections>
                         <outlet property="appleButton" destination="Bu5-he-vho" id="9VW-fg-YNl"/>
                         <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
+                        <outlet property="instagramButton" destination="CfQ-eL-TQp" id="ceY-5N-kVu"/>
                         <segue destination="rM5-1r-zw8" kind="showDetail" identifier="profilesetup" id="N1a-Vg-j9l"/>
                     </connections>
                 </viewController>
