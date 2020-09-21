@@ -31,7 +31,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func logout(_ sender: Any) {
-        
+        present("HomeViewController")
     }
     
 }
