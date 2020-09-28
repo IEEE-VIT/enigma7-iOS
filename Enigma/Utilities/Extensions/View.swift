@@ -9,6 +9,24 @@
 import UIKit
 
 extension UIView {
+    
+    var globalFrame : CGRect {
+        var x = self.frame.origin.x
+        var y = self.frame.origin.y
+        var oldView = self
+        
+        while let superView = oldView.superview {
+            x += superView.frame.origin.x
+            y += superView.frame.origin.y
+            if superView.next is UIViewController {
+                break //superView is the rootView of a UIViewController
+            }
+            oldView = superView
+        }
+        
+        return CGRect(x: x, y: y, width: self.frame.width, height: self.frame.height)
+    }
+    
    func roundCorners(corners: UIRectCorner, radius: CGFloat = 4) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()

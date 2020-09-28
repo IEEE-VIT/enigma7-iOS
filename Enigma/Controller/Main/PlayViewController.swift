@@ -22,9 +22,13 @@ class PlayViewController: UIViewController {
     
     @IBOutlet weak var scroll: UIScrollView!
     
+    @IBOutlet weak var subScrollView: UIView!
     var previousTag : Int = 0
     
     let hint = "Vitae habitasse fames feugiat morbi."
+    
+    var startingImageFrame : CGRect?
+    var backgroundView : ImageScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +48,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
+        questionImageView.image = UIImage(named: "sample")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -80,6 +85,11 @@ class PlayViewController: UIViewController {
         self.present(headerView, animated: false, completion: nil)
     }
     
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        self.performZoom()
+    }
+    
+
     func showProgress(){
         let progress = xpBar(for: progressBar, duration: 1.5, startValue: 0.0, endValue: 0.6)
         self.progressBar.layer.insertSublayer(progress, above: self.progressBar.layer)
@@ -162,4 +172,60 @@ extension PlayViewController {
                        animations: { self.view.layoutIfNeeded() },
                        completion: nil)
     }
+}
+
+extension PlayViewController : ZoomoutDelegate{
+    
+    func performZoom(){
+        startingImageFrame = questionImageView.globalFrame
+        let zoomingImageView = UIImageView(frame: self.startingImageFrame ?? CGRect())
+        zoomingImageView.image = questionImageView.image
+        
+        var aspectRatio : CGFloat = 1
+        
+        backgroundView = ImageScrollView(frame: view.frame)
+        backgroundView.setup()
+        backgroundView?.backgroundColor = .dark
+        backgroundView?.alpha = 0
+        backgroundView.zoomOutDelegate = self
+        view.addSubview(backgroundView!)
+        view.addSubview(zoomingImageView)
+        if let image = questionImageView.image {
+            aspectRatio = image.size.width / image.size.height
+        }
+        let width = view.frame.width
+        let center = view.center
+        let height = width / aspectRatio
+        UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            zoomingImageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+            zoomingImageView.center = center
+            self.backgroundView?.alpha = 1
+        }){ (completed : Bool) in
+            self.questionImageView.isHidden = true
+            zoomingImageView.isHidden = true
+            if let image = self.questionImageView.image {
+                self.backgroundView.display(image: image)
+            }
+        }
+    }
+    
+    func didTapOnImage(imageScrollView: ImageScrollView, tap: UITapGestureRecognizer) {
+        self.zoomout(tapGesture: tap)
+    }
+    
+    @objc func zoomout(tapGesture: UITapGestureRecognizer){
+        print("zoom  out")
+        if  let zoomOutImageView = tapGesture.view{
+            zoomOutImageView.isHidden = false
+            UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1 ,options: .curveEaseOut, animations: {
+                zoomOutImageView.frame = self.startingImageFrame!
+                self.backgroundView.backgroundColor = .clear
+            }) { (completed : Bool) in
+                zoomOutImageView.removeFromSuperview()
+                self.backgroundView?.removeFromSuperview()
+                self.questionImageView?.isHidden = false
+            }
+        }
+    }
+
 }

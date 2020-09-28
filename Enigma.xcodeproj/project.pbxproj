@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1B4B4E252252D000398B0D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4D252252D000398B0D /* Image.swift */; };
+		5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */; };
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
 		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
 		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
@@ -103,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1B4B4D252252D000398B0D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 				5B32868C24FBA02600FE2EEC /* View.swift */,
 				5BF83A0124FEAFC900A93885 /* ViewController.swift */,
 				5B921FF325087E4500B2AFF4 /* Haptic.swift */,
+				5B1B4B4D252252D000398B0D /* Image.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				5B32868824FB949200FE2EEC /* CustomTextField.swift */,
 				5B32868E24FBD97900FE2EEC /* xpBar.swift */,
 				5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */,
+				5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -624,7 +630,9 @@
 				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,
 				5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
+				5B1B4B4E252252D000398B0D /* Image.swift in Sources */,
 				5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */,
+				5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */,
 				5B32867724FB619F00FE2EEC /* Button.swift in Sources */,
 				5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */,
 				5B32868324FB6ACE00FE2EEC /* ProfileViewController.swift in Sources */,
