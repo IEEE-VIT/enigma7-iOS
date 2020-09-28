@@ -29,3 +29,21 @@ enum httpMethod: String {
 class Keys {
     static let token = "EnigmaToken"
 }
+
+func DebugRequest(_ url : String, request : Data, response : Data){
+    let req = try? JSONSerialization.jsonObject(with: request)
+    let res = try? JSONSerialization.jsonObject(with: response)
+    
+    print("====================================================")
+    print("URL: ",url)
+    print("\n")
+    print("==============      REQUEST BODY      ==============")
+    print("\n")
+    print(req ?? (Any).self)
+    print("\n")
+    print("==============      RESPONSE BODY     ==============")
+    print("\n")
+    print(res ?? (Any).self)
+    print("\n")
+    print("====================================================")
+}
