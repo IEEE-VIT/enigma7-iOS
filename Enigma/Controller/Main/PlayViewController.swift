@@ -90,7 +90,6 @@ class PlayViewController: UIViewController {
     }
     
 
-    
     func showProgress(){
         let progress = xpBar(for: progressBar, duration: 1.5, startValue: 0.0, endValue: 0.6)
         self.progressBar.layer.insertSublayer(progress, above: self.progressBar.layer)
@@ -178,8 +177,7 @@ extension PlayViewController {
 extension PlayViewController : ZoomoutDelegate{
     
     func performZoom(){
-        startingImageFrame = questionImageView.superview?.convert(questionImageView.frame, to: nil)
-        startingImageFrame?.origin = getCoordinate(questionImageView)
+        startingImageFrame = questionImageView.globalFrame
         let zoomingImageView = UIImageView(frame: self.startingImageFrame ?? CGRect())
         zoomingImageView.image = questionImageView.image
         

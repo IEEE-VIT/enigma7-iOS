@@ -10,8 +10,7 @@ import UIKit
 
 extension UIView {
     
-    
-    var func globalFrame : CGPoint {
+    var globalFrame : CGRect {
         var x = self.frame.origin.x
         var y = self.frame.origin.y
         var oldView = self
@@ -25,7 +24,7 @@ extension UIView {
             oldView = superView
         }
         
-        return CGPoint(x: x, y: y)
+        return CGRect(x: x, y: y, width: self.frame.width, height: self.frame.height)
     }
     
    func roundCorners(corners: UIRectCorner, radius: CGFloat = 4) {
