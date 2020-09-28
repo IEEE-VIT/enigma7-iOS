@@ -26,6 +26,10 @@ class PlayViewController: UIViewController {
     
     let hint = "Vitae habitasse fames feugiat morbi."
     
+    var startingImageFrame : CGRect?
+    var backgroundView : UIView?
+    var startingImageView : UIImageView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,6 +48,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
+        questionImageView.asyncLoadImage("http://wallpoper.com/images/00/29/23/65/nature-australia_00292365.jpg", placeHolder: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -79,6 +84,58 @@ class PlayViewController: UIViewController {
         headerView.delegate = self
         self.present(headerView, animated: false, completion: nil)
     }
+    
+    @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+           if let imageView = sender.view as? UIImageView{
+               self.performZoom(startingImageView: imageView)
+           }
+       }
+       
+       func performZoom(startingImageView : UIImageView){
+           self.startingImageView = startingImageView
+           startingImageFrame = startingImageView.globalFrame
+           let zoomingImageView = UIImageView(frame: self.startingImageFrame ?? CGRect())
+           zoomingImageView.image = startingImageView.image
+           zoomingImageView.isUserInteractionEnabled = true
+           zoomingImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(zoomout)))
+           
+           var aspectRatio : CGFloat = 1
+           
+           backgroundView = UIView(frame: view.frame )
+           backgroundView?.backgroundColor = .systemBackground
+           backgroundView?.alpha = 0
+           view.addSubview(backgroundView!)
+           view.addSubview(zoomingImageView)
+           if let image = startingImageView.image {
+               aspectRatio = image.size.width / image.size.height
+           }
+           let width = view.frame.width
+           let center = view.center
+           let height = width / aspectRatio
+           UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+               zoomingImageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+               zoomingImageView.center = center
+               self.backgroundView?.alpha = 1
+           }){ (completed : Bool) in
+               self.startingImageView?.isHidden = true
+           }
+       }
+       
+        //MARK:- Image / Video Zoomout on tap
+       @objc func zoomout(tapGesture: UITapGestureRecognizer){
+           print("zoom  out")
+           if  let zoomOutImageView = tapGesture.view{
+               
+               UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1 ,options: .curveEaseOut, animations: {
+                   zoomOutImageView.frame = self.startingImageFrame!
+                   self.backgroundView?.alpha = 0
+               }) { (completed : Bool) in
+                   zoomOutImageView.removeFromSuperview()
+                   self.backgroundView?.removeFromSuperview()
+                   self.startingImageView?.isHidden = false
+               }
+           }
+       }
     
     func showProgress(){
         let progress = xpBar(for: progressBar, duration: 1.5, startValue: 0.0, endValue: 0.6)

@@ -9,6 +9,11 @@
 import UIKit
 
 extension UIView {
+    
+    var globalFrame :CGRect? {
+        return self.superview?.convert(self.frame, to: nil)
+    }
+    
    func roundCorners(corners: UIRectCorner, radius: CGFloat = 4) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
