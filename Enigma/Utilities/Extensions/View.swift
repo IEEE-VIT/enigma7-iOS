@@ -10,8 +10,22 @@ import UIKit
 
 extension UIView {
     
-    var globalFrame :CGRect? {
-        return self.superview?.superview?.superview?.convert(self.frame, to: nil)
+    
+    var func globalFrame : CGPoint {
+        var x = self.frame.origin.x
+        var y = self.frame.origin.y
+        var oldView = self
+        
+        while let superView = oldView.superview {
+            x += superView.frame.origin.x
+            y += superView.frame.origin.y
+            if superView.next is UIViewController {
+                break //superView is the rootView of a UIViewController
+            }
+            oldView = superView
+        }
+        
+        return CGPoint(x: x, y: y)
     }
     
    func roundCorners(corners: UIRectCorner, radius: CGFloat = 4) {

@@ -13,7 +13,7 @@ import UIKit
 }
 
 @objc public protocol ZoomoutDelegate: class {
-    func didTapOnImage(imageScrollView: ImageScrollView)
+    func didTapOnImage(imageScrollView: ImageScrollView, tap : UITapGestureRecognizer)
 }
 
 open class ImageScrollView: UIScrollView {
@@ -185,10 +185,11 @@ open class ImageScrollView: UIScrollView {
         zoomView!.isUserInteractionEnabled = true
         addSubview(zoomView!)
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.doubleTapGestureRecognizer(_:)))
-        tapGesture.numberOfTapsRequired = 2
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.doubleTapGestureRecognizer(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ImageScrollView.tapGestureRecognizer(_:)))
+        doubleTapGesture.numberOfTapsRequired = 2
+        zoomView!.addGestureRecognizer(doubleTapGesture)
         zoomView!.addGestureRecognizer(tapGesture)
-        
         configureImageForSize(image.size)
     }
     
@@ -262,8 +263,8 @@ open class ImageScrollView: UIScrollView {
         }
     }
     
-    @objc func tapGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
-        self.zoomOutDelegate?.didTapOnImage(imageScrollView: self)
+    @objc func tapGestureRecognizer(_ gestureRecognizer: UITapGestureRecognizer) {
+        self.zoomOutDelegate?.didTapOnImage(imageScrollView: self, tap: gestureRecognizer)
     }
     
     private func zoomRectForScale(_ scale: CGFloat, center: CGPoint) -> CGRect {
