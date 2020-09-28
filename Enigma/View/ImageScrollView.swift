@@ -12,6 +12,10 @@ import UIKit
     func imageScrollViewDidChangeOrientation(imageScrollView: ImageScrollView)
 }
 
+@objc public protocol ZoomoutDelegate: class {
+    func didTapOnImage(imageScrollView: ImageScrollView)
+}
+
 open class ImageScrollView: UIScrollView {
     
     @objc public enum ScaleMode: Int {
@@ -34,6 +38,8 @@ open class ImageScrollView: UIScrollView {
     @objc public private(set) var zoomView: UIImageView? = nil
     
     @objc open weak var imageScrollViewDelegate: ImageScrollViewDelegate?
+    @objc open weak var zoomOutDelegate: ZoomoutDelegate?
+
 
     var imageSize: CGSize = CGSize.zero
     private var pointToCenterAfterResize: CGPoint = CGPoint.zero
@@ -66,18 +72,12 @@ open class ImageScrollView: UIScrollView {
         initialize()
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     private func initialize() {
         showsVerticalScrollIndicator = false
         showsHorizontalScrollIndicator = false
         bouncesZoom = true
         decelerationRate = UIScrollView.DecelerationRate.fast
         delegate = self
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(ImageScrollView.changeOrientationNotification), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     @objc public func adjustFrameToCenter() {
@@ -262,6 +262,10 @@ open class ImageScrollView: UIScrollView {
         }
     }
     
+    @objc func tapGestureRecognizer(_ gestureRecognizer: UIGestureRecognizer) {
+        self.zoomOutDelegate?.didTapOnImage(imageScrollView: self)
+    }
+    
     private func zoomRectForScale(_ scale: CGFloat, center: CGPoint) -> CGRect {
         var zoomRect = CGRect.zero
         
@@ -281,16 +285,6 @@ open class ImageScrollView: UIScrollView {
     open func refresh() {
         if let image = zoomView?.image {
             display(image: image)
-        }
-    }
-    
-    // MARK: - Actions
-    
-    @objc func changeOrientationNotification() {
-        // A weird bug that frames are not update right after orientation changed. Need delay a little bit with async.
-        DispatchQueue.main.async {
-            self.configureImageForSize(self.imageSize)
-            self.imageScrollViewDelegate?.imageScrollViewDidChangeOrientation(imageScrollView: self)
         }
     }
 }
