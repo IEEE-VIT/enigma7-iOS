@@ -19,6 +19,7 @@ extension UIImageView {
         //If imageurl's imagename has space then this line going to work for this
         let imageServerUrl = URLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         if let cachedImage = imageCache.object(forKey: NSString(string: imageServerUrl)) {
+            print("image was already cached!")
             self.image = cachedImage
             return
         }

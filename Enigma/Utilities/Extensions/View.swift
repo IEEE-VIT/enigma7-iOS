@@ -11,7 +11,7 @@ import UIKit
 extension UIView {
     
     var globalFrame :CGRect? {
-        return self.superview?.convert(self.frame, to: nil)
+        return self.superview?.superview?.superview?.convert(self.frame, to: nil)
     }
     
    func roundCorners(corners: UIRectCorner, radius: CGFloat = 4) {

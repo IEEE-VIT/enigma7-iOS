@@ -22,13 +22,13 @@ class PlayViewController: UIViewController {
     
     @IBOutlet weak var scroll: UIScrollView!
     
+    @IBOutlet weak var subScrollView: UIView!
     var previousTag : Int = 0
     
     let hint = "Vitae habitasse fames feugiat morbi."
     
     var startingImageFrame : CGRect?
     var backgroundView : UIView?
-    var startingImageView : UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
-        questionImageView.asyncLoadImage("http://wallpoper.com/images/00/29/23/65/nature-australia_00292365.jpg", placeHolder: nil)
+        questionImageView.asyncLoadImage("https://wallpoper.com/images/00/29/23/65/nature-australia_00292365.jpg", placeHolder: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -86,27 +86,53 @@ class PlayViewController: UIViewController {
     }
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
-           if let imageView = sender.view as? UIImageView{
-               self.performZoom(startingImageView: imageView)
-           }
+            self.performZoom()
+        test()
        }
+    
+    func test(){
+        let one =  questionImageView.convert(questionImageView.frame, to: nil)
+        let two =  questionImageView.superview?.convert(questionImageView.frame, to: nil)
+        let three =  questionImageView.superview?.superview?.convert(questionImageView.frame, to: nil)
+        print(one)
+        print(two)
+        print(three)
+        print()
+    }
+    
+    private func getCoordinate(_ view: UIView) -> CGPoint {
+        var x = view.frame.origin.x
+        var y = view.frame.origin.y
+        var oldView = view
+
+        while let superView = oldView.superview {
+            x += superView.frame.origin.x
+            y += superView.frame.origin.y
+            if superView.next is UIViewController {
+                break //superView is the rootView of a UIViewController
+            }
+            oldView = superView
+        }
+
+        return CGPoint(x: x, y: y)
+    }
        
-       func performZoom(startingImageView : UIImageView){
-           self.startingImageView = startingImageView
-           startingImageFrame = startingImageView.globalFrame
+       func performZoom(){
+           startingImageFrame = questionImageView.superview?.convert(questionImageView.frame, to: nil)
+           startingImageFrame?.origin = getCoordinate(questionImageView)
            let zoomingImageView = UIImageView(frame: self.startingImageFrame ?? CGRect())
-           zoomingImageView.image = startingImageView.image
+           zoomingImageView.image = questionImageView.image
            zoomingImageView.isUserInteractionEnabled = true
            zoomingImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(zoomout)))
            
            var aspectRatio : CGFloat = 1
            
            backgroundView = UIView(frame: view.frame )
-           backgroundView?.backgroundColor = .systemBackground
+           backgroundView?.backgroundColor = .dark
            backgroundView?.alpha = 0
            view.addSubview(backgroundView!)
            view.addSubview(zoomingImageView)
-           if let image = startingImageView.image {
+           if let image = questionImageView.image {
                aspectRatio = image.size.width / image.size.height
            }
            let width = view.frame.width
@@ -117,7 +143,7 @@ class PlayViewController: UIViewController {
                zoomingImageView.center = center
                self.backgroundView?.alpha = 1
            }){ (completed : Bool) in
-               self.startingImageView?.isHidden = true
+               self.questionImageView.isHidden = true
            }
        }
        
@@ -125,14 +151,13 @@ class PlayViewController: UIViewController {
        @objc func zoomout(tapGesture: UITapGestureRecognizer){
            print("zoom  out")
            if  let zoomOutImageView = tapGesture.view{
-               
                UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1 ,options: .curveEaseOut, animations: {
                    zoomOutImageView.frame = self.startingImageFrame!
                    self.backgroundView?.alpha = 0
                }) { (completed : Bool) in
                    zoomOutImageView.removeFromSuperview()
                    self.backgroundView?.removeFromSuperview()
-                   self.startingImageView?.isHidden = false
+                   self.questionImageView?.isHidden = false
                }
            }
        }
