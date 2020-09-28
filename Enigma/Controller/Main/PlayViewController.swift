@@ -28,7 +28,7 @@ class PlayViewController: UIViewController {
     let hint = "Vitae habitasse fames feugiat morbi."
     
     var startingImageFrame : CGRect?
-    var backgroundView : UIView?
+    var backgroundView : ImageScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
-        questionImageView.asyncLoadImage("https://wallpoper.com/images/00/29/23/65/nature-australia_00292365.jpg", placeHolder: nil)
+        questionImageView.image = UIImage(named: "sample")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -87,18 +87,7 @@ class PlayViewController: UIViewController {
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
             self.performZoom()
-        test()
        }
-    
-    func test(){
-        let one =  questionImageView.convert(questionImageView.frame, to: nil)
-        let two =  questionImageView.superview?.convert(questionImageView.frame, to: nil)
-        let three =  questionImageView.superview?.superview?.convert(questionImageView.frame, to: nil)
-        print(one)
-        print(two)
-        print(three)
-        print()
-    }
     
     private func getCoordinate(_ view: UIView) -> CGPoint {
         var x = view.frame.origin.x
@@ -127,10 +116,13 @@ class PlayViewController: UIViewController {
            
            var aspectRatio : CGFloat = 1
            
-           backgroundView = UIView(frame: view.frame )
+        backgroundView = ImageScrollView(frame: view.frame)
+         backgroundView.setup()
+    
+
            backgroundView?.backgroundColor = .dark
            backgroundView?.alpha = 0
-           view.addSubview(backgroundView!)
+          view.addSubview(backgroundView!)
            view.addSubview(zoomingImageView)
            if let image = questionImageView.image {
                aspectRatio = image.size.width / image.size.height
@@ -139,11 +131,15 @@ class PlayViewController: UIViewController {
            let center = view.center
            let height = width / aspectRatio
            UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-               zoomingImageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
-               zoomingImageView.center = center
-               self.backgroundView?.alpha = 1
+            zoomingImageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
+            zoomingImageView.center = center
+            self.backgroundView?.alpha = 1
            }){ (completed : Bool) in
                self.questionImageView.isHidden = true
+               zoomingImageView.isHidden = true
+            if let image = self.questionImageView.image {
+                self.backgroundView.display(image: image)
+            }
            }
        }
        
