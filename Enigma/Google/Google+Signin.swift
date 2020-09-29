@@ -17,6 +17,7 @@ extension HomeViewController: GIDSignInDelegate {
         GIDSignIn.sharedInstance()?.serverClientID = serverClientId
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.signOut()
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -27,6 +28,7 @@ extension HomeViewController: GIDSignInDelegate {
         }
         signinWithBackend(type:.google, code:user.serverAuthCode)
     }
+    
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         print("URL",url)
