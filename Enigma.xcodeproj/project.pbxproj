@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5B1B4B4E252252D000398B0D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4D252252D000398B0D /* Image.swift */; };
 		5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */; };
+		5B1B4B522523194600398B0D /* EditUsername Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B512523194600398B0D /* EditUsername Request.swift */; };
+		5B1B4B532523194600398B0D /* EditUsername Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B512523194600398B0D /* EditUsername Request.swift */; };
+		5B1B4B55252319AB00398B0D /* EditUsername Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B54252319AB00398B0D /* EditUsername Response.swift */; };
+		5B1B4B56252319AB00398B0D /* EditUsername Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B54252319AB00398B0D /* EditUsername Response.swift */; };
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
 		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
 		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
@@ -107,6 +111,8 @@
 /* Begin PBXFileReference section */
 		5B1B4B4D252252D000398B0D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		5B1B4B512523194600398B0D /* EditUsername Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditUsername Request.swift"; sourceTree = "<group>"; };
+		5B1B4B54252319AB00398B0D /* EditUsername Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditUsername Response.swift"; sourceTree = "<group>"; };
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				5B921FEA2507516E00B2AFF4 /* Signup Request.swift */,
+				5B1B4B512523194600398B0D /* EditUsername Request.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -309,6 +316,7 @@
 				5B921FE0250749D900B2AFF4 /* Error.swift */,
 				5B921FEE250752F500B2AFF4 /* Signup Response.swift */,
 				5B4AC2B92517913F00534934 /* Instagram Response.swift */,
+				5B1B4B54252319AB00398B0D /* EditUsername Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -627,6 +635,7 @@
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
+				5B1B4B55252319AB00398B0D /* EditUsername Response.swift in Sources */,
 				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,
 				5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
@@ -638,6 +647,7 @@
 				5B32868324FB6ACE00FE2EEC /* ProfileViewController.swift in Sources */,
 				5B32868724FB6B4700FE2EEC /* RulesViewController.swift in Sources */,
 				5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */,
+				5B1B4B522523194600398B0D /* EditUsername Request.swift in Sources */,
 				5B32869724FC256E00FE2EEC /* LeaderboardCell.swift in Sources */,
 				5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */,
 				5B921FE1250749D900B2AFF4 /* Error.swift in Sources */,
@@ -665,6 +675,8 @@
 			files = (
 				5BABB73324FACA02006D5541 /* EnigmaTests.swift in Sources */,
 				5BABB77024FACDD9006D5541 /* Constants.swift in Sources */,
+				5B1B4B532523194600398B0D /* EditUsername Request.swift in Sources */,
+				5B1B4B56252319AB00398B0D /* EditUsername Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

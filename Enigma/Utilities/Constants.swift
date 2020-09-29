@@ -24,6 +24,7 @@ enum httpMethod: String {
     case PUT
     case POST
     case GET
+    case PATCH
 }
 
 class Keys {
@@ -37,7 +38,8 @@ func DebugRequest(_ url : String,status : URLResponse?,request : Data, response 
     print("=================================================")
     print("URL: ",url)
     print("\n")
-    print("status code:",code?.statusCode)
+    print("status code:",code?.statusCode ?? 0)
+    print("\n")
     print("================      REQUEST BODY      ===============")
     print("\n")
     print(req ?? (Any).self)

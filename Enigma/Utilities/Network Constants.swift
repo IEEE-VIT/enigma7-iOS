@@ -10,11 +10,18 @@ import Foundation
 
 struct NetworkConstants {
     
-    public static let baseURL = "https://enigma7-backend.herokuapp.com/"
-    
-    public static let googleURL = baseURL + "api/v1/users/auth/google/"
-    public static let appleURL = baseURL + "api/v1/users/auth/apple/"
-    public static let instagramURL = baseURL + "api/v1/users/auth/instagram/"
+    struct Users {
+        public static let baseURL = "https://enigma7-backend.herokuapp.com/api/v1/users/"
+        
+        public static let googleURL = baseURL + "auth/google/"
+        public static let appleURL = baseURL + "auth/apple/"
+        public static let instagramURL = baseURL + "auth/instagram/"
+        
+        public static let editUsernameURL = baseURL + "me/edit/"
+        public static let userDetailsURL = baseURL + "me/"
+        public static let logoutURL = baseURL + "logout/"
+
+    }
     
 }
 

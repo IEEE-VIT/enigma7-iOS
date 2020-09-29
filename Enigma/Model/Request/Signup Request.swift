@@ -26,11 +26,11 @@ enum SignupType : String{
     var url : String {
         switch self {
         case .google:
-            return NetworkConstants.googleURL
+            return NetworkConstants.Users.googleURL
         case .apple:
-           return NetworkConstants.appleURL
+            return NetworkConstants.Users.appleURL
         case .instagram:
-           return NetworkConstants.instagramURL
+            return NetworkConstants.Users.instagramURL
         }
     }
     
