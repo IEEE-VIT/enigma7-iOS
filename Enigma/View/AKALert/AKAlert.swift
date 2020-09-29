@@ -30,11 +30,7 @@ class AKAlert: UIView {
         self.initSubViews()
         self.alertMessage.text = type.message
         self.alertIcon.image = type.icon
-    }
-    
-    func dismissAlert(){
-        self.AKAlertView.removeFromSuperview()
-        self.removeFromSuperview()
+        self.AKAlertWillDisappear()
     }
     
     enum ALertType : String{
@@ -65,6 +61,8 @@ class AKAlert: UIView {
         addSubview (AKAlertView)
         AKAlertView.addBorder(width: 4, .primary, alpha: 0.8)
         self.addConstraints()
+        self.AKAlertWillAppear()
+        self.addTapToDismiss()
     }
     
     private func addConstraints() {
@@ -73,6 +71,34 @@ class AKAlert: UIView {
             self.leadingAnchor.constraint(equalTo: AKAlertView.leadingAnchor),
             self.trailingAnchor.constraint(equalTo: AKAlertView.trailingAnchor),
             self.bottomAnchor.constraint(equalTo : AKAlertView.bottomAnchor)])
+    }
+    
+    private func addTapToDismiss(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.didTapOnAKAlert(sender:)))
+        AKAlertView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func didTapOnAKAlert(sender : UITapGestureRecognizer){
+        self.AKAlertWillDisappear(after: 0.0)
+    }
+    
+    private func AKAlertWillAppear(){
+        AKAlertView.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
+        UIView.animate(withDuration: 0.2){
+            self.AKAlertView.transform = .identity
+        }
+    }
+    
+    private func AKAlertWillDisappear(after seconds : Double = 3.0){
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.AKAlertView.alpha = 0.0
+                self.AKAlertView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            }) { _ in
+                self.AKAlertView.removeFromSuperview()
+                self.removeFromSuperview()
+            }
+        })
     }
     
 }
