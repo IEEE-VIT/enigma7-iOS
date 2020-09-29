@@ -20,5 +20,15 @@ class PostController {
             }
         }
     }
+    
+    func editUserName(body: EditUsernameRequest,completion: @escaping(Bool,String) -> ()) {
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Users.editUsernameURL, responseType: EditUsernameResponse.self, body: body, header: true, httpMethod: .PATCH) { (response, error) in
+            if let _ = response?.username{
+                completion(true,"Success")
+            }else{
+                completion(false,response?.error ?? error.debugDescription)
+            }
+        }
+    }
 
 }
