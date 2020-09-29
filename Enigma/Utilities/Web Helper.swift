@@ -54,7 +54,7 @@ class WebHelper {
     }
     
     class func sendPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: String, responseType: ResponseType.Type, body: RequestType,header : Bool = false, httpMethod : httpMethod = .POST,completion: @escaping (ResponseType?, Error?) -> ()) {
-        let urlreq = URL(string: url)!
+        let urlreq = URL(string: url)! //TODO guard
         var request = URLRequest(url: urlreq)
         request.httpMethod = httpMethod.rawValue
         let postData = try! JSONEncoder().encode(body)
@@ -75,7 +75,7 @@ class WebHelper {
                 return
             }
             
-            DebugRequest(url, request : postData, response : data)
+            DebugRequest(url, status: response, request : postData, response : data)
             
             let decoder = JSONDecoder()
             do {

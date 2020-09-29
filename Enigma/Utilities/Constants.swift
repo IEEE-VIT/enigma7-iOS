@@ -24,18 +24,21 @@ enum httpMethod: String {
     case PUT
     case POST
     case GET
+    case PATCH
 }
 
 class Keys {
     static let token = "EnigmaToken"
 }
 
-func DebugRequest(_ url : String, request : Data, response : Data){
+func DebugRequest(_ url : String,status : URLResponse?,request : Data, response : Data){
     let req = try? JSONSerialization.jsonObject(with: request)
     let res = try? JSONSerialization.jsonObject(with: response)
-    
+    let code = status as? HTTPURLResponse
     print("=================================================")
     print("URL: ",url)
+    print("\n")
+    print("status code:",code?.statusCode ?? 0)
     print("\n")
     print("================      REQUEST BODY      ===============")
     print("\n")

@@ -45,12 +45,16 @@ class HomeViewController: UIViewController {
     
     func signinWithBackend(type : SignupType, code : String){
         let request = SignupRequest(code: code, type: type)
-        PostController.shared.signup(type: type, body: request) { (success, response, error) in
-                  if success && response?.key != nil{
-                      self.present("UserNameViewController")
-                  } else {
-                      //TODO show error
-                  }
+        PostController.shared.signup(type: type, body: request, completion: handleSignup(success:response:error:))
+    }
+    
+    func handleSignup(success:Bool,response:SignupResponse?,error:String){
+        if success{
+            let usernameExits = response?.username_exists ?? false
+            let vc = usernameExits ? "PlayViewController" : "UserNameViewController"
+            self.present(vc)
+        } else {
+            //TODO show error
         }
     }
     
