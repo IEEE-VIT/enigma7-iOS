@@ -58,10 +58,12 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func submitTapped(_ sender: Any) {
-        let alert = AKAlert(type: .success)
+        
         let width = UIScreen.main.bounds.width * 0.8
         let height = width / 3.33
-        alert.frame = CGRect(x: 0, y: 0, width: width, height: height)
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        let alert = AKAlert(type: .success)
+        alert.frame = frame
         self.view.addSubview(alert)
         alert.center = self.view.center
     }
