@@ -11,7 +11,7 @@ import UIKit
 
 class WebHelper {
     
-    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) {
+    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil, completion: @escaping (ResponseType?, Error?) -> Void) {
         var components = URLComponents(string: url)!
         components.queryItems = parameters.map { (key, value) in
             URLQueryItem(name: key, value: value)
@@ -28,6 +28,8 @@ class WebHelper {
                     }
                     return
                 }
+                DebugRequest(url, status: response, request: Data(), response: data)
+                if let key = key { UserDefaults.standard.set(data, forKey: key) }
                 let decoder = JSONDecoder()
                 do {
                     let responseObject = try decoder.decode(ResponseType.self, from: data)

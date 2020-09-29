@@ -12,4 +12,11 @@ class ServiceController {
 
 static let shared: ServiceController = ServiceController()
     
+    
+    func getUserDetails(completion : @escaping (UserDetails?)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user) { (response, error) in
+                completion(response)
+        }
+    }
+    
 }
