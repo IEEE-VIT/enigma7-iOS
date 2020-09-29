@@ -9,30 +9,39 @@
 import UIKit
 
 class UserNameViewController: UIViewController {
-
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorTextView: UITextView!
     
     let errorPrefix = "________________\nInvalidUsername.\n-> "
-    var error = String()
-    
+    var error = String() {
+        didSet {
+            error = errorPrefix + error
+            errorTextView.text = error
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         nextButton.addBorder(UIColor.tertiary)
     }
     
     
-    
-    
     @IBAction func nextTapped(_ sender: Any) {
-        errorTextView.isHidden = validate()
-        if validate() {
-            gotoTimer()
-        } else {
-            errorTextView.text = error
-        }
+        guard validate() == true else { return }
+        let request = EditUsernameRequest(username: userNameTextField.text!)
+        PostController.shared.editUserName(request, completion: handleEditusername(success:error:))
+    }
+    
+    func handleEditusername(success: Bool, error: String){
+        if success{ self.gotoTimer()  }
+        else { self.error = error }
     }
     
     func gotoTimer(){
@@ -40,8 +49,8 @@ class UserNameViewController: UIViewController {
     }
     
     func validate()->Bool{
-        if errorTextView.text.rangeOfCharacter(from: .decimalDigits) != nil {
-            error = errorPrefix + "Numerals Missing!"
+        if userNameTextField.text?.isEmpty ?? true{
+            error = "Username Empty!"
             return false
         }
         return true
