@@ -13,7 +13,8 @@ class PostController {
     
     func signup(type: SignupType,body:SignupRequest,completion: @escaping(Bool,SignupResponse?,String) -> ()) {
         WebHelper.sendPOSTRequest(url: type.url, responseType: SignupResponse.self, body: body) { (response, error) in
-            if let response = response,let _ = response.key{
+            if let response = response,let key = response.key{
+                UserDefaults.standard.set("Token " + key, forKey: Keys.token)
                 completion(true,response,"success")
             }else{
                 completion(false,nil,error?.localizedDescription ?? "Error")
@@ -24,7 +25,7 @@ class PostController {
     func editUserName(_ body: EditUsernameRequest,completion: @escaping(Bool,String) -> ()) {
         WebHelper.sendPOSTRequest(url: NetworkConstants.Users.editUsernameURL, responseType: EditUsernameResponse.self, body: body, header: true, httpMethod: .PATCH) { (response, error) in
             if let _ = response?.username{
-                completion(true,"Success")
+                completion(true,"success")
             }else{
                 completion(false,response?.error ?? error.debugDescription)
             }
