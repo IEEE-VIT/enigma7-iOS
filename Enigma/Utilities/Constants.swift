@@ -29,6 +29,17 @@ enum httpMethod: String {
 
 class Keys {
     static let token = "EnigmaToken"
+    static let user = "EnigmaUser"
+}
+
+func decode<T: Decodable>(data: Data) -> T? {
+    let decoder = JSONDecoder()
+    do {
+        let body = try decoder.decode(T.self, from: data)
+        return body
+    } catch {
+        return nil
+    }
 }
 
 func DebugRequest(_ url : String,status : URLResponse?,request : Data, response : Data){
