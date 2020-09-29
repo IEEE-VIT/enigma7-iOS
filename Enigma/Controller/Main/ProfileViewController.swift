@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var signoutButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        handleUserDetails(details: Defaults.user())
     }
     
     override func viewDidAppear(_ animated: Bool) {
