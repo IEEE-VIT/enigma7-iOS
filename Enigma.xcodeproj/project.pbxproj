@@ -90,6 +90,7 @@
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
 		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
+		5BF6EB232526108100813987 /* Question Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question Response.swift */; };
 		5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83A0124FEAFC900A93885 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -183,6 +184,7 @@
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
+		5BF6EB222526108100813987 /* Question Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question Response.swift"; sourceTree = "<group>"; };
 		5BF83A0124FEAFC900A93885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,6 +323,7 @@
 				5B4AC2B92517913F00534934 /* Instagram Response.swift */,
 				5B1B4B54252319AB00398B0D /* EditUsername Response.swift */,
 				5B1B4B5725236AAD00398B0D /* UserDetails Response.swift */,
+				5BF6EB222526108100813987 /* Question Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
 				5B1B4B4E252252D000398B0D /* Image.swift in Sources */,
+				5BF6EB232526108100813987 /* Question Response.swift in Sources */,
 				5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */,
 				5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */,
 				5B32867724FB619F00FE2EEC /* Button.swift in Sources */,
