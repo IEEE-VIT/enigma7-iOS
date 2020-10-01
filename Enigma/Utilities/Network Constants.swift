@@ -23,6 +23,13 @@ struct NetworkConstants {
 
     }
     
+    struct Game {
+        public static let baseURL = "https://enigma7-backend.herokuapp.com/api/v1/game/"
+
+        public static let leaderboardURL = baseURL + "leaderboard/"
+
+    }
+    
 }
 
 

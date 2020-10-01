@@ -16,7 +16,7 @@ class LeaderboardViewController: UIViewController {
     
     let leaderboardIdentifer = "leadercell"
     
-    let leaderboard = [LeaderboardResponse]()
+    let leaderboard = [Leaderboard]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,5 @@ extension LeaderboardViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
     }
-
-    
     
 }

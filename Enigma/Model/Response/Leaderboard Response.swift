@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct LeaderboardResponse: Decodable {
+struct Leaderboard: Decodable {
     let username : String?
     let solved : Int?
     let score : Int?

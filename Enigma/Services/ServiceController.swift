@@ -19,4 +19,8 @@ static let shared: ServiceController = ServiceController()
         }
     }
     
+    func getLeaderboard(completion : @escaping (Leaderboard?)->()){
+        
+        
+    }
 }
