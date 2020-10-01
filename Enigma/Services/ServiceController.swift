@@ -9,13 +9,19 @@
 import Foundation
 
 class ServiceController {
-
-static let shared: ServiceController = ServiceController()
+    
+    static let shared: ServiceController = ServiceController()
     
     
     func getUserDetails(completion : @escaping (UserDetails?)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user) { (response, error) in
-                completion(response)
+            completion(response)
+        }
+    }
+    
+    func getLeaderboard(completion : @escaping ([Leaderboard]?)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.leaderboardURL, parameters: [:], responseType: [Leaderboard].self,key: Keys.leaderboard) { (response, error) in
+            completion(response)
         }
     }
     

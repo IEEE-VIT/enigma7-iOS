@@ -40,8 +40,6 @@ class ProfileViewController: UIViewController {
         score.text = user.points?.stringValue
     }
     
-    @IBAction func logout(_ sender: Any) {
-        
-    }
+    @IBAction func logout(_ sender: Any) {  }
     
 }

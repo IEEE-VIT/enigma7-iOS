@@ -23,4 +23,10 @@ class  Defaults {
         return decode(data: data)
     }
     
+    static func leaderboard() -> [Leaderboard]? {
+        let body = userDefaults.value(forKey: Keys.leaderboard) as? Data
+        guard let data = body else { return nil }
+        return decode(data: data)
+    }
+    
 }
