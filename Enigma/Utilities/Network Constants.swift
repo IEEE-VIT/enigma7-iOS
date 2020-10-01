@@ -16,7 +16,6 @@ struct NetworkConstants {
         public static let googleURL = baseURL + "auth/google/"
         public static let appleURL = baseURL + "auth/apple/"
         public static let instagramURL = baseURL + "auth/instagram/"
-        
         public static let editUsernameURL = baseURL + "me/edit/"
         public static let userDetailsURL = baseURL + "me/"
         public static let logoutURL = baseURL + "logout/"
@@ -27,6 +26,12 @@ struct NetworkConstants {
         public static let baseURL = "https://enigma7-backend.herokuapp.com/api/v1/game/"
 
         public static let leaderboardURL = baseURL + "leaderboard/"
+        public static let questionURL = baseURL + "question/"
+        public static let hintURL = baseURL + "hint/"
+        public static let hintPowerupURL = baseURL + "powerup/hint/"
+        public static let skipPowerupURL = baseURL + "powerup/skip/"
+        public static let closeAnswerPowerupURL = baseURL + "powerup/close-answer/"
+        public static let answerURL = baseURL + "answer/"
 
     }
     
