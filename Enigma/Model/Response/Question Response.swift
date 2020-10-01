@@ -9,11 +9,11 @@
 import Foundation
 
 struct Question : Decodable {
-    var imageUrl : String
+    var imageUrl : String?
     var question : String?
     
     enum CodingKeys: String, CodingKey {
-        case question : "text"
-        case imageUrl : "img_url"
+        case question = "text"
+        case imageUrl = "img_url"
     }
 }
