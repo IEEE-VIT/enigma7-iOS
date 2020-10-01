@@ -12,15 +12,26 @@ class LeaderboardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var headerView: UIView!
-    
     let leaderboardIdentifer = "leadercell"
     
-    let leaderboard = [Leaderboard]()
+    var leaderboard = [Leaderboard]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        handleLeaderBoard(leaderboard: Defaults.leaderboard())
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ServiceController.shared.getLeaderboard(completion: handleLeaderBoard(leaderboard:))
+    }
+    
+    func handleLeaderBoard(leaderboard: [Leaderboard]?){
+        guard let leaderboard = leaderboard else { return }
+        self.leaderboard = leaderboard.filter{ $0.username != "" }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
 

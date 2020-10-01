@@ -30,6 +30,7 @@ enum httpMethod: String {
 class Keys {
     static let token = "EnigmaToken"
     static let user = "EnigmaUser"
+    static let leaderboard = "EnigmaLeaderboard"
 }
 
 func decode<T: Decodable>(data: Data) -> T? {
