@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct LeaderboardModel {
-    let rank : Int = 0
-    let userName : String
+struct LeaderboardResponse: Decodable {
+    let username : String
     let solved : Int
     let score : Int
+
 }

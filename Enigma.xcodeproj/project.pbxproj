@@ -30,7 +30,7 @@
 		5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32869024FC0A4D00FE2EEC /* HintAlert.xib */; };
 		5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869424FC0E9400FE2EEC /* HintAlert.swift */; };
 		5B32869724FC256E00FE2EEC /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */; };
-		5B32869924FC27F100FE2EEC /* LeaderboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* LeaderboardModel.swift */; };
+		5B32869924FC27F100FE2EEC /* Leaderboard Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* Leaderboard Response.swift */; };
 		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
 		5B4AC2B42517908600534934 /* Instagram Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B32517908600534934 /* Instagram Signin.swift */; };
 		5B4AC2B6251790AC00534934 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B5251790AC00534934 /* InstagramAPI.swift */; };
@@ -131,7 +131,7 @@
 		5B32869024FC0A4D00FE2EEC /* HintAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintAlert.xib; sourceTree = "<group>"; };
 		5B32869424FC0E9400FE2EEC /* HintAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintAlert.swift; sourceTree = "<group>"; };
 		5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
-		5B32869824FC27F100FE2EEC /* LeaderboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardModel.swift; sourceTree = "<group>"; };
+		5B32869824FC27F100FE2EEC /* Leaderboard Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Leaderboard Response.swift"; sourceTree = "<group>"; };
 		5B4AC2AE2517887600534934 /* Apple Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apple Signin.swift"; sourceTree = "<group>"; };
 		5B4AC2B025178A7E00534934 /* Enigma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enigma.entitlements; sourceTree = "<group>"; };
 		5B4AC2B32517908600534934 /* Instagram Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instagram Signin.swift"; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 		5B921FED2507518E00B2AFF4 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				5B32869824FC27F100FE2EEC /* LeaderboardModel.swift */,
+				5B32869824FC27F100FE2EEC /* Leaderboard Response.swift */,
 				5B921FE0250749D900B2AFF4 /* Error.swift */,
 				5B921FEE250752F500B2AFF4 /* Signup Response.swift */,
 				5B4AC2B92517913F00534934 /* Instagram Response.swift */,
@@ -655,7 +655,7 @@
 				5B32869724FC256E00FE2EEC /* LeaderboardCell.swift in Sources */,
 				5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */,
 				5B921FE1250749D900B2AFF4 /* Error.swift in Sources */,
-				5B32869924FC27F100FE2EEC /* LeaderboardModel.swift in Sources */,
+				5B32869924FC27F100FE2EEC /* Leaderboard Response.swift in Sources */,
 				5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */,
 				5B32868124FB6AC700FE2EEC /* StoryViewController.swift in Sources */,
 				5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */,
