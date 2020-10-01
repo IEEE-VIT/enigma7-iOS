@@ -15,7 +15,6 @@ class  Defaults {
     static func token() -> String {
         return userDefaults.string(forKey: Keys.token) ?? ""
     }
-    
 
     static func user() -> UserDetails? {
         let body = userDefaults.value(forKey: Keys.user) as? Data
@@ -25,6 +24,18 @@ class  Defaults {
     
     static func leaderboard() -> [Leaderboard]? {
         let body = userDefaults.value(forKey: Keys.leaderboard) as? Data
+        guard let data = body else { return nil }
+        return decode(data: data)
+    }
+    
+    static func question() -> Question? {
+        let body = userDefaults.value(forKey: Keys.question) as? Data
+        guard let data = body else { return nil }
+        return decode(data: data)
+    }
+    
+    static func hint() -> Question? {
+        let body = userDefaults.value(forKey: Keys.hint) as? Data
         guard let data = body else { return nil }
         return decode(data: data)
     }

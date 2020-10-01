@@ -92,6 +92,11 @@
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
 		5BF6EB232526108100813987 /* Question Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question Response.swift */; };
 		5BF6EB252526190A00813987 /* Hint Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB242526190A00813987 /* Hint Response.swift */; };
+		5BF6EB2925261BCB00813987 /* KeyboardObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2825261BCB00813987 /* KeyboardObservers.swift */; };
+		5BF6EB2B25261BE400813987 /* ZoomingDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2A25261BE400813987 /* ZoomingDelegates.swift */; };
+		5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2C25261CFD00813987 /* HintDelegate.swift */; };
+		5BF6EB2F25261DF600813987 /* Answer Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2E25261DF600813987 /* Answer Request.swift */; };
+		5BF6EB3125261E3300813987 /* Answer Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB3025261E3300813987 /* Answer Response.swift */; };
 		5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83A0124FEAFC900A93885 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +192,11 @@
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF6EB222526108100813987 /* Question Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question Response.swift"; sourceTree = "<group>"; };
 		5BF6EB242526190A00813987 /* Hint Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hint Response.swift"; sourceTree = "<group>"; };
+		5BF6EB2825261BCB00813987 /* KeyboardObservers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservers.swift; sourceTree = "<group>"; };
+		5BF6EB2A25261BE400813987 /* ZoomingDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomingDelegates.swift; sourceTree = "<group>"; };
+		5BF6EB2C25261CFD00813987 /* HintDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintDelegate.swift; sourceTree = "<group>"; };
+		5BF6EB2E25261DF600813987 /* Answer Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer Request.swift"; sourceTree = "<group>"; };
+		5BF6EB3025261E3300813987 /* Answer Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer Response.swift"; sourceTree = "<group>"; };
 		5BF83A0124FEAFC900A93885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,7 +257,7 @@
 		5B32868524FB6ADF00FE2EEC /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				5B32867C24FB6AB400FE2EEC /* PlayViewController.swift */,
+				5BF6EB2625261BB000813987 /* PlayViewController */,
 				5B32867E24FB6AC000FE2EEC /* LeaderboardViewController.swift */,
 				5B32868024FB6AC700FE2EEC /* StoryViewController.swift */,
 				5B32868224FB6ACE00FE2EEC /* ProfileViewController.swift */,
@@ -312,6 +322,7 @@
 			children = (
 				5B921FEA2507516E00B2AFF4 /* Signup Request.swift */,
 				5B1B4B512523194600398B0D /* EditUsername Request.swift */,
+				5BF6EB2E25261DF600813987 /* Answer Request.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -327,6 +338,7 @@
 				5B1B4B5725236AAD00398B0D /* UserDetails Response.swift */,
 				5BF6EB222526108100813987 /* Question Response.swift */,
 				5BF6EB242526190A00813987 /* Hint Response.swift */,
+				5BF6EB3025261E3300813987 /* Answer Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -476,6 +488,17 @@
 				5B32869424FC0E9400FE2EEC /* HintAlert.swift */,
 			);
 			path = HintAlert;
+			sourceTree = "<group>";
+		};
+		5BF6EB2625261BB000813987 /* PlayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B32867C24FB6AB400FE2EEC /* PlayViewController.swift */,
+				5BF6EB2825261BCB00813987 /* KeyboardObservers.swift */,
+				5BF6EB2A25261BE400813987 /* ZoomingDelegates.swift */,
+				5BF6EB2C25261CFD00813987 /* HintDelegate.swift */,
+			);
+			path = PlayViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,17 +666,22 @@
 				5B4AC2B82517910B00534934 /* Instagram Webview.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
+				5BF6EB2F25261DF600813987 /* Answer Request.swift in Sources */,
+				5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
+				5BF6EB2B25261BE400813987 /* ZoomingDelegates.swift in Sources */,
 				5B1B4B55252319AB00398B0D /* EditUsername Response.swift in Sources */,
 				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,
 				5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
 				5B1B4B4E252252D000398B0D /* Image.swift in Sources */,
+				5BF6EB2925261BCB00813987 /* KeyboardObservers.swift in Sources */,
 				5BF6EB232526108100813987 /* Question Response.swift in Sources */,
 				5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */,
 				5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */,
 				5B32867724FB619F00FE2EEC /* Button.swift in Sources */,
+				5BF6EB3125261E3300813987 /* Answer Response.swift in Sources */,
 				5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */,
 				5B32868324FB6ACE00FE2EEC /* ProfileViewController.swift in Sources */,
 				5B32868724FB6B4700FE2EEC /* RulesViewController.swift in Sources */,

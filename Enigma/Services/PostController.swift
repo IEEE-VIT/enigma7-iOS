@@ -31,5 +31,9 @@ class PostController {
             }
         }
     }
+    
+    func answerQuestion(_ body: AnswerRequest,completion: @escaping(Bool,String)->()){
+        
+    }
 
 }
