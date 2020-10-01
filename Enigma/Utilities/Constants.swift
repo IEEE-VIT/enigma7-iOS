@@ -32,6 +32,7 @@ class Keys {
     static let user = "EnigmaUser"
     static let leaderboard = "EnigmaLeaderboard"
     static let question = "EnigmaQuestion"
+    static let hint = "EnigmaHint"
 }
 
 func decode<T: Decodable>(data: Data) -> T? {

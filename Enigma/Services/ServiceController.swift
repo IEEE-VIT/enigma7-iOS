@@ -30,4 +30,10 @@ class ServiceController {
         }
     }
     
+    func getHint(completion : @escaping (Hint?)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.hintURL, parameters: [:], responseType: Hint.self,key: Keys.question) { (response, error) in
+            completion(response)
+        }
+    }
+    
 }
