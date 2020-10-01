@@ -9,8 +9,13 @@
 import Foundation
 
 struct LeaderboardResponse: Decodable {
-    let username : String
-    let solved : Int
-    let score : Int
-
+    let username : String?
+    let solved : Int?
+    let score : Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case username = "username"
+        case solved = "question_answered"
+        case score = "points"
+    }
 }
