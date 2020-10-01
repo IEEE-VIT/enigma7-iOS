@@ -91,6 +91,7 @@
 		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
 		5BF6EB232526108100813987 /* Question Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question Response.swift */; };
+		5BF6EB252526190A00813987 /* Hint Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB242526190A00813987 /* Hint Response.swift */; };
 		5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83A0124FEAFC900A93885 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -185,6 +186,7 @@
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF6EB222526108100813987 /* Question Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question Response.swift"; sourceTree = "<group>"; };
+		5BF6EB242526190A00813987 /* Hint Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hint Response.swift"; sourceTree = "<group>"; };
 		5BF83A0124FEAFC900A93885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -324,6 +326,7 @@
 				5B1B4B54252319AB00398B0D /* EditUsername Response.swift */,
 				5B1B4B5725236AAD00398B0D /* UserDetails Response.swift */,
 				5BF6EB222526108100813987 /* Question Response.swift */,
+				5BF6EB242526190A00813987 /* Hint Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */,
 				5B921FE1250749D900B2AFF4 /* Error.swift in Sources */,
 				5B32869924FC27F100FE2EEC /* Leaderboard Response.swift in Sources */,
+				5BF6EB252526190A00813987 /* Hint Response.swift in Sources */,
 				5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */,
 				5B32868124FB6AC700FE2EEC /* StoryViewController.swift in Sources */,
 				5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */,

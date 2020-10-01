@@ -12,7 +12,6 @@ class ServiceController {
     
     static let shared: ServiceController = ServiceController()
     
-    
     func getUserDetails(completion : @escaping (UserDetails?)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user) { (response, error) in
             completion(response)
@@ -21,6 +20,12 @@ class ServiceController {
     
     func getLeaderboard(completion : @escaping ([Leaderboard]?)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Game.leaderboardURL, parameters: [:], responseType: [Leaderboard].self,key: Keys.leaderboard) { (response, error) in
+            completion(response)
+        }
+    }
+    
+    func getQuestion(completion : @escaping (Question?)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.questionURL, parameters: [:], responseType: Question.self,key: Keys.question) { (response, error) in
             completion(response)
         }
     }

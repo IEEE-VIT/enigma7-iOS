@@ -49,6 +49,7 @@ class PlayViewController: UIViewController {
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
         questionImageView.image = UIImage(named: "sample")
+        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -89,6 +90,12 @@ class PlayViewController: UIViewController {
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         self.performZoom()
+    }
+    
+    func handleQuestion(question : Question?){
+        guard  let question = question else { return }
+        questionLabel.text = question.text
+        questionImageView.asyncLoadImage(question.imageUrl, placeHolder: nil)
     }
     
 
@@ -182,7 +189,7 @@ extension PlayViewController : ZoomoutDelegate{
         startingImageFrame = questionImageView.globalFrame
         let zoomingImageView = UIImageView(frame: self.startingImageFrame ?? CGRect())
         zoomingImageView.image = questionImageView.image
-        
+        zoomingImageView.contentMode = .scaleAspectFit
         var aspectRatio : CGFloat = 1
         
         backgroundView = ImageScrollView(frame: view.frame)
@@ -219,6 +226,7 @@ extension PlayViewController : ZoomoutDelegate{
         print("zoom  out")
         if  let zoomOutImageView = tapGesture.view{
             zoomOutImageView.isHidden = false
+            zoomOutImageView.contentMode = .scaleAspectFit
             UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1 ,options: .curveEaseOut, animations: {
                 zoomOutImageView.frame = self.startingImageFrame!
                 self.backgroundView.backgroundColor = .clear

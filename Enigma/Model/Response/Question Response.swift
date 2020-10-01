@@ -10,10 +10,10 @@ import Foundation
 
 struct Question : Decodable {
     var imageUrl : String?
-    var question : String?
+    var text : String?
     
     enum CodingKeys: String, CodingKey {
-        case question = "text"
+        case text = "text"
         case imageUrl = "img_url"
     }
 }
