@@ -13,6 +13,7 @@ class TabbarController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var header: UIView!
+    @IBOutlet weak var infoButton: UIButton!
     
     var HomeViewController: UIViewController!
     var PlayViewController : UIViewController!
@@ -22,7 +23,9 @@ class TabbarController: UIViewController {
     var RulesViewController : UIViewController!
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 0
-
+    var share : Bool = false
+    var shareImage : UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         HomeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController")
@@ -32,39 +35,51 @@ class TabbarController: UIViewController {
         setupView(HomeViewController)
     }
     
-    
-    
-    
     @IBAction func tabSelected(_ sender: UIButton) {
-        header.isHidden = (sender.tag == 4)
-        let previousIndex = selectedIndex
-        selectedIndex = sender.tag
-        buttons[previousIndex].isSelected = false
-        UIView.animate(withDuration: 0.4) {
-            self.buttons[previousIndex].bottomShadow(8)
-            self.buttons[self.selectedIndex].bottomShadow(2)
+        if share {
+            guard let image = self.shareImage else { return }
+            let imageToShare = [image]
+            let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+            self.present(activityViewController, animated: true, completion: nil)
+            header.isHidden = false
+        } else {
+            header.isHidden = (sender.tag == 4)
+            let previousIndex = selectedIndex
+            selectedIndex = sender.tag
+            buttons[previousIndex].isSelected = false
+            UIView.animate(withDuration: 0.4) {
+                self.buttons[previousIndex].bottomShadow(8)
+                self.buttons[self.selectedIndex].bottomShadow(2)
+            }
+            
+            let previousVC = viewControllers[previousIndex]
+            previousVC.willMove(toParent: nil)
+            previousVC.view.removeFromSuperview()
+            previousVC.removeFromParent()
+            sender.isSelected = true
+            let vc = viewControllers[selectedIndex]
+            checkForShare(vc)
+            addChild(vc)
+            setupView(vc)
+            vc.didMove(toParent: self)
         }
-        
-        let previousVC = viewControllers[previousIndex]
-        previousVC.willMove(toParent: nil)
-        previousVC.view.removeFromSuperview()
-        previousVC.removeFromParent()
-        sender.isSelected = true
-        let vc = viewControllers[selectedIndex]
-        addChild(vc)
-        setupView(vc)
-        vc.didMove(toParent: self)
     }
     
     @IBAction func infoClicked(_ sender: Any) {
         header.isHidden = true
     }
     
+    func checkForShare(_ vc : UIViewController){
+        if let viewController = vc as? PlayViewController{
+            viewController.delegate = self
+        }
+    }
+    
     func setupHeader(){
         header.roundCorners(corners: [.topLeft,.topRight])
         header.layer.borderWidth = 3
         header.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-         header.isHidden = true
+        header.isHidden = true
     }
     
     func instantiateViews(){
@@ -92,5 +107,17 @@ class TabbarController: UIViewController {
         for button in buttons{
             button.bottomShadow(8)
         }
+    }
+}
+
+
+extension TabbarController: ShareDelegate{
+    func setShare(bool: Bool, image: UIImage?) {
+        print("BOOL:",bool)
+        let imageName = bool ? "share" : "Hint"
+        let image = UIImage(named: imageName)
+        infoButton.setBackgroundImage(image, for: .normal)
+        self.shareImage = image
+        self.share = bool
     }
 }

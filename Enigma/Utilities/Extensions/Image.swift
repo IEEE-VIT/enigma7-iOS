@@ -13,9 +13,12 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
-    func asyncLoadImage(_ URLString: String, placeHolder: UIImage?) {
+    func asyncLoadImage(_ url: String?, placeHolder: UIImage?) {
+        
         
         self.image = nil
+        guard let URLString = url else { return }
+
         //If imageurl's imagename has space then this line going to work for this
         let imageServerUrl = URLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         if let cachedImage = imageCache.object(forKey: NSString(string: imageServerUrl)) {
