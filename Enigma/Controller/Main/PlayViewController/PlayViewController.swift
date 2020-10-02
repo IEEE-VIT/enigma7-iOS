@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ShareDelegate : class {
-    func setShare(bool : Bool)
+    func setShare(bool : Bool, image: UIImage?)
 }
 
 class PlayViewController: UIViewController {

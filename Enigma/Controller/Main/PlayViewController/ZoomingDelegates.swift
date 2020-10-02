@@ -34,8 +34,8 @@ extension PlayViewController : ZoomoutDelegate{
             zoomingImageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
             zoomingImageView.center = center
             self.backgroundView?.alpha = 1
+            self.delegate?.setShare(bool: true, image: zoomingImageView.image)
         }){ (completed : Bool) in
-            self.delegate?.setShare(bool: true)
             self.questionImageView.alpha = 0.0
             zoomingImageView.isHidden = true
             if let image = self.questionImageView.image {
@@ -57,8 +57,8 @@ extension PlayViewController : ZoomoutDelegate{
                 zoomOutImageView.frame = self.startingImageFrame!
                 self.backgroundView.backgroundColor = .clear
                 self.questionImageView.alpha = 1.0
+                self.delegate?.setShare(bool: false, image: nil)
             }) { (completed : Bool) in
-                self.delegate?.setShare(bool: false)
                 zoomOutImageView.removeFromSuperview()
                 self.backgroundView?.removeFromSuperview()
             }
