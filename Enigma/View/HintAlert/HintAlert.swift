@@ -11,6 +11,7 @@ import UIKit
 
 protocol AlertDelegate : class {
     func hintUsed(type: HintAlert.AlertType)
+    func hintSkipped(type: HintAlert.AlertType)
 }
 
 class HintAlert: UIViewController {
@@ -46,6 +47,7 @@ class HintAlert: UIViewController {
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
+        delegate?.hintSkipped(type: type)
         self.dismiss(animated: false, completion: nil)
     }
     

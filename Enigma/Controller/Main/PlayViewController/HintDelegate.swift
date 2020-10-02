@@ -9,6 +9,12 @@
 import Foundation
 
 extension PlayViewController : AlertDelegate{
+    func hintSkipped(type: HintAlert.AlertType) {
+        if type != .normal{
+            resetPowerups()
+        }
+    }
+    
     func hintUsed(type: HintAlert.AlertType) {
         switch type {
         case .normal:
@@ -21,10 +27,15 @@ extension PlayViewController : AlertDelegate{
     }
     
     func handleHint(hint:Hint?){
-        guard let hint = hint else { return }
+        guard let text = hint?.hint else {
+            let message = hint?.detail ?? "Error"
+            presentAKAlert(type: .custom(message: message))
+            return
+        }
         hintLabel.isUserInteractionEnabled = false
-        hintLabel.text = hint.hint
+        hintLabel.text = text
         hintLabel.textAlignment = .left
+        resetPowerups()
         //TODO update xp
     }
     
@@ -37,6 +48,12 @@ extension PlayViewController : AlertDelegate{
     }
     
     func handleSkip(answer:AnswerResponse?){
+        resetPowerups()
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+    }
+    
+    func resetPowerups(){
+        closePowerupOn = false
+        setButton(powerupButtons[previousTag],false)
     }
 }
