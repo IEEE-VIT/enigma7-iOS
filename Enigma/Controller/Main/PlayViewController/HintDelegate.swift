@@ -9,8 +9,15 @@
 import Foundation
 
 extension PlayViewController : AlertDelegate{
-    func hintUsed() {
-        ServiceController.shared.getHint(completion: handleHint(hint:))
+    func hintUsed(type: HintAlert.AlertType) {
+        switch type {
+        case .normal:
+            ServiceController.shared.getHint(completion: handleHint(hint:))
+        case .freeHint:
+            print("free")
+        case .skipQuestion:
+            print("SKIP")
+        }
     }
     
     func handleHint(hint:Hint?){
@@ -20,8 +27,9 @@ extension PlayViewController : AlertDelegate{
         hintLabel.textAlignment = .left
     }
     
-    func createHintAlert(){
+    func createHintAlert(_ type : HintAlert.AlertType){
         let headerView = HintAlert()
+        headerView.type = type
         headerView.modalPresentationStyle = .overFullScreen
         headerView.delegate = self
         self.present(headerView, animated: false, completion: nil)

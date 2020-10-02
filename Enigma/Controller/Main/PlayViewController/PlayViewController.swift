@@ -111,7 +111,7 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func hintTapped(_ sender: Any) {
-        createHintAlert()
+        createHintAlert(.normal)
     }
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {

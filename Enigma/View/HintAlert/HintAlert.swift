@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol AlertDelegate : class {
-    func hintUsed()
+    func hintUsed(type: HintAlert.AlertType)
 }
 
 class HintAlert: UIViewController {
@@ -24,6 +24,8 @@ class HintAlert: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        hintTitle.text = type.title
+        hintSubtitle.text = type.subtitle
         alertView.addBorder(width: 4, .primary, alpha: 0.8)
         noButton.addBorder(width: 2, .white)
         yesButton.addBorder(width: 2, .white)
@@ -36,9 +38,10 @@ class HintAlert: UIViewController {
     @IBOutlet weak var noButton: UIButton!
     
     weak var delegate : AlertDelegate?
+    var type : AlertType = .normal
     
     @IBAction func yesTapped(_ sender: Any) {
-        delegate?.hintUsed()
+        delegate?.hintUsed(type: type)
         self.dismiss(animated: false, completion: nil)
     }
     

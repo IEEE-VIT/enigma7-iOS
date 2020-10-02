@@ -10,4 +10,6 @@ import Foundation
 
 struct Hint : Decodable{
     let hint : String?
+    let status: Bool?
+    let xp : Int?
 }
