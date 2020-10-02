@@ -131,6 +131,7 @@
                     <connections>
                         <outlet property="containerView" destination="VTk-pk-dCY" id="Apl-uw-coZ"/>
                         <outlet property="header" destination="jIz-a1-mdp" id="WHP-dc-lrG"/>
+                        <outlet property="infoButton" destination="lYG-UN-GaR" id="Tqm-x6-Zlv"/>
                         <outletCollection property="buttons" destination="321-Mp-Rq8" collectionClass="NSMutableArray" id="M6e-Fc-BgI"/>
                         <outletCollection property="buttons" destination="Nux-CZ-9Jr" collectionClass="NSMutableArray" id="uqX-Rr-NFq"/>
                         <outletCollection property="buttons" destination="9hM-6u-fAj" collectionClass="NSMutableArray" id="Hdo-di-qfd"/>

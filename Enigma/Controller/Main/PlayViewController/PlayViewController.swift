@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ShareDelegate : class {
+    func setShare(bool : Bool)
+}
+
 class PlayViewController: UIViewController {
     
     
@@ -27,6 +31,7 @@ class PlayViewController: UIViewController {
         
     var startingImageFrame : CGRect?
     var backgroundView : ImageScrollView!
+    weak var delegate : ShareDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -40,13 +40,12 @@ extension PlayViewController {
         // MARK: Get Keyboard Top Inset
         let viewHeight = UIScreen.main.bounds.height
         let keyboardIsUp = endFrameY == viewHeight
-        let textFieldY = self.answerTextField.superGlobalFrame.maxY
-        print(self.answerTextField.superGlobalFrame)
-        print(endFrameY)
-        print(textFieldY)
+        let textFieldY = self.answerTextField.superGlobalFrame.maxY + 20
         let offset = textFieldY  - endFrameY
-        print(offset)
-        let scrollPoint = CGPoint(x: 0, y: keyboardIsUp ? .zero : offset + 20)
+        let scrollPoint = CGPoint(x: 0, y: keyboardIsUp ? .zero : offset)
+        
+        guard scrollPoint.y >= 0 else { return }
+        
         self.scroll.setContentOffset(scrollPoint, animated: true)
         
         

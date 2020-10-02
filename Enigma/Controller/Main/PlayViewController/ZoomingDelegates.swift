@@ -35,7 +35,8 @@ extension PlayViewController : ZoomoutDelegate{
             zoomingImageView.center = center
             self.backgroundView?.alpha = 1
         }){ (completed : Bool) in
-            self.questionImageView.isHidden = true
+            self.delegate?.setShare(bool: true)
+            self.questionImageView.alpha = 0.0
             zoomingImageView.isHidden = true
             if let image = self.questionImageView.image {
                 self.backgroundView.display(image: image)
@@ -55,10 +56,11 @@ extension PlayViewController : ZoomoutDelegate{
             UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1 ,options: .curveEaseOut, animations: {
                 zoomOutImageView.frame = self.startingImageFrame!
                 self.backgroundView.backgroundColor = .clear
+                self.questionImageView.alpha = 1.0
             }) { (completed : Bool) in
+                self.delegate?.setShare(bool: false)
                 zoomOutImageView.removeFromSuperview()
                 self.backgroundView?.removeFromSuperview()
-                self.questionImageView?.isHidden = false
             }
         }
     }
