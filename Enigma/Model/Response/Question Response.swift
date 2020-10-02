@@ -9,11 +9,17 @@
 import Foundation
 
 struct Question : Decodable {
+    var id : Int?
     var imageUrl : String?
     var text : String?
     
     enum CodingKeys: String, CodingKey {
         case text = "text"
         case imageUrl = "img_url"
+        case id = "id"
+    }
+    
+    var questionNumber : String{
+        return "Q" + (id ?? 1).stringValue + "."
     }
 }

@@ -103,6 +103,8 @@ class PlayViewController: UIViewController {
         let powerup = sender.tag
         let powerupButton = powerupButtons[powerup]
         
+        //TODO unselect powerup
+        
         setButton(powerupButtons[previousTag],false)
         setButton(powerupButton, true)
         
@@ -129,6 +131,7 @@ class PlayViewController: UIViewController {
     func handleQuestion(question : Question?){
         guard  let question = question else { return }
         questionLabel.text = question.text
+        questionNumberLabel.text = question.questionNumber
         questionImageView.asyncLoadImage(question.imageUrl, placeHolder: nil)
     }
     

@@ -39,6 +39,13 @@ extension PlayViewController : AlertDelegate{
         //TODO update xp
     }
     
+    func resetHint(){
+        hintLabel.isUserInteractionEnabled = true
+        hintLabel.text = "[ Use hint ]"
+        hintLabel.textAlignment = .center
+        resetPowerups()
+    }
+    
     func loadHint(hint:Hint?){
         guard let text = hint?.hint else { return }
         hintLabel.isUserInteractionEnabled = false
@@ -58,6 +65,8 @@ extension PlayViewController : AlertDelegate{
     
     func handleSkip(answer:AnswerResponse?){
         resetPowerups()
+        resetHint()
+        UserDefaults.standard.set(nil, forKey: Keys.hint)
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
