@@ -14,9 +14,9 @@ extension PlayViewController : AlertDelegate{
         case .normal:
             ServiceController.shared.getHint(completion: handleHint(hint:))
         case .freeHint:
-            print("free")
+            ServiceController.shared.getHint(powerup: true, completion: handleHint(hint:))
         case .skipQuestion:
-            print("SKIP")
+            PostController.shared.skipQuestion(completion: handleSkip(answer:))
         }
     }
     
@@ -25,6 +25,7 @@ extension PlayViewController : AlertDelegate{
         hintLabel.isUserInteractionEnabled = false
         hintLabel.text = hint.hint
         hintLabel.textAlignment = .left
+        //TODO update xp
     }
     
     func createHintAlert(_ type : HintAlert.AlertType){
@@ -33,5 +34,9 @@ extension PlayViewController : AlertDelegate{
         headerView.modalPresentationStyle = .overFullScreen
         headerView.delegate = self
         self.present(headerView, animated: false, completion: nil)
+    }
+    
+    func handleSkip(answer:AnswerResponse?){
+        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
 }

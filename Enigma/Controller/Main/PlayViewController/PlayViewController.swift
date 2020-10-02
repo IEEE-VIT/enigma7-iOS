@@ -28,7 +28,7 @@ class PlayViewController: UIViewController {
     
     @IBOutlet weak var subScrollView: UIView!
     var previousTag : Int = 0
-        
+    
     var startingImageFrame : CGRect?
     var closePowerupOn : Bool = false
     var backgroundView : ImageScrollView!
@@ -107,6 +107,12 @@ class PlayViewController: UIViewController {
         
         self.previousTag = sender.tag
         self.closePowerupOn = sender.tag == 1
+        
+        if sender.tag == 0{
+            createHintAlert(.freeHint)
+        } else if sender.tag == 2{
+            createHintAlert(.skipQuestion)
+        }
     }
     
     
@@ -125,7 +131,7 @@ class PlayViewController: UIViewController {
         questionImageView.asyncLoadImage(question.imageUrl, placeHolder: nil)
     }
     
-
+    
     func showProgress(){
         let progress = xpBar(for: progressBar, duration: 1.5, startValue: 0.0, endValue: 0.6)
         self.progressBar.layer.insertSublayer(progress, above: self.progressBar.layer)
