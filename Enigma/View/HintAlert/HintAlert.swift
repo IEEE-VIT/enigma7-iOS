@@ -14,7 +14,7 @@ protocol AlertDelegate : class {
 }
 
 class HintAlert: UIViewController {
-        
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -37,7 +37,6 @@ class HintAlert: UIViewController {
     
     weak var delegate : AlertDelegate?
     
-    
     @IBAction func yesTapped(_ sender: Any) {
         delegate?.hintUsed()
         self.dismiss(animated: false, completion: nil)
@@ -47,5 +46,22 @@ class HintAlert: UIViewController {
         self.dismiss(animated: false, completion: nil)
     }
     
+    enum AlertType{
+        case normal
+        case freeHint
+        case skipQuestion
+        
+        var title : String{
+            let base = "Are you sure you want to use "
+            let postFix = (self == .normal) ? "hint?" : "powerup?"
+            return base + postFix
+        }
+        
+        var subtitle : String{
+            let base = "[ this will deduct "
+            let postFix = (self == .normal) ? "points ]" : "xp ]"
+            return base + postFix
+        }
+    }
     
 }
