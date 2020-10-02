@@ -39,6 +39,7 @@ class PlayViewController: UIViewController {
         for button in powerupButtons{
             setButton(button,false)
         }
+        loadHint(hint: Defaults.hint())
     }
     
     override func viewDidLayoutSubviews() {

@@ -39,6 +39,15 @@ extension PlayViewController : AlertDelegate{
         //TODO update xp
     }
     
+    func loadHint(hint:Hint?){
+        guard let text = hint?.hint else { return }
+        hintLabel.isUserInteractionEnabled = false
+        hintLabel.text = text
+        hintLabel.textAlignment = .left
+        resetPowerups()
+        //TODO update xp
+    }
+    
     func createHintAlert(_ type : HintAlert.AlertType){
         let headerView = HintAlert()
         headerView.type = type
