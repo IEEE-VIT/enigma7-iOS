@@ -12,6 +12,7 @@ struct NetworkConstants {
     
     struct Users {
         public static let baseURL = "https://enigma7-backend.herokuapp.com/api/v1/users/"
+        //   public static let baseURL = "http://0.0.0.0:8000/"
         
         public static let googleURL = baseURL + "auth/google/"
         public static let appleURL = baseURL + "auth/apple/"

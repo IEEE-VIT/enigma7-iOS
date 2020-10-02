@@ -47,7 +47,7 @@ class PlayViewController: UIViewController {
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
         questionImageView.image = UIImage(named: "sample")
-        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+        //ServiceController.shared.getQuestion(completion: handleQuestion(question:)) //TODO
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -83,6 +83,7 @@ class PlayViewController: UIViewController {
     }
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
+        guard let _ = questionImageView.image else { return }
         self.performZoom()
     }
     
@@ -118,7 +119,7 @@ extension PlayViewController : UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         UIView.animate(withDuration: 1) {
             let scrollPoint = CGPoint(x: 0, y: 80)
-            self.scroll.setContentOffset(scrollPoint, animated: true)
+            //self.scroll.setContentOffset(scrollPoint, animated: true)
         }
     }
 }

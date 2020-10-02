@@ -33,7 +33,9 @@ class PostController {
     }
     
     func answerQuestion(_ body: AnswerRequest,completion: @escaping(Bool,String)->()){
-        
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.answerURL, responseType: AnswerResponse.self, body: body,header: true) { (response, error) in
+            completion(response?.answer ?? false,response?.detail ?? "Uh oh 😕")
+        }
     }
 
 }
