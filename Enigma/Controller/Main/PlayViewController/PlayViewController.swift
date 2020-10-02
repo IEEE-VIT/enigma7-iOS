@@ -30,18 +30,19 @@ class PlayViewController: UIViewController {
     var previousTag : Int = 0
         
     var startingImageFrame : CGRect?
+    var closePowerupOn : Bool = false
     var backgroundView : ImageScrollView!
     weak var delegate : ShareDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for button in powerupButtons{
+            setButton(button,false)
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        for button in powerupButtons{
-            setButton(button,false)
-        }
         submitButton.addBorder(width: 2, .tertiary)
         questionImageView.addBorder(width: 2, .tertiary)
     }
@@ -52,7 +53,7 @@ class PlayViewController: UIViewController {
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
         questionImageView.image = UIImage(named: "sample")
-        //ServiceController.shared.getQuestion(completion: handleQuestion(question:)) //TODO
+        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -62,15 +63,40 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func submitTapped(_ sender: Any) {
+        //TODO disable button
+        let answer = AnswerRequest(answer: answerTextField.text ?? "")
+        PostController.shared.answerQuestion(answer, closePowerupUsed: closePowerupOn, completion: handleAnswerResponse(success:message:))
+    }
+    
+    
+    
+    
+    
+    func handleAnswerResponse(success:Bool,message:String){
+        if success{
+            presentAKAlert(type: .success)
+            processCorrectAnswer()
+        } else {
+            presentAKAlert(type: .failure)
+        }
+    }
+    
+    func presentAKAlert(type: AKAlert.ALertType){
         let width = UIScreen.main.bounds.width * 0.8
         let height = width / 3.33
         let frame = CGRect(x: 0, y: 0, width: width, height: height)
-        let alert = AKAlert(type: .success)
+        let alert = AKAlert(type: type)
         alert.frame = frame
         self.view.addSubview(alert)
         alert.center = self.view.center
     }
     
+    func processCorrectAnswer(){
+        self.questionLabel.text = ""
+        self.answerTextField.text = ""
+        self.questionImageView.image = nil
+        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+    }
     
     @IBAction func powerupTapped(_ sender: UIButton) {
         let powerup = sender.tag
@@ -80,6 +106,7 @@ class PlayViewController: UIViewController {
         setButton(powerupButton, true)
         
         self.previousTag = sender.tag
+        self.closePowerupOn = sender.tag == 1
     }
     
     
@@ -116,16 +143,6 @@ class PlayViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-}
-
-extension PlayViewController : UITextFieldDelegate{
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 1) {
-            let scrollPoint = CGPoint(x: 0, y: 80)
-            //self.scroll.setContentOffset(scrollPoint, animated: true)
-        }
     }
 }
 

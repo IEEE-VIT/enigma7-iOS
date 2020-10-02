@@ -33,7 +33,6 @@ struct NetworkConstants {
         public static let skipPowerupURL = baseURL + "powerup/skip/"
         public static let closeAnswerPowerupURL = baseURL + "powerup/close-answer/"
         public static let answerURL = baseURL + "answer/"
-
     }
     
 }
