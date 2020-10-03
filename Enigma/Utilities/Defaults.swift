@@ -15,6 +15,10 @@ class  Defaults {
     static func token() -> String {
         return userDefaults.string(forKey: Keys.token) ?? ""
     }
+    
+    static func isLoggedin() -> Bool {
+        return (userDefaults.value(forKey: Keys.login) as? Bool) ?? false
+    }
 
     static func user() -> UserDetails? {
         let body = userDefaults.value(forKey: Keys.user) as? Data
@@ -41,9 +45,12 @@ class  Defaults {
     }
     
     static func fetchAll(){
+        if Defaults.isLoggedin() {
+        print("FETCHING ALL DATA")
         ServiceController.shared.getLeaderboard { (_) in }
         ServiceController.shared.getUserDetails { (_) in }
         ServiceController.shared.getQuestion { (_) in }
+        }
     }
     
 }
