@@ -64,12 +64,19 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func submitTapped(_ sender: Any) {
-        //TODO disable button
+        guard validate() else { return }
+        submitButton.isEnabled = false
         let answer = AnswerRequest(answer: answerTextField.text ?? "")
         PostController.shared.answerQuestion(answer, closePowerupUsed: closePowerupOn, completion: handleAnswerResponse(success:message:))
     }
     
-    
+    func validate()->Bool{
+        if answerTextField.text?.isEmpty ??  true {
+            presentAKAlert(type: .custom(message: "Answer can not be empty!"))
+            return false
+        }
+        return true
+    }
     
     
     
@@ -78,6 +85,7 @@ class PlayViewController: UIViewController {
             presentAKAlert(type: .success)
             processCorrectAnswer()
         } else {
+            submitButton.isEnabled = true
             if closePowerupOn {
                 presentAKAlert(type: .custom(message: message))
             } else {
@@ -100,6 +108,7 @@ class PlayViewController: UIViewController {
         self.questionLabel.text = ""
         self.answerTextField.text = ""
         self.questionImageView.image = nil
+        self.submitButton.isEnabled = true
         UserDefaults.standard.set(nil, forKey: Keys.question)
         UserDefaults.standard.set(nil, forKey: Keys.hint)
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
@@ -142,7 +151,6 @@ class PlayViewController: UIViewController {
     }
     
     func handleQuestion(question : Question?){
-        print("Q",question)
         guard  let question = question else { return }
         questionLabel.text = question.text
         questionNumberLabel.text = question.questionNumber
