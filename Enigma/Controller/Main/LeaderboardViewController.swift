@@ -16,9 +16,12 @@ class LeaderboardViewController: UIViewController {
     
     var leaderboard = [Leaderboard]()
     
+    private let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         handleLeaderBoard(leaderboard: Defaults.leaderboard())
+        setupRefreshControl()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,8 +33,19 @@ class LeaderboardViewController: UIViewController {
         guard let leaderboard = leaderboard else { return }
         self.leaderboard = leaderboard.filter{ $0.username != "" }
         DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
             self.tableView.reloadData()
         }
+    }
+    
+    func setupRefreshControl(){
+        tableView.refreshControl = refreshControl
+        refreshControl.tintColor = .tertiary
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+    }
+    
+    @objc func refresh(_ sender: Any) {
+       ServiceController.shared.getLeaderboard(completion: handleLeaderBoard(leaderboard:))
     }
     
 
