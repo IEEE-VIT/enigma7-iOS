@@ -23,3 +23,5 @@ extension ErrorResponse: LocalizedError {
         return statusMessage
     }
 }
+
+struct sample : Decodable { }

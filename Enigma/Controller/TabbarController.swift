@@ -82,6 +82,9 @@ class TabbarController: UIViewController {
         if let viewController = vc as? PlayViewController{
             viewController.delegate = self
         }
+        if let viewController = vc as? ProfileViewController{
+            viewController.delegate = self
+        }
     }
     
     func setupHeader(){
@@ -127,5 +130,14 @@ extension TabbarController: ShareDelegate{
         infoButton.setBackgroundImage(buttonImage, for: .normal)
         self.shareImage = image
         self.share = bool
+    }
+}
+
+extension TabbarController: LogoutDelegate{
+    func logout() {
+        containerView.subviews.forEach({ $0.removeFromSuperview() })
+        viewDidLoad()
+        viewDidLayoutSubviews()
+        viewWillAppear(true)
     }
 }

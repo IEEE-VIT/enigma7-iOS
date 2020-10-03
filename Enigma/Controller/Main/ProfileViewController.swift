@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol LogoutDelegate: class {
+    func logout()
+}
+
 class ProfileViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var emailId: UILabel!
@@ -16,6 +20,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var signoutButton: UIButton!
+    
+    weak var delegate: LogoutDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +48,10 @@ class ProfileViewController: UIViewController {
         score.text = user.points?.stringValue
     }
     
-    @IBAction func logout(_ sender: Any) {  }
+    @IBAction func logout(_ sender: Any) {
+        PostController.shared.logout()
+        self.delegate?.logout()
+    }
     
 }
 

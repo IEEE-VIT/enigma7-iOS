@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GoogleSignIn
 
 class PostController {
     static let shared: PostController = PostController()
@@ -45,6 +46,14 @@ class PostController {
         WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, error) in
             completion(response)
         }
+    }
+    
+    func logout(){
+        let body = AnswerRequest(answer: "")
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Users.logoutURL, responseType: sample.self, body: body,header: true,noBody: true) { (_, _) in }
+        GIDSignIn.sharedInstance()?.signOut()
+        UserDefaults.standard.set(false, forKey: Keys.login)
+        UserDefaults.standard.set(nil, forKey: Keys.token)
     }
     
 }
