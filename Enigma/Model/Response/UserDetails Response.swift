@@ -17,6 +17,16 @@ struct UserDetails : Decodable{
     let xp: Int?
     let no_of_hints_used: Int?
     let rank: Int?
+    
+    var profileDataSource : [(String,String)] {
+        var data : [(String,String)] = []
+        data.append(("User Name:",username ?? ""))
+        data.append(("Email ID:",email ?? ""))
+        data.append(("Questions Solved:",(rank ?? 0).stringValue))
+        data.append(("Rank:",(rank ?? 0).stringValue))
+        data.append(("Score:",(points ?? 0).stringValue))
+        return data
+    }
 }
 
 
