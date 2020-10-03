@@ -14,8 +14,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var questionsSolved: UILabel!
     @IBOutlet weak var rank: UILabel!
     @IBOutlet weak var score: UILabel!
-    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var signoutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         handleUserDetails(details: Defaults.user())
@@ -29,6 +30,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         signoutButton.addBorder(width: 2, .tertiary)
+        bottomConstraint.constant = view.frame.height * 0.08
     }
     
     func handleUserDetails(details: UserDetails?){
@@ -43,3 +45,4 @@ class ProfileViewController: UIViewController {
     @IBAction func logout(_ sender: Any) {  }
     
 }
+
