@@ -557,7 +557,7 @@
                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Press the play button]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-sa-Pwa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Press the play button]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rNH-sa-Pwa">
                                 <rect key="frame" x="25" y="608.5" width="325" height="27.5"/>
                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
                                 <color key="textColor" name="quaternary"/>
@@ -672,12 +672,6 @@
                                     <action selector="logout:" destination="6W7-zj-YS8" eventType="touchUpInside" id="R24-ug-OqI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ValidUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hNF-eN-z1K">
-                                <rect key="frame" x="298" y="35" width="156" height="26"/>
-                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
-                                <color key="textColor" name="tertiary"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-po-Z1t">
                                 <rect key="frame" x="25" y="147" width="325" height="379"/>
                                 <subviews>
@@ -697,7 +691,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" name="dark"/>
                                         <constraints>
                                             <constraint firstItem="8og-ns-L69" firstAttribute="top" secondItem="lhV-sk-H9h" secondAttribute="bottom" id="GGQ-bJ-tJs"/>
                                             <constraint firstItem="lhV-sk-H9h" firstAttribute="leading" secondItem="xyL-i3-3y8" secondAttribute="leading" id="Jse-9g-Wnz"/>
@@ -716,16 +710,17 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ValidUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-2f-trR">
-                                                <rect key="frame" x="16" y="49" width="156" height="26"/>
+                                                <rect key="frame" x="16" y="49" width="309" height="26"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="tertiary"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" name="dark"/>
                                         <constraints>
                                             <constraint firstItem="ET8-hC-GoW" firstAttribute="centerY" secondItem="J0V-k2-25F" secondAttribute="centerY" constant="-12.5" id="6bw-Rw-tlC"/>
                                             <constraint firstItem="DWf-2f-trR" firstAttribute="leading" secondItem="J0V-k2-25F" secondAttribute="leading" constant="16" id="Cfv-cX-gcn"/>
+                                            <constraint firstAttribute="trailing" secondItem="DWf-2f-trR" secondAttribute="trailing" id="EPy-d4-tEV"/>
                                             <constraint firstItem="ET8-hC-GoW" firstAttribute="leading" secondItem="J0V-k2-25F" secondAttribute="leading" id="K7O-Q8-AUj"/>
                                             <constraint firstItem="DWf-2f-trR" firstAttribute="top" secondItem="ET8-hC-GoW" secondAttribute="bottom" id="T2y-5R-Jxg"/>
                                         </constraints>
@@ -749,7 +744,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" name="dark"/>
                                                 <constraints>
                                                     <constraint firstItem="G8c-YQ-pA3" firstAttribute="leading" secondItem="LIM-M1-QP7" secondAttribute="trailing" constant="5" id="QZj-Fg-SD7"/>
                                                     <constraint firstItem="LIM-M1-QP7" firstAttribute="centerY" secondItem="8G0-le-ZEY" secondAttribute="centerY" id="RS9-6i-wgb"/>
@@ -774,7 +769,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" name="dark"/>
                                                 <constraints>
                                                     <constraint firstItem="0pO-6t-4vr" firstAttribute="centerY" secondItem="N3D-Ys-UMh" secondAttribute="centerY" id="76d-pO-P65"/>
                                                     <constraint firstItem="dU3-9n-wdo" firstAttribute="leading" secondItem="N3D-Ys-UMh" secondAttribute="leading" id="SK2-lr-8TT"/>
@@ -799,7 +794,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="backgroundColor" name="dark"/>
                                                 <constraints>
                                                     <constraint firstItem="ryV-dg-fed" firstAttribute="leading" secondItem="2Ih-TX-w59" secondAttribute="leading" id="1ED-Ep-5CI"/>
                                                     <constraint firstItem="ryV-dg-fed" firstAttribute="centerY" secondItem="2Ih-TX-w59" secondAttribute="centerY" id="VjY-uX-v7G"/>
@@ -809,7 +804,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" name="dark"/>
                                         <constraints>
                                             <constraint firstItem="2Ih-TX-w59" firstAttribute="leading" secondItem="1tr-ZL-KOA" secondAttribute="leading" id="21t-UX-xR4"/>
                                             <constraint firstItem="N3D-Ys-UMh" firstAttribute="top" secondItem="8G0-le-ZEY" secondAttribute="bottom" id="74w-jS-70B"/>
@@ -854,9 +849,7 @@
                             <constraint firstItem="fBx-ig-sAq" firstAttribute="top" secondItem="T60-ww-clu" secondAttribute="top" constant="80" id="KmY-oR-2ku"/>
                             <constraint firstItem="fBx-ig-sAq" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="20" id="e8o-vd-u58"/>
                             <constraint firstItem="3bp-Op-LdI" firstAttribute="width" secondItem="oag-Mo-AO7" secondAttribute="width" multiplier="0.33" id="gWV-2G-fhA"/>
-                            <constraint firstItem="hNF-eN-z1K" firstAttribute="centerY" secondItem="oag-Mo-AO7" secondAttribute="centerY" constant="-285.5" id="j0k-32-avf"/>
                             <constraint firstItem="6WR-po-Z1t" firstAttribute="top" secondItem="fBx-ig-sAq" secondAttribute="bottom" constant="30" id="rvc-X5-uet"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hNF-eN-z1K" secondAttribute="trailing" constant="-95" id="tbf-Pw-l7I"/>
                             <constraint firstItem="T60-ww-clu" firstAttribute="trailing" secondItem="fBx-ig-sAq" secondAttribute="trailing" constant="50" id="uD2-xm-yWT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T60-ww-clu"/>
