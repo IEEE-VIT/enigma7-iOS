@@ -28,6 +28,7 @@ extension PlayViewController : AlertDelegate{
     
     func handleHint(hint:Hint?){
         guard let text = hint?.hint else {
+            setButton(powerupButtons[previousTag],false)
             let message = hint?.detail ?? "Error"
             presentAKAlert(type: .custom(message: message))
             return
@@ -64,10 +65,16 @@ extension PlayViewController : AlertDelegate{
     }
     
     func handleSkip(answer:AnswerResponse?){
-        resetPowerups()
-        resetHint()
-        UserDefaults.standard.set(nil, forKey: Keys.hint)
-        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+        if answer?.status ?? false{
+            setButton(powerupButtons[previousTag],false)
+            resetHint()
+            UserDefaults.standard.set(nil, forKey: Keys.hint)
+            ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+        } else {
+            setButton(powerupButtons[previousTag],false)
+            let message = answer?.detail ?? "An Error occured"
+            presentAKAlert(type: .custom(message: message))
+        }
     }
     
     func resetPowerups(){

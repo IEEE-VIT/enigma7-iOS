@@ -13,16 +13,16 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
-    func asyncLoadImage(_ url: String?, placeHolder: UIImage?) {
+    func asyncLoadImage(_ url: String?, placeHolder: UIImage?,img: @escaping (UIImage)->()) {
         
         
-        self.image = nil
         guard let URLString = url else { return }
 
         //If imageurl's imagename has space then this line going to work for this
         let imageServerUrl = URLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         if let cachedImage = imageCache.object(forKey: NSString(string: imageServerUrl)) {
             print("image was already cached!")
+            img(cachedImage)
             self.image = cachedImage
             return
         }
@@ -38,10 +38,12 @@ extension UIImageView {
                     }
                     return
                 }
+                
                 DispatchQueue.main.async {
                     if let data = data {
                         if let downloadedImage = UIImage(data: data) {
                             imageCache.setObject(downloadedImage, forKey: NSString(string: imageServerUrl))
+                            img(downloadedImage)
                             self.image = downloadedImage
                         }
                     }

@@ -23,12 +23,11 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var answerTextField: CustomTextField!
     @IBOutlet weak var submitButton: UIButton!
-    
     @IBOutlet weak var scroll: UIScrollView!
-    
     @IBOutlet weak var subScrollView: UIView!
-    var previousTag : Int = 0
     
+    var previousTag : Int = 0
+    var image : UIImage?
     var startingImageFrame : CGRect?
     var closePowerupOn : Bool = false
     var backgroundView : ImageScrollView!
@@ -39,7 +38,9 @@ class PlayViewController: UIViewController {
         for button in powerupButtons{
             setButton(button,false)
         }
+        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
         loadHint(hint: Defaults.hint())
+        handleQuestion(question: Defaults.question())
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,8 +54,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         progressBar.layer.borderWidth = 1.5
         progressBar.layer.borderColor = UIColor.secondary.cgColor
-        questionImageView.image = UIImage(named: "sample")
-        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+      //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -78,7 +78,11 @@ class PlayViewController: UIViewController {
             presentAKAlert(type: .success)
             processCorrectAnswer()
         } else {
+            if closePowerupOn {
+                presentAKAlert(type: .custom(message: message))
+            } else {
             presentAKAlert(type: .failure)
+            }
         }
     }
     
@@ -96,6 +100,8 @@ class PlayViewController: UIViewController {
         self.questionLabel.text = ""
         self.answerTextField.text = ""
         self.questionImageView.image = nil
+        UserDefaults.standard.set(nil, forKey: Keys.question)
+        UserDefaults.standard.set(nil, forKey: Keys.hint)
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
@@ -103,19 +109,26 @@ class PlayViewController: UIViewController {
         let powerup = sender.tag
         let powerupButton = powerupButtons[powerup]
         
-        //TODO unselect powerup
+
         
         setButton(powerupButtons[previousTag],false)
         setButton(powerupButton, true)
         
-        self.previousTag = sender.tag
-        self.closePowerupOn = sender.tag == 1
-        
+        if powerup == 1 && closePowerupOn{
+            closePowerupOn = false
+            setButton(powerupButtons[1],false)
+        } else {
+            closePowerupOn = sender.tag == 1
+        }
+            
         if sender.tag == 0{
             createHintAlert(.freeHint)
         } else if sender.tag == 2{
             createHintAlert(.skipQuestion)
         }
+        
+
+        self.previousTag = sender.tag
     }
     
     
@@ -129,10 +142,15 @@ class PlayViewController: UIViewController {
     }
     
     func handleQuestion(question : Question?){
+        print("Q",question)
         guard  let question = question else { return }
         questionLabel.text = question.text
         questionNumberLabel.text = question.questionNumber
-        questionImageView.asyncLoadImage(question.imageUrl, placeHolder: nil)
+        questionImageView.asyncLoadImage(question.imageUrl, placeHolder: nil, img: setImage(img:))
+    }
+    
+    func setImage(img: UIImage){
+        self.image = img
     }
     
     
@@ -149,6 +167,10 @@ class PlayViewController: UIViewController {
             button.addBorder(.quaternary)
             button.backgroundColor = UIColor.primary.withAlphaComponent(0.6)
         }
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        self.view.endEditing(true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
