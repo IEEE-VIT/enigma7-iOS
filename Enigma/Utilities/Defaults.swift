@@ -40,4 +40,10 @@ class  Defaults {
         return decode(data: data)
     }
     
+    static func fetchAll(){
+        ServiceController.shared.getLeaderboard { (_) in }
+        ServiceController.shared.getUserDetails { (_) in }
+        ServiceController.shared.getQuestion { (_) in }
+    }
+    
 }

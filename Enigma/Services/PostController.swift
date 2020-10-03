@@ -14,6 +14,7 @@ class PostController {
     func signup(type: SignupType,body:SignupRequest,completion: @escaping(Bool,SignupResponse?,String) -> ()) {
         WebHelper.sendPOSTRequest(url: type.url, responseType: SignupResponse.self, body: body) { (response, error) in
             if let response = response,let key = response.key{
+                UserDefaults.standard.set(true, forKey: Keys.login)
                 UserDefaults.standard.set("Token " + key, forKey: Keys.token)
                 completion(true,response,"success")
             }else{
