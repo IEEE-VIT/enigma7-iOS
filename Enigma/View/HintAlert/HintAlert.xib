@@ -16,8 +16,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HintAlert" customModule="Enigma" customModuleProvider="target">
             <connections>
                 <outlet property="alertView" destination="hgW-qN-xay" id="9zM-q9-Nlm"/>
-                <outlet property="hintSubtitle" destination="4TX-Rr-Kcw" id="is8-1z-iiW"/>
-                <outlet property="hintTitle" destination="fe5-sk-W86" id="SVn-Od-ohn"/>
+                <outlet property="hintSubtitle" destination="4TX-Rr-Kcw" id="Ejg-IW-pQ2"/>
+                <outlet property="hintTitle" destination="fe5-sk-W86" id="Bg3-1q-BQt"/>
                 <outlet property="noButton" destination="j4k-Aq-PvL" id="kiu-9q-BrR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="sEn-Hq-K2r"/>
                 <outlet property="yesButton" destination="Vuc-Jb-ZGe" id="L7v-dl-BbJ"/>

@@ -34,7 +34,7 @@ class  Defaults {
         return decode(data: data)
     }
     
-    static func hint() -> Question? {
+    static func hint() -> Hint? {
         let body = userDefaults.value(forKey: Keys.hint) as? Data
         guard let data = body else { return nil }
         return decode(data: data)

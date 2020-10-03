@@ -33,10 +33,11 @@ class AKAlert: UIView {
         self.AKAlertWillDisappear()
     }
     
-    enum ALertType : String{
+    enum ALertType{
         case success
         case failure
         case close
+        case custom(message: String)
         
         var message : String{
             switch self {
@@ -46,11 +47,26 @@ class AKAlert: UIView {
                 return "Try again !"
             case .close:
                 return "Response is close to the answer"
+            case .custom(let message):
+                return message
+            }
+        }
+        
+        var title : String{
+         switch self {
+            case .success:
+                return "success"
+            case .failure:
+                return "failure"
+            case .close:
+                return "close"
+         case .custom(_):
+            return "close"
             }
         }
         
         var icon : UIImage?{
-            return UIImage(named: self.rawValue)
+            return UIImage(named: self.title)
         }
     }
     

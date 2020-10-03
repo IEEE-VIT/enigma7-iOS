@@ -38,5 +38,12 @@ class PostController {
             completion(response?.answer ?? false,response?.detail ?? "Uh oh 😕")
         }
     }
-
+    
+    func skipQuestion(completion: @escaping(AnswerResponse?)->()){
+        let body = AnswerRequest(answer: "")
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, error) in
+            completion(response)
+        }
+    }
+    
 }

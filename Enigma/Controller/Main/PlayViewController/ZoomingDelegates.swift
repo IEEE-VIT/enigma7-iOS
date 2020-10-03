@@ -31,6 +31,7 @@ extension PlayViewController : ZoomoutDelegate{
         let center = view.center
         let height = width / aspectRatio
         UIView.animate(withDuration: 0.5, delay: 0,usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+            self.view.endEditing(true)
             zoomingImageView.frame = CGRect(x: 0, y: 0, width: width, height: height)
             zoomingImageView.center = center
             self.backgroundView?.alpha = 1
