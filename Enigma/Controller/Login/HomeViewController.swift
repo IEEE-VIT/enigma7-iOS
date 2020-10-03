@@ -52,6 +52,7 @@ class HomeViewController: UIViewController {
         if success{
             let usernameExits = response?.username_exists ?? false
             let vc = usernameExits ? "PlayViewController" : "UserNameViewController"
+            Defaults.fetchAll()
             self.present(vc)
         } else {
             //TODO show error

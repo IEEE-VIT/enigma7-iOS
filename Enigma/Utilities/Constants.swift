@@ -28,6 +28,7 @@ enum httpMethod: String {
 }
 
 class Keys {
+    static let login = "EnigmaLogin"
     static let token = "EnigmaToken"
     static let user = "EnigmaUser"
     static let leaderboard = "EnigmaLeaderboard"
