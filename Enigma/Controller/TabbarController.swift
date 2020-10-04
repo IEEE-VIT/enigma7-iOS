@@ -31,12 +31,21 @@ class TabbarController: UIViewController {
         HomeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController")
         setupButtons()
         instantiateViews()
-        setupHeader()
         setupView(HomeViewController)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        header.isHidden = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupHeader()
+    }
+    
     @IBAction func tabSelected(_ sender: UIButton) {
-        if share {
+        if share && sender.tag == 4{
             guard let image = self.shareImage else { return }
             let imageToShare = [image]
             let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
@@ -73,13 +82,15 @@ class TabbarController: UIViewController {
         if let viewController = vc as? PlayViewController{
             viewController.delegate = self
         }
+        if let viewController = vc as? ProfileViewController{
+            viewController.delegate = self
+        }
     }
     
     func setupHeader(){
         header.roundCorners(corners: [.topLeft,.topRight])
         header.layer.borderWidth = 3
         header.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        header.isHidden = true
     }
     
     func instantiateViews(){
@@ -115,9 +126,18 @@ extension TabbarController: ShareDelegate{
     func setShare(bool: Bool, image: UIImage?) {
         print("BOOL:",bool)
         let imageName = bool ? "share" : "Hint"
-        let image = UIImage(named: imageName)
-        infoButton.setBackgroundImage(image, for: .normal)
+        let buttonImage = UIImage(named: imageName)
+        infoButton.setBackgroundImage(buttonImage, for: .normal)
         self.shareImage = image
         self.share = bool
+    }
+}
+
+extension TabbarController: LogoutDelegate{
+    func logout() {
+        containerView.subviews.forEach({ $0.removeFromSuperview() })
+        viewDidLoad()
+        viewDidLayoutSubviews()
+        viewWillAppear(true)
     }
 }
