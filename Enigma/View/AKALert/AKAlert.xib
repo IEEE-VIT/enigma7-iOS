@@ -28,13 +28,13 @@
                     <rect key="frame" x="0.0" y="47" width="421" height="110"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rhI-Hb-cor">
-                            <rect key="frame" x="60" y="38.5" width="33" height="33"/>
+                            <rect key="frame" x="30" y="38.5" width="33" height="33"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="rhI-Hb-cor" secondAttribute="height" id="KHZ-CQ-PRa"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Response is close to the answer" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdQ-GG-sh8">
-                            <rect key="frame" x="108" y="43.5" width="298" height="23.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have already taken a hint" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HdQ-GG-sh8">
+                            <rect key="frame" x="78" y="15" width="328" height="80"/>
                             <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -42,12 +42,14 @@
                     </subviews>
                     <color key="backgroundColor" name="dark"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="HdQ-GG-sh8" secondAttribute="bottom" constant="15" id="1VE-V5-VYa"/>
                         <constraint firstItem="HdQ-GG-sh8" firstAttribute="leading" secondItem="rhI-Hb-cor" secondAttribute="trailing" constant="15" id="2T9-rV-Akk"/>
                         <constraint firstAttribute="trailing" secondItem="HdQ-GG-sh8" secondAttribute="trailing" constant="15" id="F7W-ls-RRY"/>
                         <constraint firstItem="rhI-Hb-cor" firstAttribute="height" secondItem="00M-Ft-Qfk" secondAttribute="height" multiplier="0.3" id="Od9-Up-DM6"/>
-                        <constraint firstItem="rhI-Hb-cor" firstAttribute="leading" secondItem="00M-Ft-Qfk" secondAttribute="leading" constant="60" id="TeH-BR-kQh"/>
+                        <constraint firstItem="rhI-Hb-cor" firstAttribute="leading" secondItem="00M-Ft-Qfk" secondAttribute="leading" constant="30" id="TeH-BR-kQh"/>
                         <constraint firstItem="rhI-Hb-cor" firstAttribute="centerY" secondItem="00M-Ft-Qfk" secondAttribute="centerY" id="fev-xp-GnP"/>
                         <constraint firstItem="HdQ-GG-sh8" firstAttribute="centerY" secondItem="rhI-Hb-cor" secondAttribute="centerY" id="jRo-hP-n5o"/>
+                        <constraint firstItem="HdQ-GG-sh8" firstAttribute="top" secondItem="00M-Ft-Qfk" secondAttribute="top" constant="15" id="uOM-4P-vPs"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7x-VC-Kek">
