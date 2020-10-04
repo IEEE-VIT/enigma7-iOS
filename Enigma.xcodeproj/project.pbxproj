@@ -36,15 +36,11 @@
 		5B4AC2B6251790AC00534934 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B5251790AC00534934 /* InstagramAPI.swift */; };
 		5B4AC2B82517910B00534934 /* Instagram Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B72517910B00534934 /* Instagram Webview.swift */; };
 		5B4AC2BA2517913F00534934 /* Instagram Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B92517913F00534934 /* Instagram Response.swift */; };
-		5B8F72262506929E00C427F7 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72232506929D00C427F7 /* GoogleSignIn.framework */; };
-		5B8F72272506929E00C427F7 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */; };
-		5B8F72282506929E00C427F7 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
 		5B8F722C2506952F00C427F7 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722B2506952F00C427F7 /* LocalAuthentication.framework */; };
 		5B8F722E2506953A00C427F7 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722D2506953A00C427F7 /* SafariServices.framework */; };
 		5B8F72302506954600C427F7 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722F2506954600C427F7 /* AuthenticationServices.framework */; };
 		5B8F72322506955800C427F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72312506955800C427F7 /* SystemConfiguration.framework */; };
 		5B8F7234250695ED00C427F7 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F7233250695ED00C427F7 /* credentials.plist */; };
-		5B8F7238250696C400C427F7 /* Google+Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7237250696C400C427F7 /* Google+Signin.swift */; };
 		5B921FDD250745A900B2AFF4 /* Network Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDC250745A900B2AFF4 /* Network Constants.swift */; };
 		5B921FDF250748BE00B2AFF4 /* Web Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDE250748BE00B2AFF4 /* Web Helper.swift */; };
 		5B921FE1250749D900B2AFF4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE0250749D900B2AFF4 /* Error.swift */; };
@@ -54,6 +50,10 @@
 		5B921FEB2507516E00B2AFF4 /* Signup Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FEA2507516E00B2AFF4 /* Signup Request.swift */; };
 		5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FEE250752F500B2AFF4 /* Signup Response.swift */; };
 		5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FF325087E4500B2AFF4 /* Haptic.swift */; };
+		5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7237250696C400C427F7 /* Google+Signin.swift */; };
+		5BA3F87325298D22008F0420 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
+		5BA3F87725298D2D008F0420 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72232506929D00C427F7 /* GoogleSignIn.framework */; };
+		5BA3F87825298D2D008F0420 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */; };
 		5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */; };
 		5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */; };
 		5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB72124FAC9F8006D5541 /* Main.storyboard */; };
@@ -146,7 +146,7 @@
 		5B4AC2B72517910B00534934 /* Instagram Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instagram Webview.swift"; sourceTree = "<group>"; };
 		5B4AC2B92517913F00534934 /* Instagram Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instagram Response.swift"; sourceTree = "<group>"; };
 		5B8F72232506929D00C427F7 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
-		5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
+		5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = SOURCE_ROOT; };
 		5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		5B8F7229250692B300C427F7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = Enigma/Google/GoogleSignIn.bundle; sourceTree = "<group>"; };
 		5B8F722B2506952F00C427F7 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
@@ -207,10 +207,10 @@
 			files = (
 				5B8F72322506955800C427F7 /* SystemConfiguration.framework in Frameworks */,
 				5B8F72302506954600C427F7 /* AuthenticationServices.framework in Frameworks */,
+				5BA3F87725298D2D008F0420 /* GoogleSignIn.framework in Frameworks */,
+				5BA3F87825298D2D008F0420 /* GoogleSignInDependencies.framework in Frameworks */,
 				5B8F722E2506953A00C427F7 /* SafariServices.framework in Frameworks */,
 				5B8F722C2506952F00C427F7 /* LocalAuthentication.framework in Frameworks */,
-				5B8F72272506929E00C427F7 /* GoogleSignInDependencies.framework in Frameworks */,
-				5B8F72262506929E00C427F7 /* GoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +309,7 @@
 		5B8F7235250696B200C427F7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5B8F72222506928D00C427F7 /* Google */,
 				5B4AC2B22517907300534934 /* Instagram */,
 				5B4AC2AD2517886B00534934 /* Apple */,
 				5B921FE42507503000B2AFF4 /* ServiceController.swift */,
@@ -370,7 +371,6 @@
 			children = (
 				5B4AC2B025178A7E00534934 /* Enigma.entitlements */,
 				5B8F7235250696B200C427F7 /* Services */,
-				5B8F72222506928D00C427F7 /* Google */,
 				5BABB74E24FACB68006D5541 /* Utilities */,
 				5BABB74D24FACB2A006D5541 /* Controller */,
 				5BABB74C24FACB28006D5541 /* View */,
@@ -605,7 +605,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8F72282506929E00C427F7 /* GoogleSignIn.bundle in Resources */,
+				5BA3F87325298D22008F0420 /* GoogleSignIn.bundle in Resources */,
 				5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */,
 				5BABB75B24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */,
 				5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */,
@@ -699,9 +699,9 @@
 				5B4AC2B6251790AC00534934 /* InstagramAPI.swift in Sources */,
 				5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */,
 				5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */,
-				5B8F7238250696C400C427F7 /* Google+Signin.swift in Sources */,
 				5B1B4B5825236AAD00398B0D /* UserDetails Response.swift in Sources */,
 				5B921FDF250748BE00B2AFF4 /* Web Helper.swift in Sources */,
+				5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */,
 				5B921FEB2507516E00B2AFF4 /* Signup Request.swift in Sources */,
 				5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */,
 				5B4AC2BA2517913F00534934 /* Instagram Response.swift in Sources */,
@@ -892,6 +892,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Enigma/Google",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Enigma/Services/Google",
 				);
 				INFOPLIST_FILE = Enigma/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -920,6 +922,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Enigma/Google",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Enigma/Services/Google",
 				);
 				INFOPLIST_FILE = Enigma/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
