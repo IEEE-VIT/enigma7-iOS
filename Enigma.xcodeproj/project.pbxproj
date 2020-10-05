@@ -38,6 +38,7 @@
 		5B4AC2BA2517913F00534934 /* Instagram Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B92517913F00534934 /* Instagram Response.swift */; };
 		5B81A1F8252AF33500DA09A8 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A1F7252AF33500DA09A8 /* LoginTests.swift */; };
 		5B81A207252AF38100DA09A8 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */; };
+		5B81A254252B71F400DA09A8 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A253252B71F400DA09A8 /* GameTests.swift */; };
 		5B8F722C2506952F00C427F7 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722B2506952F00C427F7 /* LocalAuthentication.framework */; };
 		5B8F722E2506953A00C427F7 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722D2506953A00C427F7 /* SafariServices.framework */; };
 		5B8F72302506954600C427F7 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722F2506954600C427F7 /* AuthenticationServices.framework */; };
@@ -149,6 +150,7 @@
 		5B4AC2B92517913F00534934 /* Instagram Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instagram Response.swift"; sourceTree = "<group>"; };
 		5B81A1F7252AF33500DA09A8 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		5B81A253252B71F400DA09A8 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		5B8F72232506929D00C427F7 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = SOURCE_ROOT; };
 		5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				5BABB73424FACA02006D5541 /* Info.plist */,
 				5B81A1F7252AF33500DA09A8 /* LoginTests.swift */,
 				5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */,
+				5B81A253252B71F400DA09A8 /* GameTests.swift */,
 			);
 			path = EnigmaTests;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 				5B81A1F8252AF33500DA09A8 /* LoginTests.swift in Sources */,
 				5B1B4B532523194600398B0D /* EditUsername Request.swift in Sources */,
 				5B1B4B56252319AB00398B0D /* EditUsername Response.swift in Sources */,
+				5B81A254252B71F400DA09A8 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

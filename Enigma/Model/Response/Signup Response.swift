@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SignupResponse : Decodable {
+struct SignupResponse : Codable {
     var key : String?
     var username_exists : Bool?
 }

@@ -55,7 +55,7 @@ class WebHelper {
         }
     }
     
-    class func sendPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: String, responseType: ResponseType.Type, body: RequestType,header : Bool = false, httpMethod : httpMethod = .POST,noBody:Bool = false, completion: @escaping (ResponseType?, Error?) -> ()) {
+    class func sendPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: String, responseType: ResponseType.Type, body: RequestType,header : Bool = false, httpMethod : httpMethod = .POST,noBody:Bool = false, completion: @escaping (ResponseType?,Int) -> ()) {
         let urlreq = URL(string: url)! //TODO guard
         var request = URLRequest(url: urlreq)
         request.httpMethod = httpMethod.rawValue
@@ -71,9 +71,9 @@ class WebHelper {
         }
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
+            guard let data = data, let response = response as? HTTPURLResponse else {
                 DispatchQueue.main.async {
-                    completion(nil, error)
+                    completion(nil, 0)
                 }
                 return
             }
@@ -84,17 +84,18 @@ class WebHelper {
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
                 DispatchQueue.main.async {
-                    completion(responseObject, nil)
+                    completion(responseObject, response.statusCode)
                 }
             } catch {
+                //TODO
                 do {
-                    let errorResponse = try decoder.decode(ErrorResponse.self, from: data) as Error
+                    _ = try decoder.decode(ErrorResponse.self, from: data) as Error
                     DispatchQueue.main.async {
-                        completion(nil, errorResponse)
+                        completion(nil, 0)
                     }
                 } catch {
                     DispatchQueue.main.async {
-                        completion(nil, error)
+                        completion(nil, 0)
                     }
                 }
             }
