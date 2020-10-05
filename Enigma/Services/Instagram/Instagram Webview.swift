@@ -41,7 +41,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     func dismissViewController() {
         self.dismiss(animated: true) {
-            print(self.testUserData ?? nil)
+            print(self.testUserData as Any)
         }
     }
 }
