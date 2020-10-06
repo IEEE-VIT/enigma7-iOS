@@ -9,72 +9,79 @@
 import Foundation
 import UIKit
 
+//MARK: - NicoProgressBar
+open class xpBar: UIView {
+    //MARK: Private Properties
+    private var progressBarIndicator: UIView!
+    
+    //MARK: UIView
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        setupViews()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupViews()
+    }
+    
+    convenience init() {
+        self.init(frame: CGRect.zero)
+    }
 
-final class xpBar: CAShapeLayer, CAAnimationDelegate {
-    
-    var start : CGFloat = 0.33
-    var end : CGFloat = 0.66
-    
-    var animationDuration: TimeInterval = 0
-    
-    var progress = CAShapeLayer()
-    var gradient = CAGradientLayer()
-    
-    override init() {
-        super.init()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    init(for view: UIView, duration: TimeInterval, startValue start : CGFloat, endValue end : CGFloat ) {
-        super.init()
-        self.animationDuration = duration
-        self.start = start
-        self.end = end
-        
+    open override func didMoveToSuperview() {
+        super.didMoveToSuperview()
+
         DispatchQueue.main.async {
-            self.showProgress(view: view)
+            self.moveProgressBarIndicatorToStart()
         }
     }
-    
-    func showProgress(view: UIView) {
-        let width  : CGFloat = view.frame.width
-        let height  : CGFloat = view.frame.height
-        let heightFactor = height/2
 
-        let barPath = UIBezierPath()
-        barPath.move(to: CGPoint(x: heightFactor, y: heightFactor))
-        barPath.addLine(to: CGPoint(x:(end * width)-(heightFactor), y: heightFactor))
+    //MARK: Setup
+    private func setupViews() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.clipsToBounds = true
+        self.backgroundColor = .dark
         
-        progress.path = barPath.cgPath
-        progress.fillColor = UIColor.clear.cgColor
-        progress.lineWidth = height
-        progress.strokeEnd =  start > 0.5 ? (1-start) : (start)
-        progress.lineCap = .square
-        progress.strokeColor = UIColor.red.cgColor
+        progressBarIndicator = UIView(frame: zeroFrame)
+        setGradientBackground()
+        progressBarIndicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.addSubview(progressBarIndicator)
         
-        gradient.colors = [ UIColor.secondary.cgColor, UIColor.quaternary.cgColor ]
-        gradient.frame = view.bounds
-        gradient.startPoint = CGPoint(x: 0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1 * end, y: 0.5)
-        gradient.mask = progress
-        
-        self.insertSublayer(gradient, above: self)
-        
-        let strokeEnd = animate(duration: animationDuration)
-        self.progress.add(strokeEnd, forKey: "strokeEnd")
+        moveProgressBarIndicatorToStart()
     }
     
-    func animate(duration: TimeInterval) -> CABasicAnimation {
-        let strokeEnd = CABasicAnimation(keyPath: "strokeEnd")
-        strokeEnd.duration = duration
-        strokeEnd.toValue = 1.0
-        strokeEnd.isRemovedOnCompletion = false
-        strokeEnd.fillMode = .forwards
-        return strokeEnd
+    func setGradientBackground() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [ UIColor.secondary.cgColor, UIColor.quaternary.cgColor ]
+        gradientLayer.frame = self.bounds
+        gradientLayer.locations = [0.0, 1.0]
+        self.progressBarIndicator.layer.insertSublayer(gradientLayer, at:0)
+    }
+
+    
+    // MARK: Private
+     func animateProgress(toPercent percent: CGFloat, completion: ((Bool) -> Void)? = nil) {
+        UIView.animate(
+            withDuration: 1.5,
+            delay: 0,
+            options: [.beginFromCurrentState],
+            animations: {
+                self.progressBarIndicator.frame = CGRect(x: 0, y: 0,
+                                                         width: self.bounds.width * percent,
+                                                         height: self.bounds.size.height)
+            },
+            completion: completion)
+    }
+
+    
+    private func moveProgressBarIndicatorToStart() {
+        progressBarIndicator.layer.removeAllAnimations()
+        progressBarIndicator.frame = zeroFrame
+        progressBarIndicator.layoutIfNeeded()
+    }
+    
+    private var zeroFrame: CGRect {
+        return CGRect(origin: .zero, size: CGSize(width: 0, height: bounds.size.height))
     }
 }
-
-

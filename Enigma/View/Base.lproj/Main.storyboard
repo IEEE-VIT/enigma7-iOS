@@ -878,7 +878,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-9S-bLb">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-9S-bLb" customClass="xpBar" customModule="Enigma" customModuleProvider="target">
                                 <rect key="frame" x="20" y="80" width="285" height="8"/>
                                 <color key="backgroundColor" name="dark"/>
                                 <constraints>
@@ -1068,7 +1068,7 @@
                     <connections>
                         <outlet property="answerTextField" destination="Dqz-Qd-Elv" id="aam-8h-0ug"/>
                         <outlet property="hintLabel" destination="p2N-k0-9xg" id="WOZ-nH-UV8"/>
-                        <outlet property="progressBar" destination="SVz-9S-bLb" id="z4z-e6-wN1"/>
+                        <outlet property="progressBar" destination="SVz-9S-bLb" id="BdG-Zi-0iP"/>
                         <outlet property="questionImageView" destination="3pS-Lr-plb" id="XgO-nK-DSQ"/>
                         <outlet property="questionLabel" destination="Ii6-nK-T8T" id="rqM-um-e8a"/>
                         <outlet property="questionNumberLabel" destination="fpG-eW-Pq4" id="few-vx-yZz"/>

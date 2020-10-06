@@ -15,7 +15,8 @@ protocol ShareDelegate : class {
 class PlayViewController: UIViewController {
     
     
-    @IBOutlet weak var progressBar: UIView!
+
+    @IBOutlet weak var progressBar: xpBar!
     @IBOutlet var powerupButtons: [UIButton]!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -25,11 +26,13 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var subScrollView: UIView!
+
     
     var previousTag : Int = 0
     var image : UIImage?
     var startingImageFrame : CGRect?
     var closePowerupOn : Bool = false
+    var progress : xpBar = xpBar()
     var backgroundView : ImageScrollView!
     weak var delegate : ShareDelegate?
     
@@ -50,10 +53,8 @@ class PlayViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        showProgress()
         subscribeToKeyboardNotifications()
-        progressBar.layer.borderWidth = 1.5
-        progressBar.layer.borderColor = UIColor.secondary.cgColor
+        progressBar.animateProgress(toPercent: 0.6)
       //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
@@ -144,6 +145,7 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func hintTapped(_ sender: Any) {
+        progressBar.animateProgress(toPercent: 0.3)
         createHintAlert(.normal)
     }
     
@@ -161,12 +163,6 @@ class PlayViewController: UIViewController {
     
     func setImage(img: UIImage){
         self.image = img
-    }
-    
-    
-    func showProgress(){
-        let progress = xpBar(for: progressBar, duration: 1.5, startValue: 0.0, endValue: 0.6)
-        self.progressBar.layer.insertSublayer(progress, above: self.progressBar.layer)
     }
     
     func setButton(_ button : UIButton ,_ bool : Bool){
@@ -187,6 +183,3 @@ class PlayViewController: UIViewController {
         self.view.endEditing(true)
     }
 }
-
-
-
