@@ -30,7 +30,7 @@ extension UIImageView {
         if let url = URL(string: imageServerUrl) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 
-                print("RESPONSE FROM API: \(response)")
+                print((response as? HTTPURLResponse)?.statusCode as Any)
                 if error != nil {
                     print("ERROR LOADING IMAGES FROM URL:"+(error?.localizedDescription ?? ""))
                     DispatchQueue.main.async {

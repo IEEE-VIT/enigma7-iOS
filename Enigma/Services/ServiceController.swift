@@ -14,6 +14,7 @@ class ServiceController {
     
     func getUserDetails(completion : @escaping (UserDetails?)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user) { (response, _) in
+            if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(response)
         }
     }
@@ -33,6 +34,7 @@ class ServiceController {
     func getHint(powerup: Bool = false,completion : @escaping (Hint?)->()){
         let url = powerup ? NetworkConstants.Game.hintPowerupURL : NetworkConstants.Game.hintURL
         WebHelper.sendGETRequest(url: url, parameters: [:], responseType: Hint.self,key: Keys.hint) { (response, error) in
+            if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(response)
         }
     }

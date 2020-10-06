@@ -6,7 +6,7 @@
 //  Copyright © 2020 Aaryan Kothari. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension PlayViewController : AlertDelegate{
     func hintSkipped(type: HintAlert.AlertType) {
@@ -33,10 +33,12 @@ extension PlayViewController : AlertDelegate{
             presentAKAlert(type: .custom(message: message))
             return
         }
+        
         hintLabel.isUserInteractionEnabled = false
         hintLabel.text = text
         hintLabel.textAlignment = .left
         resetPowerups()
+        updateProgressbar()
         //TODO update xp
     }
     
@@ -53,7 +55,6 @@ extension PlayViewController : AlertDelegate{
         hintLabel.text = text
         hintLabel.textAlignment = .left
         resetPowerups()
-        //TODO update xp
     }
     
     func createHintAlert(_ type : HintAlert.AlertType){
@@ -69,6 +70,7 @@ extension PlayViewController : AlertDelegate{
             setButton(powerupButtons[previousTag],false)
             resetHint()
             UserDefaults.standard.set(nil, forKey: Keys.hint)
+            updateProgressbar()
             ServiceController.shared.getQuestion(completion: handleQuestion(question:))
         } else {
             setButton(powerupButtons[previousTag],false)

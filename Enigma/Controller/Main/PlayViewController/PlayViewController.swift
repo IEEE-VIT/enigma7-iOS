@@ -15,7 +15,8 @@ protocol ShareDelegate : class {
 class PlayViewController: UIViewController {
     
     
-    @IBOutlet weak var progressBar: UIView!
+    @IBOutlet weak var xpLabel: UILabel!
+    @IBOutlet weak var progressBar: xpBar!
     @IBOutlet var powerupButtons: [UIButton]!
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -25,6 +26,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var subScrollView: UIView!
+
     
     var previousTag : Int = 0
     var image : UIImage?
@@ -32,6 +34,7 @@ class PlayViewController: UIViewController {
     var closePowerupOn : Bool = false
     var backgroundView : ImageScrollView!
     weak var delegate : ShareDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +53,9 @@ class PlayViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        showProgress()
         subscribeToKeyboardNotifications()
-        progressBar.layer.borderWidth = 1.5
-        progressBar.layer.borderColor = UIColor.secondary.cgColor
+        updateProgressbar()
+        answerTextField.layer.borderColor = UIColor.black.cgColor
       //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
@@ -111,6 +113,7 @@ class PlayViewController: UIViewController {
         self.submitButton.isEnabled = true
         UserDefaults.standard.set(nil, forKey: Keys.question)
         UserDefaults.standard.set(nil, forKey: Keys.hint)
+        updateProgressbar()
         resetPowerups()
         resetHint()
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
@@ -119,8 +122,6 @@ class PlayViewController: UIViewController {
     @IBAction func powerupTapped(_ sender: UIButton) {
         let powerup = sender.tag
         let powerupButton = powerupButtons[powerup]
-        
-
         
         setButton(powerupButtons[previousTag],false)
         setButton(powerupButton, true)
@@ -163,12 +164,6 @@ class PlayViewController: UIViewController {
         self.image = img
     }
     
-    
-    func showProgress(){
-        let progress = xpBar(for: progressBar, duration: 1.5, startValue: 0.0, endValue: 0.6)
-        self.progressBar.layer.insertSublayer(progress, above: self.progressBar.layer)
-    }
-    
     func setButton(_ button : UIButton ,_ bool : Bool){
         if !bool {
             button.addBorder(width: 1, .quaternary, alpha: 0.2)
@@ -179,6 +174,13 @@ class PlayViewController: UIViewController {
         }
     }
     
+    func updateProgressbar(){
+        let progress = Defaults.xp() / maxXp
+        print(Defaults.xp(),maxXp,progress)
+        progressBar.animateProgress(toPercent: CGFloat(progress))
+        xpLabel.text = Int(Defaults.xp()).stringValue + "px"
+    }
+    
     @IBAction func dismissKeyboard(_ sender: Any) {
         self.view.endEditing(true)
     }
@@ -187,6 +189,3 @@ class PlayViewController: UIViewController {
         self.view.endEditing(true)
     }
 }
-
-
-

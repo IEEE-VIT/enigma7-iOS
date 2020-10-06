@@ -34,6 +34,7 @@ class PostController {
     func answerQuestion(_ body: AnswerRequest,closePowerupUsed: Bool,completion: @escaping(Bool,String)->()){
         let url = closePowerupUsed ? NetworkConstants.Game.closeAnswerPowerupURL : NetworkConstants.Game.answerURL
         WebHelper.sendPOSTRequest(url: url, responseType: AnswerResponse.self, body: body,header: true) { (response, statusCode) in
+            if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(response?.answer ?? false,response?.detail ?? "Uh oh 😕")
         }
     }
@@ -42,6 +43,7 @@ class PostController {
         let body = AnswerRequest(answer: "")
         WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, statusCode) in
             let success = (200..<300) ~= statusCode
+            if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(success,response)
         }
     }

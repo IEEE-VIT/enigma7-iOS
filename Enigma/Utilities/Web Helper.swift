@@ -43,7 +43,7 @@ class WebHelper {
                     //TODO
                 } catch {
                     do {
-                        let errorResponse = try decoder.decode(ErrorResponse.self, from: data) as Error
+                        _ = try decoder.decode(ErrorResponse.self, from: data) as Error
                         DispatchQueue.main.async {
                             completion(nil, response.statusCode)
                         }
