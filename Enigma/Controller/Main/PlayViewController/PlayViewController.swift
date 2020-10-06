@@ -26,7 +26,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var subScrollView: UIView!
-
+    
     
     var previousTag : Int = 0
     var image : UIImage?
@@ -56,7 +56,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         updateProgressbar()
         answerTextField.layer.borderColor = UIColor.black.cgColor
-      //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+        //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -69,7 +69,7 @@ class PlayViewController: UIViewController {
         guard validate() else { return }
         submitButton.isEnabled = false
         let answer = AnswerRequest(answer: answerTextField.text ?? "")
-        PostController.shared.answerQuestion(answer, closePowerupUsed: closePowerupOn, completion: handleAnswerResponse(success:message:))
+        PostController.shared.answerQuestion(answer, closePowerupUsed: closePowerupOn, completion: handleAnswerResponse(success:close:message:))
     }
     
     func validate()->Bool{
@@ -82,16 +82,18 @@ class PlayViewController: UIViewController {
     
     
     
-    func handleAnswerResponse(success:Bool,message:String){
+    func handleAnswerResponse(success:Bool,close:Bool,message:String){
+        submitButton.isEnabled = true
         if success{
             presentAKAlert(type: .success)
             processCorrectAnswer()
+        } else if close {
+            presentAKAlert(type: .close)
         } else {
-            submitButton.isEnabled = true
             if closePowerupOn {
                 presentAKAlert(type: .custom(message: message))
             } else {
-            presentAKAlert(type: .failure)
+                presentAKAlert(type: .failure)
             }
         }
     }
@@ -110,7 +112,6 @@ class PlayViewController: UIViewController {
         self.questionLabel.text = ""
         self.answerTextField.text = ""
         self.questionImageView.image = nil
-        self.submitButton.isEnabled = true
         UserDefaults.standard.set(nil, forKey: Keys.question)
         UserDefaults.standard.set(nil, forKey: Keys.hint)
         updateProgressbar()
@@ -132,14 +133,14 @@ class PlayViewController: UIViewController {
         } else {
             closePowerupOn = sender.tag == 1
         }
-            
+        
         if sender.tag == 0{
             createHintAlert(.freeHint)
         } else if sender.tag == 2{
             createHintAlert(.skipQuestion)
         }
         
-
+        
         self.previousTag = sender.tag
     }
     

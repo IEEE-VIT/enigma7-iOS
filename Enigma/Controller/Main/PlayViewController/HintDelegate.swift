@@ -66,11 +66,11 @@ extension PlayViewController : AlertDelegate{
     }
     
     func handleSkip(success:Bool,answer:AnswerResponse?){
+        updateProgressbar()
         if success {
             setButton(powerupButtons[previousTag],false)
             resetHint()
             UserDefaults.standard.set(nil, forKey: Keys.hint)
-            updateProgressbar()
             ServiceController.shared.getQuestion(completion: handleQuestion(question:))
         } else {
             setButton(powerupButtons[previousTag],false)

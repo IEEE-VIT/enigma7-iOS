@@ -31,11 +31,11 @@ class PostController {
         }
     }
     
-    func answerQuestion(_ body: AnswerRequest,closePowerupUsed: Bool,completion: @escaping(Bool,String)->()){
+    func answerQuestion(_ body: AnswerRequest,closePowerupUsed: Bool,completion: @escaping(Bool,Bool,String)->()){
         let url = closePowerupUsed ? NetworkConstants.Game.closeAnswerPowerupURL : NetworkConstants.Game.answerURL
         WebHelper.sendPOSTRequest(url: url, responseType: AnswerResponse.self, body: body,header: true) { (response, statusCode) in
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
-            completion(response?.answer ?? false,response?.detail ?? "Uh oh 😕")
+            completion(response?.answer ?? false,response?.close_answer ?? false,response?.detail ?? "Uh oh 😕")
         }
     }
     
