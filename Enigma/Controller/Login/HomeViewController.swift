@@ -9,6 +9,10 @@
 import UIKit
 import GoogleSignIn
 
+protocol SigninDelegate: class {
+    func didSignin()
+}
+
 class HomeViewController: UIViewController {
     
     ///OUTLETS
@@ -18,6 +22,7 @@ class HomeViewController: UIViewController {
     
     ///VARIABLES
     var instagramApi = InstagramApi.shared
+    weak var delegate : SigninDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +56,7 @@ class HomeViewController: UIViewController {
     func handleSignup(success:Bool,response:SignupResponse?){
         if success{
             let usernameExits = response?.username_exists ?? false
+            usernameExits ? delegate?.didSignin() : print()
             let vc = usernameExits ? "PlayViewController" : "UserNameViewController"
             Defaults.fetchAll()
             self.present(vc)
