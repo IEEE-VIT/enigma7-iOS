@@ -49,7 +49,8 @@ open class xpBar: UIView {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
         self.backgroundColor = .dark
-        
+        self.layer.borderWidth = 2
+        self.layer.borderColor = UIColor.secondary.cgColor
         progressBarIndicator = UIView(frame: zeroFrame)
         progressBarIndicator.backgroundColor = .quaternary
         progressBarIndicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
