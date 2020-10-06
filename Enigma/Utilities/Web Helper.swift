@@ -11,7 +11,7 @@ import UIKit
 
 class WebHelper {
     
-    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil, completion: @escaping (ResponseType?, Error?) -> Void) {
+    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil, completion: @escaping (ResponseType?,Int) -> Void) {
         var components = URLComponents(string: url)!
         components.queryItems = parameters.map { (key, value) in
             URLQueryItem(name: key, value: value)
@@ -22,40 +22,45 @@ class WebHelper {
             request.setValue(Defaults.token(), forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data else  {
+                guard let data = data, let response = response as? HTTPURLResponse else {
                     DispatchQueue.main.async {
-                        completion(nil, error)
+                        completion(nil, 0)
                     }
                     return
                 }
+                
                 DebugRequest(url, status: response, request: Data(), response: data)
-                if let key = key { UserDefaults.standard.set(data, forKey: key) }
+                
+                
+                
                 let decoder = JSONDecoder()
                 do {
                     let responseObject = try decoder.decode(ResponseType.self, from: data)
                     DispatchQueue.main.async {
-                        completion(responseObject, nil)
+                        if let key = key { UserDefaults.standard.set(data, forKey: key) }
+                        completion(responseObject, response.statusCode)
                     }
+                    //TODO
                 } catch {
                     do {
                         let errorResponse = try decoder.decode(ErrorResponse.self, from: data) as Error
                         DispatchQueue.main.async {
-                            completion(nil, errorResponse)
+                            completion(nil, response.statusCode)
                         }
                     } catch {
                         DispatchQueue.main.async {
-                            completion(nil, error)
+                            completion(nil, response.statusCode)
                         }
                     }
                 }
             }
             task.resume()
         }else{
-            completion(nil,nil)
+            completion(nil,0)
         }
     }
     
-    class func sendPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: String, responseType: ResponseType.Type, body: RequestType,header : Bool = false, httpMethod : httpMethod = .POST,noBody:Bool = false, completion: @escaping (ResponseType?, Error?) -> ()) {
+    class func sendPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: String, responseType: ResponseType.Type, body: RequestType,header : Bool = false, httpMethod : httpMethod = .POST,noBody:Bool = false, completion: @escaping (ResponseType?,Int) -> ()) {
         let urlreq = URL(string: url)! //TODO guard
         var request = URLRequest(url: urlreq)
         request.httpMethod = httpMethod.rawValue
@@ -71,9 +76,9 @@ class WebHelper {
         }
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
+            guard let data = data, let response = response as? HTTPURLResponse else {
                 DispatchQueue.main.async {
-                    completion(nil, error)
+                    completion(nil, 0)
                 }
                 return
             }
@@ -84,17 +89,18 @@ class WebHelper {
             do {
                 let responseObject = try decoder.decode(ResponseType.self, from: data)
                 DispatchQueue.main.async {
-                    completion(responseObject, nil)
+                    completion(responseObject, response.statusCode)
                 }
             } catch {
+                //TODO
                 do {
-                    let errorResponse = try decoder.decode(ErrorResponse.self, from: data) as Error
+                    _ = try decoder.decode(ErrorResponse.self, from: data) as Error
                     DispatchQueue.main.async {
-                        completion(nil, errorResponse)
+                        completion(nil, 0)
                     }
                 } catch {
                     DispatchQueue.main.async {
-                        completion(nil, error)
+                        completion(nil, 0)
                     }
                 }
             }

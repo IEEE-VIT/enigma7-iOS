@@ -15,7 +15,7 @@ class TabbarController: UIViewController {
     @IBOutlet weak var header: UIView!
     @IBOutlet weak var infoButton: UIButton!
     
-    var HomeViewController: UIViewController!
+    var HomeViewController: HomeViewController!
     var PlayViewController : UIViewController!
     var LeaderboardViewController : UIViewController!
     var StoryViewController : UIViewController!
@@ -29,6 +29,7 @@ class TabbarController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         HomeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController")
+        self.HomeViewController.delegate = self
         setupButtons()
         instantiateViews()
         setupView(HomeViewController)
@@ -141,3 +142,12 @@ extension TabbarController: LogoutDelegate{
         viewWillAppear(true)
     }
 }
+
+extension TabbarController: SigninDelegate{
+    func didSignin() {
+        header.isHidden = false
+    }
+}
+
+
+

@@ -12,39 +12,37 @@ import GoogleSignIn
 class PostController {
     static let shared: PostController = PostController()
     
-    func signup(type: SignupType,body:SignupRequest,completion: @escaping(Bool,SignupResponse?,String) -> ()) {
+    func signup(type: SignupType,body:SignupRequest,completion: @escaping(Bool,SignupResponse?) -> ()) {
         WebHelper.sendPOSTRequest(url: type.url, responseType: SignupResponse.self, body: body) { (response, error) in
             if let response = response,let key = response.key{
                 UserDefaults.standard.set(true, forKey: Keys.login)
                 UserDefaults.standard.set("Token " + key, forKey: Keys.token)
-                completion(true,response,"success")
+                completion(true,response)
             }else{
-                completion(false,nil,error?.localizedDescription ?? "Error")
+                completion(false,nil)
             }
         }
     }
     
-    func editUserName(_ body: EditUsernameRequest,completion: @escaping(Bool,String) -> ()) {
-        WebHelper.sendPOSTRequest(url: NetworkConstants.Users.editUsernameURL, responseType: EditUsernameResponse.self, body: body, header: true, httpMethod: .PATCH) { (response, error) in
-            if let _ = response?.username{
-                completion(true,"success")
-            }else{
-                completion(false,response?.error ?? error.debugDescription)
-            }
+    func editUserName(_ body: EditUsernameRequest,completion: @escaping(Bool,EditUsernameResponse?) -> ()) {
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Users.editUsernameURL, responseType: EditUsernameResponse.self, body: body, header: true, httpMethod: .PATCH) { (response, statusCode) in
+            let success = (200..<300) ~= statusCode
+            completion(success,response)
         }
     }
     
     func answerQuestion(_ body: AnswerRequest,closePowerupUsed: Bool,completion: @escaping(Bool,String)->()){
         let url = closePowerupUsed ? NetworkConstants.Game.closeAnswerPowerupURL : NetworkConstants.Game.answerURL
-        WebHelper.sendPOSTRequest(url: url, responseType: AnswerResponse.self, body: body,header: true) { (response, error) in
+        WebHelper.sendPOSTRequest(url: url, responseType: AnswerResponse.self, body: body,header: true) { (response, statusCode) in
             completion(response?.answer ?? false,response?.detail ?? "Uh oh 😕")
         }
     }
     
-    func skipQuestion(completion: @escaping(AnswerResponse?)->()){
+    func skipQuestion(completion: @escaping(Bool, AnswerResponse?)->()){
         let body = AnswerRequest(answer: "")
-        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, error) in
-            completion(response)
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, statusCode) in
+            let success = (200..<300) ~= statusCode
+            completion(success,response)
         }
     }
     

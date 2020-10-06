@@ -38,9 +38,9 @@ class PlayViewController: UIViewController {
         for button in powerupButtons{
             setButton(button,false)
         }
-        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
         loadHint(hint: Defaults.hint())
         handleQuestion(question: Defaults.question())
+        ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
     override func viewDidLayoutSubviews() {
@@ -111,6 +111,8 @@ class PlayViewController: UIViewController {
         self.submitButton.isEnabled = true
         UserDefaults.standard.set(nil, forKey: Keys.question)
         UserDefaults.standard.set(nil, forKey: Keys.hint)
+        resetPowerups()
+        resetHint()
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     

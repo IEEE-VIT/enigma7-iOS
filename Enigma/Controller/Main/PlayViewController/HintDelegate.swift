@@ -22,7 +22,7 @@ extension PlayViewController : AlertDelegate{
         case .freeHint:
             ServiceController.shared.getHint(powerup: true, completion: handleHint(hint:))
         case .skipQuestion:
-            PostController.shared.skipQuestion(completion: handleSkip(answer:))
+            PostController.shared.skipQuestion(completion: handleSkip(success:answer:))
         }
     }
     
@@ -64,8 +64,8 @@ extension PlayViewController : AlertDelegate{
         self.present(headerView, animated: false, completion: nil)
     }
     
-    func handleSkip(answer:AnswerResponse?){
-        if answer?.status ?? false{
+    func handleSkip(success:Bool,answer:AnswerResponse?){
+        if success {
             setButton(powerupButtons[previousTag],false)
             resetHint()
             UserDefaults.standard.set(nil, forKey: Keys.hint)
