@@ -34,6 +34,7 @@ class ServiceController {
     func getHint(powerup: Bool = false,completion : @escaping (Hint?)->()){
         let url = powerup ? NetworkConstants.Game.hintPowerupURL : NetworkConstants.Game.hintURL
         WebHelper.sendGETRequest(url: url, parameters: [:], responseType: Hint.self,key: Keys.hint) { (response, error) in
+            if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(response)
         }
     }

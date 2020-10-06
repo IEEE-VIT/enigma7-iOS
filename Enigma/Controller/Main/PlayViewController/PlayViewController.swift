@@ -32,9 +32,10 @@ class PlayViewController: UIViewController {
     var image : UIImage?
     var startingImageFrame : CGRect?
     var closePowerupOn : Bool = false
-    var progress : xpBar = xpBar()
+    var progress : Double = 0.0
     var backgroundView : ImageScrollView!
     weak var delegate : ShareDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,8 @@ class PlayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         subscribeToKeyboardNotifications()
-        progressBar.animateProgress(toPercent: 0.6)
+        progress = Defaults.xp() / maxXp
+        progressBar.animateProgress(toPercent: CGFloat(progress))
       //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
@@ -120,8 +122,6 @@ class PlayViewController: UIViewController {
     @IBAction func powerupTapped(_ sender: UIButton) {
         let powerup = sender.tag
         let powerupButton = powerupButtons[powerup]
-        
-
         
         setButton(powerupButtons[previousTag],false)
         setButton(powerupButton, true)

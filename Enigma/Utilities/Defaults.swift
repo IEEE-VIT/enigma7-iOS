@@ -26,10 +26,10 @@ class  Defaults {
         return decode(data: data)
     }
     
-    static func xp() -> Int {
-        return (userDefaults.value(forKey: Keys.xp) as? Int) ?? 0
+    static func xp() -> Double {
+        return (userDefaults.value(forKey: Keys.xp) as? Double) ?? 0.0
     }
-    
+        
     static func leaderboard() -> [Leaderboard]? {
         let body = userDefaults.value(forKey: Keys.leaderboard) as? Data
         guard let data = body else { return nil }

@@ -51,7 +51,7 @@ open class xpBar: UIView {
         self.backgroundColor = .dark
         
         progressBarIndicator = UIView(frame: zeroFrame)
-        progressBarIndicator.backgroundColor = .red
+        progressBarIndicator.backgroundColor = .quaternary
         progressBarIndicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(progressBarIndicator)
         moveProgressBarIndicatorToStart()
