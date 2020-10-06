@@ -1075,6 +1075,7 @@
                         <outlet property="scroll" destination="mxd-3U-S7e" id="2ii-Vu-DxV"/>
                         <outlet property="subScrollView" destination="aPn-0B-6sW" id="YW1-AD-rmZ"/>
                         <outlet property="submitButton" destination="s76-d7-9L3" id="5sD-Rh-pjf"/>
+                        <outlet property="xpLabel" destination="JO3-pj-2gx" id="j6j-Hi-ZzL"/>
                         <outletCollection property="powerupButtons" destination="KEk-l4-VIr" collectionClass="NSMutableArray" id="2ck-Sg-XOZ"/>
                         <outletCollection property="powerupButtons" destination="6M5-9l-ZvB" collectionClass="NSMutableArray" id="J1J-mx-lS7"/>
                         <outletCollection property="powerupButtons" destination="LUv-4L-AcZ" collectionClass="NSMutableArray" id="Yic-ii-SCQ"/>

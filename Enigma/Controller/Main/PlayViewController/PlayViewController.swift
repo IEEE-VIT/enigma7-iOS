@@ -15,7 +15,7 @@ protocol ShareDelegate : class {
 class PlayViewController: UIViewController {
     
     
-
+    @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var progressBar: xpBar!
     @IBOutlet var powerupButtons: [UIButton]!
     @IBOutlet weak var questionNumberLabel: UILabel!
@@ -32,7 +32,6 @@ class PlayViewController: UIViewController {
     var image : UIImage?
     var startingImageFrame : CGRect?
     var closePowerupOn : Bool = false
-    var progress : Double = 0.0
     var backgroundView : ImageScrollView!
     weak var delegate : ShareDelegate?
     
@@ -55,8 +54,8 @@ class PlayViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         subscribeToKeyboardNotifications()
-        progress = Defaults.xp() / maxXp
-        progressBar.animateProgress(toPercent: CGFloat(progress))
+        updateProgressbar()
+        answerTextField.layer.borderColor = UIColor.black.cgColor
       //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
@@ -114,6 +113,7 @@ class PlayViewController: UIViewController {
         self.submitButton.isEnabled = true
         UserDefaults.standard.set(nil, forKey: Keys.question)
         UserDefaults.standard.set(nil, forKey: Keys.hint)
+        updateProgressbar()
         resetPowerups()
         resetHint()
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
@@ -145,7 +145,6 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func hintTapped(_ sender: Any) {
-        progressBar.animateProgress(toPercent: 0.3)
         createHintAlert(.normal)
     }
     
@@ -173,6 +172,13 @@ class PlayViewController: UIViewController {
             button.addBorder(.quaternary)
             button.backgroundColor = UIColor.primary.withAlphaComponent(0.6)
         }
+    }
+    
+    func updateProgressbar(){
+        let progress = Defaults.xp() / maxXp
+        print(Defaults.xp(),maxXp,progress)
+        progressBar.animateProgress(toPercent: CGFloat(progress))
+        xpLabel.text = Int(Defaults.xp()).stringValue + " xp"
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {
