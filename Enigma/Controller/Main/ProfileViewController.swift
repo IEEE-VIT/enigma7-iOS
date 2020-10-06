@@ -28,10 +28,11 @@ class ProfileViewController: UIViewController {
         handleUserDetails(details: Defaults.user())
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         ServiceController.shared.getUserDetails(completion: handleUserDetails(details:))
     }
+
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

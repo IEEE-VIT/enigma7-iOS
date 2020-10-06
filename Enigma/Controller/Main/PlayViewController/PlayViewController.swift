@@ -178,7 +178,7 @@ class PlayViewController: UIViewController {
         let progress = Defaults.xp() / maxXp
         print(Defaults.xp(),maxXp,progress)
         progressBar.animateProgress(toPercent: CGFloat(progress))
-        xpLabel.text = Int(Defaults.xp()).stringValue + " xp"
+        xpLabel.text = Int(Defaults.xp()).stringValue + "px"
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {
