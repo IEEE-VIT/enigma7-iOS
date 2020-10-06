@@ -34,6 +34,7 @@ class Keys {
     static let leaderboard = "EnigmaLeaderboard"
     static let question = "EnigmaQuestion"
     static let hint = "EnigmaHint"
+    static let xp = "Enigmaxp"
 }
 
 func decode<T: Decodable>(data: Data) -> T? {
