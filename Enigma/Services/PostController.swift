@@ -38,11 +38,11 @@ class PostController {
         }
     }
     
-    //TODO
-    func skipQuestion(completion: @escaping(AnswerResponse?)->()){
+    func skipQuestion(completion: @escaping(Bool, AnswerResponse?)->()){
         let body = AnswerRequest(answer: "")
-        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, error) in
-            completion(response)
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, statusCode) in
+            let success = (200..<300) ~= statusCode
+            completion(success,response)
         }
     }
     

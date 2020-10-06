@@ -111,6 +111,8 @@ class PlayViewController: UIViewController {
         self.submitButton.isEnabled = true
         UserDefaults.standard.set(nil, forKey: Keys.question)
         UserDefaults.standard.set(nil, forKey: Keys.hint)
+        resetPowerups()
+        resetHint()
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
