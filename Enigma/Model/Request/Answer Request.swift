@@ -8,6 +8,4 @@
 
 import Foundation
 
-struct AnswerRequest: Encodable{
-    var answer : String
-}
+

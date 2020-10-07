@@ -8,11 +8,4 @@
 
 import Foundation
 
-struct AnswerResponse: Decodable {
-    let answer : Bool?
-    let close_answer : Bool?
-    let detail : String?
-    let question_id : Int?
-    let status : Bool?
-    let xp : Int?
-}
+

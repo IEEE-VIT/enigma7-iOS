@@ -68,7 +68,7 @@ class PlayViewController: UIViewController {
     @IBAction func submitTapped(_ sender: Any) {
         guard validate() else { return }
         submitButton.isEnabled = false
-        let answer = AnswerRequest(answer: answerTextField.text ?? "")
+        let answer = AnswerModel.Request(answer: answerTextField.text ?? "")
         PostController.shared.answerQuestion(answer, closePowerupUsed: closePowerupOn, completion: handleAnswerResponse(success:close:message:))
     }
     

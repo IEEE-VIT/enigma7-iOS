@@ -65,7 +65,7 @@ extension PlayViewController : AlertDelegate{
         self.present(headerView, animated: false, completion: nil)
     }
     
-    func handleSkip(success:Bool,answer:AnswerResponse?){
+    func handleSkip(success:Bool,answer:AnswerModel.Response?){
         updateProgressbar()
         if success {
             setButton(powerupButtons[previousTag],false)

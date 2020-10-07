@@ -31,17 +31,17 @@ class PostController {
         }
     }
     
-    func answerQuestion(_ body: AnswerRequest,closePowerupUsed: Bool,completion: @escaping(Bool,Bool,String)->()){
+    func answerQuestion(_ body: AnswerModel.Request,closePowerupUsed: Bool,completion: @escaping(Bool,Bool,String)->()){
         let url = closePowerupUsed ? NetworkConstants.Game.closeAnswerPowerupURL : NetworkConstants.Game.answerURL
-        WebHelper.sendPOSTRequest(url: url, responseType: AnswerResponse.self, body: body,header: true) { (response, statusCode) in
+        WebHelper.sendPOSTRequest(url: url, responseType: AnswerModel.Response.self, body: body,header: true) { (response, statusCode) in
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(response?.answer ?? false,response?.close_answer ?? false,response?.detail ?? "Uh oh 😕")
         }
     }
     
-    func skipQuestion(completion: @escaping(Bool, AnswerResponse?)->()){
-        let body = AnswerRequest(answer: "")
-        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerResponse.self, body: body,header: true,noBody: true) { (response, statusCode) in
+    func skipQuestion(completion: @escaping(Bool, AnswerModel.Response?)->()){
+        let body = AnswerModel.Request(answer: "")
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerModel.Response.self, body: body,header: true,noBody: true) { (response, statusCode) in
             let success = (200..<300) ~= statusCode
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(success,response)
@@ -49,7 +49,7 @@ class PostController {
     }
     
     func logout(){
-        let body = AnswerRequest(answer: "")
+        let body = AnswerModel.Request(answer: "")
         WebHelper.sendPOSTRequest(url: NetworkConstants.Users.logoutURL, responseType: sample.self, body: body,header: true,noBody: true) { (_, _) in }
         GIDSignIn.sharedInstance()?.signOut()
         UserDefaults.standard.set(false, forKey: Keys.login)
