@@ -35,11 +35,11 @@ class UserNameViewController: UIViewController {
     
     @IBAction func nextTapped(_ sender: Any) {
         guard validate() == true else { return }
-        let request = EditUsernameRequest(username: userNameTextField.text!)
+        let request = EditUsernameModel.Request(username: userNameTextField.text!)
         PostController.shared.editUserName(request, completion: handleEditusername(success:response:))
     }
     
-    func handleEditusername(success: Bool, response: EditUsernameResponse?){
+    func handleEditusername(success: Bool, response: EditUsernameModel.Response?){
         if success{ self.gotoTimer()  }
         else { self.error = response?.error ?? "Error"}
     }

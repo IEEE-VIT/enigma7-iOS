@@ -18,14 +18,14 @@ class PostController {
                 UserDefaults.standard.set(true, forKey: Keys.login)
                 UserDefaults.standard.set("Token " + key, forKey: Keys.token)
                 completion(true,response)
-            }else{
+            } else {
                 completion(false,nil)
             }
         }
     }
     
-    func editUserName(_ body: EditUsernameRequest,completion: @escaping(Bool,EditUsernameResponse?) -> ()) {
-        WebHelper.sendPOSTRequest(url: NetworkConstants.Users.editUsernameURL, responseType: EditUsernameResponse.self, body: body, header: true, httpMethod: .PATCH) { (response, statusCode) in
+    func editUserName(_ body: EditUsernameModel.Request,completion: @escaping(Bool,EditUsernameModel.Response?) -> ()) {
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Users.editUsernameURL, responseType: EditUsernameModel.Response.self, body: body, header: true, httpMethod: .PATCH) { (response, statusCode) in
             let success = (200..<300) ~= statusCode
             completion(success,response)
         }
