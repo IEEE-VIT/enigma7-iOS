@@ -49,11 +49,11 @@ class HomeViewController: UIViewController {
     }
     
     func signinWithBackend(type : SignupType, code : String){
-        let request = SignupRequest(code: code, type: type)
+        let request = SignUpModel.Request(code: code, type: type)
         PostController.shared.signup(type: type, body: request, completion: handleSignup(success:response:))
     }
     
-    func handleSignup(success:Bool,response:SignupResponse?){
+    func handleSignup(success:Bool,response:SignUpModel.Response?){
         if success{
             let usernameExits = response?.username_exists ?? false
             usernameExits ? delegate?.didSignin() : print()

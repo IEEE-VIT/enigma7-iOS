@@ -9,12 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B1B4B4E252252D000398B0D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4D252252D000398B0D /* Image.swift */; };
 		5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */; };
-		5B1B4B522523194600398B0D /* EditUsername Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B512523194600398B0D /* EditUsername Request.swift */; };
-		5B1B4B532523194600398B0D /* EditUsername Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B512523194600398B0D /* EditUsername Request.swift */; };
-		5B1B4B55252319AB00398B0D /* EditUsername Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B54252319AB00398B0D /* EditUsername Response.swift */; };
-		5B1B4B56252319AB00398B0D /* EditUsername Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B54252319AB00398B0D /* EditUsername Response.swift */; };
-		5B1B4B5825236AAD00398B0D /* UserDetails Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails Response.swift */; };
-		5B1B4B5925236AAD00398B0D /* UserDetails Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails Response.swift */; };
+		5B1B4B5825236AAD00398B0D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
 		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
 		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
@@ -30,7 +25,7 @@
 		5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B32869024FC0A4D00FE2EEC /* HintAlert.xib */; };
 		5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869424FC0E9400FE2EEC /* HintAlert.swift */; };
 		5B32869724FC256E00FE2EEC /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */; };
-		5B32869924FC27F100FE2EEC /* Leaderboard Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* Leaderboard Response.swift */; };
+		5B32869924FC27F100FE2EEC /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* Leaderboard.swift */; };
 		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
 		5B4AC2B42517908600534934 /* Instagram Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B32517908600534934 /* Instagram Signin.swift */; };
 		5B4AC2B6251790AC00534934 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B5251790AC00534934 /* InstagramAPI.swift */; };
@@ -39,6 +34,9 @@
 		5B81A1F8252AF33500DA09A8 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A1F7252AF33500DA09A8 /* LoginTests.swift */; };
 		5B81A207252AF38100DA09A8 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */; };
 		5B81A254252B71F400DA09A8 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A253252B71F400DA09A8 /* GameTests.swift */; };
+		5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */; };
+		5B81A2AD252E406F00DA09A8 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */; };
+		5B81A2B8252E42B100DA09A8 /* EditUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */; };
 		5B8F722C2506952F00C427F7 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722B2506952F00C427F7 /* LocalAuthentication.framework */; };
 		5B8F722E2506953A00C427F7 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722D2506953A00C427F7 /* SafariServices.framework */; };
 		5B8F72302506954600C427F7 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722F2506954600C427F7 /* AuthenticationServices.framework */; };
@@ -50,8 +48,6 @@
 		5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
 		5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
 		5B921FE72507505200B2AFF4 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE62507505200B2AFF4 /* PostController.swift */; };
-		5B921FEB2507516E00B2AFF4 /* Signup Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FEA2507516E00B2AFF4 /* Signup Request.swift */; };
-		5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FEE250752F500B2AFF4 /* Signup Response.swift */; };
 		5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FF325087E4500B2AFF4 /* Haptic.swift */; };
 		5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7237250696C400C427F7 /* Google+Signin.swift */; };
 		5BA3F87325298D22008F0420 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
@@ -93,13 +89,11 @@
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
 		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
-		5BF6EB232526108100813987 /* Question Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question Response.swift */; };
-		5BF6EB252526190A00813987 /* Hint Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB242526190A00813987 /* Hint Response.swift */; };
+		5BF6EB232526108100813987 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
+		5BF6EB252526190A00813987 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB242526190A00813987 /* Hint.swift */; };
 		5BF6EB2925261BCB00813987 /* KeyboardObservers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2825261BCB00813987 /* KeyboardObservers.swift */; };
 		5BF6EB2B25261BE400813987 /* ZoomingDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2A25261BE400813987 /* ZoomingDelegates.swift */; };
 		5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2C25261CFD00813987 /* HintDelegate.swift */; };
-		5BF6EB2F25261DF600813987 /* Answer Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB2E25261DF600813987 /* Answer Request.swift */; };
-		5BF6EB3125261E3300813987 /* Answer Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB3025261E3300813987 /* Answer Response.swift */; };
 		5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF83A0124FEAFC900A93885 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,9 +117,7 @@
 /* Begin PBXFileReference section */
 		5B1B4B4D252252D000398B0D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
-		5B1B4B512523194600398B0D /* EditUsername Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditUsername Request.swift"; sourceTree = "<group>"; };
-		5B1B4B54252319AB00398B0D /* EditUsername Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditUsername Response.swift"; sourceTree = "<group>"; };
-		5B1B4B5725236AAD00398B0D /* UserDetails Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetails Response.swift"; sourceTree = "<group>"; };
+		5B1B4B5725236AAD00398B0D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +133,7 @@
 		5B32869024FC0A4D00FE2EEC /* HintAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintAlert.xib; sourceTree = "<group>"; };
 		5B32869424FC0E9400FE2EEC /* HintAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintAlert.swift; sourceTree = "<group>"; };
 		5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardCell.swift; sourceTree = "<group>"; };
-		5B32869824FC27F100FE2EEC /* Leaderboard Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Leaderboard Response.swift"; sourceTree = "<group>"; };
+		5B32869824FC27F100FE2EEC /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		5B4AC2AE2517887600534934 /* Apple Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apple Signin.swift"; sourceTree = "<group>"; };
 		5B4AC2B025178A7E00534934 /* Enigma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enigma.entitlements; sourceTree = "<group>"; };
 		5B4AC2B32517908600534934 /* Instagram Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instagram Signin.swift"; sourceTree = "<group>"; };
@@ -151,6 +143,9 @@
 		5B81A1F7252AF33500DA09A8 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		5B81A253252B71F400DA09A8 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
+		5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
+		5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameModel.swift; sourceTree = "<group>"; };
 		5B8F72232506929D00C427F7 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = SOURCE_ROOT; };
 		5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
@@ -167,8 +162,6 @@
 		5B921FE225074EAC00B2AFF4 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B921FE42507503000B2AFF4 /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
 		5B921FE62507505200B2AFF4 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
-		5B921FEA2507516E00B2AFF4 /* Signup Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup Request.swift"; sourceTree = "<group>"; };
-		5B921FEE250752F500B2AFF4 /* Signup Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signup Response.swift"; sourceTree = "<group>"; };
 		5B921FF325087E4500B2AFF4 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -196,13 +189,11 @@
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
-		5BF6EB222526108100813987 /* Question Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question Response.swift"; sourceTree = "<group>"; };
-		5BF6EB242526190A00813987 /* Hint Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Hint Response.swift"; sourceTree = "<group>"; };
+		5BF6EB222526108100813987 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		5BF6EB242526190A00813987 /* Hint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		5BF6EB2825261BCB00813987 /* KeyboardObservers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservers.swift; sourceTree = "<group>"; };
 		5BF6EB2A25261BE400813987 /* ZoomingDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomingDelegates.swift; sourceTree = "<group>"; };
 		5BF6EB2C25261CFD00813987 /* HintDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintDelegate.swift; sourceTree = "<group>"; };
-		5BF6EB2E25261DF600813987 /* Answer Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer Request.swift"; sourceTree = "<group>"; };
-		5BF6EB3025261E3300813987 /* Answer Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Answer Response.swift"; sourceTree = "<group>"; };
 		5BF83A0124FEAFC900A93885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -324,28 +315,11 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		5B921FEC2507518A00B2AFF4 /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				5B921FEA2507516E00B2AFF4 /* Signup Request.swift */,
-				5B1B4B512523194600398B0D /* EditUsername Request.swift */,
-				5BF6EB2E25261DF600813987 /* Answer Request.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
 		5B921FED2507518E00B2AFF4 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				5B32869824FC27F100FE2EEC /* Leaderboard Response.swift */,
 				5B921FE0250749D900B2AFF4 /* Error.swift */,
-				5B921FEE250752F500B2AFF4 /* Signup Response.swift */,
 				5B4AC2B92517913F00534934 /* Instagram Response.swift */,
-				5B1B4B54252319AB00398B0D /* EditUsername Response.swift */,
-				5B1B4B5725236AAD00398B0D /* UserDetails Response.swift */,
-				5BF6EB222526108100813987 /* Question Response.swift */,
-				5BF6EB242526190A00813987 /* Hint Response.swift */,
-				5BF6EB3025261E3300813987 /* Answer Response.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -413,7 +387,13 @@
 			isa = PBXGroup;
 			children = (
 				5B921FED2507518E00B2AFF4 /* Response */,
-				5B921FEC2507518A00B2AFF4 /* Request */,
+				5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */,
+				5B32869824FC27F100FE2EEC /* Leaderboard.swift */,
+				5BF6EB222526108100813987 /* Question.swift */,
+				5BF6EB242526190A00813987 /* Hint.swift */,
+				5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */,
+				5B1B4B5725236AAD00398B0D /* UserDetails.swift */,
+				5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -668,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */,
+				5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */,
 				5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */,
 				5B921FDD250745A900B2AFF4 /* Network Constants.swift in Sources */,
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
@@ -675,32 +656,28 @@
 				5B4AC2B82517910B00534934 /* Instagram Webview.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
-				5BF6EB2F25261DF600813987 /* Answer Request.swift in Sources */,
 				5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
 				5BF6EB2B25261BE400813987 /* ZoomingDelegates.swift in Sources */,
-				5B1B4B55252319AB00398B0D /* EditUsername Response.swift in Sources */,
 				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,
-				5B921FEF250752F500B2AFF4 /* Signup Response.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
 				5B1B4B4E252252D000398B0D /* Image.swift in Sources */,
 				5BF6EB2925261BCB00813987 /* KeyboardObservers.swift in Sources */,
-				5BF6EB232526108100813987 /* Question Response.swift in Sources */,
+				5BF6EB232526108100813987 /* Question.swift in Sources */,
 				5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */,
 				5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */,
 				5B32867724FB619F00FE2EEC /* Button.swift in Sources */,
-				5BF6EB3125261E3300813987 /* Answer Response.swift in Sources */,
 				5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */,
 				5B32868324FB6ACE00FE2EEC /* ProfileViewController.swift in Sources */,
 				5B32868724FB6B4700FE2EEC /* RulesViewController.swift in Sources */,
+				5B81A2B8252E42B100DA09A8 /* EditUsernameModel.swift in Sources */,
 				5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */,
-				5B1B4B522523194600398B0D /* EditUsername Request.swift in Sources */,
 				5B32869724FC256E00FE2EEC /* LeaderboardCell.swift in Sources */,
 				5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */,
 				5B921FE1250749D900B2AFF4 /* Error.swift in Sources */,
-				5B32869924FC27F100FE2EEC /* Leaderboard Response.swift in Sources */,
-				5BF6EB252526190A00813987 /* Hint Response.swift in Sources */,
+				5B32869924FC27F100FE2EEC /* Leaderboard.swift in Sources */,
+				5BF6EB252526190A00813987 /* Hint.swift in Sources */,
 				5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */,
 				5B32868124FB6AC700FE2EEC /* StoryViewController.swift in Sources */,
 				5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */,
@@ -708,10 +685,10 @@
 				5B4AC2B6251790AC00534934 /* InstagramAPI.swift in Sources */,
 				5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */,
 				5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */,
-				5B1B4B5825236AAD00398B0D /* UserDetails Response.swift in Sources */,
+				5B1B4B5825236AAD00398B0D /* UserDetails.swift in Sources */,
 				5B921FDF250748BE00B2AFF4 /* Web Helper.swift in Sources */,
 				5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */,
-				5B921FEB2507516E00B2AFF4 /* Signup Request.swift in Sources */,
+				5B81A2AD252E406F00DA09A8 /* AnswerModel.swift in Sources */,
 				5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */,
 				5B4AC2BA2517913F00534934 /* Instagram Response.swift in Sources */,
 				5B32868F24FBD97900FE2EEC /* xpBar.swift in Sources */,
@@ -725,11 +702,8 @@
 			files = (
 				5B81A207252AF38100DA09A8 /* MockURLProtocol.swift in Sources */,
 				5BABB73324FACA02006D5541 /* EnigmaTests.swift in Sources */,
-				5B1B4B5925236AAD00398B0D /* UserDetails Response.swift in Sources */,
 				5BABB77024FACDD9006D5541 /* Constants.swift in Sources */,
 				5B81A1F8252AF33500DA09A8 /* LoginTests.swift in Sources */,
-				5B1B4B532523194600398B0D /* EditUsername Request.swift in Sources */,
-				5B1B4B56252319AB00398B0D /* EditUsername Response.swift in Sources */,
 				5B81A254252B71F400DA09A8 /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -912,7 +886,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -942,7 +916,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",

@@ -17,22 +17,12 @@ struct UserDetails : Decodable{
     let xp: Int?
     let no_of_hints_used: Int?
     let rank: Int?
+    let user_status: UserStatus
 }
 
-
-//{
-//    email = "aaryan.kothari@gmail.com";
-//    id = 2;
-//    "no_of_hints_used" = 0;
-//    points = 0;
-//    "question_answered" = 0;
-//    rank = 1;
-//    "user_status" =     {
-//        "accept_close_answer" = 0;
-//        "hint_powerup" = 0;
-//        "hint_used" = 0;
-//        "skip_powerup" = 0;
-//    };
-//    username = Aaryan;
-//    xp = 100000;
-//}
+struct UserStatus : Decodable {
+    let accept_close_answerlet: Int?
+    let hint_poweruplet: Int?
+    let hint_usedlet: Int?
+    let skip_poweruplet: Int?
+}

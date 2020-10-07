@@ -1,20 +1,28 @@
 //
-//  Signup.swift
+//  SignupModel.swift
 //  Enigma
 //
-//  Created by Aaryan Kothari on 08/09/20.
+//  Created by Aaryan Kothari on 07/10/20.
 //  Copyright © 2020 Aaryan Kothari. All rights reserved.
 //
 
 import Foundation
 
-struct SignupRequest : Encodable {
-    let code : String
-    let callback_url : String
+final class SignUpModel {
     
-    init(code: String,type : SignupType){
-        self.code = code
-        self.callback_url = type.callback
+    struct Request : Encodable {
+        let code : String
+        let callback_url : String
+        
+        init(code: String,type : SignupType){
+            self.code = code
+            self.callback_url = type.callback
+        }
+    }
+    
+    struct Response : Codable {
+        var key : String?
+        var username_exists : Bool?
     }
 }
 
