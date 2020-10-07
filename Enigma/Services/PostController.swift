@@ -12,8 +12,8 @@ import GoogleSignIn
 class PostController {
     static let shared: PostController = PostController()
     
-    func signup(type: SignupType,body:SignupRequest,completion: @escaping(Bool,SignupResponse?) -> ()) {
-        WebHelper.sendPOSTRequest(url: type.url, responseType: SignupResponse.self, body: body) { (response, error) in
+    func signup(type: SignupType,body:SignUpModel.Request,completion: @escaping(Bool,SignUpModel.Response?) -> ()) {
+        WebHelper.sendPOSTRequest(url: type.url, responseType: SignUpModel.Response.self, body: body) { (response, error) in
             if let response = response,let key = response.key{
                 UserDefaults.standard.set(true, forKey: Keys.login)
                 UserDefaults.standard.set("Token " + key, forKey: Keys.token)
