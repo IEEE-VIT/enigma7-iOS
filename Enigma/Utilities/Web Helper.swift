@@ -24,9 +24,9 @@ class WebHelper {
             let token = defaults?.string(forKey: "Token")
             defaults?.synchronize()
             
-            let finalToken = isWidget ? token : Defaults.token()
+            let key = isWidget ? token : Defaults.token()
             
-            request.setValue(finalToken, forHTTPHeaderField: "Authorization")
+            request.setValue(key, forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let response = response as? HTTPURLResponse else {

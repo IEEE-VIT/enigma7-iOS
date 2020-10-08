@@ -12,8 +12,8 @@ class ServiceController {
     
     static let shared: ServiceController = ServiceController()
     
-    func getUserDetails(completion : @escaping (UserDetails?)->()){
-        WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user) { (response, _) in
+    func getUserDetails(w:Bool=false,completion : @escaping (UserDetails?)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user,isWidget: w) { (response, _) in
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(response)
         }

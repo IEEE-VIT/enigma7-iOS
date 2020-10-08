@@ -18,7 +18,7 @@ class PostController {
                 UserDefaults.standard.set(true, forKey: Keys.login)
                 UserDefaults.standard.set("Token " + key, forKey: Keys.token)
                 let defaults = UserDefaults(suiteName: "group.widget.ak")
-                defaults?.set("Token " + key, forKey: "token")
+                defaults?.set("Token " + key, forKey: "Token")
                 defaults?.synchronize()
                 completion(true,response)
             } else {

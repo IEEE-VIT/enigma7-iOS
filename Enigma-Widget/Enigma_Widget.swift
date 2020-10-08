@@ -48,13 +48,12 @@ struct SimpleEntry: TimelineEntry {
 struct Enigma_WidgetEntryView : View {
     var entry: Provider.Entry
     @Environment(\.widgetFamily) private var family
-    @State var token : String?
 
     var body: some View {
         Group {
             switch family {
             case .systemSmall:
-                SmallWidget()
+                SmallWidget(data: entry.user)
             case .systemMedium:
                 SmallWidget()
             case .systemLarge:
@@ -63,12 +62,6 @@ struct Enigma_WidgetEntryView : View {
                 SmallWidget()
             }
         }
-    }
-    
-    func getData(){
-        let defaults = UserDefaults(suiteName: "group.widget.ak")
-        defaults?.synchronize()
-        self.token = defaults?.string(forKey: "token")
     }
 }
 

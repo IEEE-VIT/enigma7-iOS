@@ -26,6 +26,7 @@
 		5B32869524FC0E9400FE2EEC /* HintAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869424FC0E9400FE2EEC /* HintAlert.swift */; };
 		5B32869724FC256E00FE2EEC /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */; };
 		5B32869924FC27F100FE2EEC /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* Leaderboard.swift */; };
+		5B4172D8252F5C56003726D0 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
 		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
 		5B4AC2B42517908600534934 /* Instagram Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B32517908600534934 /* Instagram Signin.swift */; };
 		5B4AC2B6251790AC00534934 /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2B5251790AC00534934 /* InstagramAPI.swift */; };
@@ -57,7 +58,6 @@
 		5B81A37D252F50D200DA09A8 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
 		5B81A37E252F50D200DA09A8 /* EditUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */; };
 		5B81A37F252F50D200DA09A8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
-		5B81A384252F50DD00DA09A8 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
 		5B81A389252F50E400DA09A8 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
 		5B81A38E252F50ED00DA09A8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE0250749D900B2AFF4 /* Error.swift */; };
 		5B81A394252F51B800DA09A8 /* WidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A393252F51B800DA09A8 /* WidgetModel.swift */; };
@@ -763,7 +763,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B81A37F252F50D200DA09A8 /* Question.swift in Sources */,
-				5B81A384252F50DD00DA09A8 /* Defaults.swift in Sources */,
 				5B81A37C252F50D200DA09A8 /* Hint.swift in Sources */,
 				5B81A2E8252E476400DA09A8 /* Enigma_Widget.swift in Sources */,
 				5B81A37A252F50D200DA09A8 /* SignupModel.swift in Sources */,
@@ -773,6 +772,7 @@
 				5B81A389252F50E400DA09A8 /* Number.swift in Sources */,
 				5B81A310252E506E00DA09A8 /* SmallWidget.swift in Sources */,
 				5B81A37E252F50D200DA09A8 /* EditUsernameModel.swift in Sources */,
+				5B4172D8252F5C56003726D0 /* Defaults.swift in Sources */,
 				5B81A379252F50D200DA09A8 /* AnswerModel.swift in Sources */,
 				5B81A394252F51B800DA09A8 /* WidgetModel.swift in Sources */,
 				5B81A366252F50C300DA09A8 /* Web Helper.swift in Sources */,
