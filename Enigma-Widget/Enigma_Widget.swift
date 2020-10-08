@@ -11,6 +11,11 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
+    
+    /// SESSION STORE IS OBSERVABLE OBJECT MADE USING COMBINE
+    @ObservedObject var coronaStore = SessionStore()
+    
+    
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), configuration: ConfigurationIntent())
     }
@@ -22,6 +27,8 @@ struct Provider: IntentTimelineProvider {
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
+        
+        
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
