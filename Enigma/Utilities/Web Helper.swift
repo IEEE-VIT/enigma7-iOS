@@ -11,7 +11,7 @@ import UIKit
 
 class WebHelper {
     
-    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil, completion: @escaping (ResponseType?,Int) -> Void) {
+    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil,isWidget:Bool = false, completion: @escaping (ResponseType?,Int) -> Void) {
         var components = URLComponents(string: url)!
         components.queryItems = parameters.map { (key, value) in
             URLQueryItem(name: key, value: value)
@@ -19,7 +19,14 @@ class WebHelper {
         components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
         if let requestURL = components.url {
             var request = URLRequest(url: requestURL)
-            request.setValue(Defaults.token(), forHTTPHeaderField: "Authorization")
+
+            let defaults = UserDefaults(suiteName: "group.widget.ak")
+            let token = defaults?.string(forKey: "Token")
+            defaults?.synchronize()
+            
+            let finalToken = isWidget ? token : Defaults.token()
+            
+            request.setValue(finalToken, forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let response = response as? HTTPURLResponse else {

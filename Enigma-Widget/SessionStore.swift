@@ -21,6 +21,7 @@ final class SessionStore: ObservableObject {
 extension SessionStore{
     func fetchUser(completion : @escaping(UserDetails?)->()){
         ServiceController.shared.getUserDetails {
+            print("USER:",$0)
             self.user = $0
             completion($0)
         }

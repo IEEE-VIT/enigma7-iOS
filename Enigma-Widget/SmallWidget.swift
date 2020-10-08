@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct SmallWidget: View {
-    @State var data : UserDetails?
+    var data : UserDetails?
     var body: some View {
         VStack{
         Image("Enigma")
             Spacer()
-        Text("Hello, World!")
+            Text(data?.username ?? "NO Name")
             .foregroundColor(.white)
         }.background(Color(.dark))
     }

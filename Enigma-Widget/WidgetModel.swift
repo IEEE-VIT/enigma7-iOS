@@ -10,8 +10,13 @@ import WidgetKit
 import SwiftUI
 import Intents
 
+//struct WidgetModel : TimelineEntry {
+//    var date = Date()
+//    let user : UserDetails?
+//    let leaderboard : Leaderboard?
+//}
+
 struct WidgetModel : TimelineEntry {
     var date = Date()
     let user : UserDetails?
-    let leaderboard : Leaderboard?
 }

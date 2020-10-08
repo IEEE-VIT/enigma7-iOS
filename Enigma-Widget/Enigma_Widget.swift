@@ -13,33 +13,30 @@ import Intents
 struct Provider: IntentTimelineProvider {
     
     /// SESSION STORE IS OBSERVABLE OBJECT MADE USING COMBINE
-    @ObservedObject var coronaStore = SessionStore()
+    @ObservedObject var sessionStore = SessionStore()
     
     
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+    func placeholder(in context: Context) -> WidgetModel {
+        WidgetModel(user: nil)
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetModel) -> ()) {
+        let entry =  WidgetModel(user: nil)
         completion(entry)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
+    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<WidgetModel>) -> ()) {
+        var entries: [WidgetModel] = []
         
         
+        let refresh = Calendar.current.date(byAdding: .minute, value: 1, to: Date()) ?? Date()
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
+        
+        sessionStore.fetchUser { user in
+            entries.append(WidgetModel(user: user))
+            let timeline = Timeline(entries: entries, policy: .after(refresh))
+            completion(timeline)
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
 }
 
@@ -85,12 +82,5 @@ struct Enigma_Widget: Widget {
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
-    }
-}
-
-struct Enigma_Widget_Previews: PreviewProvider {
-    static var previews: some View {
-        Enigma_WidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
