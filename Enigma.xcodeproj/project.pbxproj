@@ -37,6 +37,29 @@
 		5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */; };
 		5B81A2AD252E406F00DA09A8 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */; };
 		5B81A2B8252E42B100DA09A8 /* EditUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */; };
+		5B81A2E3252E476400DA09A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B81A2E2252E476400DA09A8 /* WidgetKit.framework */; };
+		5B81A2E5252E476400DA09A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B81A2E4252E476400DA09A8 /* SwiftUI.framework */; };
+		5B81A2E8252E476400DA09A8 /* Enigma_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E7252E476400DA09A8 /* Enigma_Widget.swift */; };
+		5B81A2EB252E476700DA09A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B81A2EA252E476700DA09A8 /* Assets.xcassets */; };
+		5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */; };
+		5B81A2EE252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */; };
+		5B81A2F1252E476700DA09A8 /* Enigma-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5B81A305252E4E1000DA09A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5B81A310252E506E00DA09A8 /* SmallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A30A252E4E9F00DA09A8 /* SmallWidget.swift */; };
+		5B81A357252F506000DA09A8 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A356252F506000DA09A8 /* SessionStore.swift */; };
+		5B81A35C252F508400DA09A8 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
+		5B81A361252F50BF00DA09A8 /* Network Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDC250745A900B2AFF4 /* Network Constants.swift */; };
+		5B81A366252F50C300DA09A8 /* Web Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDE250748BE00B2AFF4 /* Web Helper.swift */; };
+		5B81A379252F50D200DA09A8 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */; };
+		5B81A37A252F50D200DA09A8 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */; };
+		5B81A37B252F50D200DA09A8 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* Leaderboard.swift */; };
+		5B81A37C252F50D200DA09A8 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB242526190A00813987 /* Hint.swift */; };
+		5B81A37D252F50D200DA09A8 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
+		5B81A37E252F50D200DA09A8 /* EditUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */; };
+		5B81A37F252F50D200DA09A8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
+		5B81A384252F50DD00DA09A8 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
+		5B81A389252F50E400DA09A8 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
+		5B81A38E252F50ED00DA09A8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE0250749D900B2AFF4 /* Error.swift */; };
 		5B8F722C2506952F00C427F7 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722B2506952F00C427F7 /* LocalAuthentication.framework */; };
 		5B8F722E2506953A00C427F7 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722D2506953A00C427F7 /* SafariServices.framework */; };
 		5B8F72302506954600C427F7 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F722F2506954600C427F7 /* AuthenticationServices.framework */; };
@@ -98,6 +121,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5B81A2EF252E476700DA09A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BABB71024FAC9F8006D5541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B81A2E0252E476400DA09A8;
+			remoteInfo = "Enigma-WidgetExtension";
+		};
 		5BABB72F24FACA02006D5541 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BABB71024FAC9F8006D5541 /* Project object */;
@@ -113,6 +143,20 @@
 			remoteInfo = Enigma;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B81A2F2252E476700DA09A8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5B81A2F1252E476700DA09A8 /* Enigma-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B1B4B4D252252D000398B0D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -146,6 +190,16 @@
 		5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupModel.swift; sourceTree = "<group>"; };
 		5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameModel.swift; sourceTree = "<group>"; };
+		5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Enigma-WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B81A2E2252E476400DA09A8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5B81A2E4252E476400DA09A8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5B81A2E7252E476400DA09A8 /* Enigma_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enigma_Widget.swift; sourceTree = "<group>"; };
+		5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Enigma_Widget.intentdefinition; sourceTree = "<group>"; };
+		5B81A2EA252E476700DA09A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B81A2EC252E476700DA09A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B81A2FA252E476D00DA09A8 /* Enigma-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Enigma-WidgetExtension.entitlements"; sourceTree = "<group>"; };
+		5B81A30A252E4E9F00DA09A8 /* SmallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget.swift; sourceTree = "<group>"; };
+		5B81A356252F506000DA09A8 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		5B8F72232506929D00C427F7 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
 		5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = SOURCE_ROOT; };
 		5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
@@ -198,6 +252,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B81A2DE252E476400DA09A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B81A2E5252E476400DA09A8 /* SwiftUI.framework in Frameworks */,
+				5B81A2E3252E476400DA09A8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BABB71524FAC9F8006D5541 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,6 +344,19 @@
 			path = Instagram;
 			sourceTree = "<group>";
 		};
+		5B81A2E6252E476400DA09A8 /* Enigma-Widget */ = {
+			isa = PBXGroup;
+			children = (
+				5B81A2E7252E476400DA09A8 /* Enigma_Widget.swift */,
+				5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */,
+				5B81A2EA252E476700DA09A8 /* Assets.xcassets */,
+				5B81A2EC252E476700DA09A8 /* Info.plist */,
+				5B81A30A252E4E9F00DA09A8 /* SmallWidget.swift */,
+				5B81A356252F506000DA09A8 /* SessionStore.swift */,
+			);
+			path = "Enigma-Widget";
+			sourceTree = "<group>";
+		};
 		5B8F72222506928D00C427F7 /* Google */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +375,8 @@
 				5B8F722F2506954600C427F7 /* AuthenticationServices.framework */,
 				5B8F722D2506953A00C427F7 /* SafariServices.framework */,
 				5B8F722B2506952F00C427F7 /* LocalAuthentication.framework */,
+				5B81A2E2252E476400DA09A8 /* WidgetKit.framework */,
+				5B81A2E4252E476400DA09A8 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -327,10 +405,12 @@
 		5BABB70F24FAC9F8006D5541 = {
 			isa = PBXGroup;
 			children = (
+				5B81A2FA252E476D00DA09A8 /* Enigma-WidgetExtension.entitlements */,
 				5B8F7229250692B300C427F7 /* GoogleSignIn.bundle */,
 				5BABB71A24FAC9F8006D5541 /* Enigma */,
 				5BABB73124FACA02006D5541 /* EnigmaTests */,
 				5BABB73C24FACA02006D5541 /* EnigmaUITests */,
+				5B81A2E6252E476400DA09A8 /* Enigma-Widget */,
 				5BABB71924FAC9F8006D5541 /* Products */,
 				5B8F722A2506952F00C427F7 /* Frameworks */,
 			);
@@ -342,6 +422,7 @@
 				5BABB71824FAC9F8006D5541 /* Enigma.app */,
 				5BABB72E24FACA02006D5541 /* EnigmaTests.xctest */,
 				5BABB73924FACA02006D5541 /* EnigmaUITests.xctest */,
+				5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -493,6 +574,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B81A2E0252E476400DA09A8 /* Enigma-WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B81A2F5252E476700DA09A8 /* Build configuration list for PBXNativeTarget "Enigma-WidgetExtension" */;
+			buildPhases = (
+				5B81A2DD252E476400DA09A8 /* Sources */,
+				5B81A2DE252E476400DA09A8 /* Frameworks */,
+				5B81A2DF252E476400DA09A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Enigma-WidgetExtension";
+			productName = "Enigma-WidgetExtension";
+			productReference = 5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5BABB71724FAC9F8006D5541 /* Enigma */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BABB74224FACA02006D5541 /* Build configuration list for PBXNativeTarget "Enigma" */;
@@ -500,10 +598,12 @@
 				5BABB71424FAC9F8006D5541 /* Sources */,
 				5BABB71524FAC9F8006D5541 /* Frameworks */,
 				5BABB71624FAC9F8006D5541 /* Resources */,
+				5B81A2F2252E476700DA09A8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5B81A2F0252E476700DA09A8 /* PBXTargetDependency */,
 			);
 			name = Enigma;
 			productName = Enigma;
@@ -552,10 +652,13 @@
 		5BABB71024FAC9F8006D5541 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Aaryan Kothari";
 				TargetAttributes = {
+					5B81A2E0252E476400DA09A8 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
 					5BABB71724FAC9F8006D5541 = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -585,11 +688,20 @@
 				5BABB71724FAC9F8006D5541 /* Enigma */,
 				5BABB72D24FACA02006D5541 /* EnigmaTests */,
 				5BABB73824FACA02006D5541 /* EnigmaUITests */,
+				5B81A2E0252E476400DA09A8 /* Enigma-WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B81A2DF252E476400DA09A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B81A2EB252E476700DA09A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BABB71624FAC9F8006D5541 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -643,6 +755,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B81A2DD252E476400DA09A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B81A37F252F50D200DA09A8 /* Question.swift in Sources */,
+				5B81A384252F50DD00DA09A8 /* Defaults.swift in Sources */,
+				5B81A37C252F50D200DA09A8 /* Hint.swift in Sources */,
+				5B81A2E8252E476400DA09A8 /* Enigma_Widget.swift in Sources */,
+				5B81A37A252F50D200DA09A8 /* SignupModel.swift in Sources */,
+				5B81A37D252F50D200DA09A8 /* UserDetails.swift in Sources */,
+				5B81A37B252F50D200DA09A8 /* Leaderboard.swift in Sources */,
+				5B81A361252F50BF00DA09A8 /* Network Constants.swift in Sources */,
+				5B81A389252F50E400DA09A8 /* Number.swift in Sources */,
+				5B81A310252E506E00DA09A8 /* SmallWidget.swift in Sources */,
+				5B81A37E252F50D200DA09A8 /* EditUsernameModel.swift in Sources */,
+				5B81A379252F50D200DA09A8 /* AnswerModel.swift in Sources */,
+				5B81A366252F50C300DA09A8 /* Web Helper.swift in Sources */,
+				5B81A357252F506000DA09A8 /* SessionStore.swift in Sources */,
+				5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */,
+				5B81A305252E4E1000DA09A8 /* Constants.swift in Sources */,
+				5B81A38E252F50ED00DA09A8 /* Error.swift in Sources */,
+				5B81A35C252F508400DA09A8 /* ServiceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BABB71424FAC9F8006D5541 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -662,6 +799,7 @@
 				5BF6EB2B25261BE400813987 /* ZoomingDelegates.swift in Sources */,
 				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
+				5B81A2EE252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */,
 				5B1B4B4E252252D000398B0D /* Image.swift in Sources */,
 				5BF6EB2925261BCB00813987 /* KeyboardObservers.swift in Sources */,
 				5BF6EB232526108100813987 /* Question.swift in Sources */,
@@ -720,6 +858,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5B81A2F0252E476700DA09A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B81A2E0252E476400DA09A8 /* Enigma-WidgetExtension */;
+			targetProxy = 5B81A2EF252E476700DA09A8 /* PBXContainerItemProxy */;
+		};
 		5BABB73024FACA02006D5541 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5BABB71724FAC9F8006D5541 /* Enigma */;
@@ -752,6 +895,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5B81A2F3252E476700DA09A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Enigma-WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "Enigma-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B81A2F4252E476700DA09A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Enigma-WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "Enigma-Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5BABB74024FACA02006D5541 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -871,6 +1060,7 @@
 		5BABB74324FACA02006D5541 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Enigma/Enigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -901,6 +1091,7 @@
 		5BABB74424FACA02006D5541 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Enigma/Enigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1015,6 +1206,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B81A2F5252E476700DA09A8 /* Build configuration list for PBXNativeTarget "Enigma-WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B81A2F3252E476700DA09A8 /* Debug */,
+				5B81A2F4252E476700DA09A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5BABB71324FAC9F8006D5541 /* Build configuration list for PBXProject "Enigma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -44,6 +44,10 @@ class PlayViewController: UIViewController {
         loadHint(hint: Defaults.hint())
         handleQuestion(question: Defaults.question())
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+        
+        let defaults = UserDefaults(suiteName: "group.widget.ak")
+        defaults?.set("It worked!", forKey: "token")
+        defaults?.synchronize()
     }
     
     override func viewDidLayoutSubviews() {
