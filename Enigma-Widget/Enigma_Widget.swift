@@ -29,7 +29,7 @@ struct Provider: IntentTimelineProvider {
         var entries: [WidgetModel] = []
         
         
-        let refresh = Calendar.current.date(byAdding: .minute, value: 1, to: Date()) ?? Date()
+        let refresh = Calendar.current.date(byAdding: .hour, value: 1, to: Date()) ?? Date()
 
         
         sessionStore.fetchUser { user in

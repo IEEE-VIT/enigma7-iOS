@@ -57,4 +57,8 @@ class  Defaults {
         }
     }
     
+    static func saveGroupToken(){
+        
+    }
+    
 }
