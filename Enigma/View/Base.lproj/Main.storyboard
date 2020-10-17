@@ -163,7 +163,7 @@
                                 <rect key="frame" x="68.5" y="159" width="238" height="18"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-gN-ODh">
-                                <rect key="frame" x="56.5" y="498" width="262.5" height="49"/>
+                                <rect key="frame" x="56.5" y="567.5" width="262.5" height="49.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="height" multiplier="5.32" id="Dww-4f-thQ"/>
                                 </constraints>
@@ -176,7 +176,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-he-vho">
-                                <rect key="frame" x="56.5" y="427.5" width="262.5" height="49.5"/>
+                                <rect key="frame" x="56.5" y="497.5" width="262.5" height="49"/>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
                                 <state key="normal" title="Sign up with Apple">
                                     <color key="titleColor" name="quaternary"/>
@@ -185,21 +185,8 @@
                                     <action selector="signinWithApple:" destination="huf-Oc-YyW" eventType="touchUpInside" id="Tiv-4F-xUe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-eL-TQp">
-                                <rect key="frame" x="56.5" y="568" width="262.5" height="49.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="CfQ-eL-TQp" secondAttribute="height" multiplier="5.32" id="ca7-AS-Sjw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
-                                <state key="normal" title="Sign up with Instagram">
-                                    <color key="titleColor" name="quaternary"/>
-                                </state>
-                                <connections>
-                                    <action selector="signinWithInstagram:" destination="huf-Oc-YyW" eventType="touchUpInside" id="znv-jw-NWP"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="numbers" translatesAutoresizingMaskIntoConstraints="NO" id="Tze-XO-5ab">
-                                <rect key="frame" x="84.5" y="22" width="206" height="355.5"/>
+                                <rect key="frame" x="84.5" y="22" width="206" height="425.5"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DYC-0i-PmK"/>
@@ -209,30 +196,24 @@
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="92" id="2YX-tq-Hic"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="height" multiplier="5.32" id="39M-bx-uwU"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="leading" secondItem="DYC-0i-PmK" secondAttribute="leading" constant="50" id="E3q-do-7Fb"/>
-                            <constraint firstItem="DYC-0i-PmK" firstAttribute="bottom" secondItem="CfQ-eL-TQp" secondAttribute="bottom" constant="49.5" id="Egl-Je-TUJ"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="FWu-f1-T5R"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="top" secondItem="Bu5-he-vho" secondAttribute="bottom" constant="21" id="GZN-DG-NOj"/>
-                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="width" secondItem="CfQ-eL-TQp" secondAttribute="height" multiplier="5.32" id="JlA-4E-ruL"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="width" secondItem="9MQ-3W-YRN" secondAttribute="width" multiplier="0.866242" id="KjY-6v-gS9"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" id="OJB-Eq-Jqf"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="22" id="RvG-5q-ZpS"/>
                             <constraint firstItem="DYC-0i-PmK" firstAttribute="trailing" secondItem="9MQ-3W-YRN" secondAttribute="trailing" constant="50" id="Yno-Qx-5xW"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dA4-2m-ouD"/>
-                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dkh-dK-qSu"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" id="dvY-VV-vgg"/>
-                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="top" secondItem="dVM-gN-ODh" secondAttribute="bottom" constant="21" id="fBM-Eo-Hbm"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="top" secondItem="Tze-XO-5ab" secondAttribute="bottom" constant="50" id="frD-6x-2sV"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="centerX" secondItem="DYC-0i-PmK" secondAttribute="centerX" id="gxf-kC-itE"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="top" secondItem="9MQ-3W-YRN" secondAttribute="bottom" constant="20" id="mOa-xi-chA"/>
-                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="width" id="mef-qE-uQr"/>
-                            <constraint firstItem="CfQ-eL-TQp" firstAttribute="height" secondItem="dVM-gN-ODh" secondAttribute="height" id="qEm-6C-mM3"/>
+                            <constraint firstItem="DYC-0i-PmK" firstAttribute="bottom" secondItem="dVM-gN-ODh" secondAttribute="bottom" constant="50" id="nh4-ot-l7u"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="zNs-WU-EoW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="appleButton" destination="Bu5-he-vho" id="9VW-fg-YNl"/>
                         <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
-                        <outlet property="instagramButton" destination="CfQ-eL-TQp" id="ceY-5N-kVu"/>
                         <segue destination="rM5-1r-zw8" kind="showDetail" identifier="profilesetup" id="N1a-Vg-j9l"/>
                         <segue destination="prk-ES-iZW" kind="show" id="YCx-bQ-8wM"/>
                     </connections>
