@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -215,47 +214,11 @@
                         <outlet property="appleButton" destination="Bu5-he-vho" id="9VW-fg-YNl"/>
                         <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
                         <segue destination="rM5-1r-zw8" kind="showDetail" identifier="profilesetup" id="N1a-Vg-j9l"/>
-                        <segue destination="prk-ES-iZW" kind="show" id="YCx-bQ-8wM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6l-il-lbl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1073.913043478261" y="129.91071428571428"/>
-        </scene>
-        <!--Web View Controller-->
-        <scene sceneID="hYS-Va-fwB">
-            <objects>
-                <viewController storyboardIdentifier="WebView" id="prk-ES-iZW" customClass="WebViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aEs-hP-SeL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLG-ws-gaA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="kNw-OV-xTw"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="RLG-ws-gaA" firstAttribute="leading" secondItem="kNw-OV-xTw" secondAttribute="leading" id="18L-VP-KTN"/>
-                            <constraint firstItem="kNw-OV-xTw" firstAttribute="trailing" secondItem="RLG-ws-gaA" secondAttribute="trailing" id="2cT-QU-bon"/>
-                            <constraint firstItem="RLG-ws-gaA" firstAttribute="top" secondItem="kNw-OV-xTw" secondAttribute="top" id="oCZ-TT-4Wa"/>
-                            <constraint firstItem="kNw-OV-xTw" firstAttribute="bottom" secondItem="RLG-ws-gaA" secondAttribute="bottom" id="uDA-QO-GG7"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="4P3-oD-7mz"/>
-                    <connections>
-                        <outlet property="webView" destination="RLG-ws-gaA" id="TFU-57-ShO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oJj-Hl-DB2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1074" y="813"/>
         </scene>
         <!--User Name View Controller-->
         <scene sceneID="Dmd-hZ-jUy">
@@ -1280,8 +1243,5 @@
         <namedColor name="tertiary">
             <color red="0.11400000005960464" green="0.72200000286102295" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
