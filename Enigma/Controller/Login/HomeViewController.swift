@@ -18,10 +18,8 @@ class HomeViewController: UIViewController {
     ///OUTLETS
     @IBOutlet weak var appleButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
-    @IBOutlet weak var instagramButton: UIButton!
     
     ///VARIABLES
-    var instagramApi = InstagramApi.shared
     weak var delegate : SigninDelegate?
     
     override func viewDidLoad() {
@@ -33,7 +31,6 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         appleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
         googleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
-        instagramButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
@@ -42,10 +39,6 @@ class HomeViewController: UIViewController {
     
     @IBAction func signinWithGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
-    }
-    
-    @IBAction func signinWithInstagram(_ sender: UIButton) {
-        InstagramSignin()
     }
     
     func signinWithBackend(type : SignupType, code : String){
