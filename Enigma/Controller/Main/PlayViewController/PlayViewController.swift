@@ -57,6 +57,7 @@ class PlayViewController: UIViewController {
         updateProgressbar()
         answerTextField.layer.borderColor = UIColor.black.cgColor
         //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+        //showsTouchWhenHighlighted = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
