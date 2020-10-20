@@ -48,11 +48,10 @@ class HomeViewController: UIViewController {
     
     func handleSignup(success:Bool,response:SignUpModel.Response?){
         if success{
-            let usernameExits = response?.username_exists ?? false
-            usernameExits ? delegate?.didSignin() : print()
-            let vc = usernameExits ? "PlayViewController" : "UserNameViewController"
+            let usernameExists = response?.username_exists ?? false
+            guard usernameExists else { self.present("UserNameViewController"); return }
+            delegate?.didSignin()
             Defaults.fetchAll()
-            self.present(vc)
         } else {
             //TODO show error
         }

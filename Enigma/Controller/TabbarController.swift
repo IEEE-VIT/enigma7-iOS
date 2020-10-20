@@ -33,11 +33,12 @@ class TabbarController: UIViewController {
         setupButtons()
         instantiateViews()
         setupView(HomeViewController)
+        if Defaults.isLoggedin(){ tabSelected(buttons[0]) }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        header.isHidden = true
+        header.isHidden = !Defaults.isLoggedin()
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,6 +47,7 @@ class TabbarController: UIViewController {
     }
     
     @IBAction func tabSelected(_ sender: UIButton) {
+        if Defaults.isLoggedin() {
         if share && sender.tag == 4{
             guard let image = self.shareImage else { return }
             let imageToShare = [image]
@@ -80,6 +82,7 @@ class TabbarController: UIViewController {
             setupView(vc)
             vc.didMove(toParent: self)
         }
+        }
     }
     
     @IBAction func infoClicked(_ sender: Any) {
@@ -106,7 +109,6 @@ class TabbarController: UIViewController {
         LeaderboardViewController = storyBoard.instantiateViewController(identifier: "LeaderboardViewController")
         StoryViewController = storyBoard.instantiateViewController(identifier: "StoryViewController")
         ProfileViewController = storyBoard.instantiateViewController(identifier: "ProfileViewController")
-        
         RulesViewController = storyBoard.instantiateViewController(identifier: "RulesViewController")
         
         viewControllers = [PlayViewController,LeaderboardViewController,StoryViewController,ProfileViewController,RulesViewController]
@@ -153,6 +155,7 @@ extension TabbarController: LogoutDelegate{
 extension TabbarController: SigninDelegate{
     func didSignin() {
         header.isHidden = false
+        tabSelected(buttons[0])
     }
 }
 

@@ -18,6 +18,7 @@ extension UIViewController {
         viewController.willMove(toParent: self)
         self.view.addSubview(viewController.view)
         self.addChild(viewController)
+        
         viewController.didMove(toParent: self)
     }
 }
