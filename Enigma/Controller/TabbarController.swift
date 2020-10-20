@@ -50,6 +50,13 @@ class TabbarController: UIViewController {
             guard let image = self.shareImage else { return }
             let imageToShare = [image]
             let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+            
+            if let popoverController = activityViewController.popoverPresentationController {
+                popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 1.5, y: UIScreen.main.bounds.height / 1.75, width: 0, height: 0)
+                popoverController.sourceView = self.view
+                popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+            }
+            
             self.present(activityViewController, animated: true, completion: nil)
             header.isHidden = false
         } else {
