@@ -13,13 +13,21 @@ class LeaderboardController: WKInterfaceController {
 
     @IBOutlet weak var table: WKInterfaceTable!
     
+    var leaderboard = [Leaderboard]()
+        
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        table.setNumberOfRows(10, withRowType: "leaderboardrow")
-        let token = UserDefaults.standard.value(forKey: "token")
-        print("TOKEN: ",token)
-        ServiceController.shared.getLeaderboard { (result) in
-            print("result: ",result)
+        ServiceController.shared.getLeaderboard(completion: handleLeaderboard(leaderboard:))
+    }
+    
+    func handleLeaderboard(leaderboard: [Leaderboard]?){
+        guard let leaderboard = leaderboard else { return }
+        self.leaderboard = leaderboard
+        table.setNumberOfRows(leaderboard.count, withRowType: "leaderboardrow")
+        for i in 0..<self.table.numberOfRows {
+            guard let controller = self.table.rowController(at: i) as? LeaderboardRow else { continue }
+            controller.rank = "\(i+1). "
+            controller.leaderboard = leaderboard[i]
         }
     }
     
@@ -29,6 +37,11 @@ class LeaderboardController: WKInterfaceController {
     
     override func didDeactivate() {
         super.didDeactivate()
+    }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+      let user = leaderboard[rowIndex]
+      print(user)
     }
     
 }

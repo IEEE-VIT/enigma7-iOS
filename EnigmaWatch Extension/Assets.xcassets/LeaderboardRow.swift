@@ -14,4 +14,13 @@ class LeaderboardRow: NSObject {
     @IBOutlet weak var rankLabel: WKInterfaceLabel!
     @IBOutlet weak var userNameLabel: WKInterfaceLabel!
     
+    var rank : String = "0. "
+    
+    var leaderboard : Leaderboard?{
+        didSet{
+            guard let leaderboard = leaderboard else { return }
+            rankLabel.setText(rank)
+            userNameLabel.setText(leaderboard.username)
+        }
+    }
 }
