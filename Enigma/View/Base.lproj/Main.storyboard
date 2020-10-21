@@ -1027,7 +1027,7 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-Qd-Elv" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="389.5" width="550" height="39"/>
-                                                <color key="backgroundColor" red="0.094117647060000004" green="0.1840000004" blue="0.14100000260000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.051690839230000001" green="0.094157271089999994" blue="0.061146855350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" name="tertiary"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="39" id="1NI-ru-lM5"/>

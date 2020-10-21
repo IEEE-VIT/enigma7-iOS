@@ -15,7 +15,6 @@ struct NetworkConstants {
         
         public static let googleURL = baseURL + "auth/google/"
         public static let appleURL = baseURL + "auth/apple/"
-        public static let instagramURL = baseURL + "auth/instagram/"
         public static let editUsernameURL = baseURL + "me/edit/"
         public static let userDetailsURL = baseURL + "me/"
         public static let logoutURL = baseURL + "logout/"

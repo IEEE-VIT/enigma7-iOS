@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class TabbarController: UIViewController {
     
@@ -22,9 +23,13 @@ class TabbarController: UIViewController {
     var ProfileViewController : UIViewController!
     var RulesViewController : UIViewController!
     var viewControllers: [UIViewController]!
+    
+    var wcSession : WCSession! = nil
     var selectedIndex: Int = 0
     var share : Bool = false
     var shareImage : UIImage?
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +38,9 @@ class TabbarController: UIViewController {
         setupButtons()
         instantiateViews()
         setupView(HomeViewController)
+        wcSession = WCSession.default
+        wcSession.delegate = self
+        wcSession.activate()
         if Defaults.isLoggedin(){ tabSelected(buttons[0]) }
     }
     
@@ -48,40 +56,40 @@ class TabbarController: UIViewController {
     
     @IBAction func tabSelected(_ sender: UIButton) {
         if Defaults.isLoggedin() {
-        if share && sender.tag == 4{
-            guard let image = self.shareImage else { return }
-            let imageToShare = [image]
-            let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-            
-            if let popoverController = activityViewController.popoverPresentationController {
-                popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 1.5, y: UIScreen.main.bounds.height / 1.75, width: 0, height: 0)
-                popoverController.sourceView = self.view
-                popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+            if share && sender.tag == 4{
+                guard let image = self.shareImage else { return }
+                let imageToShare = [image]
+                let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+                
+                if let popoverController = activityViewController.popoverPresentationController {
+                    popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 1.5, y: UIScreen.main.bounds.height / 1.75, width: 0, height: 0)
+                    popoverController.sourceView = self.view
+                    popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+                }
+                
+                self.present(activityViewController, animated: true, completion: nil)
+                header.isHidden = false
+            } else {
+                header.isHidden = (sender.tag == 4)
+                let previousIndex = selectedIndex
+                selectedIndex = sender.tag
+                buttons[previousIndex].isSelected = false
+                UIView.animate(withDuration: 0.4) {
+                    self.buttons[previousIndex].bottomShadow(8)
+                    self.buttons[self.selectedIndex].bottomShadow(2)
+                }
+                
+                let previousVC = viewControllers[previousIndex]
+                previousVC.willMove(toParent: nil)
+                previousVC.view.removeFromSuperview()
+                previousVC.removeFromParent()
+                sender.isSelected = true
+                let vc = viewControllers[selectedIndex]
+                checkForShare(vc)
+                addChild(vc)
+                setupView(vc)
+                vc.didMove(toParent: self)
             }
-            
-            self.present(activityViewController, animated: true, completion: nil)
-            header.isHidden = false
-        } else {
-            header.isHidden = (sender.tag == 4)
-            let previousIndex = selectedIndex
-            selectedIndex = sender.tag
-            buttons[previousIndex].isSelected = false
-            UIView.animate(withDuration: 0.4) {
-                self.buttons[previousIndex].bottomShadow(8)
-                self.buttons[self.selectedIndex].bottomShadow(2)
-            }
-            
-            let previousVC = viewControllers[previousIndex]
-            previousVC.willMove(toParent: nil)
-            previousVC.view.removeFromSuperview()
-            previousVC.removeFromParent()
-            sender.isSelected = true
-            let vc = viewControllers[selectedIndex]
-            checkForShare(vc)
-            addChild(vc)
-            setupView(vc)
-            vc.didMove(toParent: self)
-        }
         }
     }
     
@@ -152,11 +160,35 @@ extension TabbarController: LogoutDelegate{
     }
 }
 
-extension TabbarController: SigninDelegate{
-    func didSignin() {
+extension TabbarController: SigninDelegate, WCSessionDelegate {
+    
+    
+    func didSignin(_ token: String) {
         header.isHidden = false
         tabSelected(buttons[0])
+        
+        let message = ["token":token]
+           
+        wcSession.sendMessage(message, replyHandler: nil) { (error) in
+               
+        print(error.localizedDescription)
+               
+           }
     }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print(activationState)
+        print(error)
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("active: ",session)
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("Deactive: ",session)
+    }
+    
 }
 
 

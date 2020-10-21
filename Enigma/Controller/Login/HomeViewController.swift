@@ -10,7 +10,7 @@ import UIKit
 import GoogleSignIn
 
 protocol SigninDelegate: class {
-    func didSignin()
+    func didSignin(_ token: String)
 }
 
 class HomeViewController: UIViewController {
@@ -50,7 +50,7 @@ class HomeViewController: UIViewController {
         if success{
             let usernameExists = response?.username_exists ?? false
             guard usernameExists else { self.present("UserNameViewController"); return }
-            delegate?.didSignin()
+            delegate?.didSignin(response?.key ?? "")
             Defaults.fetchAll()
         } else {
             //TODO show error
