@@ -141,6 +141,8 @@
 		5BC426AE25406EBB00E55FE3 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
 		5BC426B525406EC900E55FE3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE0250749D900B2AFF4 /* Error.swift */; };
 		5BC426C925407D9500E55FE3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC426C825407D9500E55FE3 /* ProfileController.swift */; };
+		5BC426DF254099D500E55FE3 /* PlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC426DE254099D500E55FE3 /* PlayController.swift */; };
+		5BC426E725409AF500E55FE3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC426E625409AF500E55FE3 /* Image.swift */; };
 		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
 		5BF6EB232526108100813987 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
@@ -322,6 +324,8 @@
 		5BC4266F2540261F00E55FE3 /* LeaderboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderboardRow.swift; path = Assets.xcassets/LeaderboardRow.swift; sourceTree = "<group>"; };
 		5BC426772540361200E55FE3 /* EnigmaWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EnigmaWatch Extension.entitlements"; sourceTree = "<group>"; };
 		5BC426C825407D9500E55FE3 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		5BC426DE254099D500E55FE3 /* PlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayController.swift; sourceTree = "<group>"; };
+		5BC426E625409AF500E55FE3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF6EB222526108100813987 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -637,6 +641,7 @@
 		5BC42649253FFCE500E55FE3 /* EnigmaWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5BC426EE25409F4600E55FE3 /* Extensions */,
 				5BC426772540361200E55FE3 /* EnigmaWatch Extension.entitlements */,
 				5BC4264A253FFCE500E55FE3 /* InterfaceController.swift */,
 				5BC4264C253FFCE500E55FE3 /* ExtensionDelegate.swift */,
@@ -648,8 +653,17 @@
 				5BC42667254025A800E55FE3 /* LeaderboardController.swift */,
 				5BC4266F2540261F00E55FE3 /* LeaderboardRow.swift */,
 				5BC426C825407D9500E55FE3 /* ProfileController.swift */,
+				5BC426DE254099D500E55FE3 /* PlayController.swift */,
 			);
 			path = "EnigmaWatch Extension";
+			sourceTree = "<group>";
+		};
+		5BC426EE25409F4600E55FE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BC426E625409AF500E55FE3 /* Image.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5BE7D7E42501FDF100222707 /* AKALert */ = {
@@ -1036,6 +1050,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC42668254025A900E55FE3 /* LeaderboardController.swift in Sources */,
+				5BC426DF254099D500E55FE3 /* PlayController.swift in Sources */,
+				5BC426E725409AF500E55FE3 /* Image.swift in Sources */,
 				5BC4269925406E9300E55FE3 /* Defaults.swift in Sources */,
 				5BC4268525406E7800E55FE3 /* UserDetails.swift in Sources */,
 				5BC426A025406E9700E55FE3 /* Web Helper.swift in Sources */,
