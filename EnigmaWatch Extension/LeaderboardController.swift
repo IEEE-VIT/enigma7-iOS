@@ -16,7 +16,8 @@ class LeaderboardController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         table.setNumberOfRows(10, withRowType: "leaderboardrow")
-        
+        let token = UserDefaults.standard.value(forKey: "token")
+        print("TOKEN: ",token)
     }
     
     override func willActivate() {

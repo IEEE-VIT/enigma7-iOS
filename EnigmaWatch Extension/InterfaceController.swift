@@ -8,24 +8,29 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
+
 
 
 class InterfaceController: WKInterfaceController {
+    
+    var wcSession : WCSession!
+
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
-        let defaults = UserDefaults(suiteName: "group.widget.ak")
-        let t = defaults?.value(forKey: "Token")
-        defaults?.synchronize()
-        print("Token:", t)
+
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+        wcSession = WCSession.default
+                wcSession.delegate = self
+                wcSession.activate()
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
     }
 
     @IBAction func playTapped() {
@@ -43,4 +48,17 @@ class InterfaceController: WKInterfaceController {
     @IBAction func storyTapped() {
     }
     
+}
+
+
+extension InterfaceController: WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+         let token = message["token"] as! String
+         print(token)
+        UserDefaults.standard.setValue("Token "+token, forKey: "token")
+     }
 }

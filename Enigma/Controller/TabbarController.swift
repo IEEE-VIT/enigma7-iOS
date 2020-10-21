@@ -175,15 +175,16 @@ extension TabbarController: SigninDelegate, WCSessionDelegate {
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        <#code#>
+        print(activationState)
+        print(error)
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        <#code#>
+        print("active: ",session)
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        <#code#>
+        print("Deactive: ",session)
     }
     
 }
