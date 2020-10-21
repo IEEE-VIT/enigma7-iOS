@@ -125,6 +125,8 @@
 		5BC42651253FFCE500E55FE3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42650253FFCE500E55FE3 /* ComplicationController.swift */; };
 		5BC42653253FFCF100E55FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC42652253FFCF100E55FE3 /* Assets.xcassets */; };
 		5BC42658253FFCF100E55FE3 /* EnigmaWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5BC42668254025A900E55FE3 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42667254025A800E55FE3 /* LeaderboardController.swift */; };
+		5BC426702540261F00E55FE3 /* LeaderboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4266F2540261F00E55FE3 /* LeaderboardRow.swift */; };
 		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
 		5BF6EB232526108100813987 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
@@ -303,6 +305,8 @@
 		5BC42652253FFCF100E55FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC42654253FFCF100E55FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC42655253FFCF100E55FE3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5BC42667254025A800E55FE3 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
+		5BC4266F2540261F00E55FE3 /* LeaderboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderboardRow.swift; path = Assets.xcassets/LeaderboardRow.swift; sourceTree = "<group>"; };
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF6EB222526108100813987 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -626,6 +630,8 @@
 				5BC42652253FFCF100E55FE3 /* Assets.xcassets */,
 				5BC42654253FFCF100E55FE3 /* Info.plist */,
 				5BC42655253FFCF100E55FE3 /* PushNotificationPayload.apns */,
+				5BC42667254025A800E55FE3 /* LeaderboardController.swift */,
+				5BC4266F2540261F00E55FE3 /* LeaderboardRow.swift */,
 			);
 			path = "EnigmaWatch Extension";
 			sourceTree = "<group>";
@@ -1014,7 +1020,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC42668254025A900E55FE3 /* LeaderboardController.swift in Sources */,
 				5BC4264F253FFCE500E55FE3 /* NotificationController.swift in Sources */,
+				5BC426702540261F00E55FE3 /* LeaderboardRow.swift in Sources */,
 				5BC42651253FFCE500E55FE3 /* ComplicationController.swift in Sources */,
 				5BC4264D253FFCE500E55FE3 /* ExtensionDelegate.swift in Sources */,
 				5BC4264B253FFCE500E55FE3 /* InterfaceController.swift in Sources */,

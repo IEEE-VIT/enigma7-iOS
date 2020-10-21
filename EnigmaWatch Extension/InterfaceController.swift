@@ -24,4 +24,19 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
     }
 
+    @IBAction func playTapped() {
+        print("PLAY")
+    }
+    
+    
+    @IBAction func leaderboardTapped() {
+    }
+    
+    @IBAction func profileTapped() {
+    }
+    
+    
+    @IBAction func storyTapped() {
+    }
+    
 }
