@@ -10,8 +10,88 @@
         <array key="IBMPlexMono-Regular.ttf">
             <string>IBMPlexMono</string>
         </array>
+        <array key="IBMPlexMono-SemiBold.ttf">
+            <string>IBMPlexMono-SemiBold</string>
+        </array>
     </customFonts>
     <scenes>
+        <!--Profile Controller-->
+        <scene sceneID="MsN-UL-jIm">
+            <objects>
+                <controller spacing="20" id="i2i-0h-8GT" customClass="ProfileController" customModule="EnigmaWatch_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="zUg-Tc-SSA">
+                            <items>
+                                <label alignment="left" text="UserName:" id="aQl-YT-Ucc">
+                                    <color key="textColor" name="tertiary"/>
+                                    <fontDescription key="font" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="thisIsAValidUsernamer" minimumScaleFactor="0.5" id="Rmb-AN-909">
+                                    <color key="textColor" name="quaternary"/>
+                                    <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="E4h-Kw-Nil">
+                            <items>
+                                <label alignment="left" text="Email:" id="xzQ-FE-wCz">
+                                    <color key="textColor" name="tertiary"/>
+                                    <fontDescription key="font" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="thisIsAValidUsernamer" minimumScaleFactor="0.5" id="R22-NY-Gt8">
+                                    <color key="textColor" name="quaternary"/>
+                                    <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="TK9-yw-M3T">
+                            <items>
+                                <label alignment="left" text="Rank:" id="fDR-x3-MAp">
+                                    <color key="textColor" name="tertiary"/>
+                                    <fontDescription key="font" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="1" minimumScaleFactor="0.5" id="79V-fW-l8F">
+                                    <color key="textColor" name="quaternary"/>
+                                    <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="HHx-Uh-80o">
+                            <items>
+                                <label alignment="left" text="Score:" id="mWB-fg-bBw">
+                                    <color key="textColor" name="tertiary"/>
+                                    <fontDescription key="font" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="2" minimumScaleFactor="0.5" id="Grc-v5-XgO">
+                                    <color key="textColor" name="quaternary"/>
+                                    <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="jqd-DO-TJb">
+                            <items>
+                                <label alignment="left" text="Q Solved:" id="hzJ-HF-ZeQ">
+                                    <color key="textColor" name="tertiary"/>
+                                    <fontDescription key="font" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="12" minimumScaleFactor="0.5" id="LyQ-qv-qo4">
+                                    <color key="textColor" name="quaternary"/>
+                                    <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="emailLabel" destination="R22-NY-Gt8" id="ccZ-C3-x8m"/>
+                        <outlet property="qSolvedLabel" destination="LyQ-qv-qo4" id="pED-e7-M5I"/>
+                        <outlet property="rankLabel" destination="79V-fW-l8F" id="uwE-1h-fDC"/>
+                        <outlet property="scoreLabel" destination="Grc-v5-XgO" id="8Fj-fY-IAP"/>
+                        <outlet property="userNameLabel" destination="Rmb-AN-909" id="UzL-sw-GHr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-86" y="345"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
@@ -22,12 +102,12 @@
                                 <button width="60" height="60" alignment="center" verticalAlignment="center" backgroundImage="watch_play" id="la8-TG-MlH">
                                     <connections>
                                         <action selector="playTapped" destination="AgC-eL-Hgc" id="DZh-jH-jbh"/>
-                                        <segue destination="wbR-dl-ePn" kind="push" id="CZb-iQ-Sei"/>
                                     </connections>
                                 </button>
                                 <button width="60" height="60" alignment="center" verticalAlignment="center" backgroundImage="watch_leaderboard" id="n9B-J6-aEz">
                                     <connections>
                                         <action selector="leaderboardTapped" destination="AgC-eL-Hgc" id="MjL-G4-x05"/>
+                                        <segue destination="wbR-dl-ePn" kind="push" id="TUJ-X4-zHS"/>
                                     </connections>
                                 </button>
                             </items>
@@ -37,6 +117,7 @@
                                 <button width="60" height="60" alignment="center" verticalAlignment="center" backgroundImage="watch_profile" id="4nY-2P-dkr">
                                     <connections>
                                         <action selector="profileTapped" destination="AgC-eL-Hgc" id="l6W-im-CXp"/>
+                                        <segue destination="i2i-0h-8GT" kind="push" id="JdL-0f-Ps3"/>
                                     </connections>
                                 </button>
                                 <button width="60" height="60" alignment="center" verticalAlignment="center" backgroundImage="watch_story" id="X7k-69-LRe">
@@ -129,6 +210,9 @@
         </namedColor>
         <namedColor name="quaternary">
             <color red="0.14900000393390656" green="0.875" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tertiary">
+            <color red="0.11400000005960464" green="0.72200000286102295" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
