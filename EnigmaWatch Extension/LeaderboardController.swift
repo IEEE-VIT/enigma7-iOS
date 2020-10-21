@@ -16,6 +16,7 @@ class LeaderboardController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         table.setNumberOfRows(10, withRowType: "leaderboardrow")
+        
     }
     
     override func willActivate() {

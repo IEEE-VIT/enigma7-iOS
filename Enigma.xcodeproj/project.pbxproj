@@ -307,6 +307,7 @@
 		5BC42655253FFCF100E55FE3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		5BC42667254025A800E55FE3 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
 		5BC4266F2540261F00E55FE3 /* LeaderboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeaderboardRow.swift; path = Assets.xcassets/LeaderboardRow.swift; sourceTree = "<group>"; };
+		5BC426772540361200E55FE3 /* EnigmaWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EnigmaWatch Extension.entitlements"; sourceTree = "<group>"; };
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF6EB222526108100813987 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -623,6 +624,7 @@
 		5BC42649253FFCE500E55FE3 /* EnigmaWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5BC426772540361200E55FE3 /* EnigmaWatch Extension.entitlements */,
 				5BC4264A253FFCE500E55FE3 /* InterfaceController.swift */,
 				5BC4264C253FFCE500E55FE3 /* ExtensionDelegate.swift */,
 				5BC4264E253FFCE500E55FE3 /* NotificationController.swift */,
@@ -1439,6 +1441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "EnigmaWatch Extension/EnigmaWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "EnigmaWatch Extension/Info.plist";
@@ -1461,6 +1464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "EnigmaWatch Extension/EnigmaWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "EnigmaWatch Extension/Info.plist";

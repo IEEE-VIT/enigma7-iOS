@@ -14,6 +14,10 @@ class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
+        let defaults = UserDefaults(suiteName: "group.widget.ak")
+        let t = defaults?.value(forKey: "Token")
+        defaults?.synchronize()
+        print("Token:", t)
     }
     
     override func willActivate() {
