@@ -116,6 +116,15 @@
 		5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7B924FADEEB006D5541 /* TabbarController.swift */; };
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
 		5BC42422253C108F00E55FE3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42421253C108F00E55FE3 /* Device.swift */; };
+		5BC4263D253FFCD500E55FE3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC4263B253FFCD500E55FE3 /* Interface.storyboard */; };
+		5BC4263F253FFCE400E55FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC4263E253FFCE400E55FE3 /* Assets.xcassets */; };
+		5BC42646253FFCE500E55FE3 /* EnigmaWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5BC42645253FFCE500E55FE3 /* EnigmaWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5BC4264B253FFCE500E55FE3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4264A253FFCE500E55FE3 /* InterfaceController.swift */; };
+		5BC4264D253FFCE500E55FE3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4264C253FFCE500E55FE3 /* ExtensionDelegate.swift */; };
+		5BC4264F253FFCE500E55FE3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC4264E253FFCE500E55FE3 /* NotificationController.swift */; };
+		5BC42651253FFCE500E55FE3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42650253FFCE500E55FE3 /* ComplicationController.swift */; };
+		5BC42653253FFCF100E55FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC42652253FFCF100E55FE3 /* Assets.xcassets */; };
+		5BC42658253FFCF100E55FE3 /* EnigmaWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
 		5BF6EB232526108100813987 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
@@ -148,6 +157,20 @@
 			remoteGlobalIDString = 5BABB71724FAC9F8006D5541;
 			remoteInfo = Enigma;
 		};
+		5BC42647253FFCE500E55FE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BABB71024FAC9F8006D5541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BC42644253FFCE500E55FE3;
+			remoteInfo = "EnigmaWatch Extension";
+		};
+		5BC42656253FFCF100E55FE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BABB71024FAC9F8006D5541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BC42638253FFCD500E55FE3;
+			remoteInfo = EnigmaWatch;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -158,6 +181,28 @@
 			dstSubfolderSpec = 13;
 			files = (
 				5B81A2F1252E476700DA09A8 /* Enigma-WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC42659253FFCF100E55FE3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5BC42658253FFCF100E55FE3 /* EnigmaWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC4265C253FFCF100E55FE3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5BC42646253FFCE500E55FE3 /* EnigmaWatch Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +291,18 @@
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BC42421253C108F00E55FE3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnigmaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC4263C253FFCD500E55FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		5BC4263E253FFCE400E55FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BC42640253FFCE400E55FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC42645253FFCE500E55FE3 /* EnigmaWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EnigmaWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC4264A253FFCE500E55FE3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		5BC4264C253FFCE500E55FE3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		5BC4264E253FFCE500E55FE3 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5BC42650253FFCE500E55FE3 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5BC42652253FFCF100E55FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BC42654253FFCF100E55FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BC42655253FFCF100E55FE3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF6EB222526108100813987 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -287,6 +344,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5BABB73624FACA02006D5541 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC42642253FFCE500E55FE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -407,6 +471,8 @@
 				5BABB73124FACA02006D5541 /* EnigmaTests */,
 				5BABB73C24FACA02006D5541 /* EnigmaUITests */,
 				5B81A2E6252E476400DA09A8 /* Enigma-Widget */,
+				5BC4263A253FFCD500E55FE3 /* EnigmaWatch */,
+				5BC42649253FFCE500E55FE3 /* EnigmaWatch Extension */,
 				5BABB71924FAC9F8006D5541 /* Products */,
 				5B8F722A2506952F00C427F7 /* Frameworks */,
 			);
@@ -419,6 +485,8 @@
 				5BABB72E24FACA02006D5541 /* EnigmaTests.xctest */,
 				5BABB73924FACA02006D5541 /* EnigmaUITests.xctest */,
 				5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */,
+				5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */,
+				5BC42645253FFCE500E55FE3 /* EnigmaWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -538,6 +606,30 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		5BC4263A253FFCD500E55FE3 /* EnigmaWatch */ = {
+			isa = PBXGroup;
+			children = (
+				5BC4263B253FFCD500E55FE3 /* Interface.storyboard */,
+				5BC4263E253FFCE400E55FE3 /* Assets.xcassets */,
+				5BC42640253FFCE400E55FE3 /* Info.plist */,
+			);
+			path = EnigmaWatch;
+			sourceTree = "<group>";
+		};
+		5BC42649253FFCE500E55FE3 /* EnigmaWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5BC4264A253FFCE500E55FE3 /* InterfaceController.swift */,
+				5BC4264C253FFCE500E55FE3 /* ExtensionDelegate.swift */,
+				5BC4264E253FFCE500E55FE3 /* NotificationController.swift */,
+				5BC42650253FFCE500E55FE3 /* ComplicationController.swift */,
+				5BC42652253FFCF100E55FE3 /* Assets.xcassets */,
+				5BC42654253FFCF100E55FE3 /* Info.plist */,
+				5BC42655253FFCF100E55FE3 /* PushNotificationPayload.apns */,
+			);
+			path = "EnigmaWatch Extension";
+			sourceTree = "<group>";
+		};
 		5BE7D7E42501FDF100222707 /* AKALert */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,11 +687,13 @@
 				5BABB71524FAC9F8006D5541 /* Frameworks */,
 				5BABB71624FAC9F8006D5541 /* Resources */,
 				5B81A2F2252E476700DA09A8 /* Embed App Extensions */,
+				5BC42659253FFCF100E55FE3 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				5B81A2F0252E476700DA09A8 /* PBXTargetDependency */,
+				5BC42657253FFCF100E55FE3 /* PBXTargetDependency */,
 			);
 			name = Enigma;
 			productName = Enigma;
@@ -642,6 +736,40 @@
 			productReference = 5BABB73924FACA02006D5541 /* EnigmaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		5BC42638253FFCD500E55FE3 /* EnigmaWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC42660253FFCF200E55FE3 /* Build configuration list for PBXNativeTarget "EnigmaWatch" */;
+			buildPhases = (
+				5BC42637253FFCD500E55FE3 /* Resources */,
+				5BC4265C253FFCF100E55FE3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BC42648253FFCE500E55FE3 /* PBXTargetDependency */,
+			);
+			name = EnigmaWatch;
+			productName = EnigmaWatch;
+			productReference = 5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5BC42644253FFCE500E55FE3 /* EnigmaWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC4265F253FFCF200E55FE3 /* Build configuration list for PBXNativeTarget "EnigmaWatch Extension" */;
+			buildPhases = (
+				5BC42641253FFCE500E55FE3 /* Sources */,
+				5BC42642253FFCE500E55FE3 /* Frameworks */,
+				5BC42643253FFCE500E55FE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EnigmaWatch Extension";
+			productName = "EnigmaWatch Extension";
+			productReference = 5BC42645253FFCE500E55FE3 /* EnigmaWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -666,6 +794,12 @@
 						CreatedOnToolsVersion = 11.4;
 						TestTargetID = 5BABB71724FAC9F8006D5541;
 					};
+					5BC42638253FFCD500E55FE3 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					5BC42644253FFCE500E55FE3 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
 				};
 			};
 			buildConfigurationList = 5BABB71324FAC9F8006D5541 /* Build configuration list for PBXProject "Enigma" */;
@@ -685,6 +819,8 @@
 				5BABB72D24FACA02006D5541 /* EnigmaTests */,
 				5BABB73824FACA02006D5541 /* EnigmaUITests */,
 				5B81A2E0252E476400DA09A8 /* Enigma-WidgetExtension */,
+				5BC42638253FFCD500E55FE3 /* EnigmaWatch */,
+				5BC42644253FFCE500E55FE3 /* EnigmaWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -752,6 +888,23 @@
 				5BABB76024FACDA9006D5541 /* IBMPlexMono-Light.ttf in Resources */,
 				5BABB76C24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */,
 				5BABB76624FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC42637253FFCD500E55FE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC4263F253FFCE400E55FE3 /* Assets.xcassets in Resources */,
+				5BC4263D253FFCD500E55FE3 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC42643253FFCE500E55FE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC42653253FFCF100E55FE3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +1010,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BC42641253FFCE500E55FE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC4264F253FFCE500E55FE3 /* NotificationController.swift in Sources */,
+				5BC42651253FFCE500E55FE3 /* ComplicationController.swift in Sources */,
+				5BC4264D253FFCE500E55FE3 /* ExtensionDelegate.swift in Sources */,
+				5BC4264B253FFCE500E55FE3 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -875,6 +1039,16 @@
 			target = 5BABB71724FAC9F8006D5541 /* Enigma */;
 			targetProxy = 5BABB73A24FACA02006D5541 /* PBXContainerItemProxy */;
 		};
+		5BC42648253FFCE500E55FE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BC42644253FFCE500E55FE3 /* EnigmaWatch Extension */;
+			targetProxy = 5BC42647253FFCE500E55FE3 /* PBXContainerItemProxy */;
+		};
+		5BC42657253FFCF100E55FE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BC42638253FFCD500E55FE3 /* EnigmaWatch */;
+			targetProxy = 5BC42656253FFCF100E55FE3 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -892,6 +1066,14 @@
 				5BABB72724FACA01006D5541 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5BC4263B253FFCD500E55FE3 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BC4263C253FFCD500E55FE3 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1205,6 +1387,90 @@
 			};
 			name = Release;
 		};
+		5BC4265A253FFCF100E55FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				IBSC_MODULE = EnigmaWatch_Extension;
+				INFOPLIST_FILE = EnigmaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		5BC4265B253FFCF100E55FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				IBSC_MODULE = EnigmaWatch_Extension;
+				INFOPLIST_FILE = EnigmaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		5BC4265D253FFCF100E55FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "EnigmaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		5BC4265E253FFCF100E55FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "EnigmaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1249,6 +1515,24 @@
 			buildConfigurations = (
 				5BABB74924FACA02006D5541 /* Debug */,
 				5BABB74A24FACA02006D5541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC4265F253FFCF200E55FE3 /* Build configuration list for PBXNativeTarget "EnigmaWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC4265D253FFCF100E55FE3 /* Debug */,
+				5BC4265E253FFCF100E55FE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC42660253FFCF200E55FE3 /* Build configuration list for PBXNativeTarget "EnigmaWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC4265A253FFCF100E55FE3 /* Debug */,
+				5BC4265B253FFCF100E55FE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
