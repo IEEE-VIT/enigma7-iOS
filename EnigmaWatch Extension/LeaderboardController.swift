@@ -18,6 +18,9 @@ class LeaderboardController: WKInterfaceController {
         table.setNumberOfRows(10, withRowType: "leaderboardrow")
         let token = UserDefaults.standard.value(forKey: "token")
         print("TOKEN: ",token)
+        ServiceController.shared.getLeaderboard { (result) in
+            print("result: ",result)
+        }
     }
     
     override func willActivate() {

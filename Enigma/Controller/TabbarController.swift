@@ -28,6 +28,8 @@ class TabbarController: UIViewController {
     var selectedIndex: Int = 0
     var share : Bool = false
     var shareImage : UIImage?
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

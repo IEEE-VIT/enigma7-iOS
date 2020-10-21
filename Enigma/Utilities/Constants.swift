@@ -9,7 +9,6 @@
 import UIKit
 
 
-let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 
 let maxXp : Double = 300
 

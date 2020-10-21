@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class WebHelper {
-    
+        
     class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil,isWidget:Bool = false, completion: @escaping (ResponseType?,Int) -> Void) {
         var components = URLComponents(string: url)!
         components.queryItems = parameters.map { (key, value) in
@@ -24,7 +24,12 @@ class WebHelper {
             let token = defaults?.string(forKey: "Token")
             defaults?.synchronize()
             
-            let key = isWidget ? token : Defaults.token()
+            var key = isWidget ? token : Defaults.token()
+            
+            if #available(watchOS 2,*) {
+                key = UserDefaults.standard.value(forKey: "token") as? String //TODO
+                print(key)
+            }
             
             request.setValue(key, forHTTPHeaderField: "Authorization")
             

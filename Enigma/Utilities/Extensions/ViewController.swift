@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController {
     func present(_ identifier : String){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let viewController  = storyBoard.instantiateViewController(identifier: identifier)
         viewController.view.frame = self.view.bounds
         viewController.view.layer.cornerRadius = 4
