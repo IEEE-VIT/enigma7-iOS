@@ -29,7 +29,6 @@ final class SignUpModel {
 enum SignupType : String{
     case google
     case apple
-    case instagram
     
     var url : String {
         switch self {
@@ -37,8 +36,6 @@ enum SignupType : String{
             return NetworkConstants.Users.googleURL
         case .apple:
             return NetworkConstants.Users.appleURL
-        case .instagram:
-            return NetworkConstants.Users.instagramURL
         }
     }
     
@@ -48,8 +45,6 @@ enum SignupType : String{
             return "http://127.0.0.1:8000/"
         case .apple:
             return "TODO"
-        case .instagram:
-            return "https://127.0.0.1:8000/"
         }
     }
 }
