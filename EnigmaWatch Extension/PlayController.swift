@@ -31,6 +31,7 @@ class PlayController: WKInterfaceController {
     
     override func willActivate() {
         super.willActivate()
+    
     }
     
     override func didDeactivate() {
@@ -39,6 +40,6 @@ class PlayController: WKInterfaceController {
     
     @IBAction func didClickAnswer() {
         let okay = WKAlertAction(title: "Okay", style: .default) { }
-        presentAlert(withTitle: "Uh oh !😕", message: "This action can only be perfomed in ths iOS app.", preferredStyle: .alert, actions: [okay])
+        presentAlert(withTitle: "Uh oh !😕", message: "This action can only be performed in ths iOS app.", preferredStyle: .alert, actions: [okay])
     }
 }

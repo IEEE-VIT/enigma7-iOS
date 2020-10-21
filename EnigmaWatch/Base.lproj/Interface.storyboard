@@ -171,7 +171,7 @@
                                                 <color key="textColor" name="quaternary"/>
                                                 <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
                                             </label>
-                                            <label alignment="left" verticalAlignment="center" text="Label" id="cm6-GT-53j">
+                                            <label alignment="left" verticalAlignment="center" id="cm6-GT-53j">
                                                 <color key="textColor" name="quaternary"/>
                                                 <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
                                             </label>
@@ -200,20 +200,31 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="eK3-A7-cyX">
                             <items>
-                                <label alignment="left" text="1." id="Iap-aT-ZhB">
+                                <label alignment="left" id="Iap-aT-ZhB">
                                     <color key="textColor" name="quaternary"/>
                                     <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="14"/>
                                 </label>
-                                <label alignment="left" text="This is a long enigma level question just for testing purposed blah blah blah blah hey hey hey hey hey" numberOfLines="20" id="ubv-pQ-Vko">
+                                <label alignment="left" numberOfLines="20" id="ubv-pQ-Vko">
                                     <color key="textColor" name="quaternary"/>
                                     <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="14"/>
                                 </label>
                                 <imageView width="1" height="100" alignment="left" contentMode="scaleAspectFit" id="8sC-Q0-C0e"/>
-                                <button width="1" alignment="left" title="Button" id="d06-bW-hw1">
-                                    <connections>
-                                        <action selector="didClickAnswer" destination="7qa-Nr-ZGO" id="kPh-P6-X0S"/>
-                                    </connections>
-                                </button>
+                                <group width="1" alignment="left" layout="overlap" id="4h9-OG-UMo">
+                                    <items>
+                                        <button width="0.80000000000000004" alignment="center" id="87o-eP-wEn" userLabel="background">
+                                            <color key="backgroundColor" name="tertiary"/>
+                                        </button>
+                                        <button width="0.80000000000000004" widthAdjustment="-4" height="1" heightAdjustment="-4" alignment="center" verticalAlignment="center" title="Answer" id="d06-bW-hw1">
+                                            <color key="titleColor" name="quaternary"/>
+                                            <color key="backgroundColor" name="dark"/>
+                                            <fontDescription key="font" name="IBMPlexMono" family="IBM Plex Mono" pointSize="15"/>
+                                            <connections>
+                                                <action selector="didClickAnswer" destination="7qa-Nr-ZGO" id="kPh-P6-X0S"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <edgeInsets key="margins" left="0.0" right="0.0" top="20" bottom="0.0"/>
+                                </group>
                             </items>
                         </group>
                     </items>
