@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17034"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -12,19 +11,17 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="EnigmaWatch" customModuleProvider="target">
                     <items>
-                        <group width="1" height="0.5" alignment="left" id="A0F-T9-IPo">
+                        <group width="1" height="0.5" alignment="left" spacing="20" id="A0F-T9-IPo">
                             <items>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="la8-TG-MlH"/>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="n9B-J6-aEz"/>
+                                <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="play" id="la8-TG-MlH"/>
+                                <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="watch_leaderboard" id="n9B-J6-aEz"/>
                             </items>
-                            <color key="backgroundColor" name="dark"/>
                         </group>
-                        <group width="1" height="0.5" alignment="left" id="tTe-DA-wyb">
+                        <group width="1" height="0.5" alignment="left" spacing="20" id="4JP-P3-lOi">
                             <items>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="UzH-af-ArI"/>
-                                <button width="0.5" height="1" alignment="left" title="Button" id="44f-ef-fkS"/>
+                                <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="watch_profile" id="4nY-2P-dkr"/>
+                                <button width="50" height="50" alignment="center" verticalAlignment="center" backgroundImage="watch_story" id="X7k-69-LRe"/>
                             </items>
-                            <color key="backgroundColor" name="dark"/>
                         </group>
                     </items>
                 </controller>
@@ -75,8 +72,9 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="dark">
-            <color red="0.030999999493360519" green="0.054999999701976776" blue="0.030999999493360519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="play" width="128" height="128"/>
+        <image name="watch_leaderboard" width="128" height="128"/>
+        <image name="watch_profile" width="128" height="128"/>
+        <image name="watch_story" width="128" height="128"/>
     </resources>
 </document>
