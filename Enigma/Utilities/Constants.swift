@@ -67,3 +67,9 @@ func DebugRequest(_ url : String,status : URLResponse?,request : Data, response 
     print("\n")
     print("=================================================")
 }
+
+public func isInWidget() -> Bool {
+    guard let extesion = Bundle.main.infoDictionary?["NSExtension"] as? [String: String] else { return false }
+    guard let widget = extesion["NSExtensionPointIdentifier"] else { return false }
+    return widget == "com.apple.widgetkit-extension"
+}

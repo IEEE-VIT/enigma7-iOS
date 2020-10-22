@@ -11,9 +11,17 @@ import Foundation
 class  Defaults {
     
     public static let userDefaults = UserDefaults.standard
+    public static let widgetDefaults = UserDefaults(suiteName: "group.widget.ak")
     
     static func token() -> String {
         return userDefaults.string(forKey: Keys.token) ?? ""
+    }
+    
+    static func widgetToken() -> String {
+        let defaults = UserDefaults(suiteName: "group.widget.ak")
+        let token = defaults?.string(forKey: "Token")
+        defaults?.synchronize()
+        return token ?? ""
     }
     
     static func isLoggedin() -> Bool {
@@ -22,6 +30,12 @@ class  Defaults {
 
     static func user() -> UserDetails? {
         let body = userDefaults.value(forKey: Keys.user) as? Data
+        guard let data = body else { return nil }
+        return decode(data: data)
+    }
+    
+    static func Widgetuser() -> UserDetails? {
+        let body = widgetDefaults?.value(forKey: Keys.user) as? Data
         guard let data = body else { return nil }
         return decode(data: data)
     }

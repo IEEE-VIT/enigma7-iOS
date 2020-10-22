@@ -11,7 +11,7 @@ import UIKit
 
 class WebHelper {
         
-    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil,isWidget:Bool = false, completion: @escaping (ResponseType?,Int) -> Void) {
+    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil, completion: @escaping (ResponseType?,Int) -> Void) {
         var components = URLComponents(string: url)!
         components.queryItems = parameters.map { (key, value) in
             URLQueryItem(name: key, value: value)
@@ -19,19 +19,14 @@ class WebHelper {
         components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
         if let requestURL = components.url {
             var request = URLRequest(url: requestURL)
+        
+            var tok = isInWidget() ? Defaults.widgetToken() : Defaults.token()
+            
+            #if os(watchOS)
+               tok = UserDefaults.standard.value(forKey: "token") as? String //TODO
+            #endif
 
-            let defaults = UserDefaults(suiteName: "group.widget.ak")
-            let token = defaults?.string(forKey: "Token")
-            defaults?.synchronize()
-            
-            var key = isWidget ? token : Defaults.token()
-            
-            if #available(watchOS 2,*) {
-                key = UserDefaults.standard.value(forKey: "token") as? String //TODO
-                print(key)
-            }
-            
-            request.setValue(key, forHTTPHeaderField: "Authorization")
+            request.setValue(tok, forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let response = response as? HTTPURLResponse else {
@@ -40,6 +35,7 @@ class WebHelper {
                     }
                     return
                 }
+                
                 
                 DebugRequest(url, status: response, request: Data(), response: data)
                 
@@ -50,6 +46,7 @@ class WebHelper {
                     let responseObject = try decoder.decode(ResponseType.self, from: data)
                     DispatchQueue.main.async {
                         if let key = key { UserDefaults.standard.set(data, forKey: key) }
+                        if let key = key { defaults?.set(data, forKey: key) }
                         completion(responseObject, response.statusCode)
                     }
                     //TODO

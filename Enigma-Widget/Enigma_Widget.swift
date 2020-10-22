@@ -17,7 +17,7 @@ struct Provider: IntentTimelineProvider {
     
     
     func placeholder(in context: Context) -> WidgetModel {
-        WidgetModel(user: nil)
+        WidgetModel(user: Defaults.Widgetuser())
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetModel) -> ()) {
