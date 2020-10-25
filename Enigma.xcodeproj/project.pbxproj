@@ -10,6 +10,12 @@
 		5B1B4B4E252252D000398B0D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4D252252D000398B0D /* Image.swift */; };
 		5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */; };
 		5B1B4B5825236AAD00398B0D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
+		5B30BA542545DA0100B75FF4 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA532545DA0100B75FF4 /* IntentHandler.swift */; };
+		5B30BA5C2545DA0200B75FF4 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B30BA5B2545DA0200B75FF4 /* IntentsUI.framework */; };
+		5B30BA5F2545DA0200B75FF4 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA5E2545DA0200B75FF4 /* IntentViewController.swift */; };
+		5B30BA622545DA0200B75FF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B30BA602545DA0200B75FF4 /* MainInterface.storyboard */; };
+		5B30BA662545DA0200B75FF4 /* Enigma-SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B30BA5A2545DA0200B75FF4 /* Enigma-SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5B30BA692545DA0200B75FF4 /* Enigma-Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B30BA512545DA0100B75FF4 /* Enigma-Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
 		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
 		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
@@ -154,6 +160,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5B30BA642545DA0200B75FF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BABB71024FAC9F8006D5541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B30BA592545DA0200B75FF4;
+			remoteInfo = "Enigma-SiriUI";
+		};
+		5B30BA672545DA0200B75FF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BABB71024FAC9F8006D5541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B30BA502545DA0100B75FF4;
+			remoteInfo = "Enigma-Siri";
+		};
 		5B81A2EF252E476700DA09A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5BABB71024FAC9F8006D5541 /* Project object */;
@@ -198,6 +218,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				5B30BA692545DA0200B75FF4 /* Enigma-Siri.appex in Embed App Extensions */,
+				5B30BA662545DA0200B75FF4 /* Enigma-SiriUI.appex in Embed App Extensions */,
 				5B81A2F1252E476700DA09A8 /* Enigma-WidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -231,6 +253,14 @@
 		5B1B4B4D252252D000398B0D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		5B1B4B5725236AAD00398B0D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		5B30BA512545DA0100B75FF4 /* Enigma-Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Enigma-Siri.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B30BA532545DA0100B75FF4 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		5B30BA552545DA0100B75FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B30BA5A2545DA0200B75FF4 /* Enigma-SiriUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Enigma-SiriUI.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B30BA5B2545DA0200B75FF4 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		5B30BA5E2545DA0200B75FF4 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		5B30BA612545DA0200B75FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5B30BA632545DA0200B75FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
@@ -337,6 +367,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5B30BA4E2545DA0100B75FF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B30BA572545DA0200B75FF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B30BA5C2545DA0200B75FF4 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B81A2DE252E476400DA09A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,6 +428,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B30BA522545DA0100B75FF4 /* Enigma-Siri */ = {
+			isa = PBXGroup;
+			children = (
+				5B30BA532545DA0100B75FF4 /* IntentHandler.swift */,
+				5B30BA552545DA0100B75FF4 /* Info.plist */,
+			);
+			path = "Enigma-Siri";
+			sourceTree = "<group>";
+		};
+		5B30BA5D2545DA0200B75FF4 /* Enigma-SiriUI */ = {
+			isa = PBXGroup;
+			children = (
+				5B30BA5E2545DA0200B75FF4 /* IntentViewController.swift */,
+				5B30BA602545DA0200B75FF4 /* MainInterface.storyboard */,
+				5B30BA632545DA0200B75FF4 /* Info.plist */,
+			);
+			path = "Enigma-SiriUI";
+			sourceTree = "<group>";
+		};
 		5B32867524FB619300FE2EEC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +525,7 @@
 				5B8F722B2506952F00C427F7 /* LocalAuthentication.framework */,
 				5B81A2E2252E476400DA09A8 /* WidgetKit.framework */,
 				5B81A2E4252E476400DA09A8 /* SwiftUI.framework */,
+				5B30BA5B2545DA0200B75FF4 /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -495,6 +560,8 @@
 				5B81A2E6252E476400DA09A8 /* Enigma-Widget */,
 				5BC4263A253FFCD500E55FE3 /* EnigmaWatch */,
 				5BC42649253FFCE500E55FE3 /* EnigmaWatch Extension */,
+				5B30BA522545DA0100B75FF4 /* Enigma-Siri */,
+				5B30BA5D2545DA0200B75FF4 /* Enigma-SiriUI */,
 				5BABB71924FAC9F8006D5541 /* Products */,
 				5B8F722A2506952F00C427F7 /* Frameworks */,
 			);
@@ -509,6 +576,8 @@
 				5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */,
 				5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */,
 				5BC42645253FFCE500E55FE3 /* EnigmaWatch Extension.appex */,
+				5B30BA512545DA0100B75FF4 /* Enigma-Siri.appex */,
+				5B30BA5A2545DA0200B75FF4 /* Enigma-SiriUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -698,6 +767,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5B30BA502545DA0100B75FF4 /* Enigma-Siri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B30BA6F2545DA0200B75FF4 /* Build configuration list for PBXNativeTarget "Enigma-Siri" */;
+			buildPhases = (
+				5B30BA4D2545DA0100B75FF4 /* Sources */,
+				5B30BA4E2545DA0100B75FF4 /* Frameworks */,
+				5B30BA4F2545DA0100B75FF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Enigma-Siri";
+			productName = "Enigma-Siri";
+			productReference = 5B30BA512545DA0100B75FF4 /* Enigma-Siri.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		5B30BA592545DA0200B75FF4 /* Enigma-SiriUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B30BA6E2545DA0200B75FF4 /* Build configuration list for PBXNativeTarget "Enigma-SiriUI" */;
+			buildPhases = (
+				5B30BA562545DA0200B75FF4 /* Sources */,
+				5B30BA572545DA0200B75FF4 /* Frameworks */,
+				5B30BA582545DA0200B75FF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Enigma-SiriUI";
+			productName = "Enigma-SiriUI";
+			productReference = 5B30BA5A2545DA0200B75FF4 /* Enigma-SiriUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5B81A2E0252E476400DA09A8 /* Enigma-WidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B81A2F5252E476700DA09A8 /* Build configuration list for PBXNativeTarget "Enigma-WidgetExtension" */;
@@ -730,6 +833,8 @@
 			dependencies = (
 				5B81A2F0252E476700DA09A8 /* PBXTargetDependency */,
 				5BC42657253FFCF100E55FE3 /* PBXTargetDependency */,
+				5B30BA652545DA0200B75FF4 /* PBXTargetDependency */,
+				5B30BA682545DA0200B75FF4 /* PBXTargetDependency */,
 			);
 			name = Enigma;
 			productName = Enigma;
@@ -816,6 +921,12 @@
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Aaryan Kothari";
 				TargetAttributes = {
+					5B30BA502545DA0100B75FF4 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					5B30BA592545DA0200B75FF4 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
 					5B81A2E0252E476400DA09A8 = {
 						CreatedOnToolsVersion = 12.0.1;
 					};
@@ -857,11 +968,28 @@
 				5B81A2E0252E476400DA09A8 /* Enigma-WidgetExtension */,
 				5BC42638253FFCD500E55FE3 /* EnigmaWatch */,
 				5BC42644253FFCE500E55FE3 /* EnigmaWatch Extension */,
+				5B30BA502545DA0100B75FF4 /* Enigma-Siri */,
+				5B30BA592545DA0200B75FF4 /* Enigma-SiriUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5B30BA4F2545DA0100B75FF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B30BA582545DA0200B75FF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B30BA622545DA0200B75FF4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B81A2DF252E476400DA09A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -947,6 +1075,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5B30BA4D2545DA0100B75FF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B30BA542545DA0100B75FF4 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B30BA562545DA0200B75FF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B30BA5F2545DA0200B75FF4 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5B81A2DD252E476400DA09A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1078,6 +1222,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5B30BA652545DA0200B75FF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B30BA592545DA0200B75FF4 /* Enigma-SiriUI */;
+			targetProxy = 5B30BA642545DA0200B75FF4 /* PBXContainerItemProxy */;
+		};
+		5B30BA682545DA0200B75FF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B30BA502545DA0100B75FF4 /* Enigma-Siri */;
+			targetProxy = 5B30BA672545DA0200B75FF4 /* PBXContainerItemProxy */;
+		};
 		5B81A2F0252E476700DA09A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5B81A2E0252E476400DA09A8 /* Enigma-WidgetExtension */;
@@ -1106,6 +1260,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5B30BA602545DA0200B75FF4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B30BA612545DA0200B75FF4 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		5BABB72124FAC9F8006D5541 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1133,6 +1295,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5B30BA6A2545DA0200B75FF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "Enigma-Siri/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B30BA6B2545DA0200B75FF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "Enigma-Siri/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B30BA6C2545DA0200B75FF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "Enigma-SiriUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B30BA6D2545DA0200B75FF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F8CHS6PHQS;
+				INFOPLIST_FILE = "Enigma-SiriUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		5B81A2F3252E476700DA09A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1530,6 +1772,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5B30BA6E2545DA0200B75FF4 /* Build configuration list for PBXNativeTarget "Enigma-SiriUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B30BA6C2545DA0200B75FF4 /* Debug */,
+				5B30BA6D2545DA0200B75FF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B30BA6F2545DA0200B75FF4 /* Build configuration list for PBXNativeTarget "Enigma-Siri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B30BA6A2545DA0200B75FF4 /* Debug */,
+				5B30BA6B2545DA0200B75FF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5B81A2F5252E476700DA09A8 /* Build configuration list for PBXNativeTarget "Enigma-WidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
