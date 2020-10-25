@@ -38,6 +38,10 @@
 	</dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save this question and solve later</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>LeaderboardIntent</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

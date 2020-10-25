@@ -16,6 +16,24 @@
 		5B30BA622545DA0200B75FF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B30BA602545DA0200B75FF4 /* MainInterface.storyboard */; };
 		5B30BA662545DA0200B75FF4 /* Enigma-SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B30BA5A2545DA0200B75FF4 /* Enigma-SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5B30BA692545DA0200B75FF4 /* Enigma-Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B30BA512545DA0100B75FF4 /* Enigma-Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5B30BA792545ECDF00B75FF4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */; };
+		5B30BA9A2545F1EC00B75FF4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */; };
+		5B30BAA42545F27F00B75FF4 /* LeaderboardIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BAA32545F27F00B75FF4 /* LeaderboardIntentHandler.swift */; };
+		5B30BAAD2545F2F100B75FF4 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
+		5B30BABF2545F2FA00B75FF4 /* Web Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDE250748BE00B2AFF4 /* Web Helper.swift */; };
+		5B30BAC02545F2FA00B75FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5B30BAC12545F2FA00B75FF4 /* Network Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDC250745A900B2AFF4 /* Network Constants.swift */; };
+		5B30BAC22545F2FA00B75FF4 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
+		5B30BACB2545F30100B75FF4 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
+		5B30BACC2545F30100B75FF4 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB242526190A00813987 /* Hint.swift */; };
+		5B30BACD2545F30100B75FF4 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE0250749D900B2AFF4 /* Error.swift */; };
+		5B30BACE2545F30100B75FF4 /* SignupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */; };
+		5B30BACF2545F30100B75FF4 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */; };
+		5B30BAD02545F30100B75FF4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
+		5B30BAD12545F30100B75FF4 /* EditUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */; };
+		5B30BAD22545F30100B75FF4 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* Leaderboard.swift */; };
+		5B30BAE32545F31E00B75FF4 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
+		5B30BB042545FC2300B75FF4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */; };
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
 		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
 		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
@@ -261,6 +279,8 @@
 		5B30BA5E2545DA0200B75FF4 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		5B30BA612545DA0200B75FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		5B30BA632545DA0200B75FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		5B30BAA32545F27F00B75FF4 /* LeaderboardIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardIntentHandler.swift; sourceTree = "<group>"; };
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
@@ -432,6 +452,7 @@
 			isa = PBXGroup;
 			children = (
 				5B30BA532545DA0100B75FF4 /* IntentHandler.swift */,
+				5B30BAA32545F27F00B75FF4 /* LeaderboardIntentHandler.swift */,
 				5B30BA552545DA0100B75FF4 /* Info.plist */,
 			);
 			path = "Enigma-Siri";
@@ -594,6 +615,7 @@
 				5BABB72424FACA01006D5541 /* Assets.xcassets */,
 				5BABB72924FACA01006D5541 /* Info.plist */,
 				5B8F7233250695ED00C427F7 /* credentials.plist */,
+				5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */,
 			);
 			path = Enigma;
 			sourceTree = "<group>";
@@ -1079,7 +1101,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B30BAD02545F30100B75FF4 /* Question.swift in Sources */,
+				5B30BAC22545F2FA00B75FF4 /* Defaults.swift in Sources */,
+				5B30BAC12545F2FA00B75FF4 /* Network Constants.swift in Sources */,
+				5B30BA9A2545F1EC00B75FF4 /* Intents.intentdefinition in Sources */,
+				5B30BACD2545F30100B75FF4 /* Error.swift in Sources */,
 				5B30BA542545DA0100B75FF4 /* IntentHandler.swift in Sources */,
+				5B30BABF2545F2FA00B75FF4 /* Web Helper.swift in Sources */,
+				5B30BAC02545F2FA00B75FF4 /* Constants.swift in Sources */,
+				5B30BAE32545F31E00B75FF4 /* Number.swift in Sources */,
+				5B30BAD12545F30100B75FF4 /* EditUsernameModel.swift in Sources */,
+				5B30BAA42545F27F00B75FF4 /* LeaderboardIntentHandler.swift in Sources */,
+				5B30BAD22545F30100B75FF4 /* Leaderboard.swift in Sources */,
+				5B30BACF2545F30100B75FF4 /* AnswerModel.swift in Sources */,
+				5B30BAAD2545F2F100B75FF4 /* ServiceController.swift in Sources */,
+				5B30BACE2545F30100B75FF4 /* SignupModel.swift in Sources */,
+				5B30BACC2545F30100B75FF4 /* Hint.swift in Sources */,
+				5B30BACB2545F30100B75FF4 /* UserDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1087,6 +1125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B30BB042545FC2300B75FF4 /* Intents.intentdefinition in Sources */,
 				5B30BA5F2545DA0200B75FF4 /* IntentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1124,6 +1163,7 @@
 				5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */,
 				5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */,
 				5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */,
+				5B30BA792545ECDF00B75FF4 /* Intents.intentdefinition in Sources */,
 				5B921FDD250745A900B2AFF4 /* Network Constants.swift in Sources */,
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
 				5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */,

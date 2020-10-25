@@ -26,7 +26,10 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
     
     // Prepare your view controller for the interaction to handle.
     func configureView(for parameters: Set<INParameter>, of interaction: INInteraction, interactiveBehavior: INUIInteractiveBehavior, context: INUIHostedViewContext, completion: @escaping (Bool, Set<INParameter>, CGSize) -> Void) {
-        // Do configuration here, including preparing views and calculating a desired size for presentation.
+        guard interaction.intent is Leaderb else {
+          completion(false, Set(), .zero)
+          return
+        }
         completion(true, parameters, self.desiredSize)
     }
     
