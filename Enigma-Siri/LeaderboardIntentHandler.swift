@@ -19,25 +19,29 @@ class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
     
     func handle(intent: LeaderboardIntent, completion: @escaping (LeaderboardIntentResponse) -> Void) {
         let userActivity = NSUserActivity(activityType: NSStringFromClass(LeaderboardIntent.self))
-        let response = LeaderboardIntentResponse(code: .top, userActivity: userActivity)
         self.getLeaderboard { (leaderboard,code) in
             guard code != 401 else{
-                let response2 = LeaderboardIntentResponse(code: .autherror, userActivity: userActivity)
-                completion(response2)
-                return
-            }
-            
-            guard let leaderboard = leaderboard else {
+                let response = LeaderboardIntentResponse(code: .autherror, userActivity: userActivity)
                 completion(response)
                 return
             }
             
+
+            guard let leaderboard = leaderboard else {
+                let response = LeaderboardIntentResponse(code: .failureRequiringAppLaunch, userActivity: userActivity)
+                completion(response)
+                return
+            }
+            
+            let response = LeaderboardIntentResponse(code: .top, userActivity: userActivity)
             
             var prop = [Leader]()
             for leader in leaderboard{
                 let property = Leader(identifier: "", display: "")
                 property.rank = 1
                 property.username = leader.username ?? ""
+                property.solved = NSNumber(value: leader.solved ?? 0)
+                property.score = NSNumber(value: leader.score ?? 0)
                 prop.append(property)
             }
             response.leaderboard = prop
@@ -50,37 +54,4 @@ class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
             completion(response,code)
         }
     }
-
-    
-}
-
-
-
-
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
-    var window: UIWindow?
-
-
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        donateIntent()
-        guard let _ = (scene as? UIWindowScene) else { return }
-    }
-
-    private func donateIntent(){
-        let intent = LeaderboardIntent()
-        intent.suggestedInvocationPhrase = "enigma leaderboard"
-        let interaction = INInteraction(intent: intent, response: nil)
-            
-        interaction.donate { (error) in
-            if error != nil {
-                if let error = error as NSError? {
-                    print("Interaction donation failed: \(error.description)")
-                } else {
-                    print("Successfully donated interaction")
-                }
-            }
-        }
-    }
-
 }

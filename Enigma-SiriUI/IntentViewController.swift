@@ -62,14 +62,11 @@ extension IntentViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: leaderCellId) as! LeaderboardCell
-        
         let data = leaderboard[indexPath.row]
-        
         cell.rank.text = (indexPath.row+1).stringValue
         cell.userName.text = data.username
         cell.solved.text = data.solved?.stringValue
         cell.score.text = data.score?.stringValue
-
         return cell
     }
 }

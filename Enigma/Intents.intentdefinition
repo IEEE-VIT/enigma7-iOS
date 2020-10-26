@@ -62,18 +62,18 @@
 						<string>failure</string>
 					</dict>
 					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>you need to login first!</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>GbZE5w</string>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>please login</string>
+						<string>you need to login first!</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>VRPMZO</string>
 						<key>INIntentResponseCodeName</key>
 						<string>autherror</string>
 					</dict>
 					<dict>
-						<key>INIntentResponseCodeFormatString</key>
-						<string>great.. you are ranked ${leaderboard.rank}</string>
-						<key>INIntentResponseCodeFormatStringID</key>
-						<string>k2BVhj</string>
 						<key>INIntentResponseCodeName</key>
 						<string>top</string>
 						<key>INIntentResponseCodeSuccess</key>
@@ -112,6 +112,99 @@
 			<string>Get </string>
 			<key>INIntentTitleID</key>
 			<string>B8G407</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>View</string>
+		</dict>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>information</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDescription</key>
+			<string>get your user details!</string>
+			<key>INIntentDescriptionID</key>
+			<string>wLskIJ</string>
+			<key>INIntentEligibleForWidgets</key>
+			<true/>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationUpdatesLinked</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>Profile</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationIsPrimary</key>
+					<true/>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>you need to login first!</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>nhH2wu</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>you need to login first!</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>RtwGlQ</string>
+						<key>INIntentResponseCodeName</key>
+						<string>authError</string>
+					</dict>
+				</array>
+				<key>INIntentResponseLastParameterTag</key>
+				<integer>2</integer>
+				<key>INIntentResponseParameters</key>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>userDetails</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>z3cafF</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>property</string>
+						<key>INIntentResponseParameterObjectType</key>
+						<string>User</string>
+						<key>INIntentResponseParameterObjectTypeNamespace</key>
+						<string>Y1Q9hf</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>2</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>Object</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>Profile</string>
+			<key>INIntentTitleID</key>
+			<string>YNHlqh</string>
 			<key>INIntentType</key>
 			<string>Custom</string>
 			<key>INIntentVerb</key>
@@ -234,6 +327,139 @@
 					<string>score</string>
 					<key>INTypePropertyTag</key>
 					<integer>105</integer>
+					<key>INTypePropertyType</key>
+					<string>Integer</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>INTypeDisplayName</key>
+			<string>User</string>
+			<key>INTypeDisplayNameID</key>
+			<string>LZH3RZ</string>
+			<key>INTypeLastPropertyTag</key>
+			<integer>108</integer>
+			<key>INTypeName</key>
+			<string>User</string>
+			<key>INTypeProperties</key>
+			<array>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>1</integer>
+					<key>INTypePropertyName</key>
+					<string>identifier</string>
+					<key>INTypePropertyTag</key>
+					<integer>1</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>2</integer>
+					<key>INTypePropertyName</key>
+					<string>displayString</string>
+					<key>INTypePropertyTag</key>
+					<integer>2</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>3</integer>
+					<key>INTypePropertyName</key>
+					<string>pronunciationHint</string>
+					<key>INTypePropertyTag</key>
+					<integer>3</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDefault</key>
+					<true/>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>4</integer>
+					<key>INTypePropertyName</key>
+					<string>alternativeSpeakableMatches</string>
+					<key>INTypePropertySupportsMultipleValues</key>
+					<true/>
+					<key>INTypePropertyTag</key>
+					<integer>4</integer>
+					<key>INTypePropertyType</key>
+					<string>SpeakableString</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>User Name</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>S0RSel</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>5</integer>
+					<key>INTypePropertyName</key>
+					<string>userName</string>
+					<key>INTypePropertyTag</key>
+					<integer>100</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Email</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>XtdnfA</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>6</integer>
+					<key>INTypePropertyName</key>
+					<string>email</string>
+					<key>INTypePropertyTag</key>
+					<integer>101</integer>
+					<key>INTypePropertyType</key>
+					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Score</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>SD5NFb</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>7</integer>
+					<key>INTypePropertyName</key>
+					<string>score</string>
+					<key>INTypePropertyTag</key>
+					<integer>106</integer>
+					<key>INTypePropertyType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Solved</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>BfHBui</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>8</integer>
+					<key>INTypePropertyName</key>
+					<string>solved</string>
+					<key>INTypePropertyTag</key>
+					<integer>108</integer>
+					<key>INTypePropertyType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Xp</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>OJR0lK</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>9</integer>
+					<key>INTypePropertyName</key>
+					<string>xp</string>
+					<key>INTypePropertyTag</key>
+					<integer>107</integer>
 					<key>INTypePropertyType</key>
 					<string>Integer</string>
 				</dict>
