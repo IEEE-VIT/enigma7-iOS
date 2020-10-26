@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 import GoogleSignIn
 
 @UIApplicationMain
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Defaults.fetchAll()
+        requestSiri()
+
         return true
     }
 
@@ -31,6 +34,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    
+    private func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+            guard let intent = userActivity.interaction?.intent as? LeaderboardIntent else {
+                print("AppDelegate: Start Workout Intent - FALSE")
+                return false
+            }
+            print("AppDelegate: Start Workout Intent - TRUE")
+            print(intent)
+            return true
+        }
+    
+    func requestSiri(){
+        INPreferences.requestSiriAuthorization { status in
+          if status == .authorized {
+            print("Hey, Siri!")
+          } else {
+            print("Nay, Siri!")
+          }
+        }
     }
 }
 

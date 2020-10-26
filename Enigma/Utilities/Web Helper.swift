@@ -24,13 +24,15 @@ class WebHelper {
             let token = defaults?.string(forKey: "Token")
             defaults?.synchronize()
             
-            var key = isWidget ? token : Defaults.token()
+          //  var key = isWidget ? token : Defaults.token()
             
-            if #available(watchOS 2,*) {
+            var key = token
+            
+            #if os(watchOS)
                 key = UserDefaults.standard.value(forKey: "token") as? String //TODO
-                print(key)
-            }
-            
+                print("WATCH:",key)
+            #endif
+            print("TOKEN: ",key)
             request.setValue(key, forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
