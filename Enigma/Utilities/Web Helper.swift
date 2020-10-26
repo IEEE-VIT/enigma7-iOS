@@ -24,7 +24,9 @@ class WebHelper {
             let token = defaults?.string(forKey: "Token")
             defaults?.synchronize()
             
-            var key = isWidget ? token : Defaults.token()
+          //  var key = isWidget ? token : Defaults.token()
+            
+            var key = token
             
             #if os(watchOS)
                 key = UserDefaults.standard.value(forKey: "token") as? String //TODO

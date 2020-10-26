@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import UIKit
+import Intents
 
 class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
+    
+        
     func confirm(intent: LeaderboardIntent, completion: @escaping (LeaderboardIntentResponse) -> Void) {
         ServiceController.shared.getLeaderboard { (response) in
             if let _ = response {
@@ -36,4 +40,35 @@ class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
         }
     }
     
+}
+
+
+
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var window: UIWindow?
+
+
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        donateIntent()
+        guard let _ = (scene as? UIWindowScene) else { return }
+    }
+
+    private func donateIntent(){
+        let intent = LeaderboardIntent()
+        intent.suggestedInvocationPhrase = "enigma leaderboard"
+        let interaction = INInteraction(intent: intent, response: nil)
+            
+        interaction.donate { (error) in
+            if error != nil {
+                if let error = error as NSError? {
+                    print("Interaction donation failed: \(error.description)")
+                } else {
+                    print("Successfully donated interaction")
+                }
+            }
+        }
+    }
+
 }
