@@ -38,6 +38,13 @@
 	</dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Save this question and solve later</string>
+	<key>NSSiriUsageDescription</key>
+	<string>Siri can help you get your next question, leaderboard and much more!</string>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>LeaderboardIntent</string>
+		<string>ProfileIntent</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

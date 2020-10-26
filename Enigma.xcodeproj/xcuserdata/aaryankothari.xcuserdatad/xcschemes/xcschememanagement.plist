@@ -4,10 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Enigma-WidgetExtension.xcscheme_^#shared#^_</key>
+		<key>Enigma-Siri-Profile.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Enigma-Siri.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+		<key>Enigma-SiriUI.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Enigma-WidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Enigma.xcscheme_^#shared#^_</key>
 		<dict>
@@ -22,12 +37,12 @@
 		<key>EnigmaWatch (Complication).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>EnigmaWatch (Notification).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>7</integer>
 		</dict>
 		<key>EnigmaWatch.xcscheme_^#shared#^_</key>
 		<dict>
@@ -37,12 +52,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5B30BA502545DA0100B75FF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B30BA592545DA0200B75FF4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B81A2E0252E476400DA09A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5BABB71724FAC9F8006D5541</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5BABB72D24FACA02006D5541</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5BC42638253FFCD500E55FE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

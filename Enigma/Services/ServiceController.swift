@@ -19,7 +19,7 @@ class ServiceController {
         }
     }
     
-    func getLeaderboard(completion : @escaping ([Leaderboard]?)->()){
+    func getLeaderboard(w:Bool=false,completion : @escaping ([Leaderboard]?)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Game.leaderboardURL, parameters: [:], responseType: [Leaderboard].self,key: Keys.leaderboard) { (response, _) in
             completion(response)
         }
