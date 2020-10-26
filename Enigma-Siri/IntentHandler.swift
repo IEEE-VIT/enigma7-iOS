@@ -11,11 +11,13 @@ import Intents
 class IntentHandler: INExtension {
     
     override func handler(for intent: INIntent) -> Any {
-        
-        guard intent is LeaderboardIntent else {
+        switch intent {
+        case is LeaderboardIntent:
+            return LeaderboardIntentHandler()
+        case is ProfileIntent:
+            return ProfileIntentHandler()
+        default:
             fatalError("Unhandled intent type: \(intent)")
         }
-        
-        return LeaderboardIntentHandler()
     }
 }

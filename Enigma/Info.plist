@@ -43,6 +43,7 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>LeaderboardIntent</string>
+		<string>ProfileIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

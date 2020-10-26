@@ -27,6 +27,7 @@
 			<key>IntentsSupported</key>
 			<array>
 				<string>LeaderboardIntent</string>
+				<string>ProfileIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>

@@ -38,7 +38,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="mKh-qw-sFt">
-                                                    <rect key="frame" x="0.0" y="19" width="65" height="22.5"/>
+                                                    <rect key="frame" x="0.0" y="17.5" width="65" height="25"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="19"/>
                                                     <color key="textColor" name="tertiary"/>
                                                     <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ravenclaw" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ekL-YY-z0z">
-                                                    <rect key="frame" x="75" y="19" width="159.5" height="22.5"/>
+                                                    <rect key="frame" x="75" y="17.5" width="159.5" height="25"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="19"/>
                                                     <color key="textColor" name="tertiary"/>
                                                     <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Nh-PM-rnj">
-                                                    <rect key="frame" x="244.5" y="19" width="78.5" height="22.5"/>
+                                                    <rect key="frame" x="244.5" y="17.5" width="78.5" height="25"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="19"/>
                                                     <color key="textColor" name="tertiary"/>
                                                     <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="spl-yp-0SK">
-                                                    <rect key="frame" x="323" y="19" width="71" height="22.5"/>
+                                                    <rect key="frame" x="323" y="17.5" width="71" height="25"/>
                                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="19"/>
                                                     <color key="textColor" name="tertiary"/>
                                                     <nil key="highlightedColor"/>
@@ -120,7 +120,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yud-tW-6HK">
-                                        <rect key="frame" x="323" y="40.5" width="71" height="20"/>
+                                        <rect key="frame" x="323" y="39.5" width="71" height="22.5"/>
                                         <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
                                         <color key="textColor" name="quaternary"/>
                                         <nil key="highlightedColor"/>
@@ -129,7 +129,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF9-so-6ri">
-                                        <rect key="frame" x="244.5" y="40.5" width="78.5" height="20"/>
+                                        <rect key="frame" x="244.5" y="39.5" width="78.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
                                         <color key="textColor" name="quaternary"/>
                                         <nil key="highlightedColor"/>
@@ -147,13 +147,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__________________________________________________________________________" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVy-iA-Cps">
-                                        <rect key="frame" x="0.0" y="62" width="629" height="20"/>
+                                        <rect key="frame" x="0.0" y="62" width="755" height="22.5"/>
                                         <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
                                         <color key="textColor" name="quaternary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56f-j5-P2b">
-                                        <rect key="frame" x="75" y="40.5" width="159.5" height="20"/>
+                                        <rect key="frame" x="75" y="39.5" width="159.5" height="22.5"/>
                                         <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="17"/>
                                         <color key="textColor" name="quaternary"/>
                                         <nil key="highlightedColor"/>

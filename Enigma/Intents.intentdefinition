@@ -189,7 +189,7 @@
 						<key>INIntentResponseParameterDisplayPriority</key>
 						<integer>1</integer>
 						<key>INIntentResponseParameterName</key>
-						<string>property</string>
+						<string>userDetails</string>
 						<key>INIntentResponseParameterObjectType</key>
 						<string>User</string>
 						<key>INIntentResponseParameterObjectTypeNamespace</key>
