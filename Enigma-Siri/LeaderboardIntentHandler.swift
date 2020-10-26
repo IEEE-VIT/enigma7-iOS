@@ -14,20 +14,25 @@ class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
     
         
     func confirm(intent: LeaderboardIntent, completion: @escaping (LeaderboardIntentResponse) -> Void) {
-        ServiceController.shared.getLeaderboard { (response) in
-            if let _ = response {
-                completion(LeaderboardIntentResponse(code: .ready, userActivity: .none))
-            } else {
-                completion(LeaderboardIntentResponse(code: .failure, userActivity: .none))
-            }
-        }
+        completion(LeaderboardIntentResponse(code: .ready, userActivity: nil))
     }
     
     func handle(intent: LeaderboardIntent, completion: @escaping (LeaderboardIntentResponse) -> Void) {
         let userActivity = NSUserActivity(activityType: NSStringFromClass(LeaderboardIntent.self))
-        let response = LeaderboardIntentResponse(code: .success, userActivity: userActivity)
-        ServiceController.shared.getLeaderboard { (leaderboard) in
-            guard let leaderboard = leaderboard else { return }
+        let response = LeaderboardIntentResponse(code: .top, userActivity: userActivity)
+        self.getLeaderboard { (leaderboard,code) in
+            guard code != 401 else{
+                let response2 = LeaderboardIntentResponse(code: .autherror, userActivity: userActivity)
+                completion(response2)
+                return
+            }
+            
+            guard let leaderboard = leaderboard else {
+                completion(response)
+                return
+            }
+            
+            
             var prop = [Leader]()
             for leader in leaderboard{
                 let property = Leader(identifier: "", display: "")
@@ -39,6 +44,13 @@ class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
             completion(response)
         }
     }
+    
+    private func getLeaderboard(w:Bool=false,completion : @escaping ([Leaderboard]?,Int)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.leaderboardURL, parameters: [:], responseType: [Leaderboard].self,key: Keys.leaderboard) { (response,code) in
+            completion(response,code)
+        }
+    }
+
     
 }
 

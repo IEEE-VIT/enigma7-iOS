@@ -61,9 +61,29 @@
 						<key>INIntentResponseCodeName</key>
 						<string>failure</string>
 					</dict>
+					<dict>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>please login</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>VRPMZO</string>
+						<key>INIntentResponseCodeName</key>
+						<string>autherror</string>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>great.. you are ranked ${leaderboard.rank}</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>k2BVhj</string>
+						<key>INIntentResponseCodeName</key>
+						<string>top</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
 				<integer>8</integer>
+				<key>INIntentResponseOutput</key>
+				<string>leaderboard</string>
 				<key>INIntentResponseParameters</key>
 				<array>
 					<dict>
@@ -89,7 +109,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Leaderboard</string>
+			<string>Get </string>
 			<key>INIntentTitleID</key>
 			<string>B8G407</string>
 			<key>INIntentType</key>
@@ -106,7 +126,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>vRo44P</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>102</integer>
+			<integer>106</integer>
 			<key>INTypeName</key>
 			<string>Leader</string>
 			<key>INTypeProperties</key>
@@ -188,6 +208,34 @@
 					<integer>102</integer>
 					<key>INTypePropertyType</key>
 					<string>String</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Solved</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>t82Fxa</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>7</integer>
+					<key>INTypePropertyName</key>
+					<string>solved</string>
+					<key>INTypePropertyTag</key>
+					<integer>106</integer>
+					<key>INTypePropertyType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Score</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>5QsgoK</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>8</integer>
+					<key>INTypePropertyName</key>
+					<string>score</string>
+					<key>INTypePropertyTag</key>
+					<integer>105</integer>
+					<key>INTypePropertyType</key>
+					<string>Integer</string>
 				</dict>
 			</array>
 		</dict>

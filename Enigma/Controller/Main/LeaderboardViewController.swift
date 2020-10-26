@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class LeaderboardViewController: UIViewController {
 
@@ -22,6 +23,7 @@ class LeaderboardViewController: UIViewController {
         super.viewDidLoad()
         handleLeaderBoard(leaderboard: Defaults.leaderboard())
         setupRefreshControl()
+        donateIntent()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,6 +34,7 @@ class LeaderboardViewController: UIViewController {
     func handleLeaderBoard(leaderboard: [Leaderboard]?){
         guard let leaderboard = leaderboard else { return }
         self.leaderboard = leaderboard.filter{ $0.username != "" }
+        INInteraction(intent: LeaderboardIntent(), response: nil).donate(completion: nil)
         DispatchQueue.main.async {
             self.refreshControl.endRefreshing()
             self.tableView.reloadData()
@@ -71,6 +74,24 @@ extension LeaderboardViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         return UIView()
+    }
+    
+    private func donateIntent() {
+       INPreferences.requestSiriAuthorization { [weak self] (authorization) in
+           guard let strongSelf = self else { return }
+           guard authorization == INSiriAuthorizationStatus.authorized else {
+                return
+           }
+        
+           let intent = LeaderboardIntent()
+           intent.suggestedInvocationPhrase = "Enigma leaderboard"
+           let interaction = INInteraction(intent: intent, response: nil)
+           interaction.donate(completion: { (error) in
+               if let error = error {
+                    print(error.localizedDescription)
+               }
+           })
+       }
     }
     
 }

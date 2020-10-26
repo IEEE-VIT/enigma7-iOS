@@ -32,7 +32,7 @@ class WebHelper {
                 key = UserDefaults.standard.value(forKey: "token") as? String //TODO
                 print("WATCH:",key)
             #endif
-            print("KEY: ",key)
+            print("TOKEN: ",key)
             request.setValue(key, forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in

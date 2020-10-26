@@ -17,6 +17,12 @@ import IntentsUI
 
 class IntentViewController: UIViewController, INUIHostedViewControlling {
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    let leaderCellId = "leadercell"
+    
+    var leaderboard = [Leader]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,11 +37,39 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
           return
         }
         
+        if let response = interaction.intentResponse as? LeaderboardIntentResponse {
+            guard let leaderboard = response.leaderboard else { return } //TODO
+            self.leaderboard = leaderboard.filter{ $0.username != "" }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
         completion(true, parameters, self.desiredSize)
     }
     
     var desiredSize: CGSize {
-        return self.extensionContext!.hostedViewMaximumAllowedSize
+        var size = self.extensionContext!.hostedViewMaximumAllowedSize
+        size.height /= 2
+        return size
     }
     
+}
+
+extension IntentViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return leaderboard.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: leaderCellId) as! LeaderboardCell
+        
+        let data = leaderboard[indexPath.row]
+        
+        cell.rank.text = (indexPath.row+1).stringValue
+        cell.userName.text = data.username
+        cell.solved.text = data.solved?.stringValue
+        cell.score.text = data.score?.stringValue
+
+        return cell
+    }
 }
