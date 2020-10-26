@@ -39,6 +39,7 @@
 		5B30BB6A254712A800B75FF4 /* ProfileIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BB69254712A800B75FF4 /* ProfileIntentHandler.swift */; };
 		5B30BB80254716F200B75FF4 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B30BA5B2545DA0200B75FF4 /* IntentsUI.framework */; };
 		5B30BB8A254716F200B75FF4 /* Enigma-Siri-Profile.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B30BB7F254716F200B75FF4 /* Enigma-Siri-Profile.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5B30BBA1254717E700B75FF4 /* ProfileIntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BBA0254717E700B75FF4 /* ProfileIntentViewController.swift */; };
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
 		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
 		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
@@ -297,6 +298,7 @@
 		5B30BB1D2547003E00B75FF4 /* Enigma-Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Enigma-Siri.entitlements"; sourceTree = "<group>"; };
 		5B30BB69254712A800B75FF4 /* ProfileIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntentHandler.swift; sourceTree = "<group>"; };
 		5B30BB7F254716F200B75FF4 /* Enigma-Siri-Profile.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Enigma-Siri-Profile.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B30BBA0254717E700B75FF4 /* ProfileIntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntentViewController.swift; sourceTree = "<group>"; };
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
@@ -490,6 +492,7 @@
 				5B30BA5E2545DA0200B75FF4 /* IntentViewController.swift */,
 				5B30BA602545DA0200B75FF4 /* MainInterface.storyboard */,
 				5B30BA632545DA0200B75FF4 /* Info.plist */,
+				5B30BBA0254717E700B75FF4 /* ProfileIntentViewController.swift */,
 			);
 			path = "Enigma-SiriUI";
 			sourceTree = "<group>";
@@ -1184,6 +1187,7 @@
 			files = (
 				5B30BB40254704B300B75FF4 /* Number.swift in Sources */,
 				5B30BB042545FC2300B75FF4 /* Intents.intentdefinition in Sources */,
+				5B30BBA1254717E700B75FF4 /* ProfileIntentViewController.swift in Sources */,
 				5B30BB2F2547049D00B75FF4 /* LeaderboardCell.swift in Sources */,
 				5B30BA5F2545DA0200B75FF4 /* IntentViewController.swift in Sources */,
 			);
