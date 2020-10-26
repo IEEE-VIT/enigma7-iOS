@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class  Defaults {
     
@@ -52,6 +53,21 @@ class  Defaults {
         let body = UserDefaults.standard.value(forKey: Keys.hint) as? Data
         guard let data = body else { return nil }
         return decode(data: data)
+    }
+    
+    static func saveImage(_ data : Data?,question:Int){
+        guard let data = data else { return }
+        guard question != 0 else { return }
+        userDefaults?.set(data, forKey: Keys.image + question.stringValue)
+        userDefaults?.synchronize()
+    }
+    
+    static func fetchImage(q:Int)->UIImage?{
+        let data = userDefaults?.value(forKey: Keys.image + q.stringValue) as? Data
+        userDefaults?.synchronize()
+        guard let img = data else { return nil }
+        let image = UIImage(data: img)
+        return image
     }
     
     static func fetchAll(){

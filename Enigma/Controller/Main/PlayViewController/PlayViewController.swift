@@ -159,11 +159,12 @@ class PlayViewController: UIViewController {
         guard  let question = question else { return }
         questionLabel.text = question.text
         questionNumberLabel.text = question.questionNumber
-        questionImageView.asyncLoadImage(question.imageUrl, placeHolder: nil, img: setImage(img:))
+        questionImageView.asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
     }
     
-    func setImage(img: UIImage){
+    func setImage(img: UIImage,no:Int){
         self.image = img
+        Defaults.saveImage(img.pngData(), question: no)
     }
     
     func setButton(_ button : UIButton ,_ bool : Bool){

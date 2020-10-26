@@ -36,6 +36,7 @@ class Keys {
     static let question = "EnigmaQuestion"
     static let hint = "EnigmaHint"
     static let xp = "Enigmaxp"
+    static let image = "EnigmaImage"
 }
 
 func decode<T: Decodable>(data: Data) -> T? {
