@@ -17,7 +17,7 @@ struct Provider: IntentTimelineProvider {
     
     
     func placeholder(in context: Context) -> WidgetModel {
-        WidgetModel(user: nil)
+        WidgetModel(user: Defaults.user())
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetModel) -> ()) {
@@ -57,7 +57,7 @@ struct Enigma_WidgetEntryView : View {
             case .systemMedium:
                 SmallWidget()
             case .systemLarge:
-                SmallWidget()
+                LargeWidget()
             @unknown default:
                 SmallWidget()
             }

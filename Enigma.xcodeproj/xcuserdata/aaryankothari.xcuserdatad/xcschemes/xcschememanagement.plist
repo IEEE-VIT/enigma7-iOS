@@ -22,7 +22,11 @@
 		<key>Enigma-WidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>4</integer>
+=======
+			<integer>2</integer>
+>>>>>>> medium_widget
 		</dict>
 		<key>Enigma.xcscheme_^#shared#^_</key>
 		<dict>
