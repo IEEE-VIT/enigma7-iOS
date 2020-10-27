@@ -35,7 +35,6 @@ struct LargeWidget: View {
             .cornerRadius(20)
             .padding(10)
             .onAppear{
-                    guard let question = Defaults.question()?.text else { return }
                     guard let image = Defaults.fetchImage(q: Defaults.question()?.id ?? 0) else { return }
                     self.image = image
                     return
