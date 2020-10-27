@@ -110,6 +110,7 @@
                                     <constraint firstItem="7Ly-zm-Gru" firstAttribute="top" secondItem="jIz-a1-mdp" secondAttribute="top" constant="11" id="YFE-ee-iFF"/>
                                     <constraint firstAttribute="trailing" secondItem="lYG-UN-GaR" secondAttribute="trailing" constant="18" id="ZmY-aM-9sF"/>
                                     <constraint firstItem="7Ly-zm-Gru" firstAttribute="centerX" secondItem="jIz-a1-mdp" secondAttribute="centerX" id="m3r-f1-euu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="nJt-9v-rJh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPg-PC-Qrw">
@@ -130,7 +131,7 @@
                             <constraint firstItem="VTk-pk-dCY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="cia-1g-ABn"/>
                             <constraint firstItem="jIz-a1-mdp" firstAttribute="leading" secondItem="VTk-pk-dCY" secondAttribute="leading" id="dFV-DU-lb4"/>
                             <constraint firstAttribute="trailing" secondItem="KPg-PC-Qrw" secondAttribute="trailing" id="mqR-x1-ELA"/>
-                            <constraint firstItem="jIz-a1-mdp" firstAttribute="height" secondItem="VTk-pk-dCY" secondAttribute="height" multiplier="0.0775194" id="nJt-Dp-eII"/>
+                            <constraint firstItem="jIz-a1-mdp" firstAttribute="height" secondItem="VTk-pk-dCY" secondAttribute="height" multiplier="0.0775194" priority="750" id="nJt-Dp-eII"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XCs-0i-Dxm" secondAttribute="trailing" id="o3z-e7-ZFy"/>
                             <constraint firstItem="jIz-a1-mdp" firstAttribute="top" secondItem="VTk-pk-dCY" secondAttribute="top" id="qAy-aX-QQa"/>
                             <constraint firstItem="XCs-0i-Dxm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="s1o-SZ-lfI"/>
@@ -993,14 +994,18 @@
                                                     <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="26"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii6-nK-T8T">
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ii6-nK-T8T">
                                                 <rect key="frame" x="0.0" y="23.5" width="366" height="94"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=regular-widthClass=regular">
                                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="23"/>
                                                 </variation>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="1Sc-pk-iNh" appends="YES" id="dzR-XQ-al8"/>
+                                                </connections>
                                             </label>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-Lr-plb">
                                                 <rect key="frame" x="36.5" y="129.5" width="293" height="175.5"/>
@@ -1012,7 +1017,7 @@
                                                     <outletCollection property="gestureRecognizers" destination="LuT-kQ-oFX" appends="YES" id="Wlb-DQ-Xfh"/>
                                                 </connections>
                                             </imageView>
-                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-k0-9xg">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-k0-9xg">
                                                 <rect key="frame" x="36.5" y="317" width="293" height="0.0"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
@@ -1032,6 +1037,11 @@
                                                 <color key="textColor" name="tertiary"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="delegate" destination="5eb-eE-DVo" id="MRe-gO-C8z"/>
                                                 </connections>
@@ -1185,6 +1195,11 @@
                 <tapGestureRecognizer id="CAM-4Y-jFF">
                     <connections>
                         <action selector="dismissKeyboard:" destination="5eb-eE-DVo" id="nfd-FI-2NS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="1Sc-pk-iNh">
+                    <connections>
+                        <action selector="questionTapped:" destination="5eb-eE-DVo" id="Cs7-bW-jKx"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

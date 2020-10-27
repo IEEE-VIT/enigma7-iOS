@@ -14,7 +14,7 @@ protocol ShareDelegate : class {
 
 class PlayViewController: UIViewController {
     
-    
+    //MARK: OUTLETS
     @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var progressBar: xpBar!
     @IBOutlet var powerupButtons: [UIButton]!
@@ -158,6 +158,11 @@ class PlayViewController: UIViewController {
         guard let _ = questionImageView.image else { return }
         self.performZoom()
     }
+    
+    @IBAction func questionTapped(_ sender: Any) {
+        UIPasteboard.general.string = questionLabel.text
+    }
+    
     
     func handleQuestion(question : Question?){
         guard  let question = question else { return }
