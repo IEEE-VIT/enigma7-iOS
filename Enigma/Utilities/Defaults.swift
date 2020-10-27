@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+
 class  Defaults {
     
     public static let userDefaults = UserDefaults(suiteName: "group.widget.ak")
@@ -21,6 +23,15 @@ class  Defaults {
     
     static func isLoggedin() -> Bool {
         return (UserDefaults.standard.value(forKey: Keys.login) as? Bool) ?? false
+    }
+    
+    static func login(_ key : String){
+        UserDefaults.standard.set(true, forKey: Keys.login)
+        UserDefaults.standard.set("Token " + key, forKey: Keys.token)
+        let defaults = UserDefaults(suiteName: "group.widget.ak")
+        defaults?.set("Token " + key, forKey: "Token")
+        defaults?.synchronize()
+        reloadWidget()
     }
 
     static func user() -> UserDetails? {
@@ -44,7 +55,6 @@ class  Defaults {
     static func question() -> Question? {
         let body = userDefaults?.value(forKey: Keys.question) as? Data
         userDefaults?.synchronize()
-        print(body,"BODY")
         guard let data = body else { return nil }
         return decode(data: data)
     }
@@ -79,4 +89,13 @@ class  Defaults {
         }
     }
     
+    //TODO empty others
+    static func emptyAll(){
+        UserDefaults.standard.set(false, forKey: Keys.login)
+        UserDefaults.standard.set(nil, forKey: Keys.token)
+        userDefaults?.set(nil, forKey: Keys.token)
+        userDefaults?.synchronize()
+        reloadWidget()
+    }
+
 }

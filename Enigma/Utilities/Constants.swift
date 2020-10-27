@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+#if !os(watchOS)
+import WidgetKit
+#endif
 
 let maxXp : Double = 300
 
@@ -37,6 +39,14 @@ class Keys {
     static let hint = "EnigmaHint"
     static let xp = "Enigmaxp"
     static let image = "EnigmaImage"
+}
+
+public func reloadWidget(){
+    #if !os(watchOS)
+    DispatchQueue.main.async {
+        if #available(iOS 14.0, *) { WidgetCenter.shared.reloadTimelines(ofKind: "Enigma_Widget") }
+    }
+    #endif
 }
 
 func decode<T: Decodable>(data: Data) -> T? {

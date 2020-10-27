@@ -10,9 +10,35 @@ import SwiftUI
 import WidgetKit
 
 struct LargeWidget: View {
+    var entry: Provider.Entry
+    var body: some View {
+        Group{
+            if entry.isLogin {
+                largeWidget(question: entry.question)
+            } else {
+                authError()
+            }
+        }
+    }
+    
+    func isLoggedin()->Bool{
+        print("TOKEN: ",Defaults.token())
+        if Defaults.token() == "" {
+            return false
+        } else if Defaults.question()?.text == nil {
+            return false
+        } else if Defaults.fetchImage(q: Defaults.question()?.id ?? 0) == nil {
+            return false
+        } else {
+            return true
+        }
+    }
+}
+
+struct largeWidget : View {
     var question: Question?
     @State var image = UIImage(named: "bah")
-    var body: some View {
+    var body : some View {
         ZStack {
             Color(.primary)
             VStack(alignment: .leading){
@@ -35,30 +61,20 @@ struct LargeWidget: View {
             .cornerRadius(20)
             .padding(10)
             .onAppear{
-                    guard let image = Defaults.fetchImage(q: Defaults.question()?.id ?? 0) else { return }
-                    self.image = image
-                    return
+                guard let image = Defaults.fetchImage(q: Defaults.question()?.id ?? 0) else { return }
+                self.image = image
+                return
             }
         }
     }
-    
-    func isLoggedin()->Bool{
-        if Defaults.token() == "" {
-            return false
-        } else if Defaults.question()?.text == nil {
-            return false
-        } else if Defaults.fetchImage(q: Defaults.question()?.id ?? 0) == nil {
-            return false
-        } else {
-            return true
-        }
-    }
-    
 }
 
-struct LargeWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        LargeWidget()
-            .previewContext(WidgetPreviewContext(family: .systemLarge))
+struct authError : View {
+    var body : some View {
+        Image("401")
+            .resizable()
+            .scaledToFit()
+            .frame(maxWidth: .infinity,maxHeight: .infinity)
+            .background(Color(#colorLiteral(red: 0.168627451, green: 0.1764705882, blue: 0.1607843137, alpha: 1)))
     }
 }
