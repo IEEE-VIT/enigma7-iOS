@@ -10,16 +10,15 @@ import SwiftUI
 import WidgetKit
 
 struct LargeWidget: View {
-    @State var questionNumber : String = "Q1."
-    @State var q : String = "Bahubali ko kaun mara :( ?"
+    var question: Question?
     @State var image = UIImage(named: "bah")
     var body: some View {
         ZStack {
             Color(.primary)
             VStack(alignment: .leading){
                 Group{
-                    Text(questionNumber)
-                    Text(q)
+                    Text(question?.questionNumber ?? "")
+                    Text(question?.text ?? "")
                 }
                 .foregroundColor(Color(.tertiary))
                 .font(.custom("IBMPlexMono-SemiBold", size: 16))
@@ -30,6 +29,7 @@ struct LargeWidget: View {
                     .cornerRadius(5)
                 Spacer()
             }
+            .frame(maxWidth: .infinity)
             .padding(10)
             .background(Color(.dark))
             .cornerRadius(20)
@@ -37,9 +37,7 @@ struct LargeWidget: View {
             .onAppear{
                     guard let question = Defaults.question()?.text else { return }
                     guard let image = Defaults.fetchImage(q: Defaults.question()?.id ?? 0) else { return }
-                    self.q = question
                     self.image = image
-                    self.questionNumber = Defaults.question()?.questionNumber ?? ""
                     return
             }
         }
