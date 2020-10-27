@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "skip.png",
+      "filename" : "Group 21.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "skip@2x.png",
+      "filename" : "Group 21@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "skip@3x.png",
+      "filename" : "Group 21@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
