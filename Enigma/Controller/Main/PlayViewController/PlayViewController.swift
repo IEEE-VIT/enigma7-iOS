@@ -24,6 +24,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var answerTextField: CustomTextField!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var hintButton: UIButton!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var subScrollView: UIView!
     
@@ -49,6 +50,7 @@ class PlayViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         submitButton.addBorder(width: 2, .tertiary)
+        hintButton.addBorder(width: 2, .tertiary)
         questionImageView.addBorder(width: 2, .tertiary)
     }
     
@@ -71,6 +73,11 @@ class PlayViewController: UIViewController {
         submitButton.isEnabled = false
         let answer = AnswerModel.Request(answer: answerTextField.text ?? "")
         PostController.shared.answerQuestion(answer, closePowerupUsed: closePowerupOn, completion: handleAnswerResponse(success:close:message:))
+    }
+    
+    
+    @IBAction func hintTapped(_ sender: UIButton) {
+        createHintAlert(.normal)
     }
     
     func validate()->Bool{
@@ -143,11 +150,6 @@ class PlayViewController: UIViewController {
         
         
         self.previousTag = sender.tag
-    }
-    
-    
-    @IBAction func hintTapped(_ sender: Any) {
-        createHintAlert(.normal)
     }
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
