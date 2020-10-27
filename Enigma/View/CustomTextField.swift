@@ -16,4 +16,13 @@ class CustomTextField: UITextField {
         rect = CGRect(origin: CGPoint(x: rect.origin.x, y: y), size: size)
         return rect
     }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 10, dy: 0)
+    }
+
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return textRect(forBounds: bounds)
+    }
+    
 }

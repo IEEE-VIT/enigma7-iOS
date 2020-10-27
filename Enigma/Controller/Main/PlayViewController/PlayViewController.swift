@@ -15,7 +15,7 @@ protocol ShareDelegate : class {
 
 class PlayViewController: UIViewController {
     
-    
+    //MARK: OUTLETS
     @IBOutlet weak var xpLabel: UILabel!
     @IBOutlet weak var progressBar: xpBar!
     @IBOutlet var powerupButtons: [UIButton]!
@@ -25,6 +25,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var answerTextField: CustomTextField!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var hintButton: UIButton!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var subScrollView: UIView!
     
@@ -50,7 +51,9 @@ class PlayViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         submitButton.addBorder(width: 2, .tertiary)
+        hintButton.addBorder(width: 2, .tertiary)
         questionImageView.addBorder(width: 2, .tertiary)
+        answerTextField.backgroundColor = #colorLiteral(red: 0.05169083923, green: 0.09415727109, blue: 0.06114685535, alpha: 1)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,9 +72,15 @@ class PlayViewController: UIViewController {
     
     @IBAction func submitTapped(_ sender: Any) {
         guard validate() else { return }
-        submitButton.isEnabled = false
+        setBottomButton(submitButton, true)
         let answer = AnswerModel.Request(answer: answerTextField.text ?? "")
         PostController.shared.answerQuestion(answer, closePowerupUsed: closePowerupOn, completion: handleAnswerResponse(success:close:message:))
+    }
+    
+    
+    @IBAction func hintTapped(_ sender: UIButton) {
+        setBottomButton(hintButton, true)
+        createHintAlert(.normal)
     }
     
     func validate()->Bool{
@@ -85,7 +94,7 @@ class PlayViewController: UIViewController {
     
     
     func handleAnswerResponse(success:Bool,close:Bool,message:String){
-        submitButton.isEnabled = true
+        setBottomButton(submitButton, false)
         if success{
             presentAKAlert(type: .success)
             processCorrectAnswer()
@@ -146,15 +155,15 @@ class PlayViewController: UIViewController {
         self.previousTag = sender.tag
     }
     
-    
-    @IBAction func hintTapped(_ sender: Any) {
-        createHintAlert(.normal)
-    }
-    
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         guard let _ = questionImageView.image else { return }
         self.performZoom()
     }
+    
+    @IBAction func questionTapped(_ sender: Any) {
+        UIPasteboard.general.string = questionLabel.text
+    }
+    
     
     func handleQuestion(question : Question?){
         guard  let question = question else { return }
@@ -182,6 +191,12 @@ class PlayViewController: UIViewController {
             button.addBorder(.quaternary)
             button.backgroundColor = UIColor.primary.withAlphaComponent(0.6)
         }
+    }
+    
+    func setBottomButton(_ button : UIButton ,_ bool : Bool){
+        let color : UIColor = bool ? UIColor.primary.withAlphaComponent(0.6) : .clear
+        button.backgroundColor = color
+        button.isEnabled = !bool
     }
     
     func updateProgressbar(){
