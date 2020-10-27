@@ -10,9 +10,7 @@ import UIKit
 
 extension PlayViewController : AlertDelegate{
     func hintSkipped(type: HintAlert.AlertType) {
-        if type != .normal{
-            resetPowerups()
-        }
+        type == .normal ? setBottomButton(hintButton, true) : resetPowerups()
     }
     
     func hintUsed(type: HintAlert.AlertType) {
@@ -27,6 +25,7 @@ extension PlayViewController : AlertDelegate{
     }
     
     func handleHint(hint:Hint?){
+        setBottomButton(hintButton, false)
         guard let text = hint?.hint else {
             setButton(powerupButtons[previousTag],false)
             let message = hint?.detail ?? "Error"

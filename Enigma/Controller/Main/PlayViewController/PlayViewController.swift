@@ -78,6 +78,7 @@ class PlayViewController: UIViewController {
     
     
     @IBAction func hintTapped(_ sender: UIButton) {
+        setBottomButton(hintButton, true)
         createHintAlert(.normal)
     }
     
