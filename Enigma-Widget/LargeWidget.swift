@@ -10,32 +10,58 @@ import SwiftUI
 import WidgetKit
 
 struct LargeWidget: View {
-    @State var q : String = ""
-    @State var image = UIImage()
+    @State var questionNumber : String = "Q1."
+    @State var q : String = "Bahubali ko kaun mara :( ?"
+    @State var image = UIImage(named: "bah")
     var body: some View {
-        VStack(alignment: .leading){
-        
-        Text(q)
-            .foregroundColor(Color(.tertiary))
-            .font(.custom("IBMPlexMono-SemiBold", size: 16))
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-        }
-        .padding(.horizontal, 20)
-        .background(Color(.dark))
-        .onAppear{
-            self.q = Defaults.question()?.text ?? "OK"
-            print("OKKK: ", Defaults.question()?.text)
-            print("IMAGE:", Defaults.fetchImage(q: Defaults.question()?.id ?? 0))
-            self.image = Defaults.fetchImage(q: Defaults.question()?.id ?? 0) ?? UIImage()
+        ZStack {
+            Color(.primary)
+            VStack(alignment: .leading){
+                Group{
+                    Text(questionNumber)
+                    Text(q)
+                }
+                .foregroundColor(Color(.tertiary))
+                .font(.custom("IBMPlexMono-SemiBold", size: 16))
+                Spacer()
+                Image(uiImage: image!)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(5)
+                Spacer()
+            }
+            .padding(10)
+            .background(Color(.dark))
+            .cornerRadius(20)
+            .padding(10)
+            .onAppear{
+                    guard let question = Defaults.question()?.text else { return }
+                    guard let image = Defaults.fetchImage(q: Defaults.question()?.id ?? 0) else { return }
+                    self.q = question
+                    self.image = image
+                    self.questionNumber = Defaults.question()?.questionNumber ?? ""
+                    return
+            }
         }
     }
+    
+    func isLoggedin()->Bool{
+        if Defaults.token() == "" {
+            return false
+        } else if Defaults.question()?.text == nil {
+            return false
+        } else if Defaults.fetchImage(q: Defaults.question()?.id ?? 0) == nil {
+            return false
+        } else {
+            return true
+        }
+    }
+    
 }
 
 struct LargeWidget_Previews: PreviewProvider {
     static var previews: some View {
         LargeWidget()
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
