@@ -707,6 +707,7 @@
 				5BABB74F24FACBE4006D5541 /* Helpers */,
 				5BABB76E24FACDD9006D5541 /* Common.swift */,
 				5B921FE225074EAC00B2AFF4 /* Defaults.swift */,
+				5BC24E6425492948000A310A /* AppConstants.swift */,
 				5B921FDC250745A900B2AFF4 /* Network Constants.swift */,
 				5B921FDE250748BE00B2AFF4 /* Web Helper.swift */,
 			);
@@ -718,7 +719,6 @@
 			children = (
 				5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */,
 				5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */,
-				5BC24E6425492948000A310A /* AppConstants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

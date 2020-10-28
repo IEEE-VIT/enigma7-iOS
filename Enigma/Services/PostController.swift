@@ -34,7 +34,7 @@ class PostController {
         let url = closePowerupUsed ? NetworkConstants.Game.closeAnswerPowerupURL : NetworkConstants.Game.answerURL
         WebHelper.sendPOSTRequest(url: url, responseType: AnswerModel.Response.self, body: body,header: true) { (response, statusCode) in
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
-            completion(response?.answer ?? false,response?.close_answer ?? false,response?.detail ?? "Uh oh 😕")
+            completion(response?.answer ?? false,response?.close_answer ?? false,response?.detail ?? AppConstants.Error.uhOh)
         }
     }
     

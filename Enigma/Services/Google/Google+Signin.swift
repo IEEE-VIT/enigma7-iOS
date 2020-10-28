@@ -11,10 +11,8 @@ import GoogleSignIn
 
 extension HomeViewController: GIDSignInDelegate {
     public func googleSetup(){
-        let clientId = "55484635453-2fmn476nlr2it49soaejbeqj29lq0k6k.apps.googleusercontent.com"
-        let serverClientId = "55484635453-c46tes445anbidhb2qnmb2qs618mvpni.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().clientID = clientId
-        GIDSignIn.sharedInstance()?.serverClientID = serverClientId
+        GIDSignIn.sharedInstance().clientID = AppConstants.Google.clientId
+        GIDSignIn.sharedInstance()?.serverClientID = AppConstants.Google.serverClientId
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signOut()
@@ -31,13 +29,11 @@ extension HomeViewController: GIDSignInDelegate {
     
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-        print("URL",url)
       return GIDSignIn.sharedInstance().handle(url)
     }
     
     func application(_ application: UIApplication,
                      open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        print("URL",url)
       return GIDSignIn.sharedInstance().handle(url)
     }
     

@@ -17,6 +17,7 @@ struct AppConstants {
         static let usernameErrorPrefix = "________________\nInvalidUsername.\n-> "
         static let emptyAnswer = "Answer can not be empty!"
         static let emptyUsername = "Username Empty!"
+        static let uhOh = "Uh oh 😕"
         static let misc = "An Error occured :("
     }
     
@@ -35,4 +36,15 @@ struct AppConstants {
         static let share = "share"
         static let hint = "Hint"
     }
+    
+    struct Date {
+        static let startDate = "23-10-2020 16:20"
+        static let dateFormat = ""
+    }
+    
+    struct Google {
+        static let clientId = "55484635453-2fmn476nlr2it49soaejbeqj29lq0k6k.apps.googleusercontent.com"
+        static let serverClientId = "55484635453-c46tes445anbidhb2qnmb2qs618mvpni.apps.googleusercontent.com"
+    }
+    
 }

@@ -15,11 +15,11 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var minutLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     
-    let startDate = "23-10-2020 16:20"
+    let startDate = AppConstants.Date.startDate
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
-        formatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        formatter.dateFormat = AppConstants.Date.dateFormat
         calculateTimeDifference()
         super.viewDidLoad()
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in self.calculateTimeDifference() })
