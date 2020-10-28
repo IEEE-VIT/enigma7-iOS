@@ -55,7 +55,7 @@ struct Enigma_WidgetEntryView : View {
             case .systemSmall:
                 SmallWidget(data: entry.user)
             case .systemMedium:
-                SmallWidget()
+                MediumWidget()
             case .systemLarge:
                 LargeWidget(entry: entry)
             @unknown default:

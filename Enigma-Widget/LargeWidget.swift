@@ -16,18 +16,17 @@ struct LargeWidget: View {
             if entry.isLogin {
                 largeWidget(question: entry.question)
             } else {
-                authError()
+                authError(image:"401")
             }
         }
     }
     
     func isLoggedin()->Bool{
-        print("TOKEN: ",Defaults.token())
         if Defaults.token() == "" {
             return false
         } else if Defaults.question()?.text == nil {
             return false
-        } else if Defaults.fetchImage(q: Defaults.question()?.id ?? 0) == nil {
+        } else if Defaults.fetchImage() == nil {
             return false
         } else {
             return true
@@ -61,7 +60,7 @@ struct largeWidget : View {
             .cornerRadius(20)
             .padding(10)
             .onAppear{
-                guard let image = Defaults.fetchImage(q: Defaults.question()?.id ?? 0) else { return }
+                guard let image = Defaults.fetchImage() else { return }
                 self.image = image
                 return
             }
@@ -70,8 +69,9 @@ struct largeWidget : View {
 }
 
 struct authError : View {
+    var image : String
     var body : some View {
-        Image("401")
+        Image(image)
             .resizable()
             .scaledToFit()
             .frame(maxWidth: .infinity,maxHeight: .infinity)

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CountdownDelegate: class {
+    func didSignin(_ token: String)
+}
+
 class CountdownViewController: UIViewController {
 
     @IBOutlet weak var dayLabel: UILabel!
@@ -15,6 +19,7 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var minutLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    
     
     let startDate = AppConstants.Date.startDate
     let formatter = DateFormatter()
@@ -29,7 +34,7 @@ class CountdownViewController: UIViewController {
     
     
     @IBAction func startClicked(_ sender: UIButton) {
-        
+        UserDefaults.standard.set(true, forKey: Keys.login)
     }
     
     func calculateTimeDifference(){
