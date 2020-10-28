@@ -145,6 +145,7 @@
 		5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7B924FADEEB006D5541 /* TabbarController.swift */; };
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
 		5BC24E6525492948000A310A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
+		5BC24E7725493138000A310A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E7625493138000A310A /* String.swift */; };
 		5BC42422253C108F00E55FE3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42421253C108F00E55FE3 /* Device.swift */; };
 		5BC4263D253FFCD500E55FE3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC4263B253FFCD500E55FE3 /* Interface.storyboard */; };
 		5BC4263F253FFCE400E55FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC4263E253FFCE400E55FE3 /* Assets.xcassets */; };
@@ -370,6 +371,7 @@
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BC24E6425492948000A310A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		5BC24E7625493138000A310A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5BC42421253C108F00E55FE3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnigmaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC4263C253FFCD500E55FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				5B921FF325087E4500B2AFF4 /* Haptic.swift */,
 				5B1B4B4D252252D000398B0D /* Image.swift */,
 				5BC42421253C108F00E55FE3 /* Device.swift */,
+				5BC24E7625493138000A310A /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1231,6 +1234,7 @@
 				5BABB76F24FACDD9006D5541 /* Common.swift in Sources */,
 				5B32868F24FBD97900FE2EEC /* xpBar.swift in Sources */,
 				5B921FE72507505200B2AFF4 /* PostController.swift in Sources */,
+				5BC24E7725493138000A310A /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

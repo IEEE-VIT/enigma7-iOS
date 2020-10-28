@@ -17,6 +17,7 @@ struct AppConstants {
         static let usernameErrorPrefix = "________________\nInvalidUsername.\n-> "
         static let emptyAnswer = "Answer can not be empty!"
         static let emptyUsername = "Username Empty!"
+        static let specialCharacters = "Special charcaters are not allowed!"
         static let uhOh = "Uh oh 😕"
         static let misc = "An Error occured :("
     }

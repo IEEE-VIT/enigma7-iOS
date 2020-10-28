@@ -53,7 +53,12 @@ class UserNameViewController: UIViewController {
             error = AppConstants.Error.emptyUsername
             return false
         }
-        //TODO no symbols
+        
+        if userNameTextField.text?.hasSpecialCharacter ?? true{
+            error = AppConstants.Error.specialCharacters
+            return false
+        }
+
         return true
     }
     
