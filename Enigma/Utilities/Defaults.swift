@@ -64,15 +64,14 @@ class  Defaults {
         return decode(data: data)
     }
     
-    static func saveImage(_ data : Data?,question:Int){
+    static func saveImage(_ data : Data?){
         guard let data = data else { return }
-        guard question != 0 else { return }
-        userDefaults?.set(data, forKey: Keys.image + question.stringValue)
+        userDefaults?.set(data, forKey: Keys.image)
         userDefaults?.synchronize()
     }
     
-    static func fetchImage(q:Int)->UIImage?{
-        let data = userDefaults?.value(forKey: Keys.image + q.stringValue) as? Data
+    static func fetchImage()->UIImage?{
+        let data = userDefaults?.value(forKey: Keys.image) as? Data
         userDefaults?.synchronize()
         guard let img = data else { return nil }
         let image = UIImage(data: img)
@@ -92,7 +91,7 @@ class  Defaults {
     static func emptyAll(){
         UserDefaults.standard.set(false, forKey: Keys.login)
         UserDefaults.standard.set(nil, forKey: Keys.token)
-        userDefaults?.set(nil, forKey: Keys.token)
+        userDefaults?.set(nil, forKey: "Token")
         userDefaults?.synchronize()
         reloadWidget()
     }

@@ -23,6 +23,7 @@ class TabbarController: UIViewController {
     var ProfileViewController : UIViewController!
     var RulesViewController : UIViewController!
     var viewControllers: [UIViewController]!
+
     
     var wcSession : WCSession! = nil
     var selectedIndex: Int = 0

@@ -11,18 +11,31 @@ import WidgetKit
 import UIKit
 
 struct SmallWidget: View {
-    var data : UserDetails?
+    @State var data : UserDetails?
     var body: some View {
-        VStack(alignment: .leading, spacing: 5){
-            Image("banner")
-            userName
-            profileRow(key: "Rank:", value: data?.rank?.stringValue ?? "5")
-            profileRow(key: "Score :", value: data?.points?.stringValue ?? "150")
-            profileRow(key: "Xp :", value: data?.xp?.stringValue ?? "150")
+        Group{
+            if isLoggedin(){
+                VStack(alignment: .leading, spacing: 5){
+                    Image("banner")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(minWidth: 120, idealWidth: 180, maxWidth: .infinity, minHeight: 40, idealHeight: 40, maxHeight: 50, alignment: .center)
+                        .background(Color(UIColor.primary))
+                    userName
+                    profileRow(key: "Rank:", value: data?.rank?.stringValue ?? "5")
+                    profileRow(key: "Score :", value: data?.points?.stringValue ?? "150")
+                    profileRow(key: "Xp :", value: data?.xp?.stringValue ?? "150")
+                }
+                .padding(.bottom,20)
+                .background(Color(.dark))
+                .onAppear{
+                    self.data = Defaults.user()
+                }
+            } else {
+                authError(image:"401")
+            }
         }
-        .padding(.bottom,20)
-        .background(Color(.dark))
-    }
+    }   
     
     var userName : some View {
         HStack{
@@ -30,9 +43,12 @@ struct SmallWidget: View {
             Text(data?.username ?? "Yolo Yolo")
                 .font(.custom("IBMPlexMono-Bold", fixedSize: 20))
                 .foregroundColor(Color(.tertiary))
-                .underline()
             Spacer()
         }
+    }
+    
+    func isLoggedin()->Bool{
+        return Defaults.token() != ""
     }
 }
 

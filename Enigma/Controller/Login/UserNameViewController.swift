@@ -14,6 +14,8 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorTextView: UITextView!
     
+    weak var CountdownController : CountdownViewController?
+    
     let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {
         didSet {
@@ -24,13 +26,14 @@ class UserNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        overrideUserInterfaceStyle = .light
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         nextButton.addBorder(UIColor.tertiary)
         userNameTextField.backgroundColor = #colorLiteral(red: 0.05169083923, green: 0.09415727109, blue: 0.06114685535, alpha: 1)
+        userNameTextField.layer.borderColor = UIColor(named: "black")?.cgColor
     }
     
     
