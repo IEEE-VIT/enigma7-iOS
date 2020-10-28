@@ -39,8 +39,8 @@ struct AppConstants {
     }
     
     struct Date {
-        static let startDate = "23-10-2020 16:20"
-        static let dateFormat = ""
+        static let startDate = "23-11-2020 16:20"
+        static let dateFormat = "dd-MM-yyyy HH:mm"
     }
     
     struct Google {

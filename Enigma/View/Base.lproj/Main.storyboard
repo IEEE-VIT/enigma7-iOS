@@ -485,6 +485,23 @@
                                 <color key="textColor" name="tertiary"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-y0-Hyx">
+                                <rect key="frame" x="62" y="740" width="290" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vlV-y0-Hyx" secondAttribute="height" multiplier="50:9" id="R6z-r7-CdM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" name="quaternary"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextTapped:" destination="rM5-1r-zw8" eventType="touchUpInside" id="ni7-K7-9Qa"/>
+                                    <action selector="startClicked:" destination="ydA-HJ-Uxv" eventType="touchUpInside" id="VJr-3v-85O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xdS-cb-BOp"/>
                         <color key="backgroundColor" name="dark"/>
@@ -498,7 +515,10 @@
                             <constraint firstItem="agl-Ds-gWa" firstAttribute="trailing" secondItem="24W-PJ-t0o" secondAttribute="trailing" id="J9e-Dm-87X"/>
                             <constraint firstItem="6hR-vv-J2m" firstAttribute="top" secondItem="Jwj-CL-5Iw" secondAttribute="bottom" constant="5" id="LEa-aY-bvw"/>
                             <constraint firstItem="agl-Ds-gWa" firstAttribute="leading" secondItem="24W-PJ-t0o" secondAttribute="leading" id="OWH-5f-F9M"/>
+                            <constraint firstItem="vlV-y0-Hyx" firstAttribute="centerX" secondItem="4lk-St-dPV" secondAttribute="centerX" id="T1q-i0-uhi"/>
+                            <constraint firstItem="vlV-y0-Hyx" firstAttribute="width" secondItem="vlV-y0-Hyx" secondAttribute="height" multiplier="50:9" id="Tlm-1i-LfK"/>
                             <constraint firstItem="Jwj-CL-5Iw" firstAttribute="centerX" secondItem="4lk-St-dPV" secondAttribute="centerX" id="V9Y-SW-vzg"/>
+                            <constraint firstItem="vlV-y0-Hyx" firstAttribute="width" secondItem="4lk-St-dPV" secondAttribute="width" multiplier="0.7" id="VmL-Bv-W09"/>
                             <constraint firstItem="6hR-vv-J2m" firstAttribute="leading" secondItem="6tC-wk-DCZ" secondAttribute="leading" id="YBD-Y0-Hh7"/>
                             <constraint firstItem="ppg-R6-ome" firstAttribute="leading" secondItem="pss-UH-wUD" secondAttribute="leading" id="d4E-rh-yG6"/>
                             <constraint firstItem="xdS-cb-BOp" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jwj-CL-5Iw" secondAttribute="trailing" constant="10" id="eTF-Xq-xVo"/>
@@ -507,6 +527,7 @@
                             <constraint firstItem="ppg-R6-ome" firstAttribute="trailing" secondItem="pss-UH-wUD" secondAttribute="trailing" id="qRt-9h-dPY"/>
                             <constraint firstItem="niO-dD-jxU" firstAttribute="leading" secondItem="myk-ef-Fs3" secondAttribute="leading" id="sfR-mn-Aad"/>
                             <constraint firstItem="Jwj-CL-5Iw" firstAttribute="centerY" secondItem="4lk-St-dPV" secondAttribute="centerY" id="wHS-Jt-Pdi"/>
+                            <constraint firstItem="xdS-cb-BOp" firstAttribute="bottom" secondItem="vlV-y0-Hyx" secondAttribute="bottom" constant="70" id="xTa-W1-2dr"/>
                             <constraint firstItem="agl-Ds-gWa" firstAttribute="top" secondItem="Jwj-CL-5Iw" secondAttribute="bottom" constant="5" id="zlq-A4-emv"/>
                         </constraints>
                     </view>
@@ -515,6 +536,7 @@
                         <outlet property="hourLabel" destination="24W-PJ-t0o" id="mwo-2x-thU"/>
                         <outlet property="minutLabel" destination="pss-UH-wUD" id="cci-hr-0iG"/>
                         <outlet property="secondLabel" destination="6tC-wk-DCZ" id="xYG-hm-5j7"/>
+                        <outlet property="startButton" destination="vlV-y0-Hyx" id="MLX-AM-3m2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6M-3L-vr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

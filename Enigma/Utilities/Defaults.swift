@@ -26,7 +26,6 @@ class  Defaults {
     }
     
     static func login(_ key : String){
-        UserDefaults.standard.set(true, forKey: Keys.login)
         UserDefaults.standard.set("Token " + key, forKey: Keys.token)
         let defaults = UserDefaults(suiteName: "group.widget.ak")
         defaults?.set("Token " + key, forKey: "Token")
