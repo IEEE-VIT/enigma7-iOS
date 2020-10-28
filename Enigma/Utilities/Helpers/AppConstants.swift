@@ -14,7 +14,10 @@ struct AppConstants {
     }
     
     struct Error {
+        static let usernameErrorPrefix = "________________\nInvalidUsername.\n-> "
         static let emptyAnswer = "Answer can not be empty!"
+        static let emptyUsername = "Username Empty!"
+        static let misc = "An Error occured :("
     }
     
     struct ViewController {
@@ -24,5 +27,12 @@ struct AppConstants {
         static let ProfileViewController = "ProfileViewController"
         static let RulesViewController = "RulesViewController"
         static let HomeViewController = "HomeViewController"
+        static let CountdownViewController = "CountdownViewController"
+        static let UserNameViewController = "UserNameViewController"
+    }
+    
+    struct Image {
+        static let share = "share"
+        static let hint = "Hint"
     }
 }

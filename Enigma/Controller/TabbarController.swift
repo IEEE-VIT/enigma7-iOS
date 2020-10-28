@@ -142,7 +142,7 @@ class TabbarController: UIViewController {
 
 extension TabbarController: ShareDelegate{
     func setShare(bool: Bool, image: UIImage?) {
-        let imageName = bool ? "share" : "Hint"
+        let imageName = bool ? AppConstants.Image.share : AppConstants.Image.hint
         let buttonImage = UIImage(named: imageName)
         infoButton.setBackgroundImage(buttonImage, for: .normal)
         self.shareImage = image

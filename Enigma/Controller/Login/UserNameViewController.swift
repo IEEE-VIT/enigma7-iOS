@@ -14,7 +14,7 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorTextView: UITextView!
     
-    let errorPrefix = "________________\nInvalidUsername.\n-> "
+    let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {
         didSet {
             error = errorPrefix + error
@@ -41,18 +41,19 @@ class UserNameViewController: UIViewController {
     
     func handleEditusername(success: Bool, response: EditUsernameModel.Response?){
         if success{ self.gotoTimer()  }
-        else { self.error = response?.error ?? "Error"}
+        else { self.error = response?.error ?? AppConstants.Error.misc}
     }
     
     func gotoTimer(){
-        present("CountdownViewController")
+        present(AppConstants.ViewController.CountdownViewController)
     }
     
     func validate()->Bool{
         if userNameTextField.text?.isEmpty ?? true{
-            error = "Username Empty!"
+            error = AppConstants.Error.emptyUsername
             return false
         }
+        //TODO no symbols
         return true
     }
     
@@ -66,7 +67,6 @@ extension UserNameViewController : UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text != ""{
             nextButton.isHidden = false
-            print(textField.text ?? "YO")
         }
     }
 }
