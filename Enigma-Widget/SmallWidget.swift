@@ -13,15 +13,22 @@ import UIKit
 struct SmallWidget: View {
     var data : UserDetails?
     var body: some View {
-        VStack(alignment: .leading, spacing: 5){
-            Image("banner")
-            userName
-            profileRow(key: "Rank:", value: data?.rank?.stringValue ?? "5")
-            profileRow(key: "Score :", value: data?.points?.stringValue ?? "150")
-            profileRow(key: "Xp :", value: data?.xp?.stringValue ?? "150")
+        Group{
+            if isLoggedin(){
+                VStack(alignment: .leading, spacing: 5){
+                    Image("banner")
+                    userName
+                    profileRow(key: "Rank:", value: data?.rank?.stringValue ?? "5")
+                    profileRow(key: "Score :", value: data?.points?.stringValue ?? "150")
+                    profileRow(key: "Xp :", value: data?.xp?.stringValue ?? "150")
+                }
+                .padding(.bottom,20)
+                .background(Color(.dark))
+            } else {
+             authError()
+            }
         }
-        .padding(.bottom,20)
-        .background(Color(.dark))
+
     }
     
     var userName : some View {
@@ -33,6 +40,10 @@ struct SmallWidget: View {
                 .underline()
             Spacer()
         }
+    }
+    
+    func isLoggedin()->Bool{
+        return Defaults.token() != ""
     }
 }
 
