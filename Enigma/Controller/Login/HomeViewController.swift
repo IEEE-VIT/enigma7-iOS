@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
     func handleSignup(success:Bool,response:SignUpModel.Response?){
         if success{
             let usernameExists = response?.username_exists ?? false
-            guard usernameExists else { self.present("UserNameViewController"); return }
+            guard usernameExists else { self.present(AppConstants.ViewController.UserNameViewController) ; return }
             delegate?.didSignin(response?.key ?? "")
             Defaults.fetchAll()
         } else {

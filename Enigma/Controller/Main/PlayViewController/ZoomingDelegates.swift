@@ -50,7 +50,6 @@ extension PlayViewController : ZoomoutDelegate{
     }
     
     @objc func zoomout(tapGesture: UITapGestureRecognizer){
-        print("zoom  out")
         if  let zoomOutImageView = tapGesture.view{
             zoomOutImageView.isHidden = false
             zoomOutImageView.contentMode = .scaleAspectFit

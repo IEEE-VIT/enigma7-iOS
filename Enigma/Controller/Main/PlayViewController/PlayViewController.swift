@@ -85,7 +85,7 @@ class PlayViewController: UIViewController {
     
     func validate()->Bool{
         if answerTextField.text?.isEmpty ??  true {
-            presentAKAlert(type: .custom(message: "Answer can not be empty!"))
+            presentAKAlert(type: .custom(message: AppConstants.Error.emptyAnswer))
             return false
         }
         return true

@@ -13,10 +13,7 @@ class LeaderboardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let leaderboardIdentifer = "leadercell"
-    
     var leaderboard = [Leaderboard]()
-    
     private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -60,7 +57,7 @@ extension LeaderboardViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: leaderboardIdentifer) as! LeaderboardCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.CellId.leaderboardCell) as! LeaderboardCell
         
         let data = leaderboard[indexPath.row]
         
@@ -79,10 +76,6 @@ extension LeaderboardViewController : UITableViewDelegate, UITableViewDataSource
     private func donateIntent() {
        INPreferences.requestSiriAuthorization { [weak self] (authorization) in
            guard let strongSelf = self else { return }
-           guard authorization == INSiriAuthorizationStatus.authorized else {
-                return
-           }
-        
            let intent = LeaderboardIntent()
            intent.suggestedInvocationPhrase = "Enigma leaderboard"
            let interaction = INInteraction(intent: intent, response: nil)

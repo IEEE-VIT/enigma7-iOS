@@ -21,7 +21,7 @@
 		5B30BAA42545F27F00B75FF4 /* LeaderboardIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BAA32545F27F00B75FF4 /* LeaderboardIntentHandler.swift */; };
 		5B30BAAD2545F2F100B75FF4 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
 		5B30BABF2545F2FA00B75FF4 /* Web Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDE250748BE00B2AFF4 /* Web Helper.swift */; };
-		5B30BAC02545F2FA00B75FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5B30BAC02545F2FA00B75FF4 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Common.swift */; };
 		5B30BAC12545F2FA00B75FF4 /* Network Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDC250745A900B2AFF4 /* Network Constants.swift */; };
 		5B30BAC22545F2FA00B75FF4 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
 		5B30BACB2545F30100B75FF4 /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
@@ -77,7 +77,7 @@
 		5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */; };
 		5B81A2EE252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */; };
 		5B81A2F1252E476700DA09A8 /* Enigma-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5B81A305252E4E1000DA09A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5B81A305252E4E1000DA09A8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Common.swift */; };
 		5B81A310252E506E00DA09A8 /* SmallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A30A252E4E9F00DA09A8 /* SmallWidget.swift */; };
 		5B81A357252F506000DA09A8 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A356252F506000DA09A8 /* SessionStore.swift */; };
 		5B81A35C252F508400DA09A8 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
@@ -138,12 +138,14 @@
 		5BABB76A24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
 		5BABB76B24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
 		5BABB76C24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
-		5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
-		5BABB77024FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
-		5BABB77124FACDD9006D5541 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5BABB76F24FACDD9006D5541 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Common.swift */; };
+		5BABB77024FACDD9006D5541 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Common.swift */; };
+		5BABB77124FACDD9006D5541 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Common.swift */; };
 		5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB77324FAD063006D5541 /* Inconsolata.otf */; };
 		5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7B924FADEEB006D5541 /* TabbarController.swift */; };
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
+		5BC24E6525492948000A310A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
+		5BC24E7725493138000A310A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E7625493138000A310A /* String.swift */; };
 		5BC42422253C108F00E55FE3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42421253C108F00E55FE3 /* Device.swift */; };
 		5BC4263D253FFCD500E55FE3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC4263B253FFCD500E55FE3 /* Interface.storyboard */; };
 		5BC4263F253FFCE400E55FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC4263E253FFCE400E55FE3 /* Assets.xcassets */; };
@@ -167,7 +169,7 @@
 		5BC4269225406E8C00E55FE3 /* Network Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDC250745A900B2AFF4 /* Network Constants.swift */; };
 		5BC4269925406E9300E55FE3 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
 		5BC426A025406E9700E55FE3 /* Web Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDE250748BE00B2AFF4 /* Web Helper.swift */; };
-		5BC426A725406E9B00E55FE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Constants.swift */; };
+		5BC426A725406E9B00E55FE3 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Common.swift */; };
 		5BC426AE25406EBB00E55FE3 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
 		5BC426B525406EC900E55FE3 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE0250749D900B2AFF4 /* Error.swift */; };
 		5BC426C925407D9500E55FE3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC426C825407D9500E55FE3 /* ProfileController.swift */; };
@@ -364,10 +366,12 @@
 		5BABB75524FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-ExtraLight.ttf"; sourceTree = "<group>"; };
 		5BABB75624FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-SemiBold.ttf"; sourceTree = "<group>"; };
 		5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexMono-Thin.ttf"; sourceTree = "<group>"; };
-		5BABB76E24FACDD9006D5541 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5BABB76E24FACDD9006D5541 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		5BABB77324FAD063006D5541 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5BC24E6425492948000A310A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		5BC24E7625493138000A310A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5BC42421253C108F00E55FE3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		5BC42639253FFCD500E55FE3 /* EnigmaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnigmaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC4263C253FFCD500E55FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -492,6 +496,7 @@
 				5B921FF325087E4500B2AFF4 /* Haptic.swift */,
 				5B1B4B4D252252D000398B0D /* Image.swift */,
 				5BC42421253C108F00E55FE3 /* Device.swift */,
+				5BC24E7625493138000A310A /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -703,8 +708,9 @@
 				5B32867524FB619300FE2EEC /* Extensions */,
 				5BABB75024FACCB9006D5541 /* Fonts */,
 				5BABB74F24FACBE4006D5541 /* Helpers */,
-				5BABB76E24FACDD9006D5541 /* Constants.swift */,
+				5BABB76E24FACDD9006D5541 /* Common.swift */,
 				5B921FE225074EAC00B2AFF4 /* Defaults.swift */,
+				5BC24E6425492948000A310A /* AppConstants.swift */,
 				5B921FDC250745A900B2AFF4 /* Network Constants.swift */,
 				5B921FDE250748BE00B2AFF4 /* Web Helper.swift */,
 			);
@@ -1124,7 +1130,7 @@
 				5B30BACD2545F30100B75FF4 /* Error.swift in Sources */,
 				5B30BA542545DA0100B75FF4 /* IntentHandler.swift in Sources */,
 				5B30BABF2545F2FA00B75FF4 /* Web Helper.swift in Sources */,
-				5B30BAC02545F2FA00B75FF4 /* Constants.swift in Sources */,
+				5B30BAC02545F2FA00B75FF4 /* Common.swift in Sources */,
 				5B30BB6A254712A800B75FF4 /* ProfileIntentHandler.swift in Sources */,
 				5B30BAE32545F31E00B75FF4 /* Number.swift in Sources */,
 				5B30BAD12545F30100B75FF4 /* EditUsernameModel.swift in Sources */,
@@ -1172,7 +1178,7 @@
 				5B81A357252F506000DA09A8 /* SessionStore.swift in Sources */,
 				5B30BBCA25474E7000B75FF4 /* LargeWidget.swift in Sources */,
 				5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */,
-				5B81A305252E4E1000DA09A8 /* Constants.swift in Sources */,
+				5B81A305252E4E1000DA09A8 /* Common.swift in Sources */,
 				5B81A38E252F50ED00DA09A8 /* Error.swift in Sources */,
 				5B81A35C252F508400DA09A8 /* ServiceController.swift in Sources */,
 			);
@@ -1183,6 +1189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */,
+				5BC24E6525492948000A310A /* AppConstants.swift in Sources */,
 				5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */,
 				5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */,
 				5B30BA792545ECDF00B75FF4 /* Intents.intentdefinition in Sources */,
@@ -1224,9 +1231,10 @@
 				5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */,
 				5BC42422253C108F00E55FE3 /* Device.swift in Sources */,
 				5B81A2AD252E406F00DA09A8 /* AnswerModel.swift in Sources */,
-				5BABB76F24FACDD9006D5541 /* Constants.swift in Sources */,
+				5BABB76F24FACDD9006D5541 /* Common.swift in Sources */,
 				5B32868F24FBD97900FE2EEC /* xpBar.swift in Sources */,
 				5B921FE72507505200B2AFF4 /* PostController.swift in Sources */,
+				5BC24E7725493138000A310A /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1236,7 +1244,7 @@
 			files = (
 				5B81A207252AF38100DA09A8 /* MockURLProtocol.swift in Sources */,
 				5BABB73324FACA02006D5541 /* EnigmaTests.swift in Sources */,
-				5BABB77024FACDD9006D5541 /* Constants.swift in Sources */,
+				5BABB77024FACDD9006D5541 /* Common.swift in Sources */,
 				5B81A1F8252AF33500DA09A8 /* LoginTests.swift in Sources */,
 				5B81A254252B71F400DA09A8 /* GameTests.swift in Sources */,
 			);
@@ -1247,7 +1255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BABB73E24FACA02006D5541 /* EnigmaUITests.swift in Sources */,
-				5BABB77124FACDD9006D5541 /* Constants.swift in Sources */,
+				5BABB77124FACDD9006D5541 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1277,7 +1285,7 @@
 				5BC4268925406E7800E55FE3 /* AnswerModel.swift in Sources */,
 				5BC4268725406E7800E55FE3 /* Leaderboard.swift in Sources */,
 				5BC4268825406E7800E55FE3 /* SignupModel.swift in Sources */,
-				5BC426A725406E9B00E55FE3 /* Constants.swift in Sources */,
+				5BC426A725406E9B00E55FE3 /* Common.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
