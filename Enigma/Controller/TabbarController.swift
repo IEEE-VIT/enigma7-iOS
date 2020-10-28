@@ -33,7 +33,7 @@ class TabbarController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        HomeViewController = storyBoard.instantiateViewController(identifier: "HomeViewController")
+        HomeViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.HomeViewController)
         self.HomeViewController.delegate = self
         setupButtons()
         instantiateViews()
@@ -113,11 +113,11 @@ class TabbarController: UIViewController {
     }
     
     func instantiateViews(){
-        PlayViewController = storyBoard.instantiateViewController(identifier: "PlayViewController")
-        LeaderboardViewController = storyBoard.instantiateViewController(identifier: "LeaderboardViewController")
-        StoryViewController = storyBoard.instantiateViewController(identifier: "StoryViewController")
-        ProfileViewController = storyBoard.instantiateViewController(identifier: "ProfileViewController")
-        RulesViewController = storyBoard.instantiateViewController(identifier: "RulesViewController")
+        PlayViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.PlayViewController)
+        LeaderboardViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.LeaderboardViewController)
+        StoryViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.StoryViewController)
+        ProfileViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.ProfileViewController)
+        RulesViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.RulesViewController)
         
         viewControllers = [PlayViewController,LeaderboardViewController,StoryViewController,ProfileViewController,RulesViewController]
     }
@@ -142,7 +142,6 @@ class TabbarController: UIViewController {
 
 extension TabbarController: ShareDelegate{
     func setShare(bool: Bool, image: UIImage?) {
-        print("BOOL:",bool)
         let imageName = bool ? "share" : "Hint"
         let buttonImage = UIImage(named: imageName)
         infoButton.setBackgroundImage(buttonImage, for: .normal)
