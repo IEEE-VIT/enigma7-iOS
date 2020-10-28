@@ -14,15 +14,22 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minutLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     
-    let startDate = "23-10-2020 16:20"
+    let startDate = AppConstants.Date.startDate
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
-        formatter.dateFormat =  "dd-MM-yyyy HH:mm"
+        formatter.dateFormat = AppConstants.Date.dateFormat
         calculateTimeDifference()
         super.viewDidLoad()
+        startButton.addBorder(UIColor.tertiary)
             Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in self.calculateTimeDifference() })
+    }
+    
+    
+    @IBAction func startClicked(_ sender: UIButton) {
+        
     }
     
     func calculateTimeDifference(){

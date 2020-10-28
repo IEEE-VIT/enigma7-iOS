@@ -28,7 +28,7 @@ extension PlayViewController : AlertDelegate{
         setBottomButton(hintButton, false)
         guard let text = hint?.hint else {
             setButton(powerupButtons[previousTag],false)
-            let message = hint?.detail ?? "Error"
+            let message = hint?.detail ?? AppConstants.Error.misc
             presentAKAlert(type: .custom(message: message))
             return
         }
@@ -69,7 +69,7 @@ extension PlayViewController : AlertDelegate{
             ServiceController.shared.getQuestion(completion: handleQuestion(question:))
         } else {
             setButton(powerupButtons[previousTag],false)
-            let message = answer?.detail ?? "An Error occured"
+            let message = answer?.detail ?? AppConstants.Error.misc
             presentAKAlert(type: .custom(message: message))
         }
     }
