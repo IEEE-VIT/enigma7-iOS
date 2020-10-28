@@ -49,7 +49,7 @@ class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
         }
     }
     
-    private func getLeaderboard(w:Bool=false,completion : @escaping ([Leaderboard]?,Int)->()){
+    private func getLeaderboard(completion : @escaping ([Leaderboard]?,Int)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Game.leaderboardURL, parameters: [:], responseType: [Leaderboard].self,key: Keys.leaderboard) { (response,code) in
             completion(response,code)
         }

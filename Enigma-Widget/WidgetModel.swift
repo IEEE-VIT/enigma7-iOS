@@ -19,4 +19,6 @@ import Intents
 struct WidgetModel : TimelineEntry {
     var date = Date()
     let user : UserDetails?
+    let question : Question?
+    var isLogin : Bool
 }

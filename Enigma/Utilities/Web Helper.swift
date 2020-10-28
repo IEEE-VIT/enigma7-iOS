@@ -11,7 +11,7 @@ import UIKit
 
 class WebHelper {
         
-    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil,isWidget:Bool = false, completion: @escaping (ResponseType?,Int) -> Void) {
+    class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil, completion: @escaping (ResponseType?,Int) -> Void) {
         var components = URLComponents(string: url)!
         components.queryItems = parameters.map { (key, value) in
             URLQueryItem(name: key, value: value)
@@ -21,19 +21,15 @@ class WebHelper {
             var request = URLRequest(url: requestURL)
 
             let defaults = UserDefaults(suiteName: "group.widget.ak")
-            let token = defaults?.string(forKey: "Token")
+            var token = defaults?.string(forKey: "Token")
             defaults?.synchronize()
             
-          //  var key = isWidget ? token : Defaults.token()
-            
-            var key = token
-            
             #if os(watchOS)
-                key = UserDefaults.standard.value(forKey: "token") as? String //TODO
-                print("WATCH:",key)
+                token = UserDefaults.standard.value(forKey: "token") as? String //TODO
             #endif
-            print("TOKEN: ",key)
-            request.setValue(key, forHTTPHeaderField: "Authorization")
+            
+            print("TOKEN: ",token)
+            request.setValue(token, forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 guard let data = data, let response = response as? HTTPURLResponse else {
@@ -43,6 +39,7 @@ class WebHelper {
                     return
                 }
                 
+                
                 DebugRequest(url, status: response, request: Data(), response: data)
                 
                 
@@ -51,10 +48,10 @@ class WebHelper {
                 do {
                     let responseObject = try decoder.decode(ResponseType.self, from: data)
                     DispatchQueue.main.async {
-                        if let key = key { UserDefaults.standard.set(data, forKey: key) }
+                        if let key = key { defaults?.set(data, forKey: key) }
+                        defaults?.synchronize()
                         completion(responseObject, response.statusCode)
                     }
-                    //TODO
                 } catch {
                     do {
                         _ = try decoder.decode(ErrorResponse.self, from: data) as Error

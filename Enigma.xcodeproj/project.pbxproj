@@ -38,6 +38,7 @@
 		5B30BB40254704B300B75FF4 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
 		5B30BB6A254712A800B75FF4 /* ProfileIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BB69254712A800B75FF4 /* ProfileIntentHandler.swift */; };
 		5B30BBA1254717E700B75FF4 /* ProfileIntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BBA0254717E700B75FF4 /* ProfileIntentViewController.swift */; };
+		5B30BBCA25474E7000B75FF4 /* LargeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BBC925474E7000B75FF4 /* LargeWidget.swift */; };
 		5B32867724FB619F00FE2EEC /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867624FB619F00FE2EEC /* Button.swift */; };
 		5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867824FB671200FE2EEC /* UserNameViewController.swift */; };
 		5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */; };
@@ -104,6 +105,7 @@
 		5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
 		5B921FE72507505200B2AFF4 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE62507505200B2AFF4 /* PostController.swift */; };
 		5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FF325087E4500B2AFF4 /* Haptic.swift */; };
+		5B9B8DDB25417EFD009B3556 /* MediumWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9B8DDA25417EFD009B3556 /* MediumWidget.swift */; };
 		5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7237250696C400C427F7 /* Google+Signin.swift */; };
 		5BA3F87325298D22008F0420 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
 		5BA3F87725298D2D008F0420 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72232506929D00C427F7 /* GoogleSignIn.framework */; };
@@ -288,6 +290,7 @@
 		5B30BB1D2547003E00B75FF4 /* Enigma-Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Enigma-Siri.entitlements"; sourceTree = "<group>"; };
 		5B30BB69254712A800B75FF4 /* ProfileIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntentHandler.swift; sourceTree = "<group>"; };
 		5B30BBA0254717E700B75FF4 /* ProfileIntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntentViewController.swift; sourceTree = "<group>"; };
+		5B30BBC925474E7000B75FF4 /* LargeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidget.swift; sourceTree = "<group>"; };
 		5B32867624FB619F00FE2EEC /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		5B32867824FB671200FE2EEC /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 		5B32867A24FB6AA300FE2EEC /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
@@ -340,6 +343,7 @@
 		5B921FE42507503000B2AFF4 /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
 		5B921FE62507505200B2AFF4 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		5B921FF325087E4500B2AFF4 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
+		5B9B8DDA25417EFD009B3556 /* MediumWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget.swift; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -532,6 +536,8 @@
 				5B81A30A252E4E9F00DA09A8 /* SmallWidget.swift */,
 				5B81A356252F506000DA09A8 /* SessionStore.swift */,
 				5B81A393252F51B800DA09A8 /* WidgetModel.swift */,
+				5B9B8DDA25417EFD009B3556 /* MediumWidget.swift */,
+				5B30BBC925474E7000B75FF4 /* LargeWidget.swift */,
 			);
 			path = "Enigma-Widget";
 			sourceTree = "<group>";
@@ -1154,6 +1160,7 @@
 				5B81A37A252F50D200DA09A8 /* SignupModel.swift in Sources */,
 				5B81A37D252F50D200DA09A8 /* UserDetails.swift in Sources */,
 				5B81A37B252F50D200DA09A8 /* Leaderboard.swift in Sources */,
+				5B9B8DDB25417EFD009B3556 /* MediumWidget.swift in Sources */,
 				5B81A361252F50BF00DA09A8 /* Network Constants.swift in Sources */,
 				5B81A389252F50E400DA09A8 /* Number.swift in Sources */,
 				5B81A310252E506E00DA09A8 /* SmallWidget.swift in Sources */,
@@ -1163,6 +1170,7 @@
 				5B81A394252F51B800DA09A8 /* WidgetModel.swift in Sources */,
 				5B81A366252F50C300DA09A8 /* Web Helper.swift in Sources */,
 				5B81A357252F506000DA09A8 /* SessionStore.swift in Sources */,
+				5B30BBCA25474E7000B75FF4 /* LargeWidget.swift in Sources */,
 				5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */,
 				5B81A305252E4E1000DA09A8 /* Constants.swift in Sources */,
 				5B81A38E252F50ED00DA09A8 /* Error.swift in Sources */,

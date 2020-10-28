@@ -17,11 +17,11 @@ struct Provider: IntentTimelineProvider {
     
     
     func placeholder(in context: Context) -> WidgetModel {
-        WidgetModel(user: nil)
+        WidgetModel(user: Defaults.user(), question: Defaults.question(),isLogin:Defaults.token() != "")
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetModel) -> ()) {
-        let entry =  WidgetModel(user: nil)
+        let entry =  WidgetModel(user: nil, question: Defaults.question(),isLogin:Defaults.token() != "")
         completion(entry)
     }
 
@@ -33,7 +33,7 @@ struct Provider: IntentTimelineProvider {
 
         
         sessionStore.fetchUser { user in
-            entries.append(WidgetModel(user: user))
+            entries.append(WidgetModel(user: user, question: Defaults.question(),isLogin:Defaults.token() != ""))
             let timeline = Timeline(entries: entries, policy: .after(refresh))
             completion(timeline)
         }
@@ -57,7 +57,7 @@ struct Enigma_WidgetEntryView : View {
             case .systemMedium:
                 SmallWidget()
             case .systemLarge:
-                SmallWidget()
+                LargeWidget(entry: entry)
             @unknown default:
                 SmallWidget()
             }
