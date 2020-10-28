@@ -180,7 +180,7 @@ class PlayViewController: UIViewController {
     
     func setImage(img: UIImage,no:Int){
         self.image = img
-        Defaults.saveImage(img.pngData()) //TODO:- compress
+        Defaults.saveImage(img.jpegData(compressionQuality: 0.7))
     }
     
     func setButton(_ button : UIButton ,_ bool : Bool){

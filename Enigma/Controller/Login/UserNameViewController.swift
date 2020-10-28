@@ -14,6 +14,8 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var errorTextView: UITextView!
     
+    weak var CountdownController : CountdownViewController?
+    
     let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {
         didSet {

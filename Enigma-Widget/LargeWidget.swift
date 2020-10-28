@@ -16,7 +16,7 @@ struct LargeWidget: View {
             if entry.isLogin {
                 largeWidget(question: entry.question)
             } else {
-                authError()
+                authError(image:"401")
             }
         }
     }
@@ -69,8 +69,9 @@ struct largeWidget : View {
 }
 
 struct authError : View {
+    var image : String
     var body : some View {
-        Image("401")
+        Image(image)
             .resizable()
             .scaledToFit()
             .frame(maxWidth: .infinity,maxHeight: .infinity)
