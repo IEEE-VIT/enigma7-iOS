@@ -15,11 +15,7 @@ class PostController {
     func signup(type: SignupType,body:SignUpModel.Request,completion: @escaping(Bool,SignUpModel.Response?) -> ()) {
         WebHelper.sendPOSTRequest(url: type.url, responseType: SignUpModel.Response.self, body: body) { (response, error) in
             if let response = response,let key = response.key{
-                UserDefaults.standard.set(true, forKey: Keys.login)
-                UserDefaults.standard.set("Token " + key, forKey: Keys.token)
-                let defaults = UserDefaults(suiteName: "group.widget.ak")
-                defaults?.set("Token " + key, forKey: "Token")
-                defaults?.synchronize()
+                Defaults.login(key)
                 completion(true,response)
             } else {
                 completion(false,nil)
@@ -55,8 +51,6 @@ class PostController {
         let body = AnswerModel.Request(answer: "")
         WebHelper.sendPOSTRequest(url: NetworkConstants.Users.logoutURL, responseType: sample.self, body: body,header: true,noBody: true) { (_, _) in }
         GIDSignIn.sharedInstance()?.signOut()
-        UserDefaults.standard.set(false, forKey: Keys.login)
-        UserDefaults.standard.set(nil, forKey: Keys.token)
+        Defaults.emptyAll()
     }
-    
 }

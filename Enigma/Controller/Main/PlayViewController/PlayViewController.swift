@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WidgetKit
 
 protocol ShareDelegate : class {
     func setShare(bool : Bool, image: UIImage?)
@@ -168,11 +169,18 @@ class PlayViewController: UIViewController {
         guard  let question = question else { return }
         questionLabel.text = question.text
         questionNumberLabel.text = question.questionNumber
-        questionImageView.asyncLoadImage(question.imageUrl, placeHolder: nil, img: setImage(img:))
+        questionImageView.asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
+        if #available(iOS 14.0, *) {  reloadWidget()  }
     }
     
-    func setImage(img: UIImage){
+    @available(iOS 14.0, *)
+    func reloadWidget(){
+        WidgetCenter.shared.reloadTimelines(ofKind: "Enigma_Widget")
+    }
+    
+    func setImage(img: UIImage,no:Int){
         self.image = img
+        Defaults.saveImage(img.pngData(), question: no)
     }
     
     func setButton(_ button : UIButton ,_ bool : Bool){

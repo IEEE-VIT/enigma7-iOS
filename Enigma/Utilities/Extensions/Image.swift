@@ -13,7 +13,7 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
-    func asyncLoadImage(_ url: String?, placeHolder: UIImage?,img: @escaping (UIImage)->()) {
+    func asyncLoadImage(_ qNumber:Int,_ url: String?, placeHolder: UIImage?,img: @escaping (UIImage,Int)->()) {
         
         
         guard let URLString = url else { return }
@@ -22,7 +22,7 @@ extension UIImageView {
         let imageServerUrl = URLString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         if let cachedImage = imageCache.object(forKey: NSString(string: imageServerUrl)) {
             print("image was already cached!")
-            img(cachedImage)
+            img(cachedImage,qNumber)
             self.image = cachedImage
             return
         }
@@ -43,7 +43,7 @@ extension UIImageView {
                     if let data = data {
                         if let downloadedImage = UIImage(data: data) {
                             imageCache.setObject(downloadedImage, forKey: NSString(string: imageServerUrl))
-                            img(downloadedImage)
+                            img(downloadedImage,qNumber)
                             self.image = downloadedImage
                             print("SUCCESSFULLY DOWNLOADED IMAGE")
                         }

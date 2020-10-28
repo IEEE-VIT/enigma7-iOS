@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+#if !os(watchOS)
+import WidgetKit
+#endif
 
 let maxXp : Double = 300
 
@@ -36,6 +38,15 @@ class Keys {
     static let question = "EnigmaQuestion"
     static let hint = "EnigmaHint"
     static let xp = "Enigmaxp"
+    static let image = "EnigmaImage"
+}
+
+public func reloadWidget(){
+    #if !os(watchOS)
+    DispatchQueue.main.async {
+        if #available(iOS 14.0, *) { WidgetCenter.shared.reloadTimelines(ofKind: "Enigma_Widget") }
+    }
+    #endif
 }
 
 func decode<T: Decodable>(data: Data) -> T? {
@@ -66,4 +77,10 @@ func DebugRequest(_ url : String,status : URLResponse?,request : Data, response 
     print(res ?? (Any).self)
     print("\n")
     print("=================================================")
+}
+
+public func isInWidget() -> Bool {
+    guard let extesion = Bundle.main.infoDictionary?["NSExtension"] as? [String: String] else { return false }
+    guard let widget = extesion["NSExtensionPointIdentifier"] else { return false }
+    return widget == "com.apple.widgetkit-extension"
 }
