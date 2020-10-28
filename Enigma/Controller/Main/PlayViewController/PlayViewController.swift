@@ -54,14 +54,13 @@ class PlayViewController: UIViewController {
         hintButton.addBorder(width: 2, .tertiary)
         questionImageView.addBorder(width: 2, .tertiary)
         answerTextField.backgroundColor = #colorLiteral(red: 0.05169083923, green: 0.09415727109, blue: 0.06114685535, alpha: 1)
+        overrideUserInterfaceStyle = .light
     }
     
     override func viewDidAppear(_ animated: Bool) {
         subscribeToKeyboardNotifications()
         updateProgressbar()
-        answerTextField.layer.borderColor = UIColor.black.cgColor
         //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
-        //showsTouchWhenHighlighted = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {

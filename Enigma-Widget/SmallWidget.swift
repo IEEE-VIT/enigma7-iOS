@@ -14,7 +14,7 @@ struct SmallWidget: View {
     @State var data : UserDetails?
     var body: some View {
         Group{
-            if !isLoggedin(){
+            if isLoggedin(){
                 VStack(alignment: .leading, spacing: 5){
                     Image("banner")
                         .resizable()
