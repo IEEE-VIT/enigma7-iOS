@@ -224,6 +224,7 @@
                             <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="OJB-Eq-Jqf"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.75" id="R38-IZ-GZF"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="22" id="RvG-5q-ZpS"/>
+                            <constraint firstItem="9MQ-3W-YRN" firstAttribute="centerY" secondItem="q0E-Ng-NXG" secondAttribute="centerY" priority="1" constant="-50" id="UK5-bS-Bsn"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dA4-2m-ouD"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="dvY-VV-vgg"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="top" secondItem="Tze-XO-5ab" secondAttribute="bottom" priority="900" constant="100" id="frD-6x-2sV"/>
@@ -238,6 +239,9 @@
                     </view>
                     <connections>
                         <outlet property="appleButton" destination="Bu5-he-vho" id="9VW-fg-YNl"/>
+                        <outlet property="backdropImage" destination="Tze-XO-5ab" id="4zJ-gO-ajl"/>
+                        <outlet property="enigmaCentreAnchor" destination="UK5-bS-Bsn" id="6O8-56-Yb5"/>
+                        <outlet property="enigmaTopAnchor" destination="2YX-tq-Hic" id="VS0-jB-eKi"/>
                         <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
                         <segue destination="rM5-1r-zw8" kind="showDetail" identifier="profilesetup" id="N1a-Vg-j9l"/>
                     </connections>
@@ -1446,27 +1450,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Enigma" translatesAutoresizingMaskIntoConstraints="NO" id="zdO-jf-q22">
-                                <rect key="frame" x="83" y="377" width="248" height="42"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPm-YM-LpS">
+                                <rect key="frame" x="18" y="0.0" width="378" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Enigma" translatesAutoresizingMaskIntoConstraints="NO" id="zdO-jf-q22">
+                                        <rect key="frame" x="47.5" y="374" width="283.5" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zdO-jf-q22" secondAttribute="height" multiplier="5.875" id="eQ9-vd-Dqq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyP-io-J0o">
+                                        <rect key="frame" x="170" y="442" width="38" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
+                                        <color key="textColor" name="tertiary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="dark"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="zdO-jf-q22" secondAttribute="height" multiplier="5.875" id="eQ9-vd-Dqq"/>
+                                    <constraint firstItem="QyP-io-J0o" firstAttribute="top" secondItem="zdO-jf-q22" secondAttribute="bottom" constant="20" id="701-y9-lOP"/>
+                                    <constraint firstItem="zdO-jf-q22" firstAttribute="width" secondItem="jPm-YM-LpS" secondAttribute="width" multiplier="0.75" id="R57-UU-IwK"/>
+                                    <constraint firstItem="zdO-jf-q22" firstAttribute="centerX" secondItem="jPm-YM-LpS" secondAttribute="centerX" id="arC-yP-xmy"/>
+                                    <constraint firstItem="QyP-io-J0o" firstAttribute="centerX" secondItem="jPm-YM-LpS" secondAttribute="centerX" id="obJ-4n-yi7"/>
+                                    <constraint firstItem="zdO-jf-q22" firstAttribute="centerY" secondItem="jPm-YM-LpS" secondAttribute="centerY" constant="-50" id="sb2-SO-yXR"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyP-io-J0o">
-                                <rect key="frame" x="188" y="439" width="38" height="27.5"/>
-                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
-                                <color key="textColor" name="tertiary"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z3Q-C7-T4O"/>
                         <color key="backgroundColor" name="dark"/>
                         <constraints>
-                            <constraint firstItem="QyP-io-J0o" firstAttribute="centerX" secondItem="56R-oJ-b2t" secondAttribute="centerX" id="2Az-Ld-iGq"/>
-                            <constraint firstItem="zdO-jf-q22" firstAttribute="width" secondItem="56R-oJ-b2t" secondAttribute="width" multiplier="0.6" id="2Yh-dp-Hvu"/>
-                            <constraint firstItem="zdO-jf-q22" firstAttribute="centerX" secondItem="56R-oJ-b2t" secondAttribute="centerX" id="Mee-Hs-18Q"/>
-                            <constraint firstItem="QyP-io-J0o" firstAttribute="top" secondItem="zdO-jf-q22" secondAttribute="bottom" constant="20" id="VdP-sT-o5A"/>
-                            <constraint firstItem="zdO-jf-q22" firstAttribute="centerY" secondItem="56R-oJ-b2t" secondAttribute="centerY" constant="-50" id="pl8-nw-LF1"/>
+                            <constraint firstItem="jPm-YM-LpS" firstAttribute="top" secondItem="56R-oJ-b2t" secondAttribute="top" id="15I-Zv-yw0"/>
+                            <constraint firstItem="Z3Q-C7-T4O" firstAttribute="trailing" secondItem="jPm-YM-LpS" secondAttribute="trailing" constant="18" id="Cua-Hb-39g"/>
+                            <constraint firstAttribute="bottom" secondItem="jPm-YM-LpS" secondAttribute="bottom" id="Kf5-2J-dl3"/>
+                            <constraint firstItem="jPm-YM-LpS" firstAttribute="leading" secondItem="Z3Q-C7-T4O" secondAttribute="leading" constant="18" id="mgp-Zr-anN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1476,7 +1492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Unv-tm-bKI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586" y="133"/>
+            <point key="canvasLocation" x="-586.95652173913049" y="132.58928571428572"/>
         </scene>
     </scenes>
     <resources>
