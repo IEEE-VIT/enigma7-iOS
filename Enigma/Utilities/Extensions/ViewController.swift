@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     func present(_ identifier : String){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController  = storyBoard.instantiateViewController(identifier: identifier)
+        let viewController  = storyBoard.instantiateViewController(identifier)
         viewController.view.frame = self.view.bounds
         viewController.view.layer.cornerRadius = 4
         viewController.view.layer.borderWidth = 3
@@ -21,5 +21,15 @@ extension UIViewController {
         self.addChild(viewController)
         
         viewController.didMove(toParent: self)
+    }
+}
+
+extension UIStoryboard {
+    func instantiateViewController(_ id : String)->UIViewController{
+        if #available(iOS 13.0, *) {
+            return  self.instantiateViewController(identifier: id)
+        } else {
+            return self.instantiateViewController(withIdentifier: id)
+        }
     }
 }

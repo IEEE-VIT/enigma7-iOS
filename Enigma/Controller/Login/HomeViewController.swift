@@ -34,7 +34,11 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
-        appleSignin()
+        if #available(iOS 13, *) {
+            appleSignin()
+        } else {
+            // TODO:- add alert for iOS 12.
+        }
     }
     
     @IBAction func signinWithGoogle(_ sender: Any) {

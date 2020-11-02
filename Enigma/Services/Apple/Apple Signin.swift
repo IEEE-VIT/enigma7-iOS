@@ -20,9 +20,9 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
     }
     
     
-    @available(iOS 13, *)
     func appleSignin() {
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        if #available(iOS 13.0, *) {
+            let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
         
@@ -30,6 +30,9 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
+        } else {
+            appleAlert()
+        }
     }
     
     
@@ -48,6 +51,8 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
         print("ASAuthorizationController: ",error.localizedDescription)
     }
     
-    
+    func appleAlert(){
+        
+    }
 }
 

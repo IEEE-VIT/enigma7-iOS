@@ -54,7 +54,7 @@ class PlayViewController: UIViewController {
         hintButton.addBorder(width: 2, .tertiary)
         questionImageView.addBorder(width: 2, .tertiary)
         answerTextField.backgroundColor = #colorLiteral(red: 0.05169083923, green: 0.09415727109, blue: 0.06114685535, alpha: 1)
-        overrideUserInterfaceStyle = .light
+        if #available(iOS 13.0, *) { overrideUserInterfaceStyle = .light }
     }
     
     override func viewDidAppear(_ animated: Bool) {
