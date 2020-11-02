@@ -34,7 +34,7 @@ class TabbarController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        HomeViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.HomeViewController)
+        HomeViewController = storyBoard.instantiateViewController(AppConstants.ViewController.HomeViewController) as? HomeViewController
         self.HomeViewController.delegate = self
         setupButtons()
         instantiateViews()
@@ -114,11 +114,11 @@ class TabbarController: UIViewController {
     }
     
     func instantiateViews(){
-        PlayViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.PlayViewController)
-        LeaderboardViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.LeaderboardViewController)
-        StoryViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.StoryViewController)
-        ProfileViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.ProfileViewController)
-        RulesViewController = storyBoard.instantiateViewController(identifier: AppConstants.ViewController.RulesViewController)
+        PlayViewController = storyBoard.instantiateViewController(AppConstants.ViewController.PlayViewController)
+        LeaderboardViewController = storyBoard.instantiateViewController(AppConstants.ViewController.LeaderboardViewController)
+        StoryViewController = storyBoard.instantiateViewController(AppConstants.ViewController.StoryViewController)
+        ProfileViewController = storyBoard.instantiateViewController(AppConstants.ViewController.ProfileViewController)
+        RulesViewController = storyBoard.instantiateViewController(AppConstants.ViewController.RulesViewController)
         
         viewControllers = [PlayViewController,LeaderboardViewController,StoryViewController,ProfileViewController,RulesViewController]
     }
