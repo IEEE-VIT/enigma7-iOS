@@ -84,10 +84,8 @@ class WebHelper {
         
         if header {
             request.setValue(Defaults.token(), forHTTPHeaderField: "Authorization")
-            print("TKN: ",Defaults.token())
         }
         
-        print("TKN2: ",Defaults.token())
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, let response = response as? HTTPURLResponse else {
                 DispatchQueue.main.async {
