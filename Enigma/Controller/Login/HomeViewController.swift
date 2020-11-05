@@ -19,10 +19,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var appleButton: UIButton!
     @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var backdropImage: UIImageView!
+    @IBOutlet weak var enigmaTitle: UIImageView!
     @IBOutlet weak var enigmaTopAnchor: NSLayoutConstraint!
     @IBOutlet weak var enigmaCentreAnchor: NSLayoutConstraint!
+    
     ///VARIABLES
     weak var delegate : SigninDelegate?
+    var animateNow : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +37,12 @@ class HomeViewController: UIViewController {
         super.viewDidLayoutSubviews()
         appleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
         googleButton.addBorder(width:2, UIColor.quaternary, alpha:0.2)
+        enigmaCentreAnchor.constant = cc()
+        viewDidAppearSetup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-     //   viewDidAppearSetup()
     }
     
     @IBAction func signinWithApple(_ sender: UIButton) {
@@ -71,18 +75,19 @@ class HomeViewController: UIViewController {
     
     
     func launchScreenInitialSetup(){
+        guard animateNow else { return }
         appleButton.alpha = 0.0
         googleButton.alpha = 0.0
         backdropImage.alpha = 0.0
         enigmaTopAnchor.priority = UILayoutPriority(1)
         enigmaCentreAnchor.priority = UILayoutPriority(999)
-        enigmaCentreAnchor.constant = cc()
     }
     
     func viewDidAppearSetup(){
+        guard animateNow else { return }
         enigmaTopAnchor.priority = UILayoutPriority(999)
         enigmaCentreAnchor.priority = UILayoutPriority(1)
-        UIView.animate(withDuration: 1.0) {
+        UIView.animate(withDuration: 1.5) { [self] in
             self.view.layoutIfNeeded()
         } completion: { (_) in
             UIView.animate(withDuration: 0.5) { [self] in
@@ -102,7 +107,7 @@ class HomeViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let userVC = segue.destination as? UserNameViewController{
+        if let userVC = segue.destination as? UserNameViewController {
             userVC.view.frame = self.view.frame
         }
     }
