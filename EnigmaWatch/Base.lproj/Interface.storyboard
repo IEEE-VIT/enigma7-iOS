@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17156" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17034"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Profile Controller-->
+        <!--profile-->
         <scene sceneID="MsN-UL-jIm">
             <objects>
-                <controller spacing="20" id="i2i-0h-8GT" customClass="ProfileController" customModule="EnigmaWatch_Extension">
+                <controller identifier="profile" spacing="20" id="i2i-0h-8GT" customClass="ProfileController" customModule="EnigmaWatch_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="zUg-Tc-SSA">
                             <items>
@@ -157,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
-        <!--Leaderboard Controller-->
+        <!--leader-->
         <scene sceneID="pBd-9x-sZC">
             <objects>
-                <controller id="wbR-dl-ePn" customClass="LeaderboardController" customModule="EnigmaWatch_Extension">
+                <controller identifier="leader" id="wbR-dl-ePn" customClass="LeaderboardController" customModule="EnigmaWatch_Extension">
                     <items>
                         <table alignment="left" id="XSD-n2-6Mt">
                             <items>
@@ -193,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="220" y="-15"/>
         </scene>
-        <!--Play Controller-->
+        <!--play-->
         <scene sceneID="8Pm-qh-nuR">
             <objects>
-                <controller animationDuration="1" id="7qa-Nr-ZGO" customClass="PlayController" customModule="EnigmaWatch_Extension">
+                <controller identifier="play" animationDuration="1" id="7qa-Nr-ZGO" customClass="PlayController" customModule="EnigmaWatch_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" id="eK3-A7-cyX">
                             <items>
@@ -251,7 +252,7 @@
         <image name="watch_profile" width="128" height="128"/>
         <image name="watch_story" width="128" height="128"/>
         <namedColor name="dark">
-            <color red="0.030999999493360519" green="0.054999999701976776" blue="0.030999999493360519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.032000001519918442" green="0.059000000357627869" blue="0.029999999329447746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="quaternary">
             <color red="0.14900000393390656" green="0.875" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

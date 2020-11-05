@@ -19,14 +19,13 @@ class InterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         // Configure interface objects here.
-
     }
     
     override func willActivate() {
         super.willActivate()
         wcSession = WCSession.default
-                wcSession.delegate = self
-                wcSession.activate()
+        wcSession.delegate = self
+        wcSession.activate()
     }
     
     override func didDeactivate() {
@@ -34,19 +33,19 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func playTapped() {
-        print("PLAY")
+        pushController(withName: "play", context: nil)
     }
     
     
     @IBAction func leaderboardTapped() {
+        pushController(withName: "leader", context: nil)
     }
     
     @IBAction func profileTapped() {
+        pushController(withName: "profile", context: nil)
     }
     
-    
-    @IBAction func storyTapped() {
-    }
+    @IBAction func storyTapped() { }
     
 }
 
@@ -59,6 +58,6 @@ extension InterfaceController: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
          let token = message["token"] as! String
          print(token)
-        UserDefaults.standard.setValue("Token "+token, forKey: "token")
+         UserDefaults.standard.setValue("Token "+token, forKey: "token")
      }
 }
