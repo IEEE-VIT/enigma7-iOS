@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dw4-pL-BHq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -26,7 +26,7 @@
         <!--Tabbar Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="TabbarController" id="BYZ-38-t0r" customClass="TabbarController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TabbarController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="TabbarController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,6 +139,7 @@
                             <constraint firstItem="KPg-PC-Qrw" firstAttribute="top" secondItem="XCs-0i-Dxm" secondAttribute="bottom" id="x7I-Sq-pHS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mel-lQ-W2E"/>
                     <connections>
                         <outlet property="containerView" destination="VTk-pk-dCY" id="Apl-uw-coZ"/>
                         <outlet property="header" destination="jIz-a1-mdp" id="WHP-dc-lrG"/>
@@ -152,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.24107142857142"/>
+            <point key="canvasLocation" x="242" y="133"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="HWl-yn-kGM">
@@ -223,6 +224,7 @@
                             <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="OJB-Eq-Jqf"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.75" id="R38-IZ-GZF"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="22" id="RvG-5q-ZpS"/>
+                            <constraint firstItem="9MQ-3W-YRN" firstAttribute="centerY" secondItem="q0E-Ng-NXG" secondAttribute="centerY" priority="999" constant="-50" id="UK5-bS-Bsn"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dA4-2m-ouD"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="dvY-VV-vgg"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="top" secondItem="Tze-XO-5ab" secondAttribute="bottom" priority="900" constant="100" id="frD-6x-2sV"/>
@@ -237,6 +239,10 @@
                     </view>
                     <connections>
                         <outlet property="appleButton" destination="Bu5-he-vho" id="9VW-fg-YNl"/>
+                        <outlet property="backdropImage" destination="Tze-XO-5ab" id="4zJ-gO-ajl"/>
+                        <outlet property="enigmaCentreAnchor" destination="UK5-bS-Bsn" id="6O8-56-Yb5"/>
+                        <outlet property="enigmaTitle" destination="9MQ-3W-YRN" id="TW2-YE-S6Y"/>
+                        <outlet property="enigmaTopAnchor" destination="2YX-tq-Hic" id="VS0-jB-eKi"/>
                         <outlet property="googleButton" destination="dVM-gN-ODh" id="j8u-UY-8Fl"/>
                         <segue destination="rM5-1r-zw8" kind="showDetail" identifier="profilesetup" id="N1a-Vg-j9l"/>
                     </connections>
@@ -1436,6 +1442,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChX-ph-ecf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5698.5507246376819" y="-471.42857142857139"/>
+        </scene>
+        <!--Launch Screen-->
+        <scene sceneID="0nb-iz-15k">
+            <objects>
+                <viewController storyboardIdentifier="LaunchScreen" id="dw4-pL-BHq" customClass="LaunchScreen" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="56R-oJ-b2t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPm-YM-LpS">
+                                <rect key="frame" x="18" y="0.0" width="378" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Enigma" translatesAutoresizingMaskIntoConstraints="NO" id="zdO-jf-q22">
+                                        <rect key="frame" x="47.5" y="374" width="283.5" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zdO-jf-q22" secondAttribute="height" multiplier="5.875" id="eQ9-vd-Dqq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyP-io-J0o">
+                                        <rect key="frame" x="173.5" y="442" width="31.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
+                                        <color key="textColor" name="tertiary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="dark"/>
+                                <constraints>
+                                    <constraint firstItem="QyP-io-J0o" firstAttribute="top" secondItem="zdO-jf-q22" secondAttribute="bottom" constant="20" id="701-y9-lOP"/>
+                                    <constraint firstItem="zdO-jf-q22" firstAttribute="width" secondItem="jPm-YM-LpS" secondAttribute="width" multiplier="0.75" id="R57-UU-IwK"/>
+                                    <constraint firstItem="zdO-jf-q22" firstAttribute="centerX" secondItem="jPm-YM-LpS" secondAttribute="centerX" id="arC-yP-xmy"/>
+                                    <constraint firstItem="QyP-io-J0o" firstAttribute="centerX" secondItem="jPm-YM-LpS" secondAttribute="centerX" id="obJ-4n-yi7"/>
+                                    <constraint firstItem="zdO-jf-q22" firstAttribute="centerY" secondItem="jPm-YM-LpS" secondAttribute="centerY" constant="-50" id="sb2-SO-yXR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z3Q-C7-T4O"/>
+                        <color key="backgroundColor" name="dark"/>
+                        <constraints>
+                            <constraint firstItem="jPm-YM-LpS" firstAttribute="top" secondItem="56R-oJ-b2t" secondAttribute="top" id="15I-Zv-yw0"/>
+                            <constraint firstItem="Z3Q-C7-T4O" firstAttribute="trailing" secondItem="jPm-YM-LpS" secondAttribute="trailing" constant="18" id="Cua-Hb-39g"/>
+                            <constraint firstAttribute="bottom" secondItem="jPm-YM-LpS" secondAttribute="bottom" id="Kf5-2J-dl3"/>
+                            <constraint firstItem="jPm-YM-LpS" firstAttribute="leading" secondItem="Z3Q-C7-T4O" secondAttribute="leading" constant="18" id="mgp-Zr-anN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subLabel" destination="QyP-io-J0o" id="AHr-hk-8XR"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="start" animates="NO" id="oXi-NG-xXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Unv-tm-bKI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-586.95652173913049" y="132.58928571428572"/>
         </scene>
     </scenes>
     <resources>

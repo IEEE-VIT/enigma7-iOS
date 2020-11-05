@@ -10,6 +10,7 @@
 		5B1B4B4E252252D000398B0D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4D252252D000398B0D /* Image.swift */; };
 		5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */; };
 		5B1B4B5825236AAD00398B0D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
+		5B1FB31B254FCB56009DCAF1 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1FB31A254FCB56009DCAF1 /* LaunchScreen.swift */; };
 		5B30BA542545DA0100B75FF4 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA532545DA0100B75FF4 /* IntentHandler.swift */; };
 		5B30BA5C2545DA0200B75FF4 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B30BA5B2545DA0200B75FF4 /* IntentsUI.framework */; };
 		5B30BA5F2545DA0200B75FF4 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA5E2545DA0200B75FF4 /* IntentViewController.swift */; };
@@ -279,6 +280,7 @@
 		5B1B4B4D252252D000398B0D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		5B1B4B5725236AAD00398B0D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
+		5B1FB31A254FCB56009DCAF1 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		5B30BA512545DA0100B75FF4 /* Enigma-Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Enigma-Siri.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B30BA532545DA0100B75FF4 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		5B30BA552545DA0100B75FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 				5B32868524FB6ADF00FE2EEC /* Main */,
 				5B32868424FB6AD500FE2EEC /* Login */,
 				5BABB7B924FADEEB006D5541 /* TabbarController.swift */,
+				5B1FB31A254FCB56009DCAF1 /* LaunchScreen.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1196,6 +1199,7 @@
 				5B921FDD250745A900B2AFF4 /* Network Constants.swift in Sources */,
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
 				5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */,
+				5B1FB31B254FCB56009DCAF1 /* LaunchScreen.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
 				5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */,
