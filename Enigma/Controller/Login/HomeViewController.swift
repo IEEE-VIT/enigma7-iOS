@@ -45,11 +45,16 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.animateNow = false
+    }
+    
     @IBAction func signinWithApple(_ sender: UIButton) {
         if #available(iOS 13, *) {
             appleSignin()
         } else {
             // TODO:- add alert for iOS 12.
+            appleButton.isHidden = true
         }
     }
     
@@ -76,6 +81,7 @@ class HomeViewController: UIViewController {
     
     func launchScreenInitialSetup(){
         guard animateNow else { return }
+        print("LAUNCHHH")
         appleButton.alpha = 0.0
         googleButton.alpha = 0.0
         backdropImage.alpha = 0.0
@@ -87,6 +93,7 @@ class HomeViewController: UIViewController {
         guard animateNow else { return }
         enigmaTopAnchor.priority = UILayoutPriority(999)
         enigmaCentreAnchor.priority = UILayoutPriority(1)
+        print("APPEARR")
         UIView.animate(withDuration: 1.5) { [self] in
             self.view.layoutIfNeeded()
         } completion: { (_) in

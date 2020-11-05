@@ -28,15 +28,15 @@ class TabbarController: UIViewController {
     var wcSession : WCSession! = nil
     var selectedIndex: Int = 0
     var share : Bool = false
+    var animateHomeVC : Bool = false
     var shareImage : UIImage?
     let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         HomeViewController = storyBoard.instantiateViewController(AppConstants.ViewController.HomeViewController) as? HomeViewController
         self.HomeViewController.delegate = self
-        self.HomeViewController.animateNow = true
+        self.HomeViewController.animateNow = animateHomeVC
         
         setupButtons()
         instantiateViews()
@@ -155,6 +155,7 @@ extension TabbarController: ShareDelegate{
 
 extension TabbarController: LogoutDelegate{
     func logout() {
+        self.animateHomeVC = false
         containerView.subviews.forEach({ $0.removeFromSuperview() })
         viewDidLoad()
         viewDidLayoutSubviews()

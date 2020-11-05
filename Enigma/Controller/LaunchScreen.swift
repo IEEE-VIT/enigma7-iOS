@@ -33,4 +33,8 @@ class LaunchScreen: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tabbar = segue.destination as? TabbarController { tabbar.animateHomeVC = true }
+    }
+    
 }
