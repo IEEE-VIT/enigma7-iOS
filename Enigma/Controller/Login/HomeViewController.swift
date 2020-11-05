@@ -90,7 +90,7 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 1.5) { [self] in
             self.view.layoutIfNeeded()
         } completion: { (_) in
-            UIView.animate(withDuration: 0.5) { [self] in
+            UIView.animate(withDuration: 0.3) { [self] in
                 appleButton.alpha = 1.0
                 googleButton.alpha = 1.0
                 backdropImage.alpha = 1.0

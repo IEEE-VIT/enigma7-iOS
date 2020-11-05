@@ -11,14 +11,13 @@ import AVFoundation
 
 class LaunchScreen: UIViewController {
     
-
     @IBOutlet weak var subLabel: UILabel!
     
     var string = "online cryptic hunt"
     var substring = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("LOAD")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +28,9 @@ class LaunchScreen: UIViewController {
             subLabel.text! = "< " + substring + " >"
             RunLoop.current.run(until: Date()+0.20)
         }
-        performSegue(withIdentifier: "start", sender: nil)
+        if substring == string {
+            performSegue(withIdentifier: "start", sender: nil)
+        }
     }
+    
 }

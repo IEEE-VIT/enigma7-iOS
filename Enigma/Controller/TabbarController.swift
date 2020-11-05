@@ -36,6 +36,8 @@ class TabbarController: UIViewController {
         super.viewDidLoad()
         HomeViewController = storyBoard.instantiateViewController(AppConstants.ViewController.HomeViewController) as? HomeViewController
         self.HomeViewController.delegate = self
+        self.HomeViewController.animateNow = true
+        
         setupButtons()
         instantiateViews()
         setupView(HomeViewController)
