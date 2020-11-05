@@ -165,32 +165,17 @@ extension TabbarController: LogoutDelegate{
 
 extension TabbarController: SigninDelegate, WCSessionDelegate {
     
-    
     func didSignin(_ token: String) {
         header.isHidden = false
         tabSelected(buttons[0])
-        
-        let message = ["token":token]
-           
-        wcSession.sendMessage(message, replyHandler: nil) { (error) in
-               
-        print(error.localizedDescription)
-               
-           }
+        wcSession.sendMessage(["token":token], replyHandler: nil, errorHandler: nil)
     }
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print(activationState)
-        print(error)
-    }
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { }
     
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        print("active: ",session)
-    }
+    func sessionDidBecomeInactive(_ session: WCSession) { }
     
-    func sessionDidDeactivate(_ session: WCSession) {
-        print("Deactive: ",session)
-    }
+    func sessionDidDeactivate(_ session: WCSession) { }
     
 }
 
