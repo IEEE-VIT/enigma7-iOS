@@ -65,6 +65,7 @@
 		5B4840C12536B73C00CF9F19 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
 		5B4840C22536B73C00CF9F19 /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */; };
 		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
+		5B7016CD255C535B007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
 		5B81A1F8252AF33500DA09A8 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A1F7252AF33500DA09A8 /* LoginTests.swift */; };
 		5B81A207252AF38100DA09A8 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */; };
 		5B81A254252B71F400DA09A8 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A253252B71F400DA09A8 /* GameTests.swift */; };
@@ -313,6 +314,7 @@
 		5B32869824FC27F100FE2EEC /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		5B4AC2AE2517887600534934 /* Apple Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apple Signin.swift"; sourceTree = "<group>"; };
 		5B4AC2B025178A7E00534934 /* Enigma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enigma.entitlements; sourceTree = "<group>"; };
+		5B7016CC255C535B007B6F82 /* XPTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPTimeModel.swift; sourceTree = "<group>"; };
 		5B81A1F7252AF33500DA09A8 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		5B81A253252B71F400DA09A8 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
@@ -669,6 +671,7 @@
 			children = (
 				5B921FED2507518E00B2AFF4 /* Response */,
 				5B81A2A1252E3F6800DA09A8 /* SignupModel.swift */,
+				5B7016CC255C535B007B6F82 /* XPTimeModel.swift */,
 				5B32869824FC27F100FE2EEC /* Leaderboard.swift */,
 				5BF6EB222526108100813987 /* Question.swift */,
 				5BF6EB242526190A00813987 /* Hint.swift */,
@@ -1202,6 +1205,7 @@
 				5B1FB31B254FCB56009DCAF1 /* LaunchScreen.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
+				5B7016CD255C535B007B6F82 /* XPTimeModel.swift in Sources */,
 				5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
