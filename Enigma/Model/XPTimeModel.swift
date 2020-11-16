@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct XPTime: Codable{
+struct XPTimeModel: Codable{
    let timeLeft : Double?
     
     enum CodingKeys: String, CodingKey {
