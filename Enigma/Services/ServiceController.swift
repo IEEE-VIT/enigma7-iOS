@@ -38,4 +38,11 @@ class ServiceController {
             completion(response)
         }
     }
+    
+    func getXpTime(completion : @escaping (Double)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.xpTimeURL, parameters: [:], responseType: XPTimeModel.self) { (response, _) in
+            completion(response?.timeLeft ?? 0.0)
+        }
+    }
+    
 }
