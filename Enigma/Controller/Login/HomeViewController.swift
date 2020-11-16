@@ -62,7 +62,7 @@ class HomeViewController: UIViewController {
         GIDSignIn.sharedInstance().signIn()
     }
     
-    func signinWithBackend(type : SignupType, code : String){
+    func signinWithBackend(type : SignupType, code : String, token : String){
         let request = SignUpModel.Request(code: code, type: type)
         PostController.shared.signup(type: type, body: request, completion: handleSignup(success:response:))
     }
