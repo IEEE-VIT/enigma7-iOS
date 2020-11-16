@@ -36,7 +36,7 @@ class PlayViewController: UIViewController {
     var closePowerupOn : Bool = false
     var backgroundView : ImageScrollView!
     weak var delegate : ShareDelegate?
-    
+    var xpTimer: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +60,7 @@ class PlayViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         subscribeToKeyboardNotifications()
         updateProgressbar()
+        ServiceController.shared.getXpTime(completion: handleXp(time:))
         //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
@@ -170,6 +171,15 @@ class PlayViewController: UIViewController {
         questionNumberLabel.text = question.questionNumber
         questionImageView.asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
         if #available(iOS 14.0, *) {  reloadWidget()  }
+    }
+    
+    func handleXp(time:Double){
+        xpTimer?.invalidate()
+        xpTimer = Timer.scheduledTimer(timeInterval: time, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
+    }
+    
+    @objc func fireTimer() {
+        ServiceController.shared.getUserDetails { _ in self.updateProgressbar() }
     }
     
     @available(iOS 14.0, *)
