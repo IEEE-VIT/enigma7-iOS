@@ -16,7 +16,7 @@ struct Question : Decodable {
     enum CodingKeys: String, CodingKey {
         case text = "text"
         case imageUrl = "img_url"
-        case id = "id"
+        case id = "order"
     }
     
     var questionNumber : String{

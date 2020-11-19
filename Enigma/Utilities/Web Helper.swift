@@ -42,10 +42,6 @@ class WebHelper {
                 
                 DebugRequest(url, status: response, request: Data(), response: data)
                 
-                print("Header: ",request.allHTTPHeaderFields)
-                print("Error: ",error)
-                print("Data: ",response)
-                
                 let decoder = JSONDecoder()
                 do {
                     let responseObject = try decoder.decode(ResponseType.self, from: data)
