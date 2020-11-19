@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension PlayViewController : AlertDelegate{
+extension PlayViewController : AlertDelegate, PreviewDelegate{
     func hintSkipped(type: HintAlert.AlertType) {
         type == .normal ? setBottomButton(hintButton, false) : resetPowerups()
     }
@@ -38,6 +38,10 @@ extension PlayViewController : AlertDelegate{
         updateProgressbar()
     }
     
+    func hintPreviewed() {
+        setBottomButton(hintButton, false)
+    }
+    
     func resetHint(){
         answerTextField.text = ""
         self.hint = ""
@@ -63,6 +67,7 @@ extension PlayViewController : AlertDelegate{
         let headerView = HintPreview()
         headerView.modalPresentationStyle = .overFullScreen
         headerView.hint = hint
+        headerView.delegate = self
         self.present(headerView, animated: false, completion: nil)
     }
     

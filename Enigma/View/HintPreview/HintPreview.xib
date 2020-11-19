@@ -51,7 +51,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Moc-sa-jWn" secondAttribute="height" multiplier="2.5" id="p5b-tL-wo2"/>
                             </constraints>
-                            <state key="normal" title="Cancel">
+                            <state key="normal" title="Close">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>

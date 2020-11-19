@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PreviewDelegate : class {
+    func hintPreviewed()
+}
+
 class HintPreview: UIViewController {
 
     required init?(coder: NSCoder) {
@@ -30,8 +34,10 @@ class HintPreview: UIViewController {
     @IBOutlet weak var alertView: UIView!
     
     var hint : String = ""
+    weak var delegate : PreviewDelegate?
     
     @IBAction func cancelTapped(_ sender: Any) {
+        self.delegate?.hintPreviewed()
         self.dismiss(animated: false, completion: nil)
     }
 }
