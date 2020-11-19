@@ -64,7 +64,12 @@ class HomeViewController: UIViewController {
     
     func signinWithBackend(type : SignupType, code : String, token : String){
         let request = SignUpModel.Request(code: code, type: type)
-        PostController.shared.signup(type: type, body: request, completion: handleSignup(success:response:))
+        let appleRequest = SignUpModel.AppleRequest(code: code, access_token: token)
+        if type.isGoogle {
+            PostController.shared.signup(type: type, body: request, completion: handleSignup(success:response:))
+        } else {
+            PostController.shared.signup(type: type, body: appleRequest, completion: handleSignup(success:response:))
+        }
     }
     
     func handleSignup(success:Bool,response:SignUpModel.Response?){

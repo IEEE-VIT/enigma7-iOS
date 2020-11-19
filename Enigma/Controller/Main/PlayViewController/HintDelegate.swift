@@ -32,23 +32,20 @@ extension PlayViewController : AlertDelegate{
             presentAKAlert(type: .custom(message: message))
             return
         }
-        hintLabel.text = text
+        self.hint = hint?.hint ?? ""
         resetPowerups()
         updateProgressbar()
-        //TODO update xp
     }
     
     func resetHint(){
         answerTextField.text = ""
-        hintLabel.text = ""
+        self.hint = ""
         resetPowerups()
     }
     
     func loadHint(hint:Hint?){
         guard let text = hint?.hint else { return }
-        hintLabel.isUserInteractionEnabled = false
-        hintLabel.text = text
-        hintLabel.textAlignment = .left
+        self.hint = text
         resetPowerups()
     }
     

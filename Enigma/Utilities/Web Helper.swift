@@ -77,7 +77,6 @@ class WebHelper {
         request.httpMethod = httpMethod.rawValue
          
         let postData = try! JSONEncoder().encode(body)
-        request.httpBody = noBody ? nil : postData
         
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")

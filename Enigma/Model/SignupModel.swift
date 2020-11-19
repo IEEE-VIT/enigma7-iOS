@@ -57,4 +57,8 @@ enum SignupType : String{
             return "TODO"
         }
     }
+    
+    var isGoogle : Bool {
+        return self == .google
+    }
 }

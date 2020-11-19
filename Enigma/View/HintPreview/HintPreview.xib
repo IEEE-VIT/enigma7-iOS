@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="IBMPlexMono-Regular.ttf">
+            <string>IBMPlexMono</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HintPreview" customModule="Enigma" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="Vi1-eW-EOg" id="QTA-km-6mw"/>
+                <outlet property="cancelButton" destination="2QG-Oy-2Ib" id="ank-OW-fdu"/>
+                <outlet property="hintSubtitle" destination="7wG-0t-KNL" id="6LX-zm-5Ua"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="n8u-zW-sql">
+            <view key="view" contentMode="scaleToFill" id="0Xg-yW-sXB">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vi1-eW-EOg">
+                        <rect key="frame" x="31" y="312.5" width="352" height="271"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bq1-iJ-7Mm">
+                                <rect key="frame" x="0.0" y="0.0" width="352" height="49"/>
+                                <color key="backgroundColor" red="0.094117647060000004" green="0.1843137255" blue="0.14117647059999999" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt; Hint &gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyV-l6-tR8">
+                                <rect key="frame" x="25" y="59" width="302" height="26"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                <color key="textColor" name="light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vitae eget urna, facilisis eget lectus ultricies pellentesque." lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-0t-KNL">
+                                <rect key="frame" x="20" y="90" width="312" height="70.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                <color key="textColor" name="light"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QG-Oy-2Ib">
+                                <rect key="frame" x="123" y="205.5" width="106" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2QG-Oy-2Ib" secondAttribute="height" multiplier="2.5" id="vJl-20-HKq"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="3nS-b8-jxn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="dark"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7wG-0t-KNL" secondAttribute="trailing" constant="20" id="0FW-ZX-j17"/>
+                            <constraint firstItem="2QG-Oy-2Ib" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7wG-0t-KNL" secondAttribute="bottom" constant="20" id="1Cm-aS-f4d"/>
+                            <constraint firstAttribute="bottom" secondItem="2QG-Oy-2Ib" secondAttribute="bottom" constant="23" id="1yZ-r7-t71"/>
+                            <constraint firstItem="bq1-iJ-7Mm" firstAttribute="leading" secondItem="Vi1-eW-EOg" secondAttribute="leading" id="73k-lE-fgs"/>
+                            <constraint firstAttribute="trailing" secondItem="bq1-iJ-7Mm" secondAttribute="trailing" id="LgE-ie-dGd"/>
+                            <constraint firstItem="2QG-Oy-2Ib" firstAttribute="width" secondItem="Vi1-eW-EOg" secondAttribute="width" multiplier="0.3" id="O7r-FV-B8z"/>
+                            <constraint firstItem="2QG-Oy-2Ib" firstAttribute="centerX" secondItem="Vi1-eW-EOg" secondAttribute="centerX" id="QQE-qu-1Ya"/>
+                            <constraint firstItem="iyV-l6-tR8" firstAttribute="leading" secondItem="Vi1-eW-EOg" secondAttribute="leading" constant="25" id="ULM-aZ-Ift"/>
+                            <constraint firstAttribute="trailing" secondItem="iyV-l6-tR8" secondAttribute="trailing" constant="25" id="ebT-Rh-WHf"/>
+                            <constraint firstItem="7wG-0t-KNL" firstAttribute="leading" secondItem="Vi1-eW-EOg" secondAttribute="leading" constant="20" id="jDq-qM-5b8"/>
+                            <constraint firstItem="bq1-iJ-7Mm" firstAttribute="height" secondItem="Vi1-eW-EOg" secondAttribute="height" multiplier="0.18" id="jgV-Sj-QtU"/>
+                            <constraint firstItem="iyV-l6-tR8" firstAttribute="top" secondItem="bq1-iJ-7Mm" secondAttribute="bottom" constant="10" id="qfj-rc-Roo"/>
+                            <constraint firstItem="7wG-0t-KNL" firstAttribute="top" secondItem="iyV-l6-tR8" secondAttribute="bottom" constant="5" id="tCJ-ui-tKn"/>
+                            <constraint firstItem="bq1-iJ-7Mm" firstAttribute="top" secondItem="Vi1-eW-EOg" secondAttribute="top" id="wej-jc-Jr0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="LiX-h9-gFR"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Vi1-eW-EOg" firstAttribute="width" secondItem="0Xg-yW-sXB" secondAttribute="width" multiplier="0.85" id="Bgf-At-uL3"/>
+                    <constraint firstItem="Vi1-eW-EOg" firstAttribute="centerY" secondItem="0Xg-yW-sXB" secondAttribute="centerY" id="EDV-rI-aom"/>
+                    <constraint firstItem="Vi1-eW-EOg" firstAttribute="width" secondItem="Vi1-eW-EOg" secondAttribute="height" multiplier="1.3" id="K2T-71-ns7"/>
+                    <constraint firstItem="Vi1-eW-EOg" firstAttribute="centerX" secondItem="0Xg-yW-sXB" secondAttribute="centerX" id="aBB-Ng-fqq"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="491" y="93"/>
+        </viewController>
+    </objects>
+    <resources>
+        <namedColor name="dark">
+            <color red="0.032000001519918442" green="0.059000000357627869" blue="0.029999999329447746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="light">
+            <color red="0.93300002813339233" green="0.9570000171661377" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
