@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dw4-pL-BHq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dw4-pL-BHq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1011,7 +1011,7 @@
                                 <rect key="frame" x="24" y="235" width="366" height="587"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPn-0B-6sW">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="470.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="468.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpG-eW-Pq4">
                                                 <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
@@ -1045,18 +1045,8 @@
                                                     <outletCollection property="gestureRecognizers" destination="LuT-kQ-oFX" appends="YES" id="Wlb-DQ-Xfh"/>
                                                 </connections>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2N-k0-9xg">
-                                                <rect key="frame" x="36.5" y="283.5" width="293" height="0.0"/>
-                                                <gestureRecognizers/>
-                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
-                                                <color key="textColor" name="quaternary"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="23"/>
-                                                </variation>
-                                            </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dqz-Qd-Elv" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="318.5" width="366" height="39"/>
+                                                <rect key="frame" x="0.0" y="316.5" width="366" height="39"/>
                                                 <color key="backgroundColor" red="0.050980392156862744" green="0.094157271089999994" blue="0.061146855350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" name="tertiary"/>
                                                 <constraints>
@@ -1075,7 +1065,7 @@
                                                 </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRl-h8-MkE">
-                                                <rect key="frame" x="0.0" y="387.5" width="366" height="33"/>
+                                                <rect key="frame" x="0.0" y="385.5" width="366" height="33"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s76-d7-9L3">
                                                         <rect key="frame" x="56.5" y="0.0" width="99" height="33"/>
@@ -1135,10 +1125,9 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="uRl-h8-MkE" firstAttribute="top" secondItem="Dqz-Qd-Elv" secondAttribute="bottom" constant="30" id="7ga-BQ-j1I"/>
-                                            <constraint firstItem="p2N-k0-9xg" firstAttribute="width" secondItem="aPn-0B-6sW" secondAttribute="width" multiplier="0.8" id="Doi-Va-97n"/>
+                                            <constraint firstItem="Dqz-Qd-Elv" firstAttribute="top" secondItem="3pS-Lr-plb" secondAttribute="bottom" constant="45" id="JPt-gs-G36"/>
                                             <constraint firstItem="3pS-Lr-plb" firstAttribute="top" secondItem="Ii6-nK-T8T" secondAttribute="bottom" constant="12" id="Kua-Lb-Ma2"/>
                                             <constraint firstItem="3pS-Lr-plb" firstAttribute="width" secondItem="aPn-0B-6sW" secondAttribute="width" multiplier="0.8" id="LQy-gg-cJg"/>
-                                            <constraint firstItem="p2N-k0-9xg" firstAttribute="top" secondItem="3pS-Lr-plb" secondAttribute="bottom" constant="12" id="LT5-8f-5Sm"/>
                                             <constraint firstItem="fpG-eW-Pq4" firstAttribute="leading" secondItem="aPn-0B-6sW" secondAttribute="leading" id="Lev-VU-1oz"/>
                                             <constraint firstAttribute="trailing" secondItem="Dqz-Qd-Elv" secondAttribute="trailing" id="OOo-UR-eEa"/>
                                             <constraint firstItem="Ii6-nK-T8T" firstAttribute="top" secondItem="fpG-eW-Pq4" secondAttribute="bottom" id="PIz-89-Lf8"/>
@@ -1146,11 +1135,9 @@
                                             <constraint firstItem="3pS-Lr-plb" firstAttribute="centerX" secondItem="aPn-0B-6sW" secondAttribute="centerX" id="b1h-0h-189"/>
                                             <constraint firstAttribute="trailing" secondItem="Ii6-nK-T8T" secondAttribute="trailing" id="ddI-Qk-eiS"/>
                                             <constraint firstItem="Ii6-nK-T8T" firstAttribute="leading" secondItem="aPn-0B-6sW" secondAttribute="leading" id="h5E-bh-YgW"/>
-                                            <constraint firstItem="Dqz-Qd-Elv" firstAttribute="top" secondItem="p2N-k0-9xg" secondAttribute="bottom" constant="35" id="knl-D2-Z92"/>
                                             <constraint firstItem="fpG-eW-Pq4" firstAttribute="top" secondItem="aPn-0B-6sW" secondAttribute="top" id="pf3-dn-ZAD"/>
                                             <constraint firstItem="uRl-h8-MkE" firstAttribute="width" secondItem="aPn-0B-6sW" secondAttribute="width" id="rJN-Rr-2D4"/>
                                             <constraint firstItem="Dqz-Qd-Elv" firstAttribute="leading" secondItem="aPn-0B-6sW" secondAttribute="leading" id="vbB-U1-ilN"/>
-                                            <constraint firstItem="p2N-k0-9xg" firstAttribute="centerX" secondItem="aPn-0B-6sW" secondAttribute="centerX" id="vfe-id-5Ph"/>
                                             <constraint firstAttribute="bottom" secondItem="uRl-h8-MkE" secondAttribute="bottom" constant="50" id="wni-uF-qYZ"/>
                                             <constraint firstItem="uRl-h8-MkE" firstAttribute="centerX" secondItem="aPn-0B-6sW" secondAttribute="centerX" id="z4A-Oy-gE6"/>
                                         </constraints>
@@ -1200,7 +1187,6 @@
                     <connections>
                         <outlet property="answerTextField" destination="Dqz-Qd-Elv" id="aam-8h-0ug"/>
                         <outlet property="hintButton" destination="s76-d7-9L3" id="sNw-4P-aL6"/>
-                        <outlet property="hintLabel" destination="p2N-k0-9xg" id="WOZ-nH-UV8"/>
                         <outlet property="progressBar" destination="SVz-9S-bLb" id="BdG-Zi-0iP"/>
                         <outlet property="questionImageView" destination="3pS-Lr-plb" id="XgO-nK-DSQ"/>
                         <outlet property="questionLabel" destination="Ii6-nK-T8T" id="rqM-um-e8a"/>
@@ -1259,6 +1245,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="2YQ-VB-J5v"/>
                                 </constraints>
+                                <inset key="separatorInset" minX="500" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="leadercell" rowHeight="60" id="0L2-hP-Xh9" customClass="LeaderboardCell" customModule="Enigma" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="384" height="60"/>

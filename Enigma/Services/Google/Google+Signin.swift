@@ -24,7 +24,7 @@ extension HomeViewController: GIDSignInDelegate {
             //TODO
             return
         }
-        signinWithBackend(type:.google, code:user.serverAuthCode)
+        signinWithBackend(type:.google, code:user.serverAuthCode, token: "")
     }
     
     

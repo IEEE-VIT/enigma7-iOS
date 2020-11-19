@@ -12,7 +12,7 @@ import GoogleSignIn
 class PostController {
     static let shared: PostController = PostController()
     
-    func signup(type: SignupType,body:SignUpModel.Request,completion: @escaping(Bool,SignUpModel.Response?) -> ()) {
+    func signup<RequestType: Encodable>(type: SignupType,body:RequestType,completion: @escaping(Bool,SignUpModel.Response?) -> ()) {
         WebHelper.sendPOSTRequest(url: type.url, responseType: SignUpModel.Response.self, body: body) { (response, error) in
             if let response = response,let key = response.key{
                 UserDefaults.standard.set(response.username_exists ?? false, forKey: Keys.login)

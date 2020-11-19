@@ -41,7 +41,9 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let data = appleIDCredential.authorizationCode else { return }
             guard let code = String(data: data, encoding: .utf8) else { return }
-            signinWithBackend(type: .apple, code: code)
+            guard let authData = appleIDCredential.identityToken else { return }
+            guard let authCode = String(data: authData, encoding: .utf8) else { return }
+            signinWithBackend(type: .apple, code: code, token: authCode)
         }
     }
     

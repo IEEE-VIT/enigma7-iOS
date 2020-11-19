@@ -22,7 +22,6 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionImageView: UIImageView!
-    @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var answerTextField: CustomTextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var hintButton: UIButton!
@@ -37,6 +36,7 @@ class PlayViewController: UIViewController {
     var backgroundView : ImageScrollView!
     weak var delegate : ShareDelegate?
     var xpTimer: Timer?
+    var hint : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +80,7 @@ class PlayViewController: UIViewController {
     
     @IBAction func hintTapped(_ sender: UIButton) {
         setBottomButton(hintButton, true)
-        createHintAlert(.normal)
+        (hint == "") ? createHintAlert(.normal) : presentHintPreview(self.hint)
     }
     
     func validate()->Bool{

@@ -20,6 +20,16 @@ final class SignUpModel {
         }
     }
     
+    struct AppleRequest : Encodable {
+        let code : String
+        let access_token : String
+        
+        init(code:String, access_token:String){
+            self.code = code
+            self.access_token = access_token
+        }
+    }
+    
     struct Response : Codable {
         var key : String?
         var username_exists : Bool?
@@ -46,5 +56,9 @@ enum SignupType : String{
         case .apple:
             return "TODO"
         }
+    }
+    
+    var isGoogle : Bool {
+        return self == .google
     }
 }

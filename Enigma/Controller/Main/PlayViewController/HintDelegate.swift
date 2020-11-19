@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension PlayViewController : AlertDelegate{
+extension PlayViewController : AlertDelegate, PreviewDelegate{
     func hintSkipped(type: HintAlert.AlertType) {
         type == .normal ? setBottomButton(hintButton, false) : resetPowerups()
     }
@@ -32,23 +32,26 @@ extension PlayViewController : AlertDelegate{
             presentAKAlert(type: .custom(message: message))
             return
         }
-        hintLabel.text = text
+        self.hint = hint?.hint ?? ""
+        self.hintButton.setTitle("Show Hint", for: .normal)
         resetPowerups()
         updateProgressbar()
-        //TODO update xp
+    }
+    
+    func hintPreviewed() {
+        setBottomButton(hintButton, false)
     }
     
     func resetHint(){
         answerTextField.text = ""
-        hintLabel.text = ""
+        self.hint = ""
+        self.hintButton.setTitle("Show Hint", for: .normal)
         resetPowerups()
     }
     
     func loadHint(hint:Hint?){
         guard let text = hint?.hint else { return }
-        hintLabel.isUserInteractionEnabled = false
-        hintLabel.text = text
-        hintLabel.textAlignment = .left
+        self.hint = text
         resetPowerups()
     }
     
@@ -56,6 +59,14 @@ extension PlayViewController : AlertDelegate{
         let headerView = HintAlert()
         headerView.type = type
         headerView.modalPresentationStyle = .overFullScreen
+        headerView.delegate = self
+        self.present(headerView, animated: false, completion: nil)
+    }
+    
+    func presentHintPreview(_ hint : String){
+        let headerView = HintPreview()
+        headerView.modalPresentationStyle = .overFullScreen
+        headerView.hint = hint
         headerView.delegate = self
         self.present(headerView, animated: false, completion: nil)
     }
