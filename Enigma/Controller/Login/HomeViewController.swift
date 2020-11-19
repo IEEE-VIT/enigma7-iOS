@@ -79,7 +79,7 @@ class HomeViewController: UIViewController {
             delegate?.didSignin(response?.key ?? "")
             Defaults.fetchAll()
         } else {
-            PostController.shared.logout()
+           // PostController.shared.logout() //TODO
         }
     }
     

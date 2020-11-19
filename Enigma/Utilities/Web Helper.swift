@@ -42,7 +42,9 @@ class WebHelper {
                 
                 DebugRequest(url, status: response, request: Data(), response: data)
                 
-                
+                print("Header: ",request.allHTTPHeaderFields)
+                print("Error: ",error)
+                print("Data: ",response)
                 
                 let decoder = JSONDecoder()
                 do {
@@ -77,7 +79,8 @@ class WebHelper {
         request.httpMethod = httpMethod.rawValue
          
         let postData = try! JSONEncoder().encode(body)
-        
+        request.httpBody = noBody ? nil : postData
+
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

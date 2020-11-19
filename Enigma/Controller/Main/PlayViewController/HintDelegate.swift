@@ -33,6 +33,7 @@ extension PlayViewController : AlertDelegate{
             return
         }
         self.hint = hint?.hint ?? ""
+        self.hintButton.setTitle("Show Hint", for: .normal)
         resetPowerups()
         updateProgressbar()
     }
@@ -40,6 +41,7 @@ extension PlayViewController : AlertDelegate{
     func resetHint(){
         answerTextField.text = ""
         self.hint = ""
+        self.hintButton.setTitle("Show Hint", for: .normal)
         resetPowerups()
     }
     
@@ -54,6 +56,13 @@ extension PlayViewController : AlertDelegate{
         headerView.type = type
         headerView.modalPresentationStyle = .overFullScreen
         headerView.delegate = self
+        self.present(headerView, animated: false, completion: nil)
+    }
+    
+    func presentHintPreview(_ hint : String){
+        let headerView = HintPreview()
+        headerView.modalPresentationStyle = .overFullScreen
+        headerView.hint = hint
         self.present(headerView, animated: false, completion: nil)
     }
     

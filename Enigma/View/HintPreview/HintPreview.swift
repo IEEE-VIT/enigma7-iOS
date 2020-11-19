@@ -6,17 +6,16 @@
 //  Copyright © 2020 Aaryan Kothari. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class HintPreview: UIViewController {
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: "HintAlert", bundle: nil)
+        super.init(nibName: "HintPreview", bundle: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -25,14 +24,17 @@ class HintPreview: UIViewController {
         cancelButton.addBorder(width: 2, .white)
     }
     
-    @IBOutlet weak var alertView: UIView!
+    
     @IBOutlet weak var hintSubtitle: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var alertView: UIView!
     
     var hint : String = ""
     
     @IBAction func cancelTapped(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
-    
 }
+    
+
+    

@@ -80,7 +80,7 @@ class PlayViewController: UIViewController {
     
     @IBAction func hintTapped(_ sender: UIButton) {
         setBottomButton(hintButton, true)
-        createHintAlert(.normal)
+        (hint == "") ? createHintAlert(.normal) : presentHintPreview(self.hint)
     }
     
     func validate()->Bool{

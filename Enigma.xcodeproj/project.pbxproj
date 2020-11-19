@@ -65,8 +65,8 @@
 		5B4840C12536B73C00CF9F19 /* IBMPlexMono-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75724FACDA9006D5541 /* IBMPlexMono-Thin.ttf */; };
 		5B4840C22536B73C00CF9F19 /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */; };
 		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
-		5B5BE2ED256649B500F12B51 /* HintPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5BE2EC256649B500F12B51 /* HintPreview.xib */; };
-		5B5BE2FF256649C800F12B51 /* HintPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5BE2FE256649C800F12B51 /* HintPreview.swift */; };
+		5B5BE3112566ACED00F12B51 /* HintPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5BE3102566ACED00F12B51 /* HintPreview.swift */; };
+		5B5BE31B2566AED000F12B51 /* HintPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5BE31A2566AED000F12B51 /* HintPreview.xib */; };
 		5B7016CD255C535B007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
 		5B7016DE255C54E6007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
 		5B7016E7255C54E7007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
@@ -322,8 +322,8 @@
 		5B32869824FC27F100FE2EEC /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		5B4AC2AE2517887600534934 /* Apple Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apple Signin.swift"; sourceTree = "<group>"; };
 		5B4AC2B025178A7E00534934 /* Enigma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enigma.entitlements; sourceTree = "<group>"; };
-		5B5BE2EC256649B500F12B51 /* HintPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintPreview.xib; sourceTree = "<group>"; };
-		5B5BE2FE256649C800F12B51 /* HintPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPreview.swift; sourceTree = "<group>"; };
+		5B5BE3102566ACED00F12B51 /* HintPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPreview.swift; sourceTree = "<group>"; };
+		5B5BE31A2566AED000F12B51 /* HintPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintPreview.xib; sourceTree = "<group>"; };
 		5B7016CC255C535B007B6F82 /* XPTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPTimeModel.swift; sourceTree = "<group>"; };
 		5B81A1F7252AF33500DA09A8 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
@@ -548,8 +548,8 @@
 		5B5BE2EB2566495200F12B51 /* HintPreview */ = {
 			isa = PBXGroup;
 			children = (
-				5B5BE2EC256649B500F12B51 /* HintPreview.xib */,
-				5B5BE2FE256649C800F12B51 /* HintPreview.swift */,
+				5B5BE3102566ACED00F12B51 /* HintPreview.swift */,
+				5B5BE31A2566AED000F12B51 /* HintPreview.xib */,
 			);
 			path = HintPreview;
 			sourceTree = "<group>";
@@ -1084,8 +1084,8 @@
 				5BABB75B24FACDA9006D5541 /* IBMPlexMono-Medium.ttf in Resources */,
 				5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */,
 				5BABB76424FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
-				5B5BE2ED256649B500F12B51 /* HintPreview.xib in Resources */,
 				5BABB76124FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */,
+				5B5BE31B2566AED000F12B51 /* HintPreview.xib in Resources */,
 				5BABB76724FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */,
 				5B8F7234250695ED00C427F7 /* credentials.plist in Resources */,
 				5BABB75824FACDA9006D5541 /* IBMPlexMono-Regular.ttf in Resources */,
@@ -1229,7 +1229,7 @@
 				5B1FB31B254FCB56009DCAF1 /* LaunchScreen.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
-				5B5BE2FF256649C800F12B51 /* HintPreview.swift in Sources */,
+				5B5BE3112566ACED00F12B51 /* HintPreview.swift in Sources */,
 				5B7016CD255C535B007B6F82 /* XPTimeModel.swift in Sources */,
 				5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
