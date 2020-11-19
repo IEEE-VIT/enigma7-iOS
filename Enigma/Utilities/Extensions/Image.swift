@@ -27,6 +27,8 @@ extension UIImageView {
             return
         }
         
+        self.image = nil
+        
         if let url = URL(string: imageServerUrl) {
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
                 

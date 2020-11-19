@@ -45,7 +45,7 @@ extension PlayViewController : AlertDelegate, PreviewDelegate{
     func resetHint(){
         answerTextField.text = ""
         self.hint = ""
-        self.hintButton.setTitle("Show Hint", for: .normal)
+        self.hintButton.setTitle("Use Hint", for: .normal)
         resetPowerups()
     }
     
