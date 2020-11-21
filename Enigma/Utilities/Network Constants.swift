@@ -35,6 +35,7 @@ struct NetworkConstants {
         public static let closeAnswerPowerupURL = baseURL + "powerup/close-answer/"
         public static let answerURL = baseURL + "answer/"
         public static let xpTimeURL = baseURL + "xp-time/"
+        public static let status = baseURL + "status/"
         public static let storyURL = baseURL + "story/"
         public static let storyCompleteURL = baseURL + "story/complete/"
 
