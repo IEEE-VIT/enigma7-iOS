@@ -27,7 +27,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var hintButton: UIButton!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var subScrollView: UIView!
-    
+    @IBOutlet weak var activity: UIActivityIndicatorView!
     
     var previousTag : Int = 0
     var image : UIImage?
@@ -169,7 +169,7 @@ class PlayViewController: UIViewController {
         guard  let question = question else { return }
         questionLabel.text = question.text
         questionNumberLabel.text = question.questionNumber
-        questionImageView.asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
+        asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
         if #available(iOS 14.0, *) {  reloadWidget()  }
     }
     

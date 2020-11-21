@@ -1120,7 +1120,7 @@
                                                     <constraint firstItem="2ys-ju-4Td" firstAttribute="centerY" secondItem="uRl-h8-MkE" secondAttribute="centerY" id="y16-9u-lAm"/>
                                                 </constraints>
                                             </view>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JOv-Jr-cmm">
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="JOv-Jr-cmm">
                                                 <rect key="frame" x="163" y="197" width="40" height="40"/>
                                                 <color key="tintColor" name="quaternary"/>
                                                 <constraints>
@@ -1196,6 +1196,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activity" destination="JOv-Jr-cmm" id="agu-Gq-DnW"/>
                         <outlet property="answerTextField" destination="Dqz-Qd-Elv" id="aam-8h-0ug"/>
                         <outlet property="hintButton" destination="s76-d7-9L3" id="sNw-4P-aL6"/>
                         <outlet property="progressBar" destination="SVz-9S-bLb" id="BdG-Zi-0iP"/>
