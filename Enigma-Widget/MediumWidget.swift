@@ -10,7 +10,7 @@ import SwiftUI
 import WidgetKit
 import UIKit
 struct MediumWidget: View {
-    let text = "Imperdiet vitae praesent ultrices libero tincidunt magna.Imperdiet vitae praesent ultrices libero tincidunt magna.Imperdiet vitae praesent ultrices libero tincidunt magna."
+    @State var text = "Imperdiet vitae praesent ultrices libero tincidunt magna.Imperdiet vitae praesent ultrices libero tincidunt magna.Imperdiet vitae praesent ultrices libero tincidunt magna."
     
     var body: some View{
         Group{
@@ -27,6 +27,11 @@ struct MediumWidget: View {
                 .padding(10)
                 .foregroundColor(Color(.tertiary))
                 .background(Color(.dark))
+                .onAppear{
+                    if let story = Defaults.story()?.story?.text {
+                    self.text = story
+                    }
+                }
             }
         }
     }

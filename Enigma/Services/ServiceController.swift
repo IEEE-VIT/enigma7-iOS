@@ -45,4 +45,16 @@ class ServiceController {
         }
     }
     
+    func getStory(completion : @escaping (Story?)->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.storyURL, parameters: [:], responseType: Story.self,key: Keys.story) { (response, _) in
+            completion(response)
+        }
+    }
+    
+    func getFullStory(completion : @escaping ([Story])->()){
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.storyCompleteURL, parameters: [:], responseType: [Story].self,key: Keys.fullStory) { (response, _) in
+            completion(response ?? [])
+        }
+    }
+    
 }

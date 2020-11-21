@@ -39,6 +39,8 @@ class Keys {
     static let hint = "EnigmaHint"
     static let xp = "Enigmaxp"
     static let image = "EnigmaImage"
+    static let story = "EnigmaStory"
+    static let fullStory = "EnigmaFullStory"
 }
 
 public func reloadWidget(){
