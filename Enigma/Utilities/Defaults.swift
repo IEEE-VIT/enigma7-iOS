@@ -104,6 +104,11 @@ class  Defaults {
     static func emptyAll(){
         UserDefaults.standard.set(false, forKey: Keys.login)
         UserDefaults.standard.set(nil, forKey: Keys.token)
+        UserDefaults.standard.set(nil, forKey: Keys.hint)
+        UserDefaults.standard.set(nil, forKey: Keys.question)
+        UserDefaults.standard.set(nil, forKey: Keys.user)
+        UserDefaults.standard.set(nil, forKey: Keys.story)
+        UserDefaults.standard.set(nil, forKey: Keys.image)
         userDefaults?.set(nil, forKey: "Token")
         userDefaults?.synchronize()
         reloadWidget()
