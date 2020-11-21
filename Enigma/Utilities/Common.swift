@@ -41,6 +41,7 @@ class Keys {
     static let image = "EnigmaImage"
     static let story = "EnigmaStory"
     static let fullStory = "EnigmaFullStory"
+    static let status = "EnigmaStatus"
 }
 
 public func reloadWidget(){

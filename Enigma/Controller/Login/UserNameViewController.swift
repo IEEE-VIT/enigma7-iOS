@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol SignupDelegate: class {
+    func didSignin(_ token: String)
+}
+
 class UserNameViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -15,6 +19,8 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var errorTextView: UITextView!
     
     weak var CountdownController : CountdownViewController?
+    weak var delegate : SignupDelegate?
+
     
     let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {
@@ -44,12 +50,14 @@ class UserNameViewController: UIViewController {
     }
     
     func handleEditusername(success: Bool, response: EditUsernameModel.Response?){
-        if success{ self.gotoTimer()  }
+        if success{ ServiceController.shared.getStatus(completion: handleStatus(started:date:)) }
         else { self.error = response?.error ?? AppConstants.Error.misc}
     }
     
-    func gotoTimer(){
-        present(AppConstants.ViewController.CountdownViewController)
+    func handleStatus(started:Bool,date:String){
+      UserDefaults.standard.set(started, forKey: Keys.login)
+      let viewcontroller = started ? AppConstants.ViewController.RulesViewController : AppConstants.ViewController.CountdownViewController
+      present(viewcontroller)
     }
     
     func validate()->Bool{
