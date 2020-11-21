@@ -66,7 +66,7 @@ public extension UIView
         let nib = UINib(nibName: "\(self)", bundle: bundle)
 
         guard let view = nib.instantiate(withOwner: withOwner, options: options).first as? T else {
-            fatalError("Could not load view from nib file.")
+            fatalError("Could not load view from nib file.") //TODO add constant
         }
         return view
     }

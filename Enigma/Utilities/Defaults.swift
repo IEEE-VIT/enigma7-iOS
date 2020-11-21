@@ -64,6 +64,12 @@ class  Defaults {
         return decode(data: data)
     }
     
+    static func story() -> Story? {
+        let body = UserDefaults.standard.value(forKey: Keys.story) as? Data
+        guard let data = body else { return nil }
+        return decode(data: data)
+    }
+    
     static func saveImage(_ data : Data?){
         guard let data = data else { return }
         userDefaults?.set(data, forKey: Keys.image)
@@ -81,9 +87,9 @@ class  Defaults {
     static func fetchAll(){
         if Defaults.isLoggedin() {
         print("FETCHING ALL DATA")
+            ServiceController.shared.getStory { (_) in }
         ServiceController.shared.getLeaderboard { (_) in }
         ServiceController.shared.getUserDetails { (_) in }
-        ServiceController.shared.getQuestion { (_) in }
         }
     }
     
