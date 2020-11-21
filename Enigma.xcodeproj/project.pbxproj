@@ -85,6 +85,7 @@
 		5B638EBD2568D44D008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
 		5B638EC62568D44D008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
 		5B638EC72568D44E008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
+		5B638F1325698EBC008CD80B /* StorySnippetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638F1225698EBC008CD80B /* StorySnippetViewController.swift */; };
 		5B7016CD255C535B007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
 		5B7016DE255C54E6007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
 		5B7016E7255C54E7007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
@@ -344,6 +345,7 @@
 		5B5BE31A2566AED000F12B51 /* HintPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintPreview.xib; sourceTree = "<group>"; };
 		5B638E28256801DD008CD80B /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		5B638E762568D20A008CD80B /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		5B638F1225698EBC008CD80B /* StorySnippetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySnippetViewController.swift; sourceTree = "<group>"; };
 		5B7016CC255C535B007B6F82 /* XPTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPTimeModel.swift; sourceTree = "<group>"; };
 		5B81A1F7252AF33500DA09A8 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
 		5B81A206252AF38100DA09A8 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
@@ -852,6 +854,7 @@
 				5BF6EB2825261BCB00813987 /* KeyboardObservers.swift */,
 				5BF6EB2A25261BE400813987 /* ZoomingDelegates.swift */,
 				5BF6EB2C25261CFD00813987 /* HintDelegate.swift */,
+				5B638F1225698EBC008CD80B /* StorySnippetViewController.swift */,
 			);
 			path = PlayViewController;
 			sourceTree = "<group>";
@@ -1262,6 +1265,7 @@
 				5B7016CD255C535B007B6F82 /* XPTimeModel.swift in Sources */,
 				5BF6EB2D25261CFD00813987 /* HintDelegate.swift in Sources */,
 				5B32867F24FB6AC000FE2EEC /* LeaderboardViewController.swift in Sources */,
+				5B638F1325698EBC008CD80B /* StorySnippetViewController.swift in Sources */,
 				5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */,
 				5BF6EB2B25261BE400813987 /* ZoomingDelegates.swift in Sources */,
 				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,

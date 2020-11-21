@@ -31,6 +31,7 @@ struct AppConstants {
         static let HomeViewController = "HomeViewController"
         static let CountdownViewController = "CountdownViewController"
         static let UserNameViewController = "UserNameViewController"
+        static let StorySnippetViewController = "StorySnippetViewController"
     }
     
     struct Image {

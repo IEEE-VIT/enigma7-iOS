@@ -932,6 +932,73 @@
             </objects>
             <point key="canvasLocation" x="5698.3999999999996" y="665.21739130434787"/>
         </scene>
+        <!--Story Snippet View Controller-->
+        <scene sceneID="t4Z-fJ-kSV">
+            <objects>
+                <viewController storyboardIdentifier="StorySnippetViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="2xy-Y0-eCG" customClass="StorySnippetViewController" customModule="Enigma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gOK-CM-Qu6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-0w-hxO">
+                                <rect key="frame" x="155.5" y="114" width="103.5" height="103.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Coi-0w-hxO" secondAttribute="height" id="s63-Mp-WR8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Tap to continue]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hsz-Kc-u43">
+                                <rect key="frame" x="25" y="772.5" width="364" height="24.5"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
+                                <color key="textColor" name="quaternary"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="30"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6S-Ak-Jvf">
+                                <rect key="frame" x="40" y="277.5" width="334" height="455"/>
+                                <string key="text">Etiam fermentum ut bibendum egestas id maecenas aliquam lacinia nulla.                     Tempor enim viverra eu laoreet.                      </string>
+                                <color key="textColor" name="tertiary"/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mNB-VW-6jZ"/>
+                        <color key="backgroundColor" name="dark"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Coi-0w-hxO" firstAttribute="width" secondItem="gOK-CM-Qu6" secondAttribute="width" multiplier="0.25" id="3ma-NL-eSN"/>
+                            <constraint firstItem="H6S-Ak-Jvf" firstAttribute="leading" secondItem="mNB-VW-6jZ" secondAttribute="leading" constant="40" id="DOP-7S-lgE"/>
+                            <constraint firstItem="Hsz-Kc-u43" firstAttribute="top" secondItem="H6S-Ak-Jvf" secondAttribute="bottom" constant="40" id="ETk-9s-Emj"/>
+                            <constraint firstItem="Coi-0w-hxO" firstAttribute="top" secondItem="mNB-VW-6jZ" secondAttribute="top" constant="70" id="Eh8-19-OBn"/>
+                            <constraint firstItem="mNB-VW-6jZ" firstAttribute="bottom" secondItem="Hsz-Kc-u43" secondAttribute="bottom" constant="65" id="La5-mj-v6j"/>
+                            <constraint firstItem="H6S-Ak-Jvf" firstAttribute="trailing" secondItem="mNB-VW-6jZ" secondAttribute="trailing" constant="-40" id="Mdg-9m-CCr"/>
+                            <constraint firstItem="mNB-VW-6jZ" firstAttribute="trailing" secondItem="Hsz-Kc-u43" secondAttribute="trailing" constant="25" id="UDZ-1f-NNH"/>
+                            <constraint firstItem="Hsz-Kc-u43" firstAttribute="leading" secondItem="gOK-CM-Qu6" secondAttribute="leading" constant="25" id="mLV-O0-Woo"/>
+                            <constraint firstItem="Coi-0w-hxO" firstAttribute="centerX" secondItem="gOK-CM-Qu6" secondAttribute="centerX" id="pOI-6d-Cmw"/>
+                            <constraint firstItem="H6S-Ak-Jvf" firstAttribute="top" secondItem="Coi-0w-hxO" secondAttribute="bottom" constant="60" id="qH5-zb-bFY"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="hG8-3h-cDZ" appends="YES" id="5Os-Hx-J6W"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="QIh-yg-Dlr"/>
+                    <connections>
+                        <outlet property="storyTextView" destination="H6S-Ak-Jvf" id="iGT-sh-j4C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7u-QZ-bTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hG8-3h-cDZ">
+                    <connections>
+                        <action selector="dismiss:" destination="2xy-Y0-eCG" id="rwf-gI-UfX"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="4344.927536231884" y="-1118.3035714285713"/>
+        </scene>
         <!--Play View Controller-->
         <scene sceneID="hN4-BU-F7b">
             <objects>
@@ -1210,6 +1277,7 @@
                         <outletCollection property="powerupButtons" destination="KEk-l4-VIr" collectionClass="NSMutableArray" id="2ck-Sg-XOZ"/>
                         <outletCollection property="powerupButtons" destination="6M5-9l-ZvB" collectionClass="NSMutableArray" id="J1J-mx-lS7"/>
                         <outletCollection property="powerupButtons" destination="LUv-4L-AcZ" collectionClass="NSMutableArray" id="Yic-ii-SCQ"/>
+                        <segue destination="2xy-Y0-eCG" kind="show" identifier="story" id="zfe-D0-0BL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7P-3b-fYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1504,6 +1572,7 @@
         <image name="numbers" width="186.5" height="425.5"/>
         <image name="online cryptic hunt" width="203" height="17.5"/>
         <image name="skip" width="74" height="46"/>
+        <image name="story_icon" width="500" height="499"/>
         <image name="top" width="68" height="51"/>
         <image name="top-1" width="68" height="51"/>
         <image name="top-2" width="68" height="51"/>
