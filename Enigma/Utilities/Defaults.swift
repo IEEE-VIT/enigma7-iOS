@@ -84,12 +84,19 @@ class  Defaults {
         return image
     }
     
+    static func status() -> Status? {
+        let body = UserDefaults.standard.value(forKey: Keys.status) as? Data
+        guard let data = body else { return nil }
+        return decode(data: data)
+    }
+    
     static func fetchAll(){
         if Defaults.isLoggedin() {
         print("FETCHING ALL DATA")
-            ServiceController.shared.getStory { (_) in }
+        ServiceController.shared.getStory { (_) in }
         ServiceController.shared.getLeaderboard { (_) in }
         ServiceController.shared.getUserDetails { (_) in }
+            ServiceController.shared.getStatus { (_,_)  in }
         }
     }
     

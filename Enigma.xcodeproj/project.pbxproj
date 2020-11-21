@@ -73,6 +73,18 @@
 		5B638E3C2568048D008CD80B /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E28256801DD008CD80B /* StoryModel.swift */; };
 		5B638E3D2568048D008CD80B /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E28256801DD008CD80B /* StoryModel.swift */; };
 		5B638E772568D20B008CD80B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E762568D20A008CD80B /* Status.swift */; };
+		5B638E912568D2A2008CD80B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E762568D20A008CD80B /* Status.swift */; };
+		5B638E922568D2A2008CD80B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E762568D20A008CD80B /* Status.swift */; };
+		5B638E932568D2A3008CD80B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E762568D20A008CD80B /* Status.swift */; };
+		5B638E942568D2A4008CD80B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E762568D20A008CD80B /* Status.swift */; };
+		5B638E962568D2A4008CD80B /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E762568D20A008CD80B /* Status.swift */; };
+		5B638EA82568D3E9008CD80B /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
+		5B638EA92568D3EA008CD80B /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
+		5B638EBB2568D44B008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
+		5B638EBC2568D44B008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
+		5B638EBD2568D44D008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
+		5B638EC62568D44D008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
+		5B638EC72568D44E008CD80B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
 		5B7016CD255C535B007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
 		5B7016DE255C54E6007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
 		5B7016E7255C54E7007B6F82 /* XPTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7016CC255C535B007B6F82 /* XPTimeModel.swift */; };
@@ -1162,6 +1174,8 @@
 			files = (
 				5B30BAD02545F30100B75FF4 /* Question.swift in Sources */,
 				5B30BAC22545F2FA00B75FF4 /* Defaults.swift in Sources */,
+				5B638E962568D2A4008CD80B /* Status.swift in Sources */,
+				5B638EBB2568D44B008CD80B /* AppConstants.swift in Sources */,
 				5B7016F2255C54EB007B6F82 /* XPTimeModel.swift in Sources */,
 				5B30BAC12545F2FA00B75FF4 /* Network Constants.swift in Sources */,
 				5B30BA9A2545F1EC00B75FF4 /* Intents.intentdefinition in Sources */,
@@ -1212,6 +1226,7 @@
 				5B81A361252F50BF00DA09A8 /* Network Constants.swift in Sources */,
 				5B81A389252F50E400DA09A8 /* Number.swift in Sources */,
 				5B81A310252E506E00DA09A8 /* SmallWidget.swift in Sources */,
+				5B638E932568D2A3008CD80B /* Status.swift in Sources */,
 				5B81A37E252F50D200DA09A8 /* EditUsernameModel.swift in Sources */,
 				5B4172D8252F5C56003726D0 /* Defaults.swift in Sources */,
 				5B81A379252F50D200DA09A8 /* AnswerModel.swift in Sources */,
@@ -1219,6 +1234,7 @@
 				5B81A366252F50C300DA09A8 /* Web Helper.swift in Sources */,
 				5B81A357252F506000DA09A8 /* SessionStore.swift in Sources */,
 				5B30BBCA25474E7000B75FF4 /* LargeWidget.swift in Sources */,
+				5B638EC72568D44E008CD80B /* AppConstants.swift in Sources */,
 				5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */,
 				5B81A305252E4E1000DA09A8 /* Common.swift in Sources */,
 				5B81A38E252F50ED00DA09A8 /* Error.swift in Sources */,
@@ -1291,11 +1307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B81A207252AF38100DA09A8 /* MockURLProtocol.swift in Sources */,
+				5B638EBD2568D44D008CD80B /* AppConstants.swift in Sources */,
 				5BABB73324FACA02006D5541 /* EnigmaTests.swift in Sources */,
+				5B638E912568D2A2008CD80B /* Status.swift in Sources */,
 				5BABB77024FACDD9006D5541 /* Common.swift in Sources */,
 				5B81A1F8252AF33500DA09A8 /* LoginTests.swift in Sources */,
 				5B7016DE255C54E6007B6F82 /* XPTimeModel.swift in Sources */,
 				5B81A254252B71F400DA09A8 /* GameTests.swift in Sources */,
+				5B638EA82568D3E9008CD80B /* ServiceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1304,8 +1323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BABB73E24FACA02006D5541 /* EnigmaUITests.swift in Sources */,
+				5B638EC62568D44D008CD80B /* AppConstants.swift in Sources */,
 				5B7016E7255C54E7007B6F82 /* XPTimeModel.swift in Sources */,
 				5BABB77124FACDD9006D5541 /* Common.swift in Sources */,
+				5B638E922568D2A2008CD80B /* Status.swift in Sources */,
+				5B638EA92568D3EA008CD80B /* ServiceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1322,6 +1344,7 @@
 				5BC426A025406E9700E55FE3 /* Web Helper.swift in Sources */,
 				5BC4268A25406E7800E55FE3 /* Hint.swift in Sources */,
 				5BC4264F253FFCE500E55FE3 /* NotificationController.swift in Sources */,
+				5B638E942568D2A4008CD80B /* Status.swift in Sources */,
 				5BC426702540261F00E55FE3 /* LeaderboardRow.swift in Sources */,
 				5BC4269225406E8C00E55FE3 /* Network Constants.swift in Sources */,
 				5BC426B525406EC900E55FE3 /* Error.swift in Sources */,
@@ -1331,6 +1354,7 @@
 				5BC4264D253FFCE500E55FE3 /* ExtensionDelegate.swift in Sources */,
 				5BC426AE25406EBB00E55FE3 /* Number.swift in Sources */,
 				5BC426C925407D9500E55FE3 /* ProfileController.swift in Sources */,
+				5B638EBC2568D44B008CD80B /* AppConstants.swift in Sources */,
 				5BC4267E25406E6A00E55FE3 /* ServiceController.swift in Sources */,
 				5B638E3B2568048C008CD80B /* StoryModel.swift in Sources */,
 				5BC4264B253FFCE500E55FE3 /* InterfaceController.swift in Sources */,

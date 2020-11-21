@@ -18,4 +18,10 @@ struct Status : Decodable {
         case startDate = "start_date"
         case startTime = "start_time"
     }
+    
+    var date: String {
+        guard let date = startDate else { return AppConstants.Date.startDate }
+        guard let time = startTime else { return AppConstants.Date.startDate }
+        return "\(date) \(time)"
+    }
 }

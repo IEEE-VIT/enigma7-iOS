@@ -76,10 +76,16 @@ class HomeViewController: UIViewController {
         if success{
             let usernameExists = response?.username_exists ?? false
             guard usernameExists else { self.present(AppConstants.ViewController.UserNameViewController) ; return }
-            delegate?.didSignin(response?.key ?? "")
-            Defaults.fetchAll()
+            ServiceController.shared.getStatus { [self] (status, _) in
+                if status{
+                    self.delegate?.didSignin(response?.key ?? "")
+                    Defaults.fetchAll()
+                } else {
+                    self.present(AppConstants.ViewController.CountdownViewController)
+                }
+            }
         } else {
-           // PostController.shared.logout() //TODO
+            PostController.shared.logout()
         }
     }
     
@@ -124,4 +130,8 @@ class HomeViewController: UIViewController {
         }
     }
     
+}
+
+extension HomeViewController : SignupDelegate {
+    func didSignin(_ token: String) { self.delegate?.didSignin(token) }
 }

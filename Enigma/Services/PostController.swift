@@ -42,7 +42,8 @@ class PostController {
     func skipQuestion(completion: @escaping(Bool, AnswerModel.Response?)->()){
         let body = AnswerModel.Request(answer: "")
         WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerModel.Response.self, body: body,header: true,noBody: true) { (response, statusCode) in
-            let success = (200..<300) ~= statusCode
+          //  let success = (200..<300) ~= statusCode TODO
+            let success = response?.question_id != nil
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
             completion(success,response)
         }

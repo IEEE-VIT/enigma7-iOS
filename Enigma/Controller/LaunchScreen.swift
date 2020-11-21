@@ -22,6 +22,10 @@ class LaunchScreen: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        performAnimation()
+    }
+    
+    func performAnimation(){
         for i in string {
             AudioServicesPlaySystemSound(1306)
             substring += "\(i)"
@@ -34,7 +38,7 @@ class LaunchScreen: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tabbar = segue.destination as? TabbarController { tabbar.animateHomeVC = true }
+        if let tabbar = segue.destination as? TabbarController { tabbar.animateHomeVC = false }
     }
     
 }

@@ -12,6 +12,8 @@ protocol CountdownDelegate: class {
     func didSignin(_ token: String)
 }
 
+//TODO handle Tiemzone
+
 class CountdownViewController: UIViewController {
 
     @IBOutlet weak var dayLabel: UILabel!
@@ -21,36 +23,81 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     
-    let startDate = AppConstants.Date.startDate
+    var startDate = AppConstants.Date.startDate
+    var started : Bool = false
     let formatter = DateFormatter()
-    
+    var countdownTimer: Timer?
+
     override func viewDidLoad() {
-        formatter.dateFormat = AppConstants.Date.dateFormat
-        calculateTimeDifference()
         super.viewDidLoad()
+        formatter.dateFormat = AppConstants.Date.dateFormat
+      //  formatter.timeZone = .
+        ServiceController.shared.getStatus(completion: handleStatus(started:date:))
+        startButton.isHidden = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         startButton.addBorder(UIColor.tertiary)
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in self.calculateTimeDifference() })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        countdownTimer?.invalidate()
+        countdownTimer = nil
+    }
+    
+    func handleStatus(started:Bool,date:String){
+        self.startDate = date
+        calculateTimeDifference()
+        if started {
+            countdownTimer?.invalidate()
+            countdownTimer = nil
+        } else {
+            countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in self.calculateTimeDifference() })
+        }
+        startButton.isHidden = !started
     }
     
     
     @IBAction func startClicked(_ sender: UIButton) {
         UserDefaults.standard.set(true, forKey: Keys.login)
+        ServiceController.shared.getStatus { (started, _) in
+            if started {
+                self.present(AppConstants.ViewController.RulesViewController)
+            }
+        }
     }
     
     func calculateTimeDifference(){
         
-        /// Calculate time difference
-        let calender = Calendar.current
-        let currentDate = Date()
-        let startdate = formatter.date(from: startDate)!
-        let dateComponents = calender.dateComponents([.day,.hour,.minute,.second], from: currentDate, to: startdate)
-        
-        
-        /// Set labels
-        dayLabel.text = (dateComponents.day ?? 0).timeValue
-        hourLabel.text = (dateComponents.hour ?? 0).timeValue
-        minutLabel.text = (dateComponents.minute ?? 0).timeValue
-        secondLabel.text = (dateComponents.second ?? 0).timeValue
+        if Date() > formatter.date(from: startDate)! {
+            self.dayLabel.text = "00"
+            self.hourLabel.text = "00"
+            self.minutLabel.text = "00"
+            self.secondLabel.text = "00"
+            
+            ServiceController.shared.getStatus { (started, _) in
+                if started{
+                    self.startButton.isHidden = false
+                    
+                }
+            }
+        } else {
+            /// Calculate time difference
+            let calender = Calendar.current
+            let currentDate = Date()
+            let startdate = formatter.date(from: startDate)!
+            let dateComponents = calender.dateComponents([.day,.hour,.minute,.second], from: currentDate, to: startdate)
+            
+            
+            /// Set labels
+            self.dayLabel.text = (dateComponents.day ?? 0).timeValue
+            self.hourLabel.text = (dateComponents.hour ?? 0).timeValue
+            self.minutLabel.text = (dateComponents.minute ?? 0).timeValue
+            self.secondLabel.text = (dateComponents.second ?? 0).timeValue
+        }
     }
+    
+    
 
 }
