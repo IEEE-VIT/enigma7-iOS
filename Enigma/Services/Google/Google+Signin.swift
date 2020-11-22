@@ -21,7 +21,6 @@ extension HomeViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error.localizedDescription)
-            //TODO
             return
         }
         signinWithBackend(type:.google, code:user.serverAuthCode, token: "")

@@ -9,9 +9,9 @@
 import Foundation
 
 struct Leaderboard: Decodable {
-    let username : String?
-    let solved : Int?
-    let score : Int?
+    var username : String?
+    var solved : Int?
+    var score : Int?
     
     enum CodingKeys: String, CodingKey {
         case username = "username"

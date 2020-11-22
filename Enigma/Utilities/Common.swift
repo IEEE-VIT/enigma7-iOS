@@ -12,7 +12,7 @@ import UIKit
 import WidgetKit
 #endif
 
-let maxXp : Double = 300
+let maxXp : Double = 100
 
 extension UIColor {
     static let dark = #colorLiteral(red: 0.03137254902, green: 0.05490196078, blue: 0.03137254902, alpha: 1)

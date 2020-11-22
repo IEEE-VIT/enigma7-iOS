@@ -18,23 +18,24 @@ class StoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        handleStory(story: Defaults.story())
         storyTextView.text = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        ServiceController.shared.getStory(completion: handleStory(story:))
+        handleStory(story: Defaults.fullStory()?.stories ?? [])
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        ServiceController.shared.getFullStory(completion: handleStory(story:))
     }
     
-    func handleStory(story:Story?){
-        guard let text = story?.story?.text else { return }
-        self.story = text
-        self.storyTextView.text = text
+    func handleStory(story:[Story]){
+        let texts = story.map{ $0.story?.text ?? "" }
+        let storyText = texts.joined(separator: "\n\n")
+        self.story = storyText
+        self.storyTextView.text = storyText
     }
     
     func handleStoryWithAnimation(story:Story?){

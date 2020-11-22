@@ -185,7 +185,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="XUy-VV-aQn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
-                                <state key="normal" title="Sign up with Google">
+                                <state key="normal" title="Continue with Google">
                                     <color key="titleColor" name="quaternary"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -201,7 +201,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="J4l-em-6Cm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
-                                <state key="normal" title="Sign up with Apple">
+                                <state key="normal" title="Continue with Apple">
                                     <color key="titleColor" name="quaternary"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">

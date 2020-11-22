@@ -70,6 +70,12 @@ class  Defaults {
         return decode(data: data)
     }
     
+    static func fullStory() -> Stories? {
+        let body = UserDefaults.standard.value(forKey: Keys.fullStory) as? Data
+        guard let data = body else { return nil }
+        return decode(data: data)
+    }
+    
     static func saveImage(_ data : Data?){
         guard let data = data else { return }
         userDefaults?.set(data, forKey: Keys.image)
@@ -96,11 +102,11 @@ class  Defaults {
         ServiceController.shared.getStory { (_) in }
         ServiceController.shared.getLeaderboard { (_) in }
         ServiceController.shared.getUserDetails { (_) in }
-            ServiceController.shared.getStatus { (_,_)  in }
+        ServiceController.shared.getFullStory { (_) in }
+        ServiceController.shared.getStatus { (_,_)  in }
         }
     }
     
-    //TODO empty others
     static func emptyAll(){
         UserDefaults.standard.set(false, forKey: Keys.login)
         UserDefaults.standard.set(nil, forKey: Keys.token)

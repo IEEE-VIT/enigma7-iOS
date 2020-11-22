@@ -55,8 +55,10 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "32">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Enigma">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BC42638253FFCD500E55FE3"
@@ -64,7 +66,7 @@
             BlueprintName = "EnigmaWatch"
             ReferencedContainer = "container:Enigma.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -73,8 +75,10 @@
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "32">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Enigma">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5BC42638253FFCD500E55FE3"
@@ -82,7 +86,16 @@
             BlueprintName = "EnigmaWatch"
             ReferencedContainer = "container:Enigma.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5BC42638253FFCD500E55FE3"
+            BuildableName = "EnigmaWatch.app"
+            BlueprintName = "EnigmaWatch"
+            ReferencedContainer = "container:Enigma.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

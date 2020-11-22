@@ -51,6 +51,7 @@ class WebHelper {
                         completion(responseObject, response.statusCode)
                     }
                 } catch {
+                    print("DECODE ERROR: ",error)
                     do {
                         _ = try decoder.decode(ErrorResponse.self, from: data) as Error
                         DispatchQueue.main.async {

@@ -184,6 +184,7 @@ class PlayViewController: UIViewController {
         questionLabel.text = question.text
         questionNumberLabel.text = question.questionNumber
         asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
+        ServiceController.shared.getFullStory{ _ in }
         if #available(iOS 14.0, *) {  reloadWidget()  }
     }
     
@@ -226,7 +227,7 @@ class PlayViewController: UIViewController {
         let progress = Defaults.xp() / maxXp
         print(Defaults.xp(),maxXp,progress)
         progressBar.animateProgress(toPercent: CGFloat(progress))
-        xpLabel.text = Int(Defaults.xp()).stringValue + "px"
+        xpLabel.text = Int(Defaults.xp()).stringValue + "xp"
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {
