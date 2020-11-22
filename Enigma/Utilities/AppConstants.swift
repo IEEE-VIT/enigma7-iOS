@@ -31,6 +31,7 @@ struct AppConstants {
         static let HomeViewController = "HomeViewController"
         static let CountdownViewController = "CountdownViewController"
         static let UserNameViewController = "UserNameViewController"
+        static let StorySnippetViewController = "StorySnippetViewController"
     }
     
     struct Image {
@@ -39,7 +40,7 @@ struct AppConstants {
     }
     
     struct Date {
-        static let startDate = "2020-11-21 22:43:00" //TODO put actual date
+        static let startDate = "2020-11-24 16:20:00" //TODO put actual date
         static let dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
     

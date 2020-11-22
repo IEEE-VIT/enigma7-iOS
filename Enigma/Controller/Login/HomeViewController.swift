@@ -119,7 +119,6 @@ class HomeViewController: UIViewController {
     func cc()->CGFloat{
         let bottom = (UIScreen.main.bounds.height * 0.133 + 10)
         let top : CGFloat = 62
-        print("HEIG: ",(bottom - top)/2 - 50 )
         return (bottom - top)/2 - 50
     }
     
@@ -130,8 +129,4 @@ class HomeViewController: UIViewController {
         }
     }
     
-}
-
-extension HomeViewController : SignupDelegate {
-    func didSignin(_ token: String) { self.delegate?.didSignin(token) }
 }

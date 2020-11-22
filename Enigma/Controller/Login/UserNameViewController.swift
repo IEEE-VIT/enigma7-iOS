@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol SignupDelegate: class {
-    func didSignin(_ token: String)
-}
-
 class UserNameViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
@@ -19,8 +15,6 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var errorTextView: UITextView!
     
     weak var CountdownController : CountdownViewController?
-    weak var delegate : SignupDelegate?
-
     
     let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {

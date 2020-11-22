@@ -120,6 +120,7 @@ class PlayViewController: UIViewController {
     }
     
     func processCorrectAnswer(){
+        ServiceController.shared.getStory(completion: handleStory(story:))
         self.questionLabel.text = ""
         self.answerTextField.text = ""
         self.questionImageView.image = nil
@@ -129,6 +130,19 @@ class PlayViewController: UIViewController {
         resetPowerups()
         resetHint()
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+    }
+    
+    func handleStory(story:Story?){
+        guard let text = story?.story?.text else { return }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(AppConstants.ViewController.StorySnippetViewController) as! StorySnippetViewController
+        viewController.story = text
+        addChild(viewController)
+        view.addSubview(viewController.view)
+        viewController.view.frame = view.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        viewController.view.frame = self.view.bounds
+        viewController.didMove(toParent: self)
     }
     
     @IBAction func powerupTapped(_ sender: UIButton) {
@@ -170,6 +184,7 @@ class PlayViewController: UIViewController {
         questionLabel.text = question.text
         questionNumberLabel.text = question.questionNumber
         asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
+        ServiceController.shared.getFullStory{ _ in }
         if #available(iOS 14.0, *) {  reloadWidget()  }
     }
     
@@ -212,7 +227,7 @@ class PlayViewController: UIViewController {
         let progress = Defaults.xp() / maxXp
         print(Defaults.xp(),maxXp,progress)
         progressBar.animateProgress(toPercent: CGFloat(progress))
-        xpLabel.text = Int(Defaults.xp()).stringValue + "px"
+        xpLabel.text = Int(Defaults.xp()).stringValue + "xp"
     }
     
     @IBAction func dismissKeyboard(_ sender: Any) {

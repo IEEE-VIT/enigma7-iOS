@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Story: Decodable {
-    let id : Int?
-    let story : StoryObject?
+struct Story: Codable {
+    var id : Int?
+    var story : StoryObject?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -18,13 +18,13 @@ struct Story: Decodable {
     }
 }
 
-struct StoryObject: Decodable{
+struct StoryObject: Codable{
     var text: String
     enum CodingKeys: String, CodingKey {
         case text = "story_text"
     }
 }
 
-struct Stories: Decodable {
-    let stories : [Story]?
+struct Stories: Codable {
+    var stories : [Story]?
 }
