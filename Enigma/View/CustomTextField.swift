@@ -26,3 +26,10 @@ class CustomTextField: UITextField {
     }
     
 }
+
+extension UITextField{
+    func setUI(){
+        self.backgroundColor = #colorLiteral(red: 0.05169083923, green: 0.09415727109, blue: 0.06114685535, alpha: 1)
+        self.layer.borderColor = UIColor(named: "black")?.cgColor
+    }
+}

@@ -31,6 +31,13 @@ class PostController {
         }
     }
     
+    func postOutreach(_ body: OutreachModel.Request,completion: @escaping(Bool,OutreachModel.Response?) -> ()) {
+        WebHelper.sendPOSTRequest(url: NetworkConstants.Users.outreachURL, responseType: OutreachModel.Response.self, body: body, header: true, httpMethod: .POST) { (response, statusCode) in
+            let success = (200..<300) ~= statusCode
+            completion(success,response)
+        }
+    }
+    
     func answerQuestion(_ body: AnswerModel.Request,closePowerupUsed: Bool,completion: @escaping(Bool,Bool,String)->()){
         let url = closePowerupUsed ? NetworkConstants.Game.closeAnswerPowerupURL : NetworkConstants.Game.answerURL
         WebHelper.sendPOSTRequest(url: url, responseType: AnswerModel.Response.self, body: body,header: true) { (response, statusCode) in

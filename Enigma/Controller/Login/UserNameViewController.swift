@@ -12,28 +12,36 @@ class UserNameViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var errorTextView: UITextView!
-    
+    @IBOutlet weak var sourceTextField: CustomTextField!
+    @IBOutlet weak var yearTextField: CustomTextField!
+    @IBOutlet weak var graduateLabel: UILabel!
+    @IBOutlet weak var studentSegmentedControl: UISegmentedControl!
     weak var CountdownController : CountdownViewController?
     
     let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {
         didSet {
             error = errorPrefix + error
-            errorTextView.text = error
+           // errorTextView.text = error
         }
+    }
+    
+    var isStudent: Bool {
+        return studentSegmentedControl.selectedSegmentIndex == 0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) { overrideUserInterfaceStyle = .light }
+        studentSegmentedControl.selectedSegmentIndex = 1
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         nextButton.addBorder(UIColor.tertiary)
-        userNameTextField.backgroundColor = #colorLiteral(red: 0.05169083923, green: 0.09415727109, blue: 0.06114685535, alpha: 1)
-        userNameTextField.layer.borderColor = UIColor(named: "black")?.cgColor
+        userNameTextField.setUI()
+        sourceTextField.setUI()
+        yearTextField.setUI()
     }
     
     
@@ -43,8 +51,17 @@ class UserNameViewController: UIViewController {
         PostController.shared.editUserName(request, completion: handleEditusername(success:response:))
     }
     
+    @IBAction func didTapSegment(_ sender: UISegmentedControl) {
+        graduateLabel.isHidden = sender.selectedSegmentIndex == 1
+        yearTextField.isHidden = sender.selectedSegmentIndex == 1
+    }
+    
+    
     func handleEditusername(success: Bool, response: EditUsernameModel.Response?){
-        if success{ ServiceController.shared.getStatus(completion: handleStatus(started:date:)) }
+        if success{
+            let body = OutreachModel.Request(outreach: sourceTextField.text!, is_college_student: isStudent, year: Int(yearTextField.text!) ?? 2020)
+            PostController.shared.postOutreach(body){ _,_  in }
+            ServiceController.shared.getStatus(completion: handleStatus(started:date:)) }
         else { self.error = response?.error ?? AppConstants.Error.misc}
     }
     
@@ -62,6 +79,16 @@ class UserNameViewController: UIViewController {
         
         if userNameTextField.text?.hasSpecialCharacter ?? true{
             error = AppConstants.Error.specialCharacters
+            return false
+        }
+        
+        if sourceTextField.text?.isEmpty ?? true{
+            error = AppConstants.Error.emptySource
+            return false
+        }
+        
+        if isStudent && yearTextField.text?.isEmpty ?? true{
+            error = AppConstants.Error.emptyYear
             return false
         }
 

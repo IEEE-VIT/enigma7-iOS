@@ -30,7 +30,7 @@ class LeaderboardViewController: UIViewController {
     
     func handleLeaderBoard(leaderboard: [Leaderboard]?){
         guard let leaderboard = leaderboard else { return }
-        self.leaderboard = leaderboard.filter{ $0.username != "" }
+        self.leaderboard = leaderboard
         INInteraction(intent: LeaderboardIntent(), response: nil).donate(completion: nil)
         DispatchQueue.main.async {
             self.refreshControl.endRefreshing()

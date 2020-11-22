@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -284,14 +285,14 @@
                                     <action selector="nextTapped:" destination="rM5-1r-zw8" eventType="touchUpInside" id="UKp-Vg-VtB"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yan-wa-6TD">
-                                <rect key="frame" x="20" y="158" width="374" height="552"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yan-wa-6TD">
+                                <rect key="frame" x="25" y="158" width="364" height="552"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4g-Dg-YMJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="516.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="491.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How you want to be known as" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qmh-D4-17f">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="26"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
@@ -300,7 +301,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[this can’t be edited later]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="3qq-RD-bKV">
-                                                <rect key="frame" x="0.0" y="31" width="374" height="22.5"/>
+                                                <rect key="frame" x="0.0" y="31" width="364" height="22.5"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="17"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
@@ -309,7 +310,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2c-E6-MWN" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="75.5" width="374" height="64"/>
+                                                <rect key="frame" x="0.0" y="75.5" width="364" height="39"/>
                                                 <color key="backgroundColor" red="0.094117647058823528" green="0.18400000035762787" blue="0.14100000262260437" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" name="tertiary"/>
                                                 <constraints>
@@ -323,7 +324,7 @@
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where did you hear about us?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-RX-xlM">
-                                                <rect key="frame" x="0.0" y="169.5" width="380" height="26"/>
+                                                <rect key="frame" x="0.0" y="144.5" width="370" height="26"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
@@ -332,7 +333,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odf-Ou-5hq" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="215.5" width="207" height="39"/>
+                                                <rect key="frame" x="0.0" y="190.5" width="202" height="39"/>
                                                 <color key="backgroundColor" red="0.094117647060000004" green="0.1840000004" blue="0.14100000260000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" name="tertiary"/>
                                                 <constraints>
@@ -343,7 +344,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a College Student?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-Ce-GVv">
-                                                <rect key="frame" x="0.0" y="284.5" width="374" height="26"/>
+                                                <rect key="frame" x="0.0" y="259.5" width="364" height="26"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
@@ -352,14 +353,125 @@
                                                 </variation>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kb2-bG-TDQ">
-                                                <rect key="frame" x="0.0" y="330.5" width="187" height="32"/>
+                                                <rect key="frame" x="0.0" y="305.5" width="182" height="32"/>
                                                 <segments>
                                                     <segment title="Yes"/>
                                                     <segment title="No"/>
                                                 </segments>
+                                                <color key="selectedSegmentTintColor" name="secondary"/>
+                                                <connections>
+                                                    <action selector="didTapSegment:" destination="rM5-1r-zw8" eventType="valueChanged" id="lyB-t3-dkl"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where did you hear about us?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oUC-sJ-16u">
-                                                <rect key="frame" x="0.0" y="401.5" width="374" height="26"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dg3-dS-QJT">
+                                                <rect key="frame" x="0.0" y="228" width="202" height="312"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6x0-do-ELN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="202" height="39"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="39" id="ZG9-hh-V0f"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Twitter">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oj1-L1-gLJ">
+                                                        <rect key="frame" x="0.0" y="39" width="202" height="39"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Instagram">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iY7-gw-ije">
+                                                        <rect key="frame" x="0.0" y="78" width="202" height="39"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Facebook">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gle-z1-l1f">
+                                                        <rect key="frame" x="0.0" y="117" width="202" height="39"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Reddit">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkW-3Z-ujU">
+                                                        <rect key="frame" x="0.0" y="156" width="202" height="39"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Email">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8Y-1A-RhD">
+                                                        <rect key="frame" x="0.0" y="195" width="202" height="39"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Whatsapp">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hle-R0-S0o">
+                                                        <rect key="frame" x="0.0" y="234" width="202" height="39"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Word of Mouth">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cN9-bx-Hpq">
+                                                        <rect key="frame" x="0.0" y="273" width="202" height="39"/>
+                                                        <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="18"/>
+                                                        <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="Other">
+                                                            <color key="titleColor" name="quaternary"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="gle-z1-l1f" secondAttribute="trailing" id="1Fu-m4-pCR"/>
+                                                    <constraint firstItem="hle-R0-S0o" firstAttribute="height" secondItem="6x0-do-ELN" secondAttribute="height" id="41Y-AS-bDO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oj1-L1-gLJ" secondAttribute="trailing" id="4WZ-fz-8pM"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6x0-do-ELN" secondAttribute="trailing" id="5RJ-A3-Hw1"/>
+                                                    <constraint firstItem="j8Y-1A-RhD" firstAttribute="top" secondItem="wkW-3Z-ujU" secondAttribute="bottom" id="BQ7-Zq-N3u"/>
+                                                    <constraint firstItem="j8Y-1A-RhD" firstAttribute="height" secondItem="6x0-do-ELN" secondAttribute="height" id="Elf-Q4-OVg"/>
+                                                    <constraint firstItem="wkW-3Z-ujU" firstAttribute="height" secondItem="6x0-do-ELN" secondAttribute="height" id="G3h-Hb-uht"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cN9-bx-Hpq" secondAttribute="trailing" id="H0c-JQ-nnK"/>
+                                                    <constraint firstItem="cN9-bx-Hpq" firstAttribute="top" secondItem="hle-R0-S0o" secondAttribute="bottom" id="IcX-Sd-WCT"/>
+                                                    <constraint firstItem="iY7-gw-ije" firstAttribute="top" secondItem="oj1-L1-gLJ" secondAttribute="bottom" id="If5-GJ-IuC"/>
+                                                    <constraint firstItem="wkW-3Z-ujU" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="Lz2-Eh-Pr9"/>
+                                                    <constraint firstItem="oj1-L1-gLJ" firstAttribute="top" secondItem="6x0-do-ELN" secondAttribute="bottom" id="Sfg-xw-CVg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="j8Y-1A-RhD" secondAttribute="trailing" id="TBI-a5-a5b"/>
+                                                    <constraint firstItem="hle-R0-S0o" firstAttribute="top" secondItem="j8Y-1A-RhD" secondAttribute="bottom" id="c6k-OC-4bh"/>
+                                                    <constraint firstItem="6x0-do-ELN" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="dNg-aU-0pp"/>
+                                                    <constraint firstItem="6x0-do-ELN" firstAttribute="top" secondItem="dg3-dS-QJT" secondAttribute="top" id="eB6-rn-TRU"/>
+                                                    <constraint firstItem="gle-z1-l1f" firstAttribute="top" secondItem="iY7-gw-ije" secondAttribute="bottom" id="fiJ-GQ-plD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hle-R0-S0o" secondAttribute="trailing" id="fsW-p5-WFR"/>
+                                                    <constraint firstItem="oj1-L1-gLJ" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="gOr-fX-82H"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iY7-gw-ije" secondAttribute="trailing" id="ipe-Gn-bRp"/>
+                                                    <constraint firstItem="hle-R0-S0o" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="jWv-5V-YX9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wkW-3Z-ujU" secondAttribute="trailing" id="jna-Ii-Ltn"/>
+                                                    <constraint firstItem="oj1-L1-gLJ" firstAttribute="height" secondItem="6x0-do-ELN" secondAttribute="height" id="ljC-Hw-SsM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cN9-bx-Hpq" secondAttribute="bottom" id="m9r-mS-L1I"/>
+                                                    <constraint firstItem="cN9-bx-Hpq" firstAttribute="height" secondItem="6x0-do-ELN" secondAttribute="height" id="mQC-ZK-Kdh"/>
+                                                    <constraint firstItem="iY7-gw-ije" firstAttribute="height" secondItem="6x0-do-ELN" secondAttribute="height" id="qe1-gW-cQU"/>
+                                                    <constraint firstItem="wkW-3Z-ujU" firstAttribute="top" secondItem="gle-z1-l1f" secondAttribute="bottom" id="qzl-m9-ve1"/>
+                                                    <constraint firstItem="gle-z1-l1f" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="uCv-aG-che"/>
+                                                    <constraint firstItem="iY7-gw-ije" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="uJi-of-g2q"/>
+                                                    <constraint firstItem="j8Y-1A-RhD" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="uJj-HI-b1o"/>
+                                                    <constraint firstItem="gle-z1-l1f" firstAttribute="height" secondItem="6x0-do-ELN" secondAttribute="height" id="xTh-yc-KGf"/>
+                                                    <constraint firstItem="cN9-bx-Hpq" firstAttribute="leading" secondItem="dg3-dS-QJT" secondAttribute="leading" id="zhs-bv-Td8"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which year will you graduate in?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oUC-sJ-16u">
+                                                <rect key="frame" x="0.0" y="376.5" width="364" height="26"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
@@ -368,7 +480,7 @@
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXD-XR-Drq" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="447.5" width="187" height="39"/>
+                                                <rect key="frame" x="0.0" y="422.5" width="182" height="39"/>
                                                 <color key="backgroundColor" red="0.094117647060000004" green="0.1840000004" blue="0.14100000260000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" name="tertiary"/>
                                                 <constraints>
@@ -382,7 +494,6 @@
                                         <color key="backgroundColor" name="dark"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="qmh-D4-17f" secondAttribute="trailing" id="2Gb-ab-EsP"/>
-                                            <constraint firstItem="o2c-E6-MWN" firstAttribute="height" secondItem="R4g-Dg-YMJ" secondAttribute="height" multiplier="0.05" constant="38.25" id="2Pq-uP-nQy"/>
                                             <constraint firstItem="3qq-RD-bKV" firstAttribute="trailing" secondItem="qmh-D4-17f" secondAttribute="trailing" id="4RH-ED-ptl"/>
                                             <constraint firstItem="OnX-RX-xlM" firstAttribute="leading" secondItem="cAe-Ce-GVv" secondAttribute="leading" id="A20-OK-9cJ"/>
                                             <constraint firstItem="Kb2-bG-TDQ" firstAttribute="width" secondItem="R4g-Dg-YMJ" secondAttribute="width" multiplier="0.5" id="CuE-g1-zA6"/>
@@ -392,9 +503,11 @@
                                             <constraint firstItem="OnX-RX-xlM" firstAttribute="top" secondItem="o2c-E6-MWN" secondAttribute="bottom" constant="30" id="LXs-zJ-mhP"/>
                                             <constraint firstAttribute="trailing" secondItem="cAe-Ce-GVv" secondAttribute="trailing" id="N8Z-Td-pTB"/>
                                             <constraint firstItem="o2c-E6-MWN" firstAttribute="top" secondItem="3qq-RD-bKV" secondAttribute="bottom" constant="22" id="OUC-St-SDA"/>
+                                            <constraint firstItem="dg3-dS-QJT" firstAttribute="leading" secondItem="odf-Ou-5hq" secondAttribute="leading" id="Pev-iN-ypn"/>
                                             <constraint firstItem="odf-Ou-5hq" firstAttribute="width" secondItem="R4g-Dg-YMJ" secondAttribute="width" multiplier="0.5" constant="20" id="SJd-os-gEA"/>
                                             <constraint firstItem="odf-Ou-5hq" firstAttribute="top" secondItem="OnX-RX-xlM" secondAttribute="bottom" constant="20" id="SfO-o4-NtZ"/>
                                             <constraint firstItem="qmh-D4-17f" firstAttribute="top" secondItem="R4g-Dg-YMJ" secondAttribute="top" id="Sy0-R5-rPg"/>
+                                            <constraint firstItem="dg3-dS-QJT" firstAttribute="trailing" secondItem="odf-Ou-5hq" secondAttribute="trailing" id="U7A-pd-AXi"/>
                                             <constraint firstItem="Kb2-bG-TDQ" firstAttribute="top" secondItem="cAe-Ce-GVv" secondAttribute="bottom" constant="20" id="Z82-ds-hhM"/>
                                             <constraint firstItem="HXD-XR-Drq" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="aQG-6a-BTv"/>
                                             <constraint firstItem="cAe-Ce-GVv" firstAttribute="top" secondItem="odf-Ou-5hq" secondAttribute="bottom" constant="30" id="cCk-30-caO"/>
@@ -403,6 +516,7 @@
                                             <constraint firstItem="oUC-sJ-16u" firstAttribute="top" secondItem="Kb2-bG-TDQ" secondAttribute="bottom" constant="40" id="hdJ-f5-MMp"/>
                                             <constraint firstAttribute="bottom" secondItem="HXD-XR-Drq" secondAttribute="bottom" constant="30" id="jB0-th-A7r"/>
                                             <constraint firstAttribute="trailing" secondItem="oUC-sJ-16u" secondAttribute="trailing" id="ma1-SV-VUL"/>
+                                            <constraint firstItem="dg3-dS-QJT" firstAttribute="top" secondItem="odf-Ou-5hq" secondAttribute="bottom" constant="-1.5" id="q7O-SW-Z6A"/>
                                             <constraint firstItem="3qq-RD-bKV" firstAttribute="top" secondItem="qmh-D4-17f" secondAttribute="bottom" constant="5" id="qnC-mG-wwQ"/>
                                             <constraint firstItem="cAe-Ce-GVv" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="rKR-T8-pFL"/>
                                             <constraint firstItem="HXD-XR-Drq" firstAttribute="top" secondItem="oUC-sJ-16u" secondAttribute="bottom" constant="20" id="rgx-So-o1g"/>
@@ -420,6 +534,7 @@
                                     <constraint firstItem="R4g-Dg-YMJ" firstAttribute="bottom" secondItem="Yan-wa-6TD" secondAttribute="bottom" id="NZR-3l-9Kw"/>
                                     <constraint firstItem="R4g-Dg-YMJ" firstAttribute="leading" secondItem="Yan-wa-6TD" secondAttribute="leading" id="X1N-KF-yNp"/>
                                     <constraint firstAttribute="trailing" secondItem="R4g-Dg-YMJ" secondAttribute="trailing" id="fi6-4b-HdO"/>
+                                    <constraint firstItem="R4g-Dg-YMJ" firstAttribute="width" secondItem="Yan-wa-6TD" secondAttribute="width" id="nTc-Xk-Joc"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -428,11 +543,10 @@
                         <constraints>
                             <constraint firstItem="ld3-S3-cDX" firstAttribute="centerX" secondItem="NaV-mU-Xfd" secondAttribute="centerX" id="4E1-UM-kim"/>
                             <constraint firstItem="ybr-gy-Cle" firstAttribute="trailing" secondItem="kB9-F7-Qkl" secondAttribute="trailing" constant="50" id="7mL-cZ-yNy"/>
-                            <constraint firstItem="ybr-gy-Cle" firstAttribute="trailing" secondItem="Yan-wa-6TD" secondAttribute="trailing" constant="20" id="8o2-9e-aTH"/>
+                            <constraint firstItem="ybr-gy-Cle" firstAttribute="trailing" secondItem="Yan-wa-6TD" secondAttribute="trailing" constant="25" id="8o2-9e-aTH"/>
                             <constraint firstItem="ld3-S3-cDX" firstAttribute="width" secondItem="NaV-mU-Xfd" secondAttribute="width" multiplier="0.7" id="Ax3-gj-scH"/>
                             <constraint firstItem="kB9-F7-Qkl" firstAttribute="leading" secondItem="ybr-gy-Cle" secondAttribute="leading" constant="20" id="B9I-Ix-1kQ"/>
-                            <constraint firstItem="Yan-wa-6TD" firstAttribute="leading" secondItem="ybr-gy-Cle" secondAttribute="leading" constant="20" id="G8Y-U8-rVK"/>
-                            <constraint firstItem="R4g-Dg-YMJ" firstAttribute="width" secondItem="NaV-mU-Xfd" secondAttribute="width" multiplier="0.903382" id="Gmk-GP-jag"/>
+                            <constraint firstItem="Yan-wa-6TD" firstAttribute="leading" secondItem="ybr-gy-Cle" secondAttribute="leading" constant="25" id="G8Y-U8-rVK"/>
                             <constraint firstItem="ld3-S3-cDX" firstAttribute="top" secondItem="Yan-wa-6TD" secondAttribute="bottom" constant="30" id="LK5-n3-Q2u"/>
                             <constraint firstItem="ybr-gy-Cle" firstAttribute="bottom" secondItem="ld3-S3-cDX" secondAttribute="bottom" constant="70" id="Ppo-tX-kVW"/>
                             <constraint firstItem="Yan-wa-6TD" firstAttribute="top" secondItem="kB9-F7-Qkl" secondAttribute="bottom" constant="40" id="Ytm-kW-YeY"/>
@@ -441,8 +555,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="3lR-RK-JED"/>
                     <connections>
+                        <outlet property="graduateLabel" destination="oUC-sJ-16u" id="yM7-lZ-i9z"/>
                         <outlet property="nextButton" destination="ld3-S3-cDX" id="8Oo-Zb-ha6"/>
+                        <outlet property="sourceTextField" destination="odf-Ou-5hq" id="pBo-u2-nAf"/>
+                        <outlet property="studentSegmentedControl" destination="Kb2-bG-TDQ" id="H5j-fF-BYQ"/>
                         <outlet property="userNameTextField" destination="o2c-E6-MWN" id="4is-r1-GoX"/>
+                        <outlet property="yearTextField" destination="HXD-XR-Drq" id="YHh-JH-kh5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YM0-yn-egL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1671,8 +1789,14 @@
         <namedColor name="quaternary">
             <color red="0.14900000393390656" green="0.875" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="secondary">
+            <color red="0.078000001609325409" green="0.36899998784065247" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="tertiary">
             <color red="0.11400000005960464" green="0.72200000286102295" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
