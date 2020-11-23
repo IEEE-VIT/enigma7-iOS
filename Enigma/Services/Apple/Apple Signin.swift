@@ -22,9 +22,10 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
     
     func appleSignin() {
         if #available(iOS 13.0, *) {
-            let appleIDProvider = ASAuthorizationAppleIDProvider()
+        self.appleButton.isEnabled = false
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
+        request.requestedScopes = [.email]
         
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
@@ -51,6 +52,7 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("ASAuthorizationController: ",error.localizedDescription)
+        self.appleButton.isEnabled = true
     }
     
     func appleAlert(){

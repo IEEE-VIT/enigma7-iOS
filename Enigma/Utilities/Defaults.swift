@@ -25,6 +25,14 @@ class  Defaults {
         return (UserDefaults.standard.value(forKey: Keys.login) as? Bool) ?? false
     }
     
+    static func enigmaStarted() -> Bool {
+        return (UserDefaults.standard.value(forKey: Keys.enigmaStarted) as? Bool) ?? false
+    }
+    
+    static func appOpenCount() -> Int {
+        return (UserDefaults.standard.value(forKey: Keys.appOpenCount) as? Int) ?? 1
+    }
+    
     static func login(_ key : String){
         UserDefaults.standard.set("Token " + key, forKey: Keys.token)
         let defaults = UserDefaults(suiteName: "group.widget.ak")

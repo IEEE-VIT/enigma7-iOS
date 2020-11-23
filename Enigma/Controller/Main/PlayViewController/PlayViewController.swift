@@ -61,6 +61,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         updateProgressbar()
         ServiceController.shared.getXpTime(completion: handleXp(time:))
+        StoreReviewHelper.checkAndAskForReview()
         //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     

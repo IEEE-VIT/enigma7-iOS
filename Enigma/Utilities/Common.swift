@@ -42,6 +42,8 @@ class Keys {
     static let story = "EnigmaStory"
     static let fullStory = "EnigmaFullStory"
     static let status = "EnigmaStatus"
+    static let enigmaStarted = "EnigmaStarted"
+    static let appOpenCount = "EnigmaAppOpenCount"
 }
 
 public func reloadWidget(){

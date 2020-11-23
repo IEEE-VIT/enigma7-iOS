@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rM5-1r-zw8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dw4-pL-BHq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -284,8 +284,8 @@
                                     <action selector="nextTapped:" destination="rM5-1r-zw8" eventType="touchUpInside" id="UKp-Vg-VtB"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yan-wa-6TD">
-                                <rect key="frame" x="25" y="154.5" width="364" height="555.5"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yan-wa-6TD">
+                                <rect key="frame" x="25" y="157" width="364" height="552"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4g-Dg-YMJ">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="480"/>
@@ -308,8 +308,8 @@
                                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="23"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2c-E6-MWN" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="75.5" width="364" height="39"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2c-E6-MWN" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70.5" width="364" height="39"/>
                                                 <color key="backgroundColor" red="0.094117647058823528" green="0.18400000035762787" blue="0.14100000262260437" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" name="tertiary"/>
                                                 <constraints>
@@ -317,13 +317,13 @@
                                                 </constraints>
                                                 <color key="textColor" name="tertiary"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="rM5-1r-zw8" id="RYX-Le-1gm"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Where did you hear about us?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-RX-xlM">
-                                                <rect key="frame" x="0.0" y="144.5" width="370" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where did you hear about us?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-RX-xlM">
+                                                <rect key="frame" x="0.0" y="139.5" width="370" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="quaternary"/>
                                                 <nil key="highlightedColor"/>
@@ -331,8 +331,42 @@
                                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odf-Ou-5hq" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="190.5" width="238.5" height="39"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a College Student?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-Ce-GVv">
+                                                <rect key="frame" x="0.0" y="252" width="364" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                                <color key="textColor" name="quaternary"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
+                                                </variation>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kb2-bG-TDQ">
+                                                <rect key="frame" x="0.0" y="295.5" width="182" height="32"/>
+                                                <segments>
+                                                    <segment title="Yes"/>
+                                                    <segment title="No"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" name="secondary"/>
+                                                <connections>
+                                                    <action selector="didTapSegment:" destination="rM5-1r-zw8" eventType="valueChanged" id="lyB-t3-dkl"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which year will you graduate in?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oUC-sJ-16u">
+                                                <rect key="frame" x="0.0" y="366.5" width="364" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
+                                                <color key="textColor" name="quaternary"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
+                                                </variation>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHD-uj-gxZ">
+                                                <rect key="frame" x="0.0" y="183" width="238.5" height="216"/>
+                                                <color key="backgroundColor" name="dark"/>
+                                                <color key="tintColor" name="quaternary"/>
+                                            </pickerView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odf-Ou-5hq" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="183" width="238.5" height="39"/>
                                                 <color key="backgroundColor" red="0.094117647060000004" green="0.1840000004" blue="0.14100000260000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" name="tertiary"/>
                                                 <constraints>
@@ -345,51 +379,8 @@
                                                     <outlet property="delegate" destination="rM5-1r-zw8" id="eUX-Q5-Zgj"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Are you a College Student?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cAe-Ce-GVv">
-                                                <rect key="frame" x="0.0" y="259.5" width="364" height="26"/>
-                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
-                                                <color key="textColor" name="quaternary"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
-                                                </variation>
-                                            </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kb2-bG-TDQ">
-                                                <rect key="frame" x="0.0" y="305.5" width="182" height="32"/>
-                                                <segments>
-                                                    <segment title="Yes"/>
-                                                    <segment title="No"/>
-                                                </segments>
-                                                <color key="selectedSegmentTintColor" name="secondary"/>
-                                                <connections>
-                                                    <action selector="didTapSegment:" destination="rM5-1r-zw8" eventType="valueChanged" id="lyB-t3-dkl"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Which year will you graduate in?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oUC-sJ-16u">
-                                                <rect key="frame" x="0.0" y="376.5" width="364" height="26"/>
-                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
-                                                <color key="textColor" name="quaternary"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=regular-widthClass=regular">
-                                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
-                                                </variation>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXD-XR-Drq" customClass="CustomTextField" customModule="Enigma" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="422.5" width="182" height="39"/>
-                                                <color key="backgroundColor" red="0.094117647060000004" green="0.1840000004" blue="0.14100000260000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" name="tertiary"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="nc2-AG-xMn"/>
-                                                </constraints>
-                                                <color key="textColor" name="tertiary"/>
-                                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IHD-uj-gxZ">
-                                                <rect key="frame" x="0.0" y="229.5" width="238.5" height="221"/>
-                                            </pickerView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTb-CQ-7aq">
-                                                <rect key="frame" x="211.5" y="197.5" width="17" height="25"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTb-CQ-7aq">
+                                                <rect key="frame" x="211.5" y="190" width="17" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="17" id="AOA-T0-3lX"/>
                                                     <constraint firstAttribute="height" constant="25" id="gye-vS-wK2"/>
@@ -399,6 +390,29 @@
                                                     <action selector="dropDown:" destination="rM5-1r-zw8" eventType="touchUpInside" id="HLM-J7-rgw"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LX-3S-UvS">
+                                                <rect key="frame" x="0.0" y="222" width="238.5" height="1"/>
+                                                <color key="backgroundColor" name="tertiary"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="K43-7C-Cxi"/>
+                                                </constraints>
+                                            </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-42-KJi">
+                                                <rect key="frame" x="0.0" y="415" width="364" height="32"/>
+                                                <color key="backgroundColor" name="dark"/>
+                                                <segments>
+                                                    <segment title="2020"/>
+                                                    <segment title="2021"/>
+                                                    <segment title="2022"/>
+                                                    <segment title="2023"/>
+                                                    <segment title="2024"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.15118002890000001" green="0.70630997419999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="selectedSegmentTintColor" name="quaternary"/>
+                                                <connections>
+                                                    <action selector="graduationYear:" destination="rM5-1r-zw8" eventType="valueChanged" id="62O-hQ-2nU"/>
+                                                </connections>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" name="dark"/>
                                         <constraints>
@@ -408,7 +422,8 @@
                                             <constraint firstItem="Kb2-bG-TDQ" firstAttribute="width" secondItem="R4g-Dg-YMJ" secondAttribute="width" multiplier="0.5" id="CuE-g1-zA6"/>
                                             <constraint firstAttribute="trailing" secondItem="o2c-E6-MWN" secondAttribute="trailing" id="FOa-gs-9W5"/>
                                             <constraint firstItem="odf-Ou-5hq" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="FXB-xe-8qQ"/>
-                                            <constraint firstItem="HXD-XR-Drq" firstAttribute="width" secondItem="R4g-Dg-YMJ" secondAttribute="width" multiplier="0.5" id="Fin-7Q-QJs"/>
+                                            <constraint firstItem="BKX-42-KJi" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="GJG-FA-aw9"/>
+                                            <constraint firstItem="BKX-42-KJi" firstAttribute="top" secondItem="oUC-sJ-16u" secondAttribute="bottom" constant="25" id="K8I-4c-C2D"/>
                                             <constraint firstItem="OnX-RX-xlM" firstAttribute="top" secondItem="o2c-E6-MWN" secondAttribute="bottom" constant="30" id="LXs-zJ-mhP"/>
                                             <constraint firstItem="IHD-uj-gxZ" firstAttribute="height" secondItem="R4g-Dg-YMJ" secondAttribute="height" multiplier="0.45" id="N8F-nZ-5or"/>
                                             <constraint firstAttribute="trailing" secondItem="cAe-Ce-GVv" secondAttribute="trailing" id="N8Z-Td-pTB"/>
@@ -417,20 +432,21 @@
                                             <constraint firstItem="odf-Ou-5hq" firstAttribute="width" secondItem="R4g-Dg-YMJ" secondAttribute="width" multiplier="0.6" constant="20" id="SJd-os-gEA"/>
                                             <constraint firstItem="odf-Ou-5hq" firstAttribute="top" secondItem="OnX-RX-xlM" secondAttribute="bottom" constant="20" id="SfO-o4-NtZ"/>
                                             <constraint firstItem="qmh-D4-17f" firstAttribute="top" secondItem="R4g-Dg-YMJ" secondAttribute="top" id="Sy0-R5-rPg"/>
+                                            <constraint firstAttribute="trailing" secondItem="BKX-42-KJi" secondAttribute="trailing" id="Ufy-Zx-uFf"/>
+                                            <constraint firstItem="3LX-3S-UvS" firstAttribute="leading" secondItem="odf-Ou-5hq" secondAttribute="leading" id="Wps-G7-Rho"/>
                                             <constraint firstItem="Kb2-bG-TDQ" firstAttribute="top" secondItem="cAe-Ce-GVv" secondAttribute="bottom" constant="20" id="Z82-ds-hhM"/>
-                                            <constraint firstItem="HXD-XR-Drq" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="aQG-6a-BTv"/>
+                                            <constraint firstItem="3LX-3S-UvS" firstAttribute="trailing" secondItem="odf-Ou-5hq" secondAttribute="trailing" id="bBe-eT-Fo4"/>
                                             <constraint firstItem="cAe-Ce-GVv" firstAttribute="top" secondItem="odf-Ou-5hq" secondAttribute="bottom" constant="30" id="cCk-30-caO"/>
                                             <constraint firstAttribute="trailing" secondItem="OnX-RX-xlM" secondAttribute="trailing" constant="-6" id="cnP-hk-NXA"/>
                                             <constraint firstItem="IHD-uj-gxZ" firstAttribute="leading" secondItem="odf-Ou-5hq" secondAttribute="leading" id="fUu-bv-eXU"/>
                                             <constraint firstItem="oUC-sJ-16u" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="hLh-WB-5HZ"/>
                                             <constraint firstItem="oUC-sJ-16u" firstAttribute="top" secondItem="Kb2-bG-TDQ" secondAttribute="bottom" constant="40" id="hdJ-f5-MMp"/>
-                                            <constraint firstAttribute="bottom" secondItem="HXD-XR-Drq" secondAttribute="bottom" constant="30" id="jB0-th-A7r"/>
-                                            <constraint firstItem="IHD-uj-gxZ" firstAttribute="top" secondItem="odf-Ou-5hq" secondAttribute="bottom" id="jOa-lB-n0n"/>
+                                            <constraint firstItem="IHD-uj-gxZ" firstAttribute="top" secondItem="odf-Ou-5hq" secondAttribute="top" id="jOa-lB-n0n"/>
+                                            <constraint firstItem="3LX-3S-UvS" firstAttribute="top" secondItem="odf-Ou-5hq" secondAttribute="bottom" id="lTw-Ci-qAm"/>
                                             <constraint firstAttribute="trailing" secondItem="oUC-sJ-16u" secondAttribute="trailing" id="ma1-SV-VUL"/>
                                             <constraint firstItem="PTb-CQ-7aq" firstAttribute="trailing" secondItem="odf-Ou-5hq" secondAttribute="trailing" constant="-10" id="neH-Je-iIK"/>
                                             <constraint firstItem="3qq-RD-bKV" firstAttribute="top" secondItem="qmh-D4-17f" secondAttribute="bottom" constant="5" id="qnC-mG-wwQ"/>
                                             <constraint firstItem="cAe-Ce-GVv" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="rKR-T8-pFL"/>
-                                            <constraint firstItem="HXD-XR-Drq" firstAttribute="top" secondItem="oUC-sJ-16u" secondAttribute="bottom" constant="20" id="rgx-So-o1g"/>
                                             <constraint firstItem="OnX-RX-xlM" firstAttribute="leading" secondItem="o2c-E6-MWN" secondAttribute="leading" id="rim-Im-EjR"/>
                                             <constraint firstItem="IHD-uj-gxZ" firstAttribute="trailing" secondItem="odf-Ou-5hq" secondAttribute="trailing" id="um4-w2-21i"/>
                                             <constraint firstItem="Kb2-bG-TDQ" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="xR7-b5-0St"/>
@@ -470,11 +486,12 @@
                         <outlet property="dropDownButton" destination="PTb-CQ-7aq" id="wY2-jP-Fz4"/>
                         <outlet property="graduateLabel" destination="oUC-sJ-16u" id="yM7-lZ-i9z"/>
                         <outlet property="nextButton" destination="ld3-S3-cDX" id="8Oo-Zb-ha6"/>
+                        <outlet property="pickerTop" destination="3LX-3S-UvS" id="TEV-gd-gYO"/>
                         <outlet property="sourcePicker" destination="IHD-uj-gxZ" id="akf-Fg-31s"/>
                         <outlet property="sourceTextField" destination="odf-Ou-5hq" id="pBo-u2-nAf"/>
                         <outlet property="studentSegmentedControl" destination="Kb2-bG-TDQ" id="H5j-fF-BYQ"/>
                         <outlet property="userNameTextField" destination="o2c-E6-MWN" id="4is-r1-GoX"/>
-                        <outlet property="yearTextField" destination="HXD-XR-Drq" id="YHh-JH-kh5"/>
+                        <outlet property="yearPicker" destination="BKX-42-KJi" id="rEM-WA-e3T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YM0-yn-egL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

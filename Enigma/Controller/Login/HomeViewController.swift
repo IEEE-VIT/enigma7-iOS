@@ -59,6 +59,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signinWithGoogle(_ sender: Any) {
+        self.googleButton.isEnabled = false
         GIDSignIn.sharedInstance().signIn()
     }
     
@@ -87,6 +88,8 @@ class HomeViewController: UIViewController {
         } else {
             PostController.shared.logout()
         }
+        self.appleButton.isEnabled = true
+        self.googleButton.isEnabled = true
     }
     
     
