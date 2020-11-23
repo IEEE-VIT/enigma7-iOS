@@ -20,6 +20,7 @@ extension HomeViewController: GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
+            self.googleButton.isEnabled = true
             print(error.localizedDescription)
             return
         }

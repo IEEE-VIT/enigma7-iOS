@@ -62,7 +62,6 @@ class PlayViewController: UIViewController {
         updateProgressbar()
         ServiceController.shared.getXpTime(completion: handleXp(time:))
         StoreReviewHelper.checkAndAskForReview()
-        //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     
     override func viewDidDisappear(_ animated: Bool) {

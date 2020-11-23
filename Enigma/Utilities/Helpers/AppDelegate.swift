@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Intents
 import GoogleSignIn
 
 @UIApplicationMain
@@ -18,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         StoreReviewHelper.incrementAppOpenedCount()
         Defaults.fetchAll()
-        requestSiri()
         return true
     }
 
@@ -48,15 +46,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(intent)
             return true
         }
-    
-    func requestSiri(){
-        INPreferences.requestSiriAuthorization { status in
-          if status == .authorized {
-            print("Hey, Siri!")
-          } else {
-            print("Nay, Siri!")
-          }
-        }
-    }
 }
 

@@ -22,11 +22,11 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var yearPicker: UISegmentedControl!
     
     @IBOutlet weak var pickerTop: UIView!
-    let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {
         didSet {
-            error = errorPrefix + error
-           // errorTextView.text = error
+            DispatchQueue.main.async {
+                self.presentAKAlert(type: .custom(message: self.error))
+            }
         }
     }
     
@@ -36,7 +36,7 @@ class UserNameViewController: UIViewController {
         return studentSegmentedControl.selectedSegmentIndex == 0
     }
     
-    var sourceList = ["Reddit","Facebook","Instagram","Word of Mouth"]
+    var sourceList = ["Twitter","Instagram","Facebook","Reddit","Email","Whatsapp","Word of Mouth","Other"]
     
     var editFrame = CGAffineTransform()
     var frame = CGRect()
@@ -48,11 +48,7 @@ class UserNameViewController: UIViewController {
         if #available(iOS 13.0, *) { overrideUserInterfaceStyle = .light }
         studentSegmentedControl.selectedSegmentIndex = 1
         self.didTapSegment(studentSegmentedControl)
-        editFrame = sourcePicker.transform
-        sourcePicker.layer.borderColor = UIColor.tertiary.cgColor
-        sourcePicker.layer.borderWidth = 1.0
-        sourcePicker.alpha = 0.0
-        pickerTop.alpha = 0.0
+        self.setupUI()
     }
     
     override func viewWillLayoutSubviews() {
@@ -69,6 +65,19 @@ class UserNameViewController: UIViewController {
         sourcePicker.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: 0.0)
     }
     
+    func setupUI(){
+        editFrame = sourcePicker.transform
+        sourcePicker.layer.borderColor = UIColor.tertiary.cgColor
+        sourcePicker.layer.borderWidth = 1.0
+        sourcePicker.alpha = 0.0
+        pickerTop.alpha = 0.0
+        let tertiaryText = [NSAttributedString.Key.foregroundColor: UIColor.tertiary]
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.quaternary]
+        yearPicker.setTitleTextAttributes(tertiaryText, for: .normal)
+        yearPicker.setTitleTextAttributes(titleTextAttributes, for: .selected)
+        studentSegmentedControl.setTitleTextAttributes(tertiaryText, for: .normal)
+        studentSegmentedControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
+    }
     
     @IBAction func nextTapped(_ sender: Any) {
         guard validate() == true else { return }
@@ -88,9 +97,27 @@ class UserNameViewController: UIViewController {
     
     
     @IBAction func dropDown(_ sender: Any) {
+        self.view.endEditing(true)
         cardOpen ? closeCard() : openCard()
         cardOpen.toggle()
     }
+    
+    
+    @IBAction func taptodismiss(_ sender: Any) {
+        self.view.endEditing(true)
+        if cardOpen { self.dropDown(Any.self) }
+    }
+    
+    func presentAKAlert(type: AKAlert.ALertType){
+        let width = UIScreen.main.bounds.width * 0.8
+        let height = width / 3.33
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        let alert = AKAlert(type: type)
+        alert.frame = frame
+        self.view.addSubview(alert)
+        alert.center = self.view.center
+    }
+    
     
     func openCard(){
         UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: {
@@ -163,9 +190,10 @@ extension UserNameViewController : UITextFieldDelegate{
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == sourceTextField {
+            if !cardOpen {  self.dropDown(Any.self) }
             return false
         }
-        
+        if cardOpen { self.dropDown(Any.self) }    
         return true
     }
     

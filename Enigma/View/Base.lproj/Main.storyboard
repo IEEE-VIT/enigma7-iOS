@@ -346,7 +346,7 @@
                                                     <segment title="Yes"/>
                                                     <segment title="No"/>
                                                 </segments>
-                                                <color key="selectedSegmentTintColor" name="secondary"/>
+                                                <color key="selectedSegmentTintColor" name="primary"/>
                                                 <connections>
                                                     <action selector="didTapSegment:" destination="rM5-1r-zw8" eventType="valueChanged" id="lyB-t3-dkl"/>
                                                 </connections>
@@ -408,13 +408,14 @@
                                                     <segment title="2024"/>
                                                 </segments>
                                                 <color key="tintColor" red="0.15118002890000001" green="0.70630997419999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="selectedSegmentTintColor" name="quaternary"/>
+                                                <color key="selectedSegmentTintColor" name="primary"/>
                                                 <connections>
                                                     <action selector="graduationYear:" destination="rM5-1r-zw8" eventType="valueChanged" id="62O-hQ-2nU"/>
                                                 </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" name="dark"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="qmh-D4-17f" secondAttribute="trailing" id="2Gb-ab-EsP"/>
                                             <constraint firstItem="3qq-RD-bKV" firstAttribute="trailing" secondItem="qmh-D4-17f" secondAttribute="trailing" id="4RH-ED-ptl"/>
@@ -454,6 +455,9 @@
                                             <constraint firstItem="o2c-E6-MWN" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="yx2-ve-cn9"/>
                                             <constraint firstItem="qmh-D4-17f" firstAttribute="leading" secondItem="R4g-Dg-YMJ" secondAttribute="leading" id="z3L-6n-xdF"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="lxV-mN-2Uh" appends="YES" id="GdP-HL-2Sh"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" name="dark"/>
@@ -495,6 +499,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YM0-yn-egL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lxV-mN-2Uh">
+                    <connections>
+                        <action selector="taptodismiss:" destination="rM5-1r-zw8" id="3k8-2B-ZzW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1823.1884057971015" y="132.58928571428572"/>
         </scene>
@@ -1718,11 +1727,11 @@
         <namedColor name="dark">
             <color red="0.032000001519918442" green="0.059000000357627869" blue="0.029999999329447746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="primary">
+            <color red="0.093999996781349182" green="0.18400000035762787" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="quaternary">
             <color red="0.14900000393390656" green="0.875" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="secondary">
-            <color red="0.078000001609325409" green="0.36899998784065247" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tertiary">
             <color red="0.11400000005960464" green="0.72200000286102295" blue="0.093999996781349182" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
