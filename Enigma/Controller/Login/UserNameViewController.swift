@@ -17,7 +17,10 @@ class UserNameViewController: UIViewController {
     @IBOutlet weak var graduateLabel: UILabel!
     @IBOutlet weak var studentSegmentedControl: UISegmentedControl!
     weak var CountdownController : CountdownViewController?
+    @IBOutlet weak var dropDownButton: UIButton!
     
+    @IBOutlet weak var sourcePicker: UIPickerView!
+
     let errorPrefix = AppConstants.Error.usernameErrorPrefix
     var error = String() {
         didSet {
@@ -30,10 +33,25 @@ class UserNameViewController: UIViewController {
         return studentSegmentedControl.selectedSegmentIndex == 0
     }
     
+    var sourceList = ["Reddit","Facebook","Instagram","Word of Mouth"]
+    
+    var editFrame = CGAffineTransform()
+    
+    var cardOpen : Bool = false
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) { overrideUserInterfaceStyle = .light }
         studentSegmentedControl.selectedSegmentIndex = 1
+        editFrame = sourcePicker.transform
+        sourcePicker.transform = CGAffineTransform(translationX: 0, y: -sourcePicker.frame.height)
+        sourcePicker.alpha = 0.0
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        groupToolBar()
     }
     
     override func viewDidLayoutSubviews() {
@@ -54,6 +72,30 @@ class UserNameViewController: UIViewController {
     @IBAction func didTapSegment(_ sender: UISegmentedControl) {
         graduateLabel.isHidden = sender.selectedSegmentIndex == 1
         yearTextField.isHidden = sender.selectedSegmentIndex == 1
+    }
+    
+    
+    @IBAction func dropDown(_ sender: Any) {
+        cardOpen ? closeCard() : openCard()
+        cardOpen.toggle()
+    }
+    
+    func openCard(){
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: {
+            self.dropDownButton.transform = CGAffineTransform(rotationAngle: .pi/2)
+            self.sourcePicker.transform = self.editFrame
+            self.sourcePicker.alpha = 1
+        }, completion: nil)
+    }
+    
+    func closeCard(){
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveEaseInOut, animations: {
+            self.dropDownButton.transform = .identity
+            self.sourcePicker.transform = CGAffineTransform(translationX: 0, y: -self.sourcePicker.frame.height)
+            self.sourcePicker.alpha = 0
+        }, completion: { (true) in
+            self.sourceTextField.resignFirstResponder()
+        })
     }
     
     
@@ -107,5 +149,36 @@ extension UserNameViewController : UITextFieldDelegate{
             nextButton.isHidden = false
         }
     }
+    
+}
+
+extension UserNameViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    func groupToolBar(){
+        sourcePicker.showsSelectionIndicator = true
+        sourcePicker.delegate = self
+        sourcePicker.dataSource = self
+        sourceTextField.inputView = sourcePicker
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return sourceList.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let title = sourceList[row]
+        return title
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let title = sourceList[row]
+        sourceTextField.text = title
+    }
+
 }
 
