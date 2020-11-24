@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 protocol LogoutDelegate: class {
     func logout()
@@ -40,6 +41,11 @@ class ProfileViewController: UIViewController {
         bottomConstraint.constant = view.frame.height * 0.08
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.siriRequest()
+    }
+    
     func handleUserDetails(details: UserDetails?){
         guard let user = details else { return }
         username.text = user.username
@@ -52,6 +58,17 @@ class ProfileViewController: UIViewController {
     @IBAction func logout(_ sender: Any) {
         PostController.shared.logout()
         self.delegate?.logout()
+    }
+    
+    func siriRequest(){
+        if enigmaStarted(){ INPreferences.requestSiriAuthorization { _ in}  }
+    }
+    
+    fileprivate func enigmaStarted()->Bool{
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        guard let hackOn = formatter.date(from: "2020/12/04 18:20") else {return false}
+        return (hackOn < Date())
     }
     
 }

@@ -139,6 +139,7 @@
 		5BA3F87325298D22008F0420 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
 		5BA3F87725298D2D008F0420 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72232506929D00C427F7 /* GoogleSignIn.framework */; };
 		5BA3F87825298D2D008F0420 /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72242506929E00C427F7 /* GoogleSignInDependencies.framework */; };
+		5BA5D017256BEC4700602A3F /* StoreReviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA5D016256BEC4700602A3F /* StoreReviewHelper.swift */; };
 		5BABB71C24FAC9F8006D5541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */; };
 		5BABB71E24FAC9F8006D5541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */; };
 		5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB72124FAC9F8006D5541 /* Main.storyboard */; };
@@ -204,6 +205,7 @@
 		5BC426C925407D9500E55FE3 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC426C825407D9500E55FE3 /* ProfileController.swift */; };
 		5BC426DF254099D500E55FE3 /* PlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC426DE254099D500E55FE3 /* PlayController.swift */; };
 		5BC426E725409AF500E55FE3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC426E625409AF500E55FE3 /* Image.swift */; };
+		5BD7F25A256AEB7C00F6E374 /* OutreachModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD7F259256AEB7C00F6E374 /* OutreachModel.swift */; };
 		5BE7D7E12501F38200222707 /* AKAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E02501F38100222707 /* AKAlert.xib */; };
 		5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE7D7E22501F52700222707 /* AKAlert.swift */; };
 		5BF6EB232526108100813987 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF6EB222526108100813987 /* Question.swift */; };
@@ -382,6 +384,7 @@
 		5B921FE62507505200B2AFF4 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 		5B921FF325087E4500B2AFF4 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		5B9B8DDA25417EFD009B3556 /* MediumWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget.swift; sourceTree = "<group>"; };
+		5BA5D016256BEC4700602A3F /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -427,6 +430,7 @@
 		5BC426C825407D9500E55FE3 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5BC426DE254099D500E55FE3 /* PlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayController.swift; sourceTree = "<group>"; };
 		5BC426E625409AF500E55FE3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		5BD7F259256AEB7C00F6E374 /* OutreachModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutreachModel.swift; sourceTree = "<group>"; };
 		5BE7D7E02501F38100222707 /* AKAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AKAlert.xib; path = Enigma/View/AKALert/AKAlert.xib; sourceTree = SOURCE_ROOT; };
 		5BE7D7E22501F52700222707 /* AKAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKAlert.swift; sourceTree = "<group>"; };
 		5BF6EB222526108100813987 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -721,6 +725,7 @@
 				5B81A2AC252E406F00DA09A8 /* AnswerModel.swift */,
 				5B1B4B5725236AAD00398B0D /* UserDetails.swift */,
 				5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */,
+				5BD7F259256AEB7C00F6E374 /* OutreachModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -772,6 +777,7 @@
 			children = (
 				5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */,
 				5BABB71D24FAC9F8006D5541 /* SceneDelegate.swift */,
+				5BA5D016256BEC4700602A3F /* StoreReviewHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1254,6 +1260,7 @@
 				5BC24E6525492948000A310A /* AppConstants.swift in Sources */,
 				5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */,
 				5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */,
+				5BD7F25A256AEB7C00F6E374 /* OutreachModel.swift in Sources */,
 				5B30BA792545ECDF00B75FF4 /* Intents.intentdefinition in Sources */,
 				5B921FDD250745A900B2AFF4 /* Network Constants.swift in Sources */,
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
@@ -1291,6 +1298,7 @@
 				5BF6EB252526190A00813987 /* Hint.swift in Sources */,
 				5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */,
 				5B32868124FB6AC700FE2EEC /* StoryViewController.swift in Sources */,
+				5BA5D017256BEC4700602A3F /* StoreReviewHelper.swift in Sources */,
 				5B32867924FB671200FE2EEC /* UserNameViewController.swift in Sources */,
 				5BE7D7E32501F52700222707 /* AKAlert.swift in Sources */,
 				5BF83A0224FEAFC900A93885 /* ViewController.swift in Sources */,
@@ -1458,7 +1466,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1480,7 +1488,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1501,7 +1509,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1522,7 +1530,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1546,7 +1554,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1570,7 +1578,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1714,7 +1722,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1745,7 +1753,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1851,7 +1859,7 @@
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				IBSC_MODULE = EnigmaWatch_Extension;
 				INFOPLIST_FILE = EnigmaWatch/Info.plist;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1872,7 +1880,7 @@
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				IBSC_MODULE = EnigmaWatch_Extension;
 				INFOPLIST_FILE = EnigmaWatch/Info.plist;
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1896,7 +1904,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1920,7 +1928,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;

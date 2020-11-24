@@ -17,9 +17,9 @@ struct NetworkConstants {
         public static let googleURL = baseURL + "auth/google/"
         public static let appleURL = baseURL + "auth/apple/"
         public static let editUsernameURL = baseURL + "me/edit/"
+        public static let outreachURL = baseURL + "outreach/"
         public static let userDetailsURL = baseURL + "me/"
         public static let logoutURL = baseURL + "logout/"
-
     }
 
     
@@ -38,7 +38,7 @@ struct NetworkConstants {
         public static let status = baseURL + "status/"
         public static let storyURL = baseURL + "story/"
         public static let storyCompleteURL = baseURL + "story/complete/"
-
+        
     }
     
 }

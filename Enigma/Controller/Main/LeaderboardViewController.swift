@@ -30,7 +30,7 @@ class LeaderboardViewController: UIViewController {
     
     func handleLeaderBoard(leaderboard: [Leaderboard]?){
         guard let leaderboard = leaderboard else { return }
-        self.leaderboard = leaderboard.filter{ $0.username != "" }
+        self.leaderboard = leaderboard
         INInteraction(intent: LeaderboardIntent(), response: nil).donate(completion: nil)
         DispatchQueue.main.async {
             self.refreshControl.endRefreshing()
@@ -74,8 +74,6 @@ extension LeaderboardViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     private func donateIntent() {
-       INPreferences.requestSiriAuthorization { [weak self] (authorization) in
-           guard let strongSelf = self else { return }
            let intent = LeaderboardIntent()
            intent.suggestedInvocationPhrase = "Enigma leaderboard"
            let interaction = INInteraction(intent: intent, response: nil)
@@ -84,7 +82,6 @@ extension LeaderboardViewController : UITableViewDelegate, UITableViewDataSource
                     print(error.localizedDescription)
                }
            })
-       }
     }
     
 }

@@ -61,7 +61,7 @@ class PlayViewController: UIViewController {
         subscribeToKeyboardNotifications()
         updateProgressbar()
         ServiceController.shared.getXpTime(completion: handleXp(time:))
-        //  ServiceController.shared.getQuestion(completion: handleQuestion(question:))
+        StoreReviewHelper.checkAndAskForReview()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
