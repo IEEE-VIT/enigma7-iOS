@@ -21,7 +21,7 @@ class TabbarController: UIViewController {
     var LeaderboardViewController : UIViewController!
     var StoryViewController : UIViewController!
     var ProfileViewController : UIViewController!
-    var RulesViewController : UIViewController!
+    var RulesViewController : RulesViewController!
     var viewControllers: [UIViewController]!
 
     
@@ -37,9 +37,9 @@ class TabbarController: UIViewController {
         HomeViewController = storyBoard.instantiateViewController(AppConstants.ViewController.HomeViewController) as? HomeViewController
         self.HomeViewController.delegate = self
         self.HomeViewController.animateNow = animateHomeVC
-        
         setupButtons()
         instantiateViews()
+        self.RulesViewController.hideLabel = true
         setupView(HomeViewController)
         wcSession = WCSession.default
         wcSession.delegate = self
@@ -120,8 +120,7 @@ class TabbarController: UIViewController {
         LeaderboardViewController = storyBoard.instantiateViewController(AppConstants.ViewController.LeaderboardViewController)
         StoryViewController = storyBoard.instantiateViewController(AppConstants.ViewController.StoryViewController)
         ProfileViewController = storyBoard.instantiateViewController(AppConstants.ViewController.ProfileViewController)
-        RulesViewController = storyBoard.instantiateViewController(AppConstants.ViewController.RulesViewController)
-        
+        RulesViewController = storyBoard.instantiateViewController(AppConstants.ViewController.RulesViewController) as? RulesViewController
         viewControllers = [PlayViewController,LeaderboardViewController,StoryViewController,ProfileViewController,RulesViewController]
     }
     

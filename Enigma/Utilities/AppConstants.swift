@@ -11,6 +11,8 @@ import Foundation
 struct AppConstants {
     struct CellId {
         static let leaderboardCell = "leadercell"
+        static let rulesCell = "rulescell"
+        static let xpCell = "xpcell"
     }
     
     struct Error {

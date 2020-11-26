@@ -33,3 +33,14 @@ extension UITextField{
         self.layer.borderColor = UIColor(named: "black")?.cgColor
     }
 }
+
+@IBDesignable class UITextViewFixed: UITextView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setup()
+    }
+    func setup() {
+        textContainerInset = UIEdgeInsets.zero
+        textContainer.lineFragmentPadding = 0
+    }
+}
