@@ -35,6 +35,7 @@ class RulesViewController: UIViewController {
         super.viewDidLoad()
         bottomAnchor.constant = hideLabel ? -10 : 31
         bottomLabel.isHidden = hideLabel
+        if #available(iOS 13.0, *) { overrideUserInterfaceStyle = .light }
     }
     
     override func viewDidLayoutSubviews() {
