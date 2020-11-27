@@ -71,7 +71,7 @@ class WebHelper {
     }
     
     class func sendPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: String, responseType: ResponseType.Type, body: RequestType,header : Bool = false, httpMethod : httpMethod = .POST,noBody:Bool = false, completion: @escaping (ResponseType?,Int) -> ()) {
-        let urlreq = URL(string: url)! //TODO guard
+        guard let urlreq = URL(string: url) else { return }
         var request = URLRequest(url: urlreq)
         request.httpMethod = httpMethod.rawValue
          
@@ -102,7 +102,7 @@ class WebHelper {
                     completion(responseObject, response.statusCode)
                 }
             } catch {
-                //TODO
+                
                 do {
                     _ = try decoder.decode(ErrorResponse.self, from: data) as Error
                     DispatchQueue.main.async {

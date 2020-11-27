@@ -12,8 +12,8 @@ struct NetworkConstants {
         
     struct Users {
         // public static let baseURL = "https://enigma7-backend.herokuapp.com/api/v1/users/"
-        // public static let baseURL = "https://enigma-api-staging.ieeevit.org/api/v1/users/"
-        public static let baseURL = "https://enigma-api.ieeevit.org/api/v1/users/"
+         public static let baseURL = "https://enigma-api-staging.ieeevit.org/api/v1/users/"
+        // public static let baseURL = "https://enigma-api.ieeevit.org/api/v1/users/"
         
         public static let googleURL = baseURL + "auth/google/"
         public static let appleURL = baseURL + "auth/apple/"
@@ -26,8 +26,8 @@ struct NetworkConstants {
     
     struct Game {
         // public static let baseURL = "https://enigma7-backend.herokuapp.com/api/v1/game/"
-        // public static let baseURL = "https://enigma-api-staging.ieeevit.org/api/v1/game/"
-        public static let baseURL = "https://enigma-api.ieeevit.org/api/v1/game/"
+         public static let baseURL = "https://enigma-api-staging.ieeevit.org/api/v1/game/"
+        // public static let baseURL = "https://enigma-api.ieeevit.org/api/v1/game/"
 
         public static let leaderboardURL = baseURL + "leaderboard/"
         public static let questionURL = baseURL + "question/"

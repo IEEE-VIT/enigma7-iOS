@@ -12,8 +12,6 @@ protocol CountdownDelegate: class {
     func didSignin(_ token: String)
 }
 
-//TODO handle Tiemzone
-
 class CountdownViewController: UIViewController {
 
     @IBOutlet weak var dayLabel: UILabel!

@@ -178,6 +178,9 @@
 		5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB77324FAD063006D5541 /* Inconsolata.otf */; };
 		5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7B924FADEEB006D5541 /* TabbarController.swift */; };
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
+		5BB0CA812571934B00A6B234 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BB0CA802571934B00A6B234 /* AppIntentVocabulary.plist */; };
+		5BB0CA822571934B00A6B234 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BB0CA802571934B00A6B234 /* AppIntentVocabulary.plist */; };
+		5BB0CA832571934B00A6B234 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BB0CA802571934B00A6B234 /* AppIntentVocabulary.plist */; };
 		5BC24E6525492948000A310A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
 		5BC24E7725493138000A310A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E7625493138000A310A /* String.swift */; };
 		5BC42422253C108F00E55FE3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42421253C108F00E55FE3 /* Device.swift */; };
@@ -417,6 +420,7 @@
 		5BABB77324FAD063006D5541 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5BB0CA802571934B00A6B234 /* AppIntentVocabulary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppIntentVocabulary.plist; sourceTree = "<group>"; };
 		5BC24E6425492948000A310A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		5BC24E7625493138000A310A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5BC42421253C108F00E55FE3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -651,6 +655,7 @@
 		5BABB70F24FAC9F8006D5541 = {
 			isa = PBXGroup;
 			children = (
+				5BB0CA802571934B00A6B234 /* AppIntentVocabulary.plist */,
 				5B81A2FA252E476D00DA09A8 /* Enigma-WidgetExtension.entitlements */,
 				5B8F7229250692B300C427F7 /* GoogleSignIn.bundle */,
 				5BABB71A24FAC9F8006D5541 /* Enigma */,
@@ -1093,6 +1098,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB0CA822571934B00A6B234 /* AppIntentVocabulary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,6 +1106,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB0CA832571934B00A6B234 /* AppIntentVocabulary.plist in Resources */,
 				5B30BA622545DA0200B75FF4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1137,6 +1144,7 @@
 				5BABB72824FACA01006D5541 /* LaunchScreen.storyboard in Resources */,
 				5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */,
 				5BABB72524FACA01006D5541 /* Assets.xcassets in Resources */,
+				5BB0CA812571934B00A6B234 /* AppIntentVocabulary.plist in Resources */,
 				5BABB76A24FACDA9006D5541 /* IBMPlexMono-Thin.ttf in Resources */,
 				5BABB72324FAC9F8006D5541 /* Main.storyboard in Resources */,
 			);
@@ -1483,7 +1491,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1505,7 +1513,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1526,7 +1534,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1547,7 +1555,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1571,7 +1579,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1595,7 +1603,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1739,7 +1747,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1770,7 +1778,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1882,7 +1890,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1911,7 +1919,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1936,7 +1944,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1960,7 +1968,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;

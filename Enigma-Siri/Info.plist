@@ -35,9 +35,6 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>INSearchForMessagesIntent</string>
-				<string>INSendMessageIntent</string>
-				<string>INSetMessageAttributeIntent</string>
 				<string>LeaderboardIntent</string>
 				<string>ProfileIntent</string>
 			</array>

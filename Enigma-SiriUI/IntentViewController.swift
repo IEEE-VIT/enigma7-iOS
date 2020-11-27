@@ -33,7 +33,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
         }
         
         if let response = interaction.intentResponse as? LeaderboardIntentResponse {
-            guard let leaderboard = response.leaderboard else { return } //TODO
+            guard let leaderboard = response.leaderboard else { return }
             self.leaderboard = leaderboard
             DispatchQueue.main.async {
                 self.tableView.reloadData()
