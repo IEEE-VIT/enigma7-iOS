@@ -39,7 +39,7 @@ class InterfaceController: WKInterfaceController {
     
     
     @IBAction func leaderboardTapped() {
-        pushController("leaderboard")
+        pushController("leader")
     }
     
     @IBAction func profileTapped() {
@@ -57,18 +57,27 @@ class InterfaceController: WKInterfaceController {
     
     func pushController(_ name: String){
         if token() != ""{
-            let vc = started() ? name : "timer"
-            pushController(vc)
+            self.started(name)
         } else {
             let okay = WKAlertAction(title: "Okay", style: .default) { }
-            presentAlert(withTitle: "Uh oh !😕", message: "Looks like you are not logged into the app. Please login the and tap the [i] icon on the top to continue.", preferredStyle: .alert, actions: [okay])
+            presentAlert(withTitle: "Uh oh !😕", message: "Looks like you are not logged into the app. Please login the iOS app and tap the [i] icon on the top to continue.", preferredStyle: .alert, actions: [okay])
         }
     }
     
-    func started()->Bool{
-        let date = Date(timeIntervalSince1970: 1607079000)
-        return Date() < date
+    func started(_ name:String){
+        ServiceController.shared.getStatus { (started, _) in
+            if started{
+                self.pushController(withName: name, context: nil)
+            } else {
+                let date = Date(timeIntervalSince1970: 1607079000)
+                print(date)
+                let started = Date() > date
+                let vc = started ? name : "timer"
+                self.pushController(withName: vc, context: nil)
+            }
+        }
     }
+
     
 }
 
@@ -81,6 +90,6 @@ extension InterfaceController: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         guard let token = message["token"] as? String else { return }
         print(token)
-        UserDefaults.standard.set("Token "+token, forKey: "token")
+        UserDefaults.standard.set(token, forKey: "token")
      }
 }

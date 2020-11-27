@@ -41,7 +41,15 @@ class LeaderboardController: WKInterfaceController {
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
       let user = leaderboard[rowIndex]
-      print(user)
+        let okay = WKAlertAction(title: "Aight", style: .default) { }
+        presentAlert(withTitle: user.username, message: message(leader: user), preferredStyle: .alert, actions: [okay])
+    }
+    
+    func message(leader: Leaderboard)->String{
+        let name = leader.username ?? "This user"
+        let score = (leader.score ?? 0).stringValue
+        let ques = (leader.solved ?? 0).stringValue
+        return "\(name) has a total of \(score) points after solving \(ques) questions!"
     }
     
 }

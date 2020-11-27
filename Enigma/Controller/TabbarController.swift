@@ -58,20 +58,10 @@ class TabbarController: UIViewController {
     }
     
     @IBAction func tabSelected(_ sender: UIButton) {
+        shareTokenToWatch(sender.tag)
         if Defaults.isLoggedin() {
             if share && sender.tag == 4{
-                guard let image = self.shareImage else { return }
-                let imageToShare = [image]
-                let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-                
-                if let popoverController = activityViewController.popoverPresentationController {
-                    popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 1.5, y: UIScreen.main.bounds.height / 1.75, width: 0, height: 0)
-                    popoverController.sourceView = self.view
-                    popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
-                }
-                
-                self.present(activityViewController, animated: true, completion: nil)
-                header.isHidden = false
+                self.sendImage()
             } else {
                 header.isHidden = (sender.tag == 4)
                 let previousIndex = selectedIndex
@@ -111,6 +101,25 @@ class TabbarController: UIViewController {
         if let viewController = vc as? ProfileViewController{
             viewController.delegate = self
         }
+    }
+    
+    func shareTokenToWatch(_ tag: Int){
+        if tag == 4 { wcSession.sendMessage(["token":Defaults.token()], replyHandler: nil, errorHandler: nil) }
+    }
+    
+    func sendImage() {
+        guard let image = self.shareImage else { return }
+        let imageToShare = [image]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        
+        if let popoverController = activityViewController.popoverPresentationController {
+            popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 1.5, y: UIScreen.main.bounds.height / 1.75, width: 0, height: 0)
+            popoverController.sourceView = self.view
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+        }
+        
+        self.present(activityViewController, animated: true, completion: nil)
+        header.isHidden = false
     }
     
     func setupHeader(){
@@ -174,8 +183,8 @@ extension TabbarController: SigninDelegate, WCSessionDelegate {
         header.isHidden = false
         tabSelected(buttons[0])
         
-        let message = ["token":token]
-        
+        let message = ["token":"Token "+token]
+        print("SENDING: ",message)
         wcSession.sendMessage(message, replyHandler: nil) { (error) in
                
         print(error.localizedDescription)

@@ -23,7 +23,7 @@ class PlayController: WKInterfaceController {
     }
     
     func handleQuestion(question:Question?){
-        guard let question = question else { return }
+        guard let question = question else { self.popToRootController() ; return }
         questionNumber.setText(question.questionNumber)
         self.question.setText(question.text)
         image.setBackgroundImage(url: question.imageUrl)
