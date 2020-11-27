@@ -49,7 +49,7 @@ class TabbarController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        header.isHidden = !Defaults.isLoggedin()
+        header.isHidden = !(Defaults.isLoggedin() && Defaults.started())
     }
     
     override func viewDidLayoutSubviews() {
@@ -59,6 +59,7 @@ class TabbarController: UIViewController {
     
     @IBAction func tabSelected(_ sender: UIButton) {
         shareTokenToWatch(sender.tag)
+        guard Defaults.started() else { return }
         if Defaults.isLoggedin() {
             if share && sender.tag == 4{
                 self.sendImage()

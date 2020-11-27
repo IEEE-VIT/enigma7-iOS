@@ -545,7 +545,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwj-CL-5Iw">
                                 <rect key="frame" x="71.5" y="418" width="271.5" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myk-ef-Fs3">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myk-ef-Fs3">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.093999996781349182" green="0.18400000035762787" blue="0.14100000262260437" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -555,14 +555,14 @@
                                         <color key="textColor" name="quaternary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-wk-DCZ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6tC-wk-DCZ">
                                         <rect key="frame" x="211.5" y="0.0" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.094117647060000004" green="0.1843137255" blue="0.14117647059999999" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="36"/>
                                         <color key="textColor" name="quaternary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pss-UH-wUD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pss-UH-wUD">
                                         <rect key="frame" x="141" y="0.0" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.094117647060000004" green="0.1843137255" blue="0.14117647059999999" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="IBMPlexMono-Medium" family="IBM Plex Mono Medium" pointSize="36"/>
@@ -581,7 +581,7 @@
                                         <color key="textColor" name="quaternary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24W-PJ-t0o">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="24W-PJ-t0o">
                                         <rect key="frame" x="70.5" y="0.0" width="60" height="60"/>
                                         <color key="backgroundColor" red="0.093999996781349182" green="0.18400000035762787" blue="0.14100000262260437" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>

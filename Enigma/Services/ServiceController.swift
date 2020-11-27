@@ -66,6 +66,7 @@ class ServiceController {
     func getStatus(completion : @escaping (Bool,String)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Game.status, parameters: [:], responseType: Status.self,key: Keys.status) { (response, _) in
             let hasStarted = response?.started ?? false
+            UserDefaults.standard.set(hasStarted, forKey: Keys.started)
             let startDate = response?.date ?? AppConstants.Date.startDate
             completion(hasStarted,startDate)
         }

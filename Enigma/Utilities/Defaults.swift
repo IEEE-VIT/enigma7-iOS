@@ -25,6 +25,10 @@ class  Defaults {
         return (UserDefaults.standard.value(forKey: Keys.login) as? Bool) ?? false
     }
     
+    static func started() -> Bool {
+        return (UserDefaults.standard.value(forKey: Keys.started) as? Bool) ?? false
+    }
+    
     static func enigmaStarted() -> Bool {
         return (UserDefaults.standard.value(forKey: Keys.enigmaStarted) as? Bool) ?? false
     }
