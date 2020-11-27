@@ -25,7 +25,7 @@ class WebHelper {
             defaults?.synchronize()
             
             #if os(watchOS)
-                token = UserDefaults.standard.value(forKey: "token") as? String //TODO
+                token = UserDefaults.standard.value(forKey: "token") as? String
             #endif
             
             print("TOKEN: ",token)

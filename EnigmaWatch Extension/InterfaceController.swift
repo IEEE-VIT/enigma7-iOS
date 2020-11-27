@@ -25,8 +25,8 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         wcSession = WCSession.default
-                wcSession.delegate = self
-                wcSession.activate()
+        wcSession.delegate = self
+        wcSession.activate()
     }
     
     override func didDeactivate() {
@@ -34,18 +34,40 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func playTapped() {
-        print("PLAY")
+        pushController("play")
     }
     
     
     @IBAction func leaderboardTapped() {
+        pushController("leaderboard")
     }
     
     @IBAction func profileTapped() {
+        pushController("profile")
     }
     
     
     @IBAction func storyTapped() {
+        pushController(withName: "rules", context: nil)
+    }
+    
+    func token()->String{
+       return UserDefaults.standard.string(forKey: "token") ?? ""
+    }
+    
+    func pushController(_ name: String){
+        if token() != ""{
+            let vc = started() ? name : "timer"
+            pushController(vc)
+        } else {
+            let okay = WKAlertAction(title: "Okay", style: .default) { }
+            presentAlert(withTitle: "Uh oh !😕", message: "Looks like you are not logged into the app. Please login the and tap the [i] icon on the top to continue.", preferredStyle: .alert, actions: [okay])
+        }
+    }
+    
+    func started()->Bool{
+        let date = Date(timeIntervalSince1970: 1607079000)
+        return Date() < date
     }
     
 }
@@ -57,8 +79,8 @@ extension InterfaceController: WCSessionDelegate {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-         let token = message["token"] as! String
-         print(token)
-        UserDefaults.standard.setValue("Token "+token, forKey: "token")
+        guard let token = message["token"] as? String else { return }
+        print(token)
+        UserDefaults.standard.set("Token "+token, forKey: "token")
      }
 }

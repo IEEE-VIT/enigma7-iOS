@@ -78,9 +78,13 @@ class TabbarController: UIViewController {
                 selectedIndex = sender.tag
                 buttons[previousIndex].isSelected = false
                 UIView.animate(withDuration: 0.4) {
-                    self.buttons[previousIndex].bottomShadow(8)
                     self.buttons[self.selectedIndex].bottomShadow(2)
+                    self.buttons[self.selectedIndex].transform = CGAffineTransform(translationX: 0, y: 6)
+                } completion: { _ in
+                    self.buttons[previousIndex].bottomShadow(8)
+                    self.buttons[previousIndex].transform = .identity
                 }
+
                 
                 let previousVC = viewControllers[previousIndex]
                 previousVC.willMove(toParent: nil)
@@ -159,6 +163,7 @@ extension TabbarController: LogoutDelegate{
         viewDidLoad()
         viewDidLayoutSubviews()
         viewWillAppear(true)
+        wcSession.sendMessage(["token":""], replyHandler: nil, errorHandler: nil)
     }
 }
 
@@ -170,7 +175,7 @@ extension TabbarController: SigninDelegate, WCSessionDelegate {
         tabSelected(buttons[0])
         
         let message = ["token":token]
-           
+        
         wcSession.sendMessage(message, replyHandler: nil) { (error) in
                
         print(error.localizedDescription)

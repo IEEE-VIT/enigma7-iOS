@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0A907C257130A100E1D3EB /* RulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A907B257130A100E1D3EB /* RulesController.swift */; };
+		5B0A90862571317A00E1D3EB /* RulesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A90852571317A00E1D3EB /* RulesRow.swift */; };
+		5B0A90982571375E00E1D3EB /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A90972571375E00E1D3EB /* TimerController.swift */; };
 		5B1B4B4E252252D000398B0D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4D252252D000398B0D /* Image.swift */; };
 		5B1B4B502522644B00398B0D /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */; };
 		5B1B4B5825236AAD00398B0D /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1B4B5725236AAD00398B0D /* UserDetails.swift */; };
@@ -308,6 +311,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0A907B257130A100E1D3EB /* RulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesController.swift; sourceTree = "<group>"; };
+		5B0A90852571317A00E1D3EB /* RulesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesRow.swift; sourceTree = "<group>"; };
+		5B0A90972571375E00E1D3EB /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		5B1B4B4D252252D000398B0D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		5B1B4B5725236AAD00398B0D /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
@@ -826,6 +832,9 @@
 				5BC4266F2540261F00E55FE3 /* LeaderboardRow.swift */,
 				5BC426C825407D9500E55FE3 /* ProfileController.swift */,
 				5BC426DE254099D500E55FE3 /* PlayController.swift */,
+				5B0A907B257130A100E1D3EB /* RulesController.swift */,
+				5B0A90852571317A00E1D3EB /* RulesRow.swift */,
+				5B0A90972571375E00E1D3EB /* TimerController.swift */,
 			);
 			path = "EnigmaWatch Extension";
 			sourceTree = "<group>";
@@ -1047,6 +1056,7 @@
 					};
 					5BC42638253FFCD500E55FE3 = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1220;
 					};
 					5BC42644253FFCE500E55FE3 = {
 						CreatedOnToolsVersion = 12.0.1;
@@ -1368,6 +1378,7 @@
 				5BC4268625406E7800E55FE3 /* EditUsernameModel.swift in Sources */,
 				5BC42651253FFCE500E55FE3 /* ComplicationController.swift in Sources */,
 				5BC4264D253FFCE500E55FE3 /* ExtensionDelegate.swift in Sources */,
+				5B0A90982571375E00E1D3EB /* TimerController.swift in Sources */,
 				5BC426AE25406EBB00E55FE3 /* Number.swift in Sources */,
 				5BC426C925407D9500E55FE3 /* ProfileController.swift in Sources */,
 				5B638EBC2568D44B008CD80B /* AppConstants.swift in Sources */,
@@ -1377,7 +1388,9 @@
 				5BC4268925406E7800E55FE3 /* AnswerModel.swift in Sources */,
 				5BC4268725406E7800E55FE3 /* Leaderboard.swift in Sources */,
 				5BC4268825406E7800E55FE3 /* SignupModel.swift in Sources */,
+				5B0A90862571317A00E1D3EB /* RulesRow.swift in Sources */,
 				5BC426A725406E9B00E55FE3 /* Common.swift in Sources */,
+				5B0A907C257130A100E1D3EB /* RulesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1859,15 +1872,23 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				IBSC_MODULE = EnigmaWatch_Extension;
 				INFOPLIST_FILE = EnigmaWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EnigmaWatch Extension/EnigmaWatch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
@@ -1880,15 +1901,22 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				IBSC_MODULE = EnigmaWatch_Extension;
 				INFOPLIST_FILE = EnigmaWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EnigmaWatch Extension/EnigmaWatch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.0;
