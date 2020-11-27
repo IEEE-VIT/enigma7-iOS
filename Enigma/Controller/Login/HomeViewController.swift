@@ -51,6 +51,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func signinWithApple(_ sender: UIButton) {
         if #available(iOS 13, *) {
+            PostController.shared.logout()
             appleSignin()
         } else {
             // TODO:- add alert for iOS 12.
@@ -60,6 +61,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func signinWithGoogle(_ sender: Any) {
         self.googleButton.isEnabled = false
+        PostController.shared.logout()
         GIDSignIn.sharedInstance().signIn()
     }
     
@@ -77,6 +79,7 @@ class HomeViewController: UIViewController {
         if success{
             let usernameExists = response?.username_exists ?? false
             guard usernameExists else { self.present(AppConstants.ViewController.UserNameViewController) ; return }
+            UserDefaults.standard.set(Defaults.username(), forKey: Keys.username)
             ServiceController.shared.getStatus { [self] (status, _) in
                 if status{
                     self.delegate?.didSignin(response?.key ?? "")

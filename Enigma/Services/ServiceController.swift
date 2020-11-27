@@ -15,6 +15,7 @@ class ServiceController {
     func getUserDetails(completion : @escaping (UserDetails?)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user) { (response, _) in
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
+            if let username = response?.username { UserDefaults.standard.set(username, forKey: Keys.username) }
             completion(response)
         }
     }
@@ -65,6 +66,7 @@ class ServiceController {
     func getStatus(completion : @escaping (Bool,String)->()){
         WebHelper.sendGETRequest(url: NetworkConstants.Game.status, parameters: [:], responseType: Status.self,key: Keys.status) { (response, _) in
             let hasStarted = response?.started ?? false
+            UserDefaults.standard.set(hasStarted, forKey: Keys.started)
             let startDate = response?.date ?? AppConstants.Date.startDate
             completion(hasStarted,startDate)
         }

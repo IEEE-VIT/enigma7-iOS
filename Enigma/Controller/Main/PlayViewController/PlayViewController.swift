@@ -136,13 +136,20 @@ class PlayViewController: UIViewController {
         guard let text = story?.story?.text else { return }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(AppConstants.ViewController.StorySnippetViewController) as! StorySnippetViewController
-        viewController.story = text
+        viewController.story = formatStory(text)
         addChild(viewController)
         view.addSubview(viewController.view)
         viewController.view.frame = view.bounds
         viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         viewController.view.frame = self.view.bounds
         viewController.didMove(toParent: self)
+    }
+    
+    func formatStory(_ story: String) -> String {
+        var texts = story
+        texts = texts.replacingOccurrences(of: AppConstants.Story.username, with: Defaults.username())
+        texts = texts.replacingOccurrences(of: AppConstants.Story.lineBreak, with: "\n")
+        return texts
     }
     
     @IBAction func powerupTapped(_ sender: UIButton) {

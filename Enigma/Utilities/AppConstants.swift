@@ -44,13 +44,18 @@ struct AppConstants {
     }
     
     struct Date {
-        static let startDate = "2020-11-24 16:20:00" //TODO put actual date
+        static let startDate = "2020-12-04 16:20:00"
         static let dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
     
     struct Google {
         static let clientId = "55484635453-2fmn476nlr2it49soaejbeqj29lq0k6k.apps.googleusercontent.com"
         static let serverClientId = "55484635453-c46tes445anbidhb2qnmb2qs618mvpni.apps.googleusercontent.com"
+    }
+    
+    struct Story {
+        static let username = "<username>"
+        static let lineBreak = "<br>"
     }
     
 }

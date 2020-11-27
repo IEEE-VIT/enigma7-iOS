@@ -27,11 +27,12 @@ class CountdownViewController: UIViewController {
     var started : Bool = false
     let formatter = DateFormatter()
     var countdownTimer: Timer?
-
+    var interval : TimeInterval = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         formatter.dateFormat = AppConstants.Date.dateFormat
-      //  formatter.timeZone = .
+        formatter.timeZone = TimeZone(abbreviation: "IST")
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         ServiceController.shared.getStatus(completion: handleStatus(started:date:))
         startButton.isHidden = true
     }
@@ -53,40 +54,48 @@ class CountdownViewController: UIViewController {
             countdownTimer?.invalidate()
             countdownTimer = nil
         } else {
-            countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (_) in self.calculateTimeDifference() })
+            countdownTimer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true, block: { (_) in self.calculateTimeDifference() })
         }
         startButton.isHidden = !started
     }
     
+    func presentAKAlert(type: AKAlert.ALertType){
+        let width = UIScreen.main.bounds.width * 0.8
+        let height = width / 3.33
+        let frame = CGRect(x: 0, y: 0, width: width, height: height)
+        let alert = AKAlert(type: type)
+        alert.frame = frame
+        self.view.addSubview(alert)
+        alert.center = self.view.center
+    }
+    
     
     @IBAction func startClicked(_ sender: UIButton) {
-        UserDefaults.standard.set(true, forKey: Keys.login)
-        ServiceController.shared.getStatus { (started, _) in
+        ServiceController.shared.getStatus { (started, date) in
             if started {
+                UserDefaults.standard.set(true, forKey: Keys.started)
                 self.present(AppConstants.ViewController.RulesViewController)
+            } else {
+                self.presentAKAlert(type: .custom(message: "Enigma will start at \(date) IST"))
             }
         }
     }
     
+    
     func calculateTimeDifference(){
-        
-        if Date() > formatter.date(from: startDate)! {
+        let enigmaDate = formatter.date(from: startDate)
+        print("date value:",enigmaDate,"startdate:",startDate,"format:",formatter.dateFormat)
+        if Date() > enigmaDate ?? Date(timeIntervalSince1970: 1607079000){
             self.dayLabel.text = "00"
             self.hourLabel.text = "00"
             self.minutLabel.text = "00"
             self.secondLabel.text = "00"
-            
-            ServiceController.shared.getStatus { (started, _) in
-                if started{
-                    self.startButton.isHidden = false
-                    
-                }
-            }
+            self.startButton.isHidden = false
         } else {
             /// Calculate time difference
             let calender = Calendar.current
             let currentDate = Date()
-            let startdate = formatter.date(from: startDate)!
+            let startdate = formatter.date(from: startDate) ?? Date(timeIntervalSince1970: 1607079000)
             let dateComponents = calender.dateComponents([.day,.hour,.minute,.second], from: currentDate, to: startdate)
             
             

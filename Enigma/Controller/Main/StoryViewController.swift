@@ -19,6 +19,7 @@ class StoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         storyTextView.text = ""
+        print("LOADING")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,9 +34,18 @@ class StoryViewController: UIViewController {
     
     func handleStory(story:[Story]){
         let texts = story.map{ $0.story?.text ?? "" }
-        let storyText = texts.joined(separator: "\n\n")
+        let storyText = formatStory(texts)
         self.story = storyText
         self.storyTextView.text = storyText
+        let bottom = NSMakeRange(storyTextView.text.count - 1, 1)
+        self.storyTextView.scrollRangeToVisible(bottom)
+    }
+    
+    func formatStory(_ story: [String]) -> String {
+        var texts = story.joined(separator: "\n\n")
+        texts = texts.replacingOccurrences(of: AppConstants.Story.username, with: Defaults.username())
+        texts = texts.replacingOccurrences(of: AppConstants.Story.lineBreak, with: "\n")
+        return texts
     }
     
     func handleStoryWithAnimation(story:Story?){

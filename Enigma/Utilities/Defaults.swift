@@ -25,6 +25,10 @@ class  Defaults {
         return (UserDefaults.standard.value(forKey: Keys.login) as? Bool) ?? false
     }
     
+    static func started() -> Bool {
+        return (UserDefaults.standard.value(forKey: Keys.started) as? Bool) ?? false
+    }
+    
     static func enigmaStarted() -> Bool {
         return (UserDefaults.standard.value(forKey: Keys.enigmaStarted) as? Bool) ?? false
     }
@@ -46,6 +50,10 @@ class  Defaults {
         userDefaults?.synchronize()
         guard let data = body else { return nil }
         return decode(data: data)
+    }
+    
+    static func username() -> String {
+        return (UserDefaults.standard.value(forKey: Keys.username) as? String) ?? ""
     }
     
     static func xp() -> Double {

@@ -21,7 +21,7 @@ extension HomeViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             self.googleButton.isEnabled = true
-            print(error.localizedDescription)
+            print("Google error: ",error)
             return
         }
         signinWithBackend(type:.google, code:user.serverAuthCode, token: "")
