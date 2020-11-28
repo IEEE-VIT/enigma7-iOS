@@ -72,6 +72,7 @@ class CountdownViewController: UIViewController {
         ServiceController.shared.getStatus { (started, date) in
             if started {
                 UserDefaults.standard.set(true, forKey: Keys.started)
+                UserDefaults.standard.set(true, forKey: Keys.login)
                 self.present(AppConstants.ViewController.RulesViewController)
             } else {
                 self.presentAKAlert(type: .custom(message: "Enigma will start at \(date) IST"))

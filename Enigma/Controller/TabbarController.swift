@@ -72,8 +72,10 @@ class TabbarController: UIViewController {
                     self.buttons[self.selectedIndex].bottomShadow(2)
                     self.buttons[self.selectedIndex].transform = CGAffineTransform(translationX: 0, y: 6)
                 } completion: { _ in
+                    if previousIndex != self.selectedIndex {
                     self.buttons[previousIndex].bottomShadow(8)
                     self.buttons[previousIndex].transform = .identity
+                    }
                 }
 
                 

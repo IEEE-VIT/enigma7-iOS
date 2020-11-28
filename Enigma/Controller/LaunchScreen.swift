@@ -25,9 +25,16 @@ class LaunchScreen: UIViewController {
         performAnimation()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UserDefaults.standard.set(false, forKey: "sound")
+    }
+    
     func performAnimation(){
         for i in string {
+            if UserDefaults.standard.bool(forKey: "sound") {
             AudioServicesPlaySystemSound(1306)
+            }
             substring += "\(i)"
             subLabel.text! = "< " + substring + " >"
             RunLoop.current.run(until: Date()+0.20)
