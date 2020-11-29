@@ -21,6 +21,8 @@
 			<string>information</string>
 			<key>INIntentConfigurable</key>
 			<true/>
+			<key>INIntentDescription</key>
+			<string>get the latest leaderboard!</string>
 			<key>INIntentDescriptionID</key>
 			<string>k7WqZC</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -109,7 +111,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Get </string>
+			<string>Leaderboard</string>
 			<key>INIntentTitleID</key>
 			<string>B8G407</string>
 			<key>INIntentType</key>

@@ -1,0 +1,46 @@
+"1B8CYu" = "Hey ${userDetails.userName}, with a total score of ${userDetails.score} your rank is ${userDetails.rank}. ";
+
+"5QsgoK" = "Score";
+
+"B8G407" = "Leaderboard";
+
+"BfHBui" = "Solved";
+
+"CrJaVT" = "Rank";
+
+"G2vIFB" = "Username";
+
+"GbZE5w" = "you need to login first!";
+
+"KolL0l" = "Rank";
+
+"LZH3RZ" = "User";
+
+"OJR0lK" = "Xp";
+
+"RtwGlQ" = "you need to login first!";
+
+"S0RSel" = "User Name";
+
+"SD5NFb" = "Score";
+
+"VRPMZO" = "you need to login first!";
+
+"XtdnfA" = "Email";
+
+"YNHlqh" = "Profile";
+
+"YvaQBV" = "Leaderboard";
+
+"lnEuQ9" = "Hey ${userDetails.userName}, with a total score of ${userDetails.score} your rank is ${userDetails.rank}. ";
+
+"nhH2wu" = "you need to login first!";
+
+"t82Fxa" = "Solved";
+
+"vRo44P" = "Leader";
+
+"wLskIJ" = "get your user details!";
+
+"z3cafF" = "userDetails";
+
