@@ -22,6 +22,7 @@ struct LargeWidget: View {
     }
     
     func isLoggedin()->Bool{
+        if Defaults.startedWidget() {
         if Defaults.token() == "" {
             return false
         } else if Defaults.question()?.text == nil {
@@ -31,6 +32,7 @@ struct LargeWidget: View {
         } else {
             return true
         }
+        } else { return false }
     }
 }
 

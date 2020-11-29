@@ -21,7 +21,7 @@ struct StoreReviewHelper {
     static func checkAndAskForReview() {
         let appOpenCount = Defaults.appOpenCount()
         switch appOpenCount {
-        case 3,50: //TODO 10
+        case 10,50:
             incrementAppOpenedCount()
             StoreReviewHelper().requestReview()
         case _ where appOpenCount%100 == 0 :

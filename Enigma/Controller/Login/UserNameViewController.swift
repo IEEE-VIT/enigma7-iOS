@@ -152,6 +152,7 @@ class UserNameViewController: UIViewController {
     
     func handleStatus(started:Bool,date:String){
       UserDefaults.standard.set(started, forKey: Keys.started)
+      UserDefaults.standard.set(started, forKey: Keys.login)
       let viewcontroller = started ? AppConstants.ViewController.RulesViewController : AppConstants.ViewController.CountdownViewController
       present(viewcontroller)
     }

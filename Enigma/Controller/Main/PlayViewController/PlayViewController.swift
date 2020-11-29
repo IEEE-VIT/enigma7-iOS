@@ -136,7 +136,7 @@ class PlayViewController: UIViewController {
         guard let text = story?.story?.text else { return }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(AppConstants.ViewController.StorySnippetViewController) as! StorySnippetViewController
-        viewController.story = formatStory(text)
+        viewController.text = formatStory(text)
         addChild(viewController)
         view.addSubview(viewController.view)
         viewController.view.frame = view.bounds
@@ -193,6 +193,7 @@ class PlayViewController: UIViewController {
         asyncLoadImage(question.id ?? 0,question.imageUrl, placeHolder: nil, img: setImage(img:no:))
         ServiceController.shared.getFullStory{ _ in }
         if #available(iOS 14.0, *) {  reloadWidget()  }
+        ServiceController.shared.getUserDetails { _ in self.updateProgressbar() }
     }
     
     func handleXp(time:Double){

@@ -878,7 +878,6 @@
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="nlz-mK-WIn" id="v7l-Bb-0qx"/>
-                                    <outletCollection property="gestureRecognizers" destination="UCe-ov-QnF" appends="YES" id="Zp9-fJ-SRU"/>
                                 </connections>
                             </textView>
                         </subviews>
@@ -899,11 +898,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx3-ee-rur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="UCe-ov-QnF">
-                    <connections>
-                        <action selector="textTappedd:" destination="nlz-mK-WIn" id="z6A-6A-cQm"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4346" y="666"/>
         </scene>
@@ -1177,12 +1171,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Coi-0w-hxO">
-                                <rect key="frame" x="155.5" y="114" width="103.5" height="103.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Coi-0w-hxO" secondAttribute="height" id="s63-Mp-WR8"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Tap to continue]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hsz-Kc-u43">
                                 <rect key="frame" x="25" y="772.5" width="364" height="24.5"/>
                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="21"/>
@@ -1193,7 +1181,7 @@
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6S-Ak-Jvf">
-                                <rect key="frame" x="40" y="277.5" width="334" height="455"/>
+                                <rect key="frame" x="40" y="339.5" width="334" height="393"/>
                                 <string key="text">Etiam fermentum ut bibendum egestas id maecenas aliquam lacinia nulla.                     Tempor enim viverra eu laoreet.                      </string>
                                 <color key="textColor" name="tertiary"/>
                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
@@ -1202,21 +1190,28 @@
                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
                                 </variation>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbv-F1-O6c">
+                                <rect key="frame" x="124" y="114" width="166" height="165.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mbv-F1-O6c" secondAttribute="height" id="eff-1U-msR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mNB-VW-6jZ"/>
-                        <color key="backgroundColor" name="dark"/>
+                        <color key="backgroundColor" red="0.01176237036" green="0.011766201820000001" blue="0.01176153217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Coi-0w-hxO" firstAttribute="width" secondItem="gOK-CM-Qu6" secondAttribute="width" multiplier="0.25" id="3ma-NL-eSN"/>
                             <constraint firstItem="H6S-Ak-Jvf" firstAttribute="leading" secondItem="mNB-VW-6jZ" secondAttribute="leading" constant="40" id="DOP-7S-lgE"/>
                             <constraint firstItem="Hsz-Kc-u43" firstAttribute="top" secondItem="H6S-Ak-Jvf" secondAttribute="bottom" constant="40" id="ETk-9s-Emj"/>
-                            <constraint firstItem="Coi-0w-hxO" firstAttribute="top" secondItem="mNB-VW-6jZ" secondAttribute="top" constant="70" id="Eh8-19-OBn"/>
                             <constraint firstItem="mNB-VW-6jZ" firstAttribute="bottom" secondItem="Hsz-Kc-u43" secondAttribute="bottom" constant="65" id="La5-mj-v6j"/>
                             <constraint firstItem="H6S-Ak-Jvf" firstAttribute="trailing" secondItem="mNB-VW-6jZ" secondAttribute="trailing" constant="-40" id="Mdg-9m-CCr"/>
                             <constraint firstItem="mNB-VW-6jZ" firstAttribute="trailing" secondItem="Hsz-Kc-u43" secondAttribute="trailing" constant="25" id="UDZ-1f-NNH"/>
+                            <constraint firstItem="Mbv-F1-O6c" firstAttribute="width" secondItem="gOK-CM-Qu6" secondAttribute="width" multiplier="0.4" id="bHl-y4-kw6"/>
+                            <constraint firstItem="Mbv-F1-O6c" firstAttribute="top" secondItem="mNB-VW-6jZ" secondAttribute="top" constant="70" id="blT-5w-lvP"/>
+                            <constraint firstItem="Mbv-F1-O6c" firstAttribute="centerX" secondItem="mNB-VW-6jZ" secondAttribute="centerX" id="dzU-6T-UGa"/>
                             <constraint firstItem="Hsz-Kc-u43" firstAttribute="leading" secondItem="gOK-CM-Qu6" secondAttribute="leading" constant="25" id="mLV-O0-Woo"/>
-                            <constraint firstItem="Coi-0w-hxO" firstAttribute="centerX" secondItem="gOK-CM-Qu6" secondAttribute="centerX" id="pOI-6d-Cmw"/>
-                            <constraint firstItem="H6S-Ak-Jvf" firstAttribute="top" secondItem="Coi-0w-hxO" secondAttribute="bottom" constant="60" id="qH5-zb-bFY"/>
+                            <constraint firstItem="H6S-Ak-Jvf" firstAttribute="top" secondItem="Mbv-F1-O6c" secondAttribute="bottom" constant="60" id="yhT-cH-yDv"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="hG8-3h-cDZ" appends="YES" id="5Os-Hx-J6W"/>
@@ -1224,7 +1219,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QIh-yg-Dlr"/>
                     <connections>
-                        <outlet property="storyTextView" destination="H6S-Ak-Jvf" id="iGT-sh-j4C"/>
+                        <outlet property="gifView" destination="Mbv-F1-O6c" id="nZd-9i-9eY"/>
+                        <outlet property="story" destination="H6S-Ak-Jvf" id="EiL-rd-3jN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7u-QZ-bTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1266,18 +1262,18 @@
                                             <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="gob-Nk-h9w"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUv-4L-AcZ">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUv-4L-AcZ">
                                         <rect key="frame" x="234.5" y="0.0" width="94.5" height="59"/>
-                                        <state key="normal" backgroundImage="skip">
+                                        <state key="normal" backgroundImage="close_ans">
                                             <color key="titleColor" name="quaternary"/>
                                         </state>
                                         <connections>
                                             <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="zRD-aR-BTZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6M5-9l-ZvB">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6M5-9l-ZvB">
                                         <rect key="frame" x="117" y="0.0" width="95" height="59"/>
-                                        <state key="normal" backgroundImage="close_ans">
+                                        <state key="normal" backgroundImage="skip">
                                             <color key="titleColor" name="quaternary"/>
                                         </state>
                                         <connections>
@@ -1511,9 +1507,9 @@
                         <outlet property="subScrollView" destination="aPn-0B-6sW" id="YW1-AD-rmZ"/>
                         <outlet property="submitButton" destination="2ys-ju-4Td" id="J6R-ab-lOg"/>
                         <outlet property="xpLabel" destination="JO3-pj-2gx" id="j6j-Hi-ZzL"/>
-                        <outletCollection property="powerupButtons" destination="KEk-l4-VIr" collectionClass="NSMutableArray" id="2ck-Sg-XOZ"/>
-                        <outletCollection property="powerupButtons" destination="6M5-9l-ZvB" collectionClass="NSMutableArray" id="J1J-mx-lS7"/>
-                        <outletCollection property="powerupButtons" destination="LUv-4L-AcZ" collectionClass="NSMutableArray" id="Yic-ii-SCQ"/>
+                        <outletCollection property="powerupButtons" destination="KEk-l4-VIr" collectionClass="NSMutableArray" id="QMt-t6-R3M"/>
+                        <outletCollection property="powerupButtons" destination="LUv-4L-AcZ" collectionClass="NSMutableArray" id="SsP-no-xn5"/>
+                        <outletCollection property="powerupButtons" destination="6M5-9l-ZvB" collectionClass="NSMutableArray" id="BIL-08-xJ5"/>
                         <segue destination="2xy-Y0-eCG" kind="show" identifier="story" id="zfe-D0-0BL"/>
                     </connections>
                 </viewController>
@@ -1802,7 +1798,7 @@
     </scenes>
     <designables>
         <designable name="7lU-1G-way">
-            <size key="intrinsicContentSize" width="941.5" height="19.5"/>
+            <size key="intrinsicContentSize" width="951.5" height="35.5"/>
         </designable>
     </designables>
     <resources>
@@ -1815,12 +1811,11 @@
         <image name="numbers" width="186.5" height="425.5"/>
         <image name="online cryptic hunt" width="203" height="17.5"/>
         <image name="skip" width="74" height="46"/>
-        <image name="story_icon" width="500" height="499"/>
         <image name="top" width="68" height="51"/>
         <image name="top-1" width="68" height="51"/>
         <image name="top-2" width="68" height="51"/>
         <image name="top-3" width="68" height="51"/>
-        <image name="xp_rules" width="171.5" height="35"/>
+        <image name="xp_rules" width="170.5" height="35"/>
         <namedColor name="dark">
             <color red="0.032000001519918442" green="0.059000000357627869" blue="0.029999999329447746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

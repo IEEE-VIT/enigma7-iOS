@@ -20,8 +20,6 @@
 		5B30BA622545DA0200B75FF4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B30BA602545DA0200B75FF4 /* MainInterface.storyboard */; };
 		5B30BA662545DA0200B75FF4 /* Enigma-SiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B30BA5A2545DA0200B75FF4 /* Enigma-SiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5B30BA692545DA0200B75FF4 /* Enigma-Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B30BA512545DA0100B75FF4 /* Enigma-Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5B30BA792545ECDF00B75FF4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */; };
-		5B30BA9A2545F1EC00B75FF4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */; };
 		5B30BAA42545F27F00B75FF4 /* LeaderboardIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BAA32545F27F00B75FF4 /* LeaderboardIntentHandler.swift */; };
 		5B30BAAD2545F2F100B75FF4 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
 		5B30BABF2545F2FA00B75FF4 /* Web Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FDE250748BE00B2AFF4 /* Web Helper.swift */; };
@@ -37,7 +35,6 @@
 		5B30BAD12545F30100B75FF4 /* EditUsernameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2B7252E42B100DA09A8 /* EditUsernameModel.swift */; };
 		5B30BAD22545F30100B75FF4 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869824FC27F100FE2EEC /* Leaderboard.swift */; };
 		5B30BAE32545F31E00B75FF4 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
-		5B30BB042545FC2300B75FF4 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */; };
 		5B30BB2F2547049D00B75FF4 /* LeaderboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */; };
 		5B30BB40254704B300B75FF4 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B32868A24FB9AC000FE2EEC /* Number.swift */; };
 		5B30BB6A254712A800B75FF4 /* ProfileIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B30BB69254712A800B75FF4 /* ProfileIntentHandler.swift */; };
@@ -107,8 +104,6 @@
 		5B81A2E5252E476400DA09A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B81A2E4252E476400DA09A8 /* SwiftUI.framework */; };
 		5B81A2E8252E476400DA09A8 /* Enigma_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E7252E476400DA09A8 /* Enigma_Widget.swift */; };
 		5B81A2EB252E476700DA09A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B81A2EA252E476700DA09A8 /* Assets.xcassets */; };
-		5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */; };
-		5B81A2EE252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */; };
 		5B81A2F1252E476700DA09A8 /* Enigma-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5B81A2E1252E476400DA09A8 /* Enigma-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5B81A305252E4E1000DA09A8 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB76E24FACDD9006D5541 /* Common.swift */; };
 		5B81A310252E506E00DA09A8 /* SmallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81A30A252E4E9F00DA09A8 /* SmallWidget.swift */; };
@@ -178,6 +173,13 @@
 		5BABB77424FAD063006D5541 /* Inconsolata.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB77324FAD063006D5541 /* Inconsolata.otf */; };
 		5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7B924FADEEB006D5541 /* TabbarController.swift */; };
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
+		5BB0CB1625725BDF00A6B234 /* enigma.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5BB0CB1525725BDF00A6B234 /* enigma.mp4 */; };
+		5BB0CB4E2572943100A6B234 /* Typewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB4D2572943100A6B234 /* Typewriter.swift */; };
+		5BB0CB8F2572E01D00A6B234 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */; };
+		5BB0CB902572E01D00A6B234 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */; };
+		5BB0CB912572E01D00A6B234 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */; };
+		5BB0CBC62572E30100A6B234 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CBC92572E30100A6B234 /* Enigma_Widget.intentdefinition */; };
+		5BB0CBC72572E30100A6B234 /* Enigma_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CBC92572E30100A6B234 /* Enigma_Widget.intentdefinition */; };
 		5BC24E6525492948000A310A /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E6425492948000A310A /* AppConstants.swift */; };
 		5BC24E7725493138000A310A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC24E7625493138000A310A /* String.swift */; };
 		5BC42422253C108F00E55FE3 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC42421253C108F00E55FE3 /* Device.swift */; };
@@ -326,7 +328,6 @@
 		5B30BA5E2545DA0200B75FF4 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		5B30BA612545DA0200B75FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		5B30BA632545DA0200B75FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
 		5B30BAA32545F27F00B75FF4 /* LeaderboardIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardIntentHandler.swift; sourceTree = "<group>"; };
 		5B30BB1D2547003E00B75FF4 /* Enigma-Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Enigma-Siri.entitlements"; sourceTree = "<group>"; };
 		5B30BB69254712A800B75FF4 /* ProfileIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIntentHandler.swift; sourceTree = "<group>"; };
@@ -367,7 +368,6 @@
 		5B81A2E2252E476400DA09A8 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		5B81A2E4252E476400DA09A8 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		5B81A2E7252E476400DA09A8 /* Enigma_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enigma_Widget.swift; sourceTree = "<group>"; };
-		5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Enigma_Widget.intentdefinition; sourceTree = "<group>"; };
 		5B81A2EA252E476700DA09A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B81A2EC252E476700DA09A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B81A2FA252E476D00DA09A8 /* Enigma-WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Enigma-WidgetExtension.entitlements"; sourceTree = "<group>"; };
@@ -417,6 +417,12 @@
 		5BABB77324FAD063006D5541 /* Inconsolata.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inconsolata.otf; sourceTree = "<group>"; };
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5BB0CB1525725BDF00A6B234 /* enigma.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = enigma.mp4; sourceTree = "<group>"; };
+		5BB0CB4D2572943100A6B234 /* Typewriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typewriter.swift; sourceTree = "<group>"; };
+		5BB0CB922572E01D00A6B234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
+		5BB0CB9D2572E02C00A6B234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
+		5BB0CBC82572E30100A6B234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Enigma_Widget.intentdefinition; sourceTree = "<group>"; };
+		5BB0CBD32572E32D00A6B234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Enigma_Widget.strings; sourceTree = "<group>"; };
 		5BC24E6425492948000A310A /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		5BC24E7625493138000A310A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5BC42421253C108F00E55FE3 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -592,7 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				5B81A2E7252E476400DA09A8 /* Enigma_Widget.swift */,
-				5B81A2E9252E476400DA09A8 /* Enigma_Widget.intentdefinition */,
+				5BB0CBC92572E30100A6B234 /* Enigma_Widget.intentdefinition */,
 				5B81A2EA252E476700DA09A8 /* Assets.xcassets */,
 				5B81A2EC252E476700DA09A8 /* Info.plist */,
 				5B81A30A252E4E9F00DA09A8 /* SmallWidget.swift */,
@@ -652,6 +658,7 @@
 			isa = PBXGroup;
 			children = (
 				5B81A2FA252E476D00DA09A8 /* Enigma-WidgetExtension.entitlements */,
+				5BB0CB1525725BDF00A6B234 /* enigma.mp4 */,
 				5B8F7229250692B300C427F7 /* GoogleSignIn.bundle */,
 				5BABB71A24FAC9F8006D5541 /* Enigma */,
 				5BABB73124FACA02006D5541 /* EnigmaTests */,
@@ -693,7 +700,7 @@
 				5BABB72424FACA01006D5541 /* Assets.xcassets */,
 				5BABB72924FACA01006D5541 /* Info.plist */,
 				5B8F7233250695ED00C427F7 /* credentials.plist */,
-				5B30BA782545ECDF00B75FF4 /* Intents.intentdefinition */,
+				5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */,
 			);
 			path = Enigma;
 			sourceTree = "<group>";
@@ -751,6 +758,7 @@
 				5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */,
 				5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */,
 				5B4CA35D25703C9300A8EF64 /* RulesCell.swift */,
+				5BB0CB4D2572943100A6B234 /* Typewriter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1129,6 +1137,7 @@
 				5B32869124FC0A4D00FE2EEC /* HintAlert.xib in Resources */,
 				5BABB76424FACDA9006D5541 /* IBMPlexMono-ExtraLight.ttf in Resources */,
 				5BABB76124FACDA9006D5541 /* IBMPlexMono-Bold.ttf in Resources */,
+				5BB0CB1625725BDF00A6B234 /* enigma.mp4 in Resources */,
 				5B5BE31B2566AED000F12B51 /* HintPreview.xib in Resources */,
 				5BABB76724FACDA9006D5541 /* IBMPlexMono-SemiBold.ttf in Resources */,
 				5B8F7234250695ED00C427F7 /* credentials.plist in Resources */,
@@ -1200,7 +1209,7 @@
 				5B638EBB2568D44B008CD80B /* AppConstants.swift in Sources */,
 				5B7016F2255C54EB007B6F82 /* XPTimeModel.swift in Sources */,
 				5B30BAC12545F2FA00B75FF4 /* Network Constants.swift in Sources */,
-				5B30BA9A2545F1EC00B75FF4 /* Intents.intentdefinition in Sources */,
+				5BB0CB902572E01D00A6B234 /* Intents.intentdefinition in Sources */,
 				5B30BACD2545F30100B75FF4 /* Error.swift in Sources */,
 				5B30BA542545DA0100B75FF4 /* IntentHandler.swift in Sources */,
 				5B30BABF2545F2FA00B75FF4 /* Web Helper.swift in Sources */,
@@ -1224,7 +1233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B30BB40254704B300B75FF4 /* Number.swift in Sources */,
-				5B30BB042545FC2300B75FF4 /* Intents.intentdefinition in Sources */,
+				5BB0CB912572E01D00A6B234 /* Intents.intentdefinition in Sources */,
 				5B30BBA1254717E700B75FF4 /* ProfileIntentViewController.swift in Sources */,
 				5B30BB2F2547049D00B75FF4 /* LeaderboardCell.swift in Sources */,
 				5B7016F3255C54EB007B6F82 /* XPTimeModel.swift in Sources */,
@@ -1257,7 +1266,7 @@
 				5B81A357252F506000DA09A8 /* SessionStore.swift in Sources */,
 				5B30BBCA25474E7000B75FF4 /* LargeWidget.swift in Sources */,
 				5B638EC72568D44E008CD80B /* AppConstants.swift in Sources */,
-				5B81A2ED252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */,
+				5BB0CBC72572E30100A6B234 /* Enigma_Widget.intentdefinition in Sources */,
 				5B81A305252E4E1000DA09A8 /* Common.swift in Sources */,
 				5B81A38E252F50ED00DA09A8 /* Error.swift in Sources */,
 				5B81A35C252F508400DA09A8 /* ServiceController.swift in Sources */,
@@ -1274,7 +1283,7 @@
 				5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */,
 				5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */,
 				5BD7F25A256AEB7C00F6E374 /* OutreachModel.swift in Sources */,
-				5B30BA792545ECDF00B75FF4 /* Intents.intentdefinition in Sources */,
+				5BB0CB8F2572E01D00A6B234 /* Intents.intentdefinition in Sources */,
 				5B921FDD250745A900B2AFF4 /* Network Constants.swift in Sources */,
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
 				5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */,
@@ -1291,7 +1300,7 @@
 				5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */,
 				5B32868B24FB9AC000FE2EEC /* Number.swift in Sources */,
 				5B4CA35E25703C9300A8EF64 /* RulesCell.swift in Sources */,
-				5B81A2EE252E476700DA09A8 /* Enigma_Widget.intentdefinition in Sources */,
+				5BB0CBC62572E30100A6B234 /* Enigma_Widget.intentdefinition in Sources */,
 				5B1B4B4E252252D000398B0D /* Image.swift in Sources */,
 				5BF6EB2925261BCB00813987 /* KeyboardObservers.swift in Sources */,
 				5BF6EB232526108100813987 /* Question.swift in Sources */,
@@ -1319,6 +1328,7 @@
 				5B1B4B5825236AAD00398B0D /* UserDetails.swift in Sources */,
 				5B921FDF250748BE00B2AFF4 /* Web Helper.swift in Sources */,
 				5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */,
+				5BB0CB4E2572943100A6B234 /* Typewriter.swift in Sources */,
 				5BC42422253C108F00E55FE3 /* Device.swift in Sources */,
 				5B81A2AD252E406F00DA09A8 /* AnswerModel.swift in Sources */,
 				5BABB76F24FACDD9006D5541 /* Common.swift in Sources */,
@@ -1459,6 +1469,24 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BB0CB922572E01D00A6B234 /* Base */,
+				5BB0CB9D2572E02C00A6B234 /* en */,
+			);
+			name = Intents.intentdefinition;
+			sourceTree = "<group>";
+		};
+		5BB0CBC92572E30100A6B234 /* Enigma_Widget.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BB0CBC82572E30100A6B234 /* Base */,
+				5BB0CBD32572E32D00A6B234 /* en */,
+			);
+			name = Enigma_Widget.intentdefinition;
+			sourceTree = "<group>";
+		};
 		5BC4263B253FFCD500E55FE3 /* Interface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1475,6 +1503,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Enigma-Siri/Enigma-Siri.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "Enigma-Siri/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1483,7 +1512,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1497,6 +1526,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Enigma-Siri/Enigma-Siri.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "Enigma-Siri/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1505,7 +1535,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1518,6 +1548,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "Enigma-SiriUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1526,7 +1557,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1539,6 +1570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "Enigma-SiriUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1547,7 +1579,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1563,6 +1595,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Enigma-WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "Enigma-Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1571,7 +1604,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1587,6 +1620,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "Enigma-WidgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "Enigma-Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1595,7 +1629,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1727,6 +1761,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Enigma/Enigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1739,7 +1774,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1758,6 +1793,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Enigma/Enigma.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1770,7 +1806,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1874,6 +1910,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				IBSC_MODULE = EnigmaWatch_Extension;
 				INFOPLIST_FILE = EnigmaWatch/Info.plist;
@@ -1882,7 +1919,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1891,7 +1928,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -1903,6 +1940,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				IBSC_MODULE = EnigmaWatch_Extension;
 				INFOPLIST_FILE = EnigmaWatch/Info.plist;
@@ -1911,7 +1949,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1919,7 +1957,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "EnigmaWatch Extension/EnigmaWatch-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};
@@ -1929,6 +1967,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "EnigmaWatch Extension/EnigmaWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "EnigmaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1936,14 +1975,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Debug;
 		};
@@ -1953,6 +1992,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "EnigmaWatch Extension/EnigmaWatch Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = F8CHS6PHQS;
 				INFOPLIST_FILE = "EnigmaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1960,14 +2000,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 5.0;
 			};
 			name = Release;
 		};

@@ -25,6 +25,17 @@ class  Defaults {
         return (UserDefaults.standard.value(forKey: Keys.login) as? Bool) ?? false
     }
     
+    static func startedWidget() -> Bool {
+        let started = userDefaults?.bool(forKey: "started")
+        userDefaults?.synchronize()
+        return started ?? false
+    }
+    
+    static func setStarted(_ bool : Bool){
+        userDefaults?.set(bool, forKey: "started")
+        userDefaults?.synchronize()
+    }
+    
     static func started() -> Bool {
         return (UserDefaults.standard.value(forKey: Keys.started) as? Bool) ?? false
     }

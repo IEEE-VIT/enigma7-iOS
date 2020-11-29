@@ -9,11 +9,11 @@
 	<key>INIntentDefinitionNamespace</key>
 	<string>Y1Q9hf</string>
 	<key>INIntentDefinitionSystemVersion</key>
-	<string>19G2021</string>
+	<string>20B29</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>12A7300</string>
+	<string>12B45b</string>
 	<key>INIntentDefinitionToolsVersion</key>
-	<string>12.0.1</string>
+	<string>12.2</string>
 	<key>INIntents</key>
 	<array>
 		<dict>
@@ -21,6 +21,8 @@
 			<string>information</string>
 			<key>INIntentConfigurable</key>
 			<true/>
+			<key>INIntentDescription</key>
+			<string>get the latest leaderboard!</string>
 			<key>INIntentDescriptionID</key>
 			<string>k7WqZC</string>
 			<key>INIntentEligibleForWidgets</key>
@@ -109,7 +111,7 @@
 				</array>
 			</dict>
 			<key>INIntentTitle</key>
-			<string>Get </string>
+			<string>Leaderboard</string>
 			<key>INIntentTitleID</key>
 			<string>B8G407</string>
 			<key>INIntentType</key>
@@ -155,6 +157,14 @@
 				<key>INIntentResponseCodes</key>
 				<array>
 					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Hey ${userDetails.userName}, with a total score of ${userDetails.score} your rank is ${userDetails.rank}. </string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>1B8CYu</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Hey ${userDetails.userName}, with a total score of ${userDetails.score} your rank is ${userDetails.rank}. </string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>lnEuQ9</string>
 						<key>INIntentResponseCodeName</key>
 						<string>success</string>
 						<key>INIntentResponseCodeSuccess</key>
@@ -338,7 +348,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>LZH3RZ</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>108</integer>
+			<integer>110</integer>
 			<key>INTypeName</key>
 			<string>User</string>
 			<key>INTypeProperties</key>
@@ -460,6 +470,20 @@
 					<string>xp</string>
 					<key>INTypePropertyTag</key>
 					<integer>107</integer>
+					<key>INTypePropertyType</key>
+					<string>Integer</string>
+				</dict>
+				<dict>
+					<key>INTypePropertyDisplayName</key>
+					<string>Rank</string>
+					<key>INTypePropertyDisplayNameID</key>
+					<string>KolL0l</string>
+					<key>INTypePropertyDisplayPriority</key>
+					<integer>10</integer>
+					<key>INTypePropertyName</key>
+					<string>rank</string>
+					<key>INTypePropertyTag</key>
+					<integer>110</integer>
 					<key>INTypePropertyType</key>
 					<string>Integer</string>
 				</dict>
