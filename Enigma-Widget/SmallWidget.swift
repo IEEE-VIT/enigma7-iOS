@@ -48,7 +48,7 @@ struct SmallWidget: View {
     }
     
     func isLoggedin()->Bool{
-        return Defaults.token() != ""
+        return (Defaults.token() != "") && Defaults.startedWidget()
     }
 }
 

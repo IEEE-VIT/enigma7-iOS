@@ -67,7 +67,9 @@ class ProfileViewController: UIViewController {
     fileprivate func enigmaStarted()->Bool{
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        guard let hackOn = formatter.date(from: "2020/12/04 18:20") else {return false}
+        formatter.timeZone = TimeZone(abbreviation: "IST")
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        guard let hackOn = formatter.date(from: "2020/12/05 16:20") else {return false}
         return (hackOn < Date())
     }
     

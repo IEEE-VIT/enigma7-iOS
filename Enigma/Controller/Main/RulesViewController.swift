@@ -25,8 +25,8 @@ class RulesViewController: UIViewController {
         "Players earn xp every hour and upon solving the questions.",
         "There are three different power ups that players can redeem from the collected xp.",
         "The first power up, Free hint (consumes 50 xp), gives the player the hint to the question without the penalty to their points.",
-        "The second power up, Close answer (consumes 80 xp), the players can successfully move to the next question and earn points for the question.",
-        "The third power up, Skip question (consumes 100 xp), the players can skip the current question but will not be awarded any points.",
+        "The second power up, Skip question (consumes 75 xp), the players can skip the current question but will not be awarded any points.",
+        "The third power up (consumes 100 xp along with a reduction of 10 points), Close answer, the players can successfully move to the next question and earn points for the question.",
         "Any form of malpractice shall be dealt with extreme seriousness. We are constantly trying to enhance the experience and security of the system. Your cooperation is highly appreciated."]
     
     var hideLabel: Bool = false

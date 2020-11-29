@@ -44,7 +44,7 @@ class LeaderboardIntentHandler: NSObject, LeaderboardIntentHandling{
                 property.score = NSNumber(value: leader.score ?? 0)
                 prop.append(property)
             }
-            response.leaderboard = prop
+            response.leaderboard = Array(prop[..<5])
             completion(response)
         }
     }

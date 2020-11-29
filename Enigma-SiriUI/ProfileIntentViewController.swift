@@ -33,12 +33,12 @@ class ProfileIntentViewController: UIViewController, INUIHostedViewControlling {
     // Prepare your view controller for the interaction to handle.
     func configureView(for parameters: Set<INParameter>, of interaction: INInteraction, interactiveBehavior: INUIInteractiveBehavior, context: INUIHostedViewContext, completion: @escaping (Bool, Set<INParameter>, CGSize) -> Void) {
         guard interaction.intent is ProfileIntent else {
-          completion(false, Set(), .zero)
+          completion(true, Set(), .zero)
           return
         }
         
         if let response = interaction.intentResponse as? ProfileIntentResponse {
-            guard let user = response.userDetails else { return } //TODO
+            guard let user = response.userDetails else { return }
             
             self.profile = user
             label.text = user.userName

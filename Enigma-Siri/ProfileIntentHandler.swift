@@ -39,6 +39,7 @@ class ProfileIntentHandler: NSObject, ProfileIntentHandling{
             profile.score = NSNumber(value: user.points ?? 0)
             profile.xp = NSNumber(value: user.xp ?? 0)
             profile.solved = NSNumber(value: user.question_answered ?? 0)
+            profile.rank = NSNumber(value: user.rank ?? 0)
             response.userDetails = profile
             completion(response)
         }

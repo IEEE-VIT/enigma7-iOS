@@ -21,7 +21,5 @@ final class AnswerModel {
         let question_id : Int?
         let status : Bool?
         let xp : Int?
-        
-        //TODO: add coding keys
     }
 }
