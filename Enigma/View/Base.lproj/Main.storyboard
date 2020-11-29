@@ -178,34 +178,50 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online cryptic hunt" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-oY-q0g">
                                 <rect key="frame" x="72.5" y="209" width="269" height="26.5"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-gN-ODh">
-                                <rect key="frame" x="62" y="757.5" width="290" height="54.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-gN-ODh">
+                                <rect key="frame" x="62" y="759" width="290" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="height" multiplier="5.32" id="Dww-4f-thQ"/>
+                                    <constraint firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="height" multiplier="5.45" id="Dww-4f-thQ"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="XUy-VV-aQn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
-                                <state key="normal" title="Continue with Google">
-                                    <color key="titleColor" name="quaternary"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="7.5" maxY="0.0"/>
+                                <state key="normal" backgroundImage="google">
+                                    <color key="titleColor" name="black"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 </variation>
                                 <connections>
                                     <action selector="signinWithGoogle:" destination="huf-Oc-YyW" eventType="touchUpInside" id="ufC-dA-XlY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-he-vho">
-                                <rect key="frame" x="62" y="682" width="290" height="54.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-he-vho">
+                                <rect key="frame" x="62" y="684.5" width="290" height="53.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="J4l-em-6Cm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
-                                <state key="normal" title="Continue with Apple">
-                                    <color key="titleColor" name="quaternary"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" backgroundImage="apple">
+                                    <color key="titleColor" name="black"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 </variation>
                                 <connections>
                                     <action selector="signinWithApple:" destination="huf-Oc-YyW" eventType="touchUpInside" id="Tiv-4F-xUe"/>
@@ -217,16 +233,16 @@
                         <constraints>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.55" id="0k3-Jv-vSc"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="92" id="2YX-tq-Hic"/>
-                            <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="height" multiplier="5.32" id="39M-bx-uwU"/>
+                            <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="height" multiplier="5.45" id="39M-bx-uwU"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="FWu-f1-T5R"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="top" secondItem="Bu5-he-vho" secondAttribute="bottom" constant="21" id="GZN-DG-NOj"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="width" secondItem="9MQ-3W-YRN" secondAttribute="width" multiplier="0.866242" id="KjY-6v-gS9"/>
+                            <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="width" id="KoE-tb-Nk5"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="OJB-Eq-Jqf"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.75" id="R38-IZ-GZF"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="22" id="RvG-5q-ZpS"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="centerY" secondItem="q0E-Ng-NXG" secondAttribute="centerY" priority="999" constant="-50" id="UK5-bS-Bsn"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dA4-2m-ouD"/>
-                            <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="dvY-VV-vgg"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="top" secondItem="Tze-XO-5ab" secondAttribute="bottom" priority="900" constant="100" id="frD-6x-2sV"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="centerX" secondItem="DYC-0i-PmK" secondAttribute="centerX" id="gxf-kC-itE"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="top" secondItem="9MQ-3W-YRN" secondAttribute="bottom" constant="20" id="mOa-xi-chA"/>
@@ -1802,16 +1818,18 @@
     </scenes>
     <designables>
         <designable name="7lU-1G-way">
-            <size key="intrinsicContentSize" width="941.5" height="19.5"/>
+            <size key="intrinsicContentSize" width="951.5" height="35.5"/>
         </designable>
     </designables>
     <resources>
         <image name="Enigma" width="152.5" height="24"/>
         <image name="Hint" width="21" height="21"/>
         <image name="Union" width="235.5" height="39.5"/>
+        <image name="apple" width="240" height="46"/>
         <image name="arrow" width="17" height="24"/>
         <image name="close_ans" width="74" height="46"/>
         <image name="free" width="74" height="46"/>
+        <image name="google" width="240" height="46"/>
         <image name="numbers" width="186.5" height="425.5"/>
         <image name="online cryptic hunt" width="203" height="17.5"/>
         <image name="skip" width="74" height="46"/>
@@ -1821,6 +1839,9 @@
         <image name="top-2" width="68" height="51"/>
         <image name="top-3" width="68" height="51"/>
         <image name="xp_rules" width="171.5" height="35"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="dark">
             <color red="0.032000001519918442" green="0.059000000357627869" blue="0.029999999329447746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

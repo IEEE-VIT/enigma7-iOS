@@ -76,11 +76,12 @@ extension RulesViewController: UITableViewDelegate,UITableViewDataSource{
         let screenWidth = view.frame.width
         let imageHeight = (index == 7) ? (screenWidth-40) * 0.20 : 0.0
         let width = view.frame.width - 60
-        print(width,screenWidth)
         let size = CGSize(width: width, height: 1000)
         
+        let fontsize : CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 32 : 16
+        
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-        let attributes = [NSAttributedString.Key.font : UIFont.init(name: "IBMPlexMono", size: 16)!]
+        let attributes = [NSAttributedString.Key.font : UIFont.init(name: "IBMPlexMono", size: fontsize)!]
         let string = NSString(string: text)
         let height = string.boundingRect(with: size, options: options, attributes: attributes, context: nil).height
         
