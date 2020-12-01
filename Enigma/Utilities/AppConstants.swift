@@ -9,6 +9,9 @@
 import Foundation
 
 struct AppConstants {
+    
+    static let privacy = "https://enigma.ieeevit.org/static/media/Privacy.6b994fbf.pdf"
+    
     struct CellId {
         static let leaderboardCell = "leadercell"
         static let rulesCell = "rulescell"

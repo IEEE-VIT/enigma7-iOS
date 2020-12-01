@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 import Intents
 
 protocol LogoutDelegate: class {
@@ -21,12 +22,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var signoutButton: UIButton!
+    @IBOutlet weak var privacyLabel: UILabel!
     
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var privacyCard: UIView!
     weak var delegate: LogoutDelegate?
+    var policyOn : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         handleUserDetails(details: Defaults.user())
+        loadPrivacy()
+        self.privacyLabel.underline()
+        self.view.sendSubviewToBack(privacyCard)
+        privacyCard.alpha = 0.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,12 +47,24 @@ class ProfileViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         signoutButton.addBorder(width: 2, .tertiary)
+        privacyCard.addBorder(width: 10, .primary, alpha: 0.8)
         bottomConstraint.constant = view.frame.height * 0.08
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.siriRequest()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if policyOn { self.dismissPrivacy((Any).self) }
+    }
+    
+    func loadPrivacy(){
+        guard let url = URL(string: AppConstants.privacy) else { return }
+        let request = URLRequest(url: url)
+        webView.load(request)
     }
     
     func handleUserDetails(details: UserDetails?){
@@ -53,8 +74,21 @@ class ProfileViewController: UIViewController {
         questionsSolved.text = user.question_answered?.stringValue
         rank.text = user.rank?.stringValue
         score.text = user.points?.stringValue
+    
     }
     
+    @IBAction func priavcyTapped(_ sender: Any) {
+        print("privacy")
+        self.view.bringSubviewToFront(privacyCard)
+        self.policyOn = true
+        privacyCard.alpha = 1.0
+    }
+    
+    @IBAction func dismissPrivacy(_ sender: Any) {
+        self.view.sendSubviewToBack(privacyCard)
+        privacyCard.alpha = 0.0
+        self.policyOn = false
+    }
     @IBAction func logout(_ sender: Any) {
         PostController.shared.logout()
         self.delegate?.logout()
@@ -75,3 +109,15 @@ class ProfileViewController: UIViewController {
     
 }
 
+
+extension UILabel {
+    func underline() {
+        if let textString = self.text {
+          let attributedString = NSMutableAttributedString(string: textString)
+            attributedString.addAttribute(NSAttributedString.Key.underlineStyle,
+                                          value: NSUnderlineStyle.single.rawValue,
+                                          range: NSRange(location: 0, length: attributedString.length))
+          attributedText = attributedString
+        }
+    }
+}
