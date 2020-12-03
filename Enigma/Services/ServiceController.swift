@@ -12,21 +12,21 @@ class ServiceController {
     
     static let shared: ServiceController = ServiceController()
     
-    func getUserDetails(completion : @escaping (UserDetails?)->()){
+    func getUserDetails(completion : @escaping (UserDetails?)->()) {
         WebHelper.sendGETRequest(url: NetworkConstants.Users.userDetailsURL, parameters: [:], responseType: UserDetails.self,key: Keys.user) { (response, _) in
             if let xp = response?.xp { UserDefaults.standard.set(xp, forKey: Keys.xp) }
-            if let username = response?.username { UserDefaults.standard.set(username, forKey: Keys.username) }
+            if let username = response?.username { UserDefaults.standard.set(username + ":", forKey: Keys.username) }
             completion(response)
         }
     }
     
-    func getLeaderboard(completion : @escaping ([Leaderboard]?)->()){
+    func getLeaderboard(completion : @escaping ([Leaderboard]?)->()) {
         WebHelper.sendGETRequest(url: NetworkConstants.Game.leaderboardURL, parameters: [:], responseType: [Leaderboard].self,key: Keys.leaderboard) { (response, _) in
             completion(response)
         }
     }
     
-    func getQuestion(completion : @escaping (Question?)->()){
+    func getQuestion(completion : @escaping (Question?)->()) {
         WebHelper.sendGETRequest(url: NetworkConstants.Game.questionURL, parameters: [:], responseType: Question.self,key: Keys.question) { (response, error) in
             completion(response)
         }
