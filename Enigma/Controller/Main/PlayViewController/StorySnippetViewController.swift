@@ -26,7 +26,6 @@ class StorySnippetViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.story.text = text
-        //animateText()
         playVideo()
     }
     
@@ -38,36 +37,7 @@ class StorySnippetViewController: UIViewController {
         self.view.removeFromSuperview()
         self.removeFromParent()
     }
-    
-    func animateText(){
-        story.text = ""
-        var charIndex = 0.0
-        for letter in text {
-            let time = 0.1 * charIndex
-            timer = Timer.scheduledTimer(withTimeInterval: time, repeats: false) { (_) in
-                if self.timer != nil {
-                    self.story.text?.append(letter)
-                    if self.extimateFrameForText() > self.story.frame.height {
-                        let point = CGPoint(x: 0.0, y: (self.story.contentSize.height - self.story.bounds.height))
-                        self.story.setContentOffset(point, animated: true)
-                    }
-                }
-            }
-            charIndex += 1
-        }
-    }
-    
-    private func extimateFrameForText() -> CGFloat {
-        let size = CGSize(width: self.story.frame.width, height: 1000)
-        
-        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-        let attributes = [NSAttributedString.Key.font : UIFont.init(name: "IBMPlexMono", size: 16)!]
-        let string = NSString(string: self.story.text)
-        let height = string.boundingRect(with: size, options: options, attributes: attributes, context: nil).height
-        
-        return height
-    }
-    
+
     
     private func playVideo() {
         guard let path = Bundle.main.path(forResource: "enigma", ofType:"mp4") else {
@@ -81,49 +51,4 @@ class StorySnippetViewController: UIViewController {
         player.play()
     }
     
-}
-
-extension UITextView {
-    func simple_scrollToBottom() {
-        let textCount: Int = text.count
-        guard textCount >= 1 else { return }
-        scrollRangeToVisible(NSRange(location: textCount - 1, length: 1))
-        self.isScrollEnabled = false
-        self.isScrollEnabled = true
-    }
-}
-
-extension UITextView {
-    func typeOn(string: String) {
-        let characterArray = string.characterArray
-        var characterIndex = 0
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (timer) in
-            if characterArray[characterIndex] != "$" {
-                while characterArray[characterIndex] == " " {
-                    self.text.append(" ")
-                    characterIndex += 1
-                    if characterIndex == characterArray.count {
-                        timer.invalidate()
-                        return
-                    }
-                }
-                self.text.append(characterArray[characterIndex])
-                self.simple_scrollToBottom()
-            }
-            characterIndex += 1
-            if characterIndex == characterArray.count {
-                timer.invalidate()
-            }
-        }
-    }
-}
-
-extension String {
-    var characterArray: [Character]{
-        var characterArray = [Character]()
-        for character in self{
-            characterArray.append(character)
-        }
-        return characterArray
-    }
 }

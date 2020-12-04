@@ -58,7 +58,9 @@ struct AppConstants {
     
     struct Story {
         static let username = " <username> "
+        static let username2 = "  <username>  "
         static let lineBreak = " <br> "
+        static let lineBreak2 = "<br>"
     }
     
 }

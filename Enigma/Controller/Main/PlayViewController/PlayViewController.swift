@@ -147,8 +147,10 @@ class PlayViewController: UIViewController {
     
     func formatStory(_ story: String) -> String {
         var texts = story
-        texts = texts.replacingOccurrences(of: AppConstants.Story.username, with: Defaults.username())
+        texts = texts.replacingOccurrences(of: AppConstants.Story.username, with: Defaults.username()+":")
+        texts = texts.replacingOccurrences(of: AppConstants.Story.username2, with: " " + Defaults.username() + " ")
         texts = texts.replacingOccurrences(of: AppConstants.Story.lineBreak, with: "\n")
+        texts = texts.replacingOccurrences(of: AppConstants.Story.lineBreak2, with: "\n")
         return texts
     }
     
