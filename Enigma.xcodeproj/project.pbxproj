@@ -174,7 +174,6 @@
 		5BABB7BA24FADEEB006D5541 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7B924FADEEB006D5541 /* TabbarController.swift */; };
 		5BABB7BC24FAE05B006D5541 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */; };
 		5BB0CB1625725BDF00A6B234 /* enigma.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5BB0CB1525725BDF00A6B234 /* enigma.mp4 */; };
-		5BB0CB4E2572943100A6B234 /* Typewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB4D2572943100A6B234 /* Typewriter.swift */; };
 		5BB0CB8F2572E01D00A6B234 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */; };
 		5BB0CB902572E01D00A6B234 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */; };
 		5BB0CB912572E01D00A6B234 /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5BB0CB932572E01D00A6B234 /* Intents.intentdefinition */; };
@@ -418,7 +417,6 @@
 		5BABB7B924FADEEB006D5541 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		5BABB7BB24FAE05B006D5541 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BB0CB1525725BDF00A6B234 /* enigma.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = enigma.mp4; sourceTree = "<group>"; };
-		5BB0CB4D2572943100A6B234 /* Typewriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typewriter.swift; sourceTree = "<group>"; };
 		5BB0CB922572E01D00A6B234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Intents.intentdefinition; sourceTree = "<group>"; };
 		5BB0CB9D2572E02C00A6B234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Intents.strings; sourceTree = "<group>"; };
 		5BB0CBC82572E30100A6B234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/Enigma_Widget.intentdefinition; sourceTree = "<group>"; };
@@ -758,7 +756,6 @@
 				5B32869624FC256E00FE2EEC /* LeaderboardCell.swift */,
 				5B1B4B4F2522644B00398B0D /* ImageScrollView.swift */,
 				5B4CA35D25703C9300A8EF64 /* RulesCell.swift */,
-				5BB0CB4D2572943100A6B234 /* Typewriter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1328,7 +1325,6 @@
 				5B1B4B5825236AAD00398B0D /* UserDetails.swift in Sources */,
 				5B921FDF250748BE00B2AFF4 /* Web Helper.swift in Sources */,
 				5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */,
-				5BB0CB4E2572943100A6B234 /* Typewriter.swift in Sources */,
 				5BC42422253C108F00E55FE3 /* Device.swift in Sources */,
 				5B81A2AD252E406F00DA09A8 /* AnswerModel.swift in Sources */,
 				5BABB76F24FACDD9006D5541 /* Common.swift in Sources */,
@@ -1512,7 +1508,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1535,7 +1531,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Siri";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1557,7 +1553,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1579,7 +1575,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-SiriUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1604,7 +1600,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1629,7 +1625,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "akk.Enigma.Enigma-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1774,7 +1770,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1806,7 +1802,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				OTHER_LDFLAGS = (
 					"$(OTHER_LDFLAGS)",
 					"-ObjC",
@@ -1919,7 +1915,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1949,7 +1945,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1975,7 +1971,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -2000,7 +1996,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = akk.Enigma.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;

@@ -178,34 +178,50 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online cryptic hunt" translatesAutoresizingMaskIntoConstraints="NO" id="DIE-oY-q0g">
                                 <rect key="frame" x="72.5" y="209" width="269" height="26.5"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-gN-ODh">
-                                <rect key="frame" x="62" y="757.5" width="290" height="54.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVM-gN-ODh">
+                                <rect key="frame" x="62" y="759" width="290" height="53"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="height" multiplier="5.32" id="Dww-4f-thQ"/>
+                                    <constraint firstAttribute="width" secondItem="dVM-gN-ODh" secondAttribute="height" multiplier="5.45" id="Dww-4f-thQ"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="XUy-VV-aQn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
-                                <state key="normal" title="Continue with Google">
-                                    <color key="titleColor" name="quaternary"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="7.5" maxY="0.0"/>
+                                <state key="normal" backgroundImage="google">
+                                    <color key="titleColor" name="black"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 </variation>
                                 <connections>
                                     <action selector="signinWithGoogle:" destination="huf-Oc-YyW" eventType="touchUpInside" id="ufC-dA-XlY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-he-vho">
-                                <rect key="frame" x="62" y="682" width="290" height="54.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bu5-he-vho">
+                                <rect key="frame" x="62" y="684.5" width="290" height="53.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="J4l-em-6Cm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="20"/>
-                                <state key="normal" title="Continue with Apple">
-                                    <color key="titleColor" name="quaternary"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" backgroundImage="apple">
+                                    <color key="titleColor" name="black"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="Inconsolata" family="Inconsolata" pointSize="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 </variation>
                                 <connections>
                                     <action selector="signinWithApple:" destination="huf-Oc-YyW" eventType="touchUpInside" id="Tiv-4F-xUe"/>
@@ -217,16 +233,16 @@
                         <constraints>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.55" id="0k3-Jv-vSc"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="92" id="2YX-tq-Hic"/>
-                            <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="height" multiplier="5.32" id="39M-bx-uwU"/>
+                            <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="height" multiplier="5.45" id="39M-bx-uwU"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="FWu-f1-T5R"/>
                             <constraint firstItem="dVM-gN-ODh" firstAttribute="top" secondItem="Bu5-he-vho" secondAttribute="bottom" constant="21" id="GZN-DG-NOj"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="width" secondItem="9MQ-3W-YRN" secondAttribute="width" multiplier="0.866242" id="KjY-6v-gS9"/>
+                            <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="Bu5-he-vho" secondAttribute="width" id="KoE-tb-Nk5"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="OJB-Eq-Jqf"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.75" id="R38-IZ-GZF"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="top" secondItem="DYC-0i-PmK" secondAttribute="top" constant="22" id="RvG-5q-ZpS"/>
                             <constraint firstItem="9MQ-3W-YRN" firstAttribute="centerY" secondItem="q0E-Ng-NXG" secondAttribute="centerY" priority="999" constant="-50" id="UK5-bS-Bsn"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="centerX" secondItem="q0E-Ng-NXG" secondAttribute="centerX" id="dA4-2m-ouD"/>
-                            <constraint firstItem="dVM-gN-ODh" firstAttribute="width" secondItem="q0E-Ng-NXG" secondAttribute="width" multiplier="0.7" priority="950" id="dvY-VV-vgg"/>
                             <constraint firstItem="Bu5-he-vho" firstAttribute="top" secondItem="Tze-XO-5ab" secondAttribute="bottom" priority="900" constant="100" id="frD-6x-2sV"/>
                             <constraint firstItem="Tze-XO-5ab" firstAttribute="centerX" secondItem="DYC-0i-PmK" secondAttribute="centerX" id="gxf-kC-itE"/>
                             <constraint firstItem="DIE-oY-q0g" firstAttribute="top" secondItem="9MQ-3W-YRN" secondAttribute="bottom" constant="20" id="mOa-xi-chA"/>
@@ -938,13 +954,13 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-po-Z1t">
-                                <rect key="frame" x="25" y="191" width="364" height="525.5"/>
+                                <rect key="frame" x="25" y="161" width="364" height="555.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xyL-i3-3y8">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="131.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="139"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhV-sk-H9h">
-                                                <rect key="frame" x="0.0" y="41" width="111.5" height="24.5"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="111.5" height="24.5"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
                                                 <color key="textColor" name="tertiary"/>
                                                 <nil key="highlightedColor"/>
@@ -953,7 +969,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ValidUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8og-ns-L69">
-                                                <rect key="frame" x="16" y="65.5" width="348" height="23.5"/>
+                                                <rect key="frame" x="16" y="69" width="348" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="tertiary"/>
                                                 <nil key="highlightedColor"/>
@@ -972,10 +988,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J0V-k2-25F">
-                                        <rect key="frame" x="0.0" y="131.5" width="364" height="131"/>
+                                        <rect key="frame" x="0.0" y="139" width="364" height="138.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET8-hC-GoW">
-                                                <rect key="frame" x="0.0" y="41" width="83.5" height="24.5"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="83.5" height="24.5"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
                                                 <color key="textColor" name="tertiary"/>
                                                 <nil key="highlightedColor"/>
@@ -984,7 +1000,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ValidUsername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DWf-2f-trR">
-                                                <rect key="frame" x="16" y="65.5" width="348" height="23.5"/>
+                                                <rect key="frame" x="16" y="69" width="348" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                 <color key="textColor" name="tertiary"/>
                                                 <nil key="highlightedColor"/>
@@ -1003,13 +1019,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-ZL-KOA">
-                                        <rect key="frame" x="0.0" y="262.5" width="364" height="263"/>
+                                        <rect key="frame" x="0.0" y="277.5" width="364" height="278"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-le-ZEY" userLabel="I">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="92.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions Solved:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIM-M1-QP7">
-                                                        <rect key="frame" x="0.0" y="31.5" width="171.5" height="24.5"/>
+                                                        <rect key="frame" x="0.0" y="34" width="171.5" height="24.5"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
                                                         <color key="textColor" name="tertiary"/>
                                                         <nil key="highlightedColor"/>
@@ -1018,7 +1034,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="G8c-YQ-pA3">
-                                                        <rect key="frame" x="176.5" y="32" width="12" height="23.5"/>
+                                                        <rect key="frame" x="176.5" y="34.5" width="12" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                         <color key="textColor" name="tertiary"/>
                                                         <nil key="highlightedColor"/>
@@ -1037,10 +1053,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N3D-Ys-UMh" userLabel="I">
-                                                <rect key="frame" x="0.0" y="87.5" width="364" height="87.5"/>
+                                                <rect key="frame" x="0.0" y="92.5" width="364" height="92.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU3-9n-wdo">
-                                                        <rect key="frame" x="0.0" y="31.5" width="54.5" height="24.5"/>
+                                                        <rect key="frame" x="0.0" y="34" width="54.5" height="24.5"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
                                                         <color key="textColor" name="tertiary"/>
                                                         <nil key="highlightedColor"/>
@@ -1049,7 +1065,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0pO-6t-4vr">
-                                                        <rect key="frame" x="59.5" y="32" width="22.5" height="23.5"/>
+                                                        <rect key="frame" x="59.5" y="34.5" width="22.5" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                         <color key="textColor" name="tertiary"/>
                                                         <nil key="highlightedColor"/>
@@ -1068,10 +1084,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ih-TX-w59" userLabel="I">
-                                                <rect key="frame" x="0.0" y="175" width="364" height="88"/>
+                                                <rect key="frame" x="0.0" y="185" width="364" height="93"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryV-dg-fed">
-                                                        <rect key="frame" x="0.0" y="32" width="61" height="24.5"/>
+                                                        <rect key="frame" x="0.0" y="34.5" width="61" height="24.5"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexMono-SemiBold" family="IBM Plex Mono SemiBold" pointSize="21"/>
                                                         <color key="textColor" name="tertiary"/>
                                                         <nil key="highlightedColor"/>
@@ -1080,7 +1096,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kNg-eh-lyb">
-                                                        <rect key="frame" x="66" y="32.5" width="33.5" height="23.5"/>
+                                                        <rect key="frame" x="66" y="35" width="33.5" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
                                                         <color key="textColor" name="tertiary"/>
                                                         <nil key="highlightedColor"/>
@@ -1133,6 +1149,65 @@
                                     <constraint firstItem="xyL-i3-3y8" firstAttribute="leading" secondItem="6WR-po-Z1t" secondAttribute="leading" id="zQP-Mk-iEk"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-ia-JAe">
+                                <rect key="frame" x="132" y="826" width="150" height="26"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="22"/>
+                                <color key="textColor" name="tertiary"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="30"/>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="H5p-G7-ZxC" appends="YES" id="vz8-mQ-kgk"/>
+                                </connections>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iol-vY-jLr">
+                                <rect key="frame" x="25" y="184" width="364" height="528"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYF-hb-6OY">
+                                        <rect key="frame" x="10" y="53" width="344" height="465"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY3-tr-c7G">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="53"/>
+                                        <subviews>
+                                            <button opaque="NO" alpha="0.68999999999999995" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCt-lC-E3e">
+                                                <rect key="frame" x="20" y="15" width="23" height="23"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cCt-lC-E3e" secondAttribute="height" id="w5v-Vf-6la"/>
+                                                </constraints>
+                                                <state key="normal" backgroundImage="failure"/>
+                                                <connections>
+                                                    <action selector="dismissPrivacy:" destination="6W7-zj-YS8" eventType="touchUpInside" id="ECn-pz-Qhq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.095853485170000002" green="0.18436643480000001" blue="0.13903841380000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="cCt-lC-E3e" firstAttribute="top" secondItem="NY3-tr-c7G" secondAttribute="top" constant="15" id="KwL-DM-djz"/>
+                                            <constraint firstItem="cCt-lC-E3e" firstAttribute="centerY" secondItem="NY3-tr-c7G" secondAttribute="centerY" id="T94-hX-FOT"/>
+                                            <constraint firstItem="cCt-lC-E3e" firstAttribute="leading" secondItem="NY3-tr-c7G" secondAttribute="leading" constant="20" id="ejp-Lf-w1p"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="dark"/>
+                                <constraints>
+                                    <constraint firstItem="NY3-tr-c7G" firstAttribute="leading" secondItem="iol-vY-jLr" secondAttribute="leading" id="3qV-Cp-Xyj"/>
+                                    <constraint firstItem="NY3-tr-c7G" firstAttribute="top" secondItem="iol-vY-jLr" secondAttribute="top" id="6vL-lw-P2Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="sYF-hb-6OY" secondAttribute="trailing" constant="10" id="B48-Xd-diH"/>
+                                    <constraint firstItem="NY3-tr-c7G" firstAttribute="height" secondItem="iol-vY-jLr" secondAttribute="height" multiplier="0.1" id="EIn-lW-nIh"/>
+                                    <constraint firstAttribute="trailing" secondItem="NY3-tr-c7G" secondAttribute="trailing" id="LKf-AJ-qkL"/>
+                                    <constraint firstItem="sYF-hb-6OY" firstAttribute="leading" secondItem="iol-vY-jLr" secondAttribute="leading" constant="10" id="NfH-gA-c7e"/>
+                                    <constraint firstAttribute="width" secondItem="iol-vY-jLr" secondAttribute="height" multiplier="0.69" id="at4-AT-zcI"/>
+                                    <constraint firstItem="sYF-hb-6OY" firstAttribute="top" secondItem="NY3-tr-c7G" secondAttribute="bottom" id="lxR-Cy-KJJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="sYF-hb-6OY" secondAttribute="bottom" constant="10" id="nVn-iC-A33"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T60-ww-clu"/>
                         <color key="backgroundColor" name="dark"/>
@@ -1143,25 +1218,40 @@
                             <constraint firstItem="3bp-Op-LdI" firstAttribute="top" secondItem="6WR-po-Z1t" secondAttribute="bottom" constant="30" id="DI0-6A-xXO"/>
                             <constraint firstItem="T60-ww-clu" firstAttribute="trailing" secondItem="6WR-po-Z1t" secondAttribute="trailing" constant="25" id="Ey1-ns-rwE"/>
                             <constraint firstItem="fBx-ig-sAq" firstAttribute="top" secondItem="T60-ww-clu" secondAttribute="top" constant="80" id="KmY-oR-2ku"/>
+                            <constraint firstItem="T60-ww-clu" firstAttribute="bottom" secondItem="T0X-ia-JAe" secondAttribute="bottom" constant="10" id="RC3-70-QXT"/>
+                            <constraint firstItem="iol-vY-jLr" firstAttribute="centerX" secondItem="oag-Mo-AO7" secondAttribute="centerX" id="SCh-6F-i2K"/>
                             <constraint firstItem="fBx-ig-sAq" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="20" id="e8o-vd-u58"/>
+                            <constraint firstItem="T0X-ia-JAe" firstAttribute="width" secondItem="3bp-Op-LdI" secondAttribute="width" multiplier="1.1" id="g3v-Qe-v2y"/>
                             <constraint firstItem="3bp-Op-LdI" firstAttribute="width" secondItem="oag-Mo-AO7" secondAttribute="width" multiplier="0.33" id="gWV-2G-fhA"/>
-                            <constraint firstItem="6WR-po-Z1t" firstAttribute="top" secondItem="fBx-ig-sAq" secondAttribute="bottom" constant="30" id="rvc-X5-uet"/>
+                            <constraint firstItem="iol-vY-jLr" firstAttribute="centerY" secondItem="oag-Mo-AO7" secondAttribute="centerY" id="jps-oY-DpI"/>
+                            <constraint firstItem="iol-vY-jLr" firstAttribute="leading" secondItem="T60-ww-clu" secondAttribute="leading" constant="25" id="kSi-pq-0AB"/>
+                            <constraint firstItem="T0X-ia-JAe" firstAttribute="centerX" secondItem="T60-ww-clu" secondAttribute="centerX" id="qwh-tT-wF0"/>
+                            <constraint firstItem="6WR-po-Z1t" firstAttribute="top" secondItem="fBx-ig-sAq" secondAttribute="bottom" id="rvc-X5-uet"/>
                             <constraint firstItem="T60-ww-clu" firstAttribute="trailing" secondItem="fBx-ig-sAq" secondAttribute="trailing" constant="50" id="uD2-xm-yWT"/>
+                            <constraint firstItem="T60-ww-clu" firstAttribute="trailing" secondItem="iol-vY-jLr" secondAttribute="trailing" constant="25" id="veh-Wx-l3O"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomConstraint" destination="D1K-6R-iBq" id="lWh-nE-zPG"/>
                         <outlet property="emailId" destination="DWf-2f-trR" id="ANL-SC-Ngs"/>
+                        <outlet property="privacyCard" destination="iol-vY-jLr" id="9p5-AV-K7k"/>
+                        <outlet property="privacyLabel" destination="T0X-ia-JAe" id="EtY-WF-5I7"/>
                         <outlet property="questionsSolved" destination="G8c-YQ-pA3" id="k4J-Oi-rSd"/>
                         <outlet property="rank" destination="0pO-6t-4vr" id="OPW-Qa-9ip"/>
                         <outlet property="score" destination="kNg-eh-lyb" id="NPk-K3-6zf"/>
                         <outlet property="signoutButton" destination="3bp-Op-LdI" id="W26-lo-hVL"/>
                         <outlet property="username" destination="8og-ns-L69" id="hfW-Iv-Iei"/>
+                        <outlet property="webView" destination="sYF-hb-6OY" id="sIV-P9-Q1a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vh-x2-1u8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="H5p-G7-ZxC">
+                    <connections>
+                        <action selector="priavcyTapped:" destination="6W7-zj-YS8" id="JQ7-fT-iWE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5698.3999999999996" y="665.21739130434787"/>
+            <point key="canvasLocation" x="5697.1014492753629" y="664.95535714285711"/>
         </scene>
         <!--Story Snippet View Controller-->
         <scene sceneID="t4Z-fJ-kSV">
@@ -1181,7 +1271,7 @@
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6S-Ak-Jvf">
-                                <rect key="frame" x="40" y="339.5" width="334" height="393"/>
+                                <rect key="frame" x="40" y="268" width="334" height="464.5"/>
                                 <string key="text">Etiam fermentum ut bibendum egestas id maecenas aliquam lacinia nulla.                     Tempor enim viverra eu laoreet.                      </string>
                                 <color key="textColor" name="tertiary"/>
                                 <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="20"/>
@@ -1190,28 +1280,28 @@
                                     <fontDescription key="fontDescription" name="IBMPlexMono" family="IBM Plex Mono" pointSize="28"/>
                                 </variation>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbv-F1-O6c">
-                                <rect key="frame" x="124" y="114" width="166" height="165.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uk-kp-S58">
+                                <rect key="frame" x="145" y="94" width="124" height="124"/>
+                                <color key="backgroundColor" red="0.011764705882352941" green="0.011764705882352941" blue="0.011764705882352941" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Mbv-F1-O6c" secondAttribute="height" id="eff-1U-msR"/>
+                                    <constraint firstAttribute="width" secondItem="4uk-kp-S58" secondAttribute="height" id="JJ2-FZ-NNU"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mNB-VW-6jZ"/>
-                        <color key="backgroundColor" red="0.01176237036" green="0.011766201820000001" blue="0.01176153217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.011764705882352941" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="H6S-Ak-Jvf" firstAttribute="leading" secondItem="mNB-VW-6jZ" secondAttribute="leading" constant="40" id="DOP-7S-lgE"/>
                             <constraint firstItem="Hsz-Kc-u43" firstAttribute="top" secondItem="H6S-Ak-Jvf" secondAttribute="bottom" constant="40" id="ETk-9s-Emj"/>
                             <constraint firstItem="mNB-VW-6jZ" firstAttribute="bottom" secondItem="Hsz-Kc-u43" secondAttribute="bottom" constant="65" id="La5-mj-v6j"/>
                             <constraint firstItem="H6S-Ak-Jvf" firstAttribute="trailing" secondItem="mNB-VW-6jZ" secondAttribute="trailing" constant="-40" id="Mdg-9m-CCr"/>
+                            <constraint firstItem="4uk-kp-S58" firstAttribute="width" secondItem="gOK-CM-Qu6" secondAttribute="width" multiplier="0.3" id="RBN-vP-abv"/>
                             <constraint firstItem="mNB-VW-6jZ" firstAttribute="trailing" secondItem="Hsz-Kc-u43" secondAttribute="trailing" constant="25" id="UDZ-1f-NNH"/>
-                            <constraint firstItem="Mbv-F1-O6c" firstAttribute="width" secondItem="gOK-CM-Qu6" secondAttribute="width" multiplier="0.4" id="bHl-y4-kw6"/>
-                            <constraint firstItem="Mbv-F1-O6c" firstAttribute="top" secondItem="mNB-VW-6jZ" secondAttribute="top" constant="70" id="blT-5w-lvP"/>
-                            <constraint firstItem="Mbv-F1-O6c" firstAttribute="centerX" secondItem="mNB-VW-6jZ" secondAttribute="centerX" id="dzU-6T-UGa"/>
                             <constraint firstItem="Hsz-Kc-u43" firstAttribute="leading" secondItem="gOK-CM-Qu6" secondAttribute="leading" constant="25" id="mLV-O0-Woo"/>
-                            <constraint firstItem="H6S-Ak-Jvf" firstAttribute="top" secondItem="Mbv-F1-O6c" secondAttribute="bottom" constant="60" id="yhT-cH-yDv"/>
+                            <constraint firstItem="H6S-Ak-Jvf" firstAttribute="top" secondItem="4uk-kp-S58" secondAttribute="bottom" constant="50" id="rJS-8x-HHU"/>
+                            <constraint firstItem="4uk-kp-S58" firstAttribute="top" secondItem="mNB-VW-6jZ" secondAttribute="top" constant="50" id="uzz-Hl-GbC"/>
+                            <constraint firstItem="4uk-kp-S58" firstAttribute="centerX" secondItem="gOK-CM-Qu6" secondAttribute="centerX" id="yyP-Bg-NxP"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="hG8-3h-cDZ" appends="YES" id="5Os-Hx-J6W"/>
@@ -1219,8 +1309,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="QIh-yg-Dlr"/>
                     <connections>
-                        <outlet property="gifView" destination="Mbv-F1-O6c" id="nZd-9i-9eY"/>
-                        <outlet property="story" destination="H6S-Ak-Jvf" id="EiL-rd-3jN"/>
+                        <outlet property="gifView" destination="4uk-kp-S58" id="sK0-GQ-1xV"/>
+                        <outlet property="story" destination="H6S-Ak-Jvf" id="zFl-DT-c8D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7u-QZ-bTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1259,7 +1349,7 @@
                                             <color key="titleColor" name="quaternary"/>
                                         </state>
                                         <connections>
-                                            <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="gob-Nk-h9w"/>
+                                            <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="FrN-kA-23d"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUv-4L-AcZ">
@@ -1268,7 +1358,7 @@
                                             <color key="titleColor" name="quaternary"/>
                                         </state>
                                         <connections>
-                                            <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="zRD-aR-BTZ"/>
+                                            <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="KfX-ob-zRk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6M5-9l-ZvB">
@@ -1277,7 +1367,7 @@
                                             <color key="titleColor" name="quaternary"/>
                                         </state>
                                         <connections>
-                                            <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="7dJ-Zg-ydF"/>
+                                            <action selector="powerupTapped:" destination="5eb-eE-DVo" eventType="touchUpInside" id="j3i-97-PDh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1507,9 +1597,9 @@
                         <outlet property="subScrollView" destination="aPn-0B-6sW" id="YW1-AD-rmZ"/>
                         <outlet property="submitButton" destination="2ys-ju-4Td" id="J6R-ab-lOg"/>
                         <outlet property="xpLabel" destination="JO3-pj-2gx" id="j6j-Hi-ZzL"/>
-                        <outletCollection property="powerupButtons" destination="KEk-l4-VIr" collectionClass="NSMutableArray" id="QMt-t6-R3M"/>
-                        <outletCollection property="powerupButtons" destination="LUv-4L-AcZ" collectionClass="NSMutableArray" id="SsP-no-xn5"/>
-                        <outletCollection property="powerupButtons" destination="6M5-9l-ZvB" collectionClass="NSMutableArray" id="BIL-08-xJ5"/>
+                        <outletCollection property="powerupButtons" destination="KEk-l4-VIr" collectionClass="NSMutableArray" id="E39-Lt-5mr"/>
+                        <outletCollection property="powerupButtons" destination="LUv-4L-AcZ" collectionClass="NSMutableArray" id="PPA-YJ-dWK"/>
+                        <outletCollection property="powerupButtons" destination="6M5-9l-ZvB" collectionClass="NSMutableArray" id="AYe-Tz-4rR"/>
                         <segue destination="2xy-Y0-eCG" kind="show" identifier="story" id="zfe-D0-0BL"/>
                     </connections>
                 </viewController>
@@ -1805,9 +1895,12 @@
         <image name="Enigma" width="152.5" height="24"/>
         <image name="Hint" width="21" height="21"/>
         <image name="Union" width="235.5" height="39.5"/>
+        <image name="apple" width="240" height="46"/>
         <image name="arrow" width="17" height="24"/>
         <image name="close_ans" width="74" height="46"/>
+        <image name="failure" width="94" height="94"/>
         <image name="free" width="74" height="46"/>
+        <image name="google" width="240" height="46"/>
         <image name="numbers" width="186.5" height="425.5"/>
         <image name="online cryptic hunt" width="203" height="17.5"/>
         <image name="skip" width="74" height="46"/>
@@ -1816,6 +1909,9 @@
         <image name="top-2" width="68" height="51"/>
         <image name="top-3" width="68" height="51"/>
         <image name="xp_rules" width="170.5" height="35"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="dark">
             <color red="0.032000001519918442" green="0.059000000357627869" blue="0.029999999329447746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

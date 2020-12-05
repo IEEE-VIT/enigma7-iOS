@@ -18,7 +18,7 @@ class RulesViewController: UIViewController {
     let rules = [
         "ENIGMA 7.0 is an online cryptic hunt where players solve a series of challenging riddles and puzzles to win exciting prizes.",
         "The points earned on answering each question are completely relative to the competition - the earlier you solve a question, the higher your score will be. These points determine your position on the leaderboard.",
-        "Upon using a hint, a one-time penalty of 15% shall be applied on the points earned from the corresponding question.",
+        "Upon using a hint, a one-time penalty of 10 points shall be applied on the points earned from the corresponding question.",
         "Every player will have xp (experience points) which can be redeemed to use power ups.",
         "xp does not play a part in determining the leaderboard position and is different from “points” mentioned.",
         "All players start with 0 xp and can collect a maximum of 100 xp.",
@@ -76,11 +76,12 @@ extension RulesViewController: UITableViewDelegate,UITableViewDataSource{
         let screenWidth = view.frame.width
         let imageHeight = (index == 7) ? (screenWidth-40) * 0.20 : 0.0
         let width = view.frame.width - 60
-        print(width,screenWidth)
         let size = CGSize(width: width, height: 1000)
         
+        let fontsize : CGFloat = UIDevice.current.userInterfaceIdiom == .pad ? 32 : 16
+        
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-        let attributes = [NSAttributedString.Key.font : UIFont.init(name: "IBMPlexMono", size: 16)!]
+        let attributes = [NSAttributedString.Key.font : UIFont.init(name: "IBMPlexMono", size: fontsize)!]
         let string = NSString(string: text)
         let height = string.boundingRect(with: size, options: options, attributes: attributes, context: nil).height
         

@@ -9,6 +9,9 @@
 import Foundation
 
 struct AppConstants {
+    
+    static let privacy = "https://enigma.ieeevit.org/static/media/Privacy.6b994fbf.pdf"
+    
     struct CellId {
         static let leaderboardCell = "leadercell"
         static let rulesCell = "rulescell"
@@ -54,8 +57,10 @@ struct AppConstants {
     }
     
     struct Story {
-        static let username = "<username>"
-        static let lineBreak = "<br>"
+        static let username = " <username> "
+        static let username2 = "  <username>  "
+        static let lineBreak = " <br> "
+        static let lineBreak2 = "<br>"
     }
     
 }
