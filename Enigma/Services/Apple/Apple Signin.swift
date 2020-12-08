@@ -10,33 +10,33 @@ import Foundation
 import AuthenticationServices
 import CryptoKit
 
+//MARK: --- EXTENSION TO HANDLE APPLE AUTH ---
+
 extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding
 {
-    
     
     @available(iOS 13.0, *)
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return ASPresentationAnchor(frame: view.frame)
     }
     
-    
+    @available(iOS 13.0, *)
     func appleSignin() {
-        if #available(iOS 13.0, *) {
+        // initial setup
         self.appleButton.isEnabled = false
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.email]
         
+        // setup authorization Controller
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
-        } else {
-            appleAlert()
-        }
     }
     
     
+    // AUTH SUCCESS
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
@@ -48,15 +48,12 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
         }
     }
     
-    
+    // AUTH ERROR
     @available(iOS 13.0, *)
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("ASAuthorizationController: ",error.localizedDescription)
+        print("ASAuthorization Error: ",error.localizedDescription)
         self.appleButton.isEnabled = true
     }
     
-    func appleAlert(){
-        
-    }
 }
 

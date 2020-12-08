@@ -9,7 +9,11 @@
 import UIKit
 import GoogleSignIn
 
+//MARK: --- EXTENSION TO HANDLE GOOGLE AUTH ---
+
 extension HomeViewController: GIDSignInDelegate {
+    
+    //INITIAL SETUP
     public func googleSetup(){
         GIDSignIn.sharedInstance().clientID = AppConstants.Google.clientId
         GIDSignIn.sharedInstance()?.serverClientID = AppConstants.Google.serverClientId
@@ -18,6 +22,7 @@ extension HomeViewController: GIDSignInDelegate {
         GIDSignIn.sharedInstance()?.signOut()
     }
     
+    // SIGNIN
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             self.googleButton.isEnabled = true
@@ -27,7 +32,7 @@ extension HomeViewController: GIDSignInDelegate {
         signinWithBackend(type:.google, code:user.serverAuthCode, token: "")
     }
     
-    
+    // URL
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
       return GIDSignIn.sharedInstance().handle(url)
     }
@@ -37,6 +42,7 @@ extension HomeViewController: GIDSignInDelegate {
       return GIDSignIn.sharedInstance().handle(url)
     }
     
+    // ERROR HANDLING
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
         print(error.localizedDescription)
