@@ -232,8 +232,7 @@ class PlayViewController: UIViewController {
     }
     
     func updateProgressbar(){
-        let progress = Defaults.xp() / maxXp
-        print(Defaults.xp(),maxXp,progress)
+        let progress = Defaults.xp() / 100.0
         progressBar.animateProgress(toPercent: CGFloat(progress))
         xpLabel.text = Int(Defaults.xp()).stringValue + "xp"
     }
