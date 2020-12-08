@@ -20,6 +20,7 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
         return ASPresentationAnchor(frame: view.frame)
     }
     
+    
     @available(iOS 13.0, *)
     func appleSignin() {
         // initial setup
@@ -47,6 +48,7 @@ extension HomeViewController : ASAuthorizationControllerDelegate, ASAuthorizatio
             signinWithBackend(type: .apple, code: code, token: authCode)
         }
     }
+    
     
     // AUTH ERROR
     @available(iOS 13.0, *)
