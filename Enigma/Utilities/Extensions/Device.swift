@@ -8,7 +8,10 @@
 
 import UIKit
 
+//MARK: Extension for UIDevice
+
 extension UIDevice{
+    // change border widths for ipad
     func ipadOutlineMultiplier(_ value: CGFloat)->CGFloat{
         if self.userInterfaceIdiom == .pad{
         var double = Double(value)

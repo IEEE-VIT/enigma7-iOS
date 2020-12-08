@@ -8,8 +8,11 @@
 
 import UIKit
 
+//MARK: Extension for UIStoryboard
 
 extension UIStoryboard {
+    // Instantiate ViewController
+    // iOS 12+
     func instantiateViewController(_ id : String)->UIViewController{
         if #available(iOS 13.0, *) {
             return  self.instantiateViewController(identifier: id)
