@@ -9,6 +9,10 @@
 import Foundation
 import StoreKit
 
+//MARK: REQUEST REVIEW IN APP
+/// review is requested when app is opened opened 5th time, 50th time  and then 100 200 300 etc.
+/// app counter starts after creating account
+
 struct StoreReviewHelper {
     static func incrementAppOpenedCount() {
         if !Defaults.token().isEmpty{
@@ -28,7 +32,6 @@ struct StoreReviewHelper {
             incrementAppOpenedCount()
             StoreReviewHelper().requestReview()
         default:
-            break
             print("App run count is : \(appOpenCount)")
             break
         }
