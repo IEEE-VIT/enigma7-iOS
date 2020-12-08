@@ -8,8 +8,11 @@
 
 import UIKit
 
+//MARK: Extension for UIView
+
 extension UIView {
     
+    // returns frame of view w.r.t sueprview of vc
     var globalFrame : CGRect {
         var x = self.frame.origin.x
         var y = self.frame.origin.y
@@ -27,6 +30,8 @@ extension UIView {
         return CGRect(x: x, y: y, width: self.frame.width, height: self.frame.height)
     }
     
+    
+    // returns frame of view w.r.t superview of UISCENE
     var superGlobalFrame : CGRect {
         var x = self.frame.origin.x
         var y = self.frame.origin.y
@@ -44,6 +49,11 @@ extension UIView {
         return CGRect(x: x, y: y, width: self.frame.width, height: self.frame.height)
     }
     
+    
+    // ADD CORNER RADIUS TO UIVIEW
+    /// - Parameters:
+    ///     - corners: which corners to round
+    ///     - radius: cornerRadius value -- DEFAULT: 4 --
    func roundCorners(corners: UIRectCorner, radius: CGFloat = 4) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
@@ -51,23 +61,15 @@ extension UIView {
         layer.mask = mask
     }
     
+    // ADD Border TO UIVIEW
+    /// - Parameters:
+    ///     - width: width of border
+    ///     - color: color of border
+    ///     - alpha: opacity of border
     func addBorder(width : CGFloat = 1,_ color : UIColor, alpha : CGFloat = 1){
         self.layer.borderWidth = UIDevice.current.ipadOutlineMultiplier(width)
         let borderColor = color.withAlphaComponent(alpha).cgColor
         self.layer.borderColor = borderColor
     }
-}
-
-public extension UIView
-{
-    static func loadFromXib<T>(withOwner: Any? = nil, options: [UINib.OptionsKey : Any]? = nil) -> T where T: UIView
-    {
-        let bundle = Bundle(for: self)
-        let nib = UINib(nibName: "\(self)", bundle: bundle)
-
-        guard let view = nib.instantiate(withOwner: withOwner, options: options).first as? T else {
-            fatalError("Could not load view from nib file.")
-        }
-        return view
-    }
+    
 }
