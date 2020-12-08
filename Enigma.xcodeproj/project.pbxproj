@@ -66,6 +66,7 @@
 		5B4840C22536B73C00CF9F19 /* IBMPlexMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5BABB75424FACDA9006D5541 /* IBMPlexMono-Bold.ttf */; };
 		5B4AC2AF2517887600534934 /* Apple Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4AC2AE2517887600534934 /* Apple Signin.swift */; };
 		5B4CA35E25703C9300A8EF64 /* RulesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CA35D25703C9300A8EF64 /* RulesCell.swift */; };
+		5B59FB1A257F463000AD1E01 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59FB19257F463000AD1E01 /* Storyboard.swift */; };
 		5B5BE3112566ACED00F12B51 /* HintPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5BE3102566ACED00F12B51 /* HintPreview.swift */; };
 		5B5BE31B2566AED000F12B51 /* HintPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5BE31A2566AED000F12B51 /* HintPreview.xib */; };
 		5B638E29256801DD008CD80B /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E28256801DD008CD80B /* StoryModel.swift */; };
@@ -132,7 +133,6 @@
 		5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE225074EAC00B2AFF4 /* Defaults.swift */; };
 		5B921FE52507503000B2AFF4 /* ServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE42507503000B2AFF4 /* ServiceController.swift */; };
 		5B921FE72507505200B2AFF4 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FE62507505200B2AFF4 /* PostController.swift */; };
-		5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B921FF325087E4500B2AFF4 /* Haptic.swift */; };
 		5BA3F86625298CF3008F0420 /* Google+Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F7237250696C400C427F7 /* Google+Signin.swift */; };
 		5BA3F87325298D22008F0420 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F72252506929E00C427F7 /* GoogleSignIn.bundle */; };
 		5BA3F87725298D2D008F0420 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8F72232506929D00C427F7 /* GoogleSignIn.framework */; };
@@ -350,6 +350,7 @@
 		5B4AC2AE2517887600534934 /* Apple Signin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Apple Signin.swift"; sourceTree = "<group>"; };
 		5B4AC2B025178A7E00534934 /* Enigma.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enigma.entitlements; sourceTree = "<group>"; };
 		5B4CA35D25703C9300A8EF64 /* RulesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesCell.swift; sourceTree = "<group>"; };
+		5B59FB19257F463000AD1E01 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		5B5BE3102566ACED00F12B51 /* HintPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPreview.swift; sourceTree = "<group>"; };
 		5B5BE31A2566AED000F12B51 /* HintPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintPreview.xib; sourceTree = "<group>"; };
 		5B638E28256801DD008CD80B /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
@@ -388,7 +389,6 @@
 		5B921FE225074EAC00B2AFF4 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		5B921FE42507503000B2AFF4 /* ServiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceController.swift; sourceTree = "<group>"; };
 		5B921FE62507505200B2AFF4 /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
-		5B921FF325087E4500B2AFF4 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		5BA5D016256BEC4700602A3F /* StoreReviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreReviewHelper.swift; sourceTree = "<group>"; };
 		5BABB71824FAC9F8006D5541 /* Enigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BABB71B24FAC9F8006D5541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -543,10 +543,10 @@
 				5B32868A24FB9AC000FE2EEC /* Number.swift */,
 				5B32868C24FBA02600FE2EEC /* View.swift */,
 				5BF83A0124FEAFC900A93885 /* ViewController.swift */,
-				5B921FF325087E4500B2AFF4 /* Haptic.swift */,
 				5B1B4B4D252252D000398B0D /* Image.swift */,
 				5BC42421253C108F00E55FE3 /* Device.swift */,
 				5BC24E7625493138000A310A /* String.swift */,
+				5B59FB19257F463000AD1E01 /* Storyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1271,7 +1271,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B921FF425087E4500B2AFF4 /* Haptic.swift in Sources */,
 				5BC24E6525492948000A310A /* AppConstants.swift in Sources */,
 				5B81A2A2252E3F6800DA09A8 /* SignupModel.swift in Sources */,
 				5B921FE325074EAC00B2AFF4 /* Defaults.swift in Sources */,
@@ -1281,6 +1280,7 @@
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
 				5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */,
 				5B1FB31B254FCB56009DCAF1 /* LaunchScreen.swift in Sources */,
+				5B59FB1A257F463000AD1E01 /* Storyboard.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,
 				5B5BE3112566ACED00F12B51 /* HintPreview.swift in Sources */,

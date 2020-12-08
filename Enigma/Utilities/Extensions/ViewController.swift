@@ -8,7 +8,10 @@
 
 import UIKit
 
+//MARK: Extension for UIViewController
+
 extension UIViewController {
+    /// present viewcontroller in custom `Tabbar`
     func present(_ identifier : String){
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let viewController  = storyBoard.instantiateViewController(identifier)
@@ -21,15 +24,5 @@ extension UIViewController {
         self.addChild(viewController)
         
         viewController.didMove(toParent: self)
-    }
-}
-
-extension UIStoryboard {
-    func instantiateViewController(_ id : String)->UIViewController{
-        if #available(iOS 13.0, *) {
-            return  self.instantiateViewController(identifier: id)
-        } else {
-            return self.instantiateViewController(withIdentifier: id)
-        }
     }
 }
