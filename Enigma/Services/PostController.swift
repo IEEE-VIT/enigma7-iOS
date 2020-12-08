@@ -9,9 +9,16 @@
 import Foundation
 import GoogleSignIn
 
+//MARK: --- CONTROLLER FOR 'POST' REQUESTS ---
+
 class PostController {
+    
     static let shared: PostController = PostController()
     
+    // MARK: SIGNUP
+    /// - Parameters:
+    ///     - type: Apple or Google,
+    ///     - body: Encodable struct
     func signup<RequestType: Encodable>(type: SignupType,body:RequestType,completion: @escaping(Bool,SignUpModel.Response?) -> ()) {
         WebHelper.sendPOSTRequest(url: type.url, responseType: SignUpModel.Response.self, body: body) { (response, error) in
             if let response = response,let key = response.key{
@@ -24,6 +31,8 @@ class PostController {
         }
     }
     
+    
+    // MARK: EDIT USERNAME ( PATCH REQUEST )
     func editUserName(_ body: EditUsernameModel.Request,completion: @escaping(Bool,EditUsernameModel.Response?) -> ()) {
         WebHelper.sendPOSTRequest(url: NetworkConstants.Users.editUsernameURL, responseType: EditUsernameModel.Response.self, body: body, header: true, httpMethod: .PATCH) { (response, statusCode) in
             let success = (200..<300) ~= statusCode && response?.username != nil
@@ -31,6 +40,7 @@ class PostController {
         }
     }
     
+    // MARK: OUTREACH
     func postOutreach(_ body: OutreachModel.Request,completion: @escaping(Bool,OutreachModel.Response?) -> ()) {
         WebHelper.sendPOSTRequest(url: NetworkConstants.Users.outreachURL, responseType: OutreachModel.Response.self, body: body, header: true, httpMethod: .POST) { (response, statusCode) in
             let success = (200..<300) ~= statusCode
@@ -38,6 +48,7 @@ class PostController {
         }
     }
     
+    // MARK: ANSWER QUESTION
     func answerQuestion(_ body: AnswerModel.Request,closePowerupUsed: Bool,completion: @escaping(Bool,Bool,String)->()){
         let url = closePowerupUsed ? NetworkConstants.Game.closeAnswerPowerupURL : NetworkConstants.Game.answerURL
         WebHelper.sendPOSTRequest(url: url, responseType: AnswerModel.Response.self, body: body,header: true) { (response, statusCode) in
@@ -47,6 +58,7 @@ class PostController {
         }
     }
     
+    // MARK: SKIP QUESTION POWERUP
     func skipQuestion(completion: @escaping(Bool, AnswerModel.Response?)->()){
         let body = AnswerModel.Request(answer: "")
         WebHelper.sendPOSTRequest(url: NetworkConstants.Game.skipPowerupURL, responseType: AnswerModel.Response.self, body: body,header: true,noBody: true) { (response, statusCode) in
@@ -57,6 +69,7 @@ class PostController {
         }
     }
     
+    // MARK: LOGOUT
     func logout(){
         let body = AnswerModel.Request(answer: "")
         WebHelper.sendPOSTRequest(url: NetworkConstants.Users.logoutURL, responseType: sample.self, body: body,header: true,noBody: true) { (_, _) in }

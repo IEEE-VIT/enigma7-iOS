@@ -39,6 +39,8 @@ class ServiceController {
     }
     
     /// `GET` Hint
+    /// - parameters:
+    ///     - powerup: true is using `Free Hint Powerup`
     func getHint(powerup: Bool = false,completion : @escaping (Hint?)->()){
         let url = powerup ? NetworkConstants.Game.hintPowerupURL : NetworkConstants.Game.hintURL
         WebHelper.sendGETRequest(url: url, parameters: [:], responseType: Hint.self,key: Keys.hint) { (response, error) in
