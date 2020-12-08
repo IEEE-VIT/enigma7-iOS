@@ -38,7 +38,7 @@ struct LargeWidget: View {
 
 struct largeWidget : View {
     var question: Question?
-    @State var image = UIImage(named: "bah")
+    @State var image = UIImage(named: "401")
     var body : some View {
         ZStack {
             Color(.primary)

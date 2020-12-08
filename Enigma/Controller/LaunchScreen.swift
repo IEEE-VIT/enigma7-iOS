@@ -32,7 +32,7 @@ class LaunchScreen: UIViewController {
     
     func performAnimation(){
         for i in string {
-            if UserDefaults.standard.bool(forKey: "sound") {
+            if Defaults.appOpenCount() > 3 {
             AudioServicesPlaySystemSound(1306)
             }
             substring += "\(i)"

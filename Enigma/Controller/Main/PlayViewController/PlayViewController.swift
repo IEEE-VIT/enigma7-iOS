@@ -43,8 +43,6 @@ class PlayViewController: UIViewController {
         for button in powerupButtons{
             setButton(button,false)
         }
-        loadHint(hint: Defaults.hint())
-        handleQuestion(question: Defaults.question())
         ServiceController.shared.getQuestion(completion: handleQuestion(question:))
     }
     

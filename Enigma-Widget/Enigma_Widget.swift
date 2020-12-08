@@ -51,15 +51,10 @@ struct Enigma_WidgetEntryView : View {
 
     var body: some View {
         Group {
-            switch family {
-            case .systemSmall:
+            if family == .systemSmall{
                 SmallWidget(data: entry.user)
-            case .systemMedium:
-                MediumWidget()
-            case .systemLarge:
+            } else {
                 LargeWidget(entry: entry)
-            @unknown default:
-                SmallWidget()
             }
         }
     }
@@ -73,8 +68,8 @@ struct Enigma_Widget: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             Enigma_WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Enigma Widget")
+        .description("Get your profile and questions right from your widgets!")
         .supportedFamilies([.systemSmall,.systemLarge])
     }
 }

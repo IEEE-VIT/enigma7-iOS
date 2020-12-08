@@ -59,7 +59,7 @@ class TabbarController: UIViewController {
     
     @IBAction func tabSelected(_ sender: UIButton) {
         shareTokenToWatch(sender.tag)
-        guard Defaults.started() else { return }
+        print("LOGIN: ",Defaults.isLoggedin())
         if Defaults.isLoggedin() {
             if share && sender.tag == 4{
                 self.sendImage()

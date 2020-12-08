@@ -91,18 +91,6 @@ class  Defaults {
         return decode(data: data)
     }
     
-    static func story() -> Story? {
-        let body = UserDefaults.standard.value(forKey: Keys.story) as? Data
-        guard let data = body else { return nil }
-        return decode(data: data)
-    }
-    
-    static func fullStory() -> Stories? {
-        let body = UserDefaults.standard.value(forKey: Keys.fullStory) as? Data
-        guard let data = body else { return nil }
-        return decode(data: data)
-    }
-    
     static func saveImage(_ data : Data?){
         guard let data = data else { return }
         userDefaults?.set(data, forKey: Keys.image)
@@ -140,7 +128,6 @@ class  Defaults {
         UserDefaults.standard.set(nil, forKey: Keys.hint)
         UserDefaults.standard.set(nil, forKey: Keys.question)
         UserDefaults.standard.set(nil, forKey: Keys.user)
-        UserDefaults.standard.set(nil, forKey: Keys.story)
         UserDefaults.standard.set(nil, forKey: Keys.image)
         userDefaults?.set(nil, forKey: "Token")
         userDefaults?.synchronize()

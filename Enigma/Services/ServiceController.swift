@@ -47,18 +47,13 @@ class ServiceController {
     }
     
     func getStory(completion : @escaping (Story?)->()){
-        WebHelper.sendGETRequest(url: NetworkConstants.Game.storyURL, parameters: [:], responseType: Story.self,key: Keys.story) { (response, _) in
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.storyURL, parameters: [:], responseType: Story.self) { (response, _) in
             completion(response)
         }
     }
     
     func getFullStory(completion : @escaping ([Story])->()){
-        WebHelper.sendGETRequest(url: NetworkConstants.Game.storyCompleteURL, parameters: [:], responseType: [Story].self,key: Keys.fullStory) { (response, _) in
-            let defaults = UserDefaults(suiteName: "group.widget.ak")
-            let story = Stories(stories: response)
-            let data = try? JSONEncoder().encode(story)
-            defaults?.set(data, forKey: Keys.fullStory)
-            defaults?.synchronize()
+        WebHelper.sendGETRequest(url: NetworkConstants.Game.storyCompleteURL, parameters: [:], responseType: [Story].self) { (response, _) in
             completion(response ?? [])
         }
     }

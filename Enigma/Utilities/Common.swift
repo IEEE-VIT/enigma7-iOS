@@ -40,8 +40,6 @@ class Keys {
     static let hint = "EnigmaHint"
     static let xp = "Enigmaxp"
     static let image = "EnigmaImage"
-    static let story = "EnigmaStory"
-    static let fullStory = "EnigmaFullStory"
     static let status = "EnigmaStatus"
     static let enigmaStarted = "EnigmaStarted"
     static let appOpenCount = "EnigmaAppOpenCount"

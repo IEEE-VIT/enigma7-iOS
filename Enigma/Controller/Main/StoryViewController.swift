@@ -16,16 +16,17 @@ class StoryViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        storyTextView.text = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        handleStory(story: Defaults.fullStory()?.stories ?? [])
+        storyTextView.text = ""
+        ServiceController.shared.getFullStory(completion: handleStory(story:))
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        ServiceController.shared.getFullStory(completion: handleStory(story:))
     }
     
     func handleStory(story:[Story]){

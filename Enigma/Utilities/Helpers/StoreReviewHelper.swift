@@ -21,29 +21,17 @@ struct StoreReviewHelper {
     static func checkAndAskForReview() {
         let appOpenCount = Defaults.appOpenCount()
         switch appOpenCount {
-        case 10,50:
+        case 5,50:
             incrementAppOpenedCount()
             StoreReviewHelper().requestReview()
         case _ where appOpenCount%100 == 0 :
             incrementAppOpenedCount()
             StoreReviewHelper().requestReview()
         default:
-            if StoreReviewHelper().hackStarted(){
-                StoreReviewHelper().requestReview()
-                UserDefaults.standard.set(false, forKey: Keys.enigmaStarted)
-            }
+            break
             print("App run count is : \(appOpenCount)")
             break
         }
-        
-    }
-    
-    fileprivate func hackStarted()->Bool{
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy/MM/dd HH:mm"
-        guard let hackOn = formatter.date(from: "2020/12/04 20:20") else {return false}
-        let bool = Defaults.enigmaStarted()
-        return (hackOn < Date()) && bool
     }
     
     fileprivate func requestReview() {
