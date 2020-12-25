@@ -34,6 +34,7 @@ class Keys {
     static let login = "EnigmaLogin"
     static let token = "EnigmaToken"
     static let user = "EnigmaUser"
+    static let username = "EnigmaUsername"
     static let leaderboard = "EnigmaLeaderboard"
     static let question = "EnigmaQuestion"
     static let hint = "EnigmaHint"

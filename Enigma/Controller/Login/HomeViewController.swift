@@ -77,6 +77,7 @@ class HomeViewController: UIViewController {
         if success{
             let usernameExists = response?.username_exists ?? false
             guard usernameExists else { self.present(AppConstants.ViewController.UserNameViewController) ; return }
+            UserDefaults.standard.set("AK0410", forKey: Keys.username)
             ServiceController.shared.getStatus { [self] (status, _) in
                 if status{
                     self.delegate?.didSignin(response?.key ?? "")

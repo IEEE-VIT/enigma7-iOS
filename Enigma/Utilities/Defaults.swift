@@ -48,6 +48,10 @@ class  Defaults {
         return decode(data: data)
     }
     
+    static func username() -> String {
+        return (UserDefaults.standard.value(forKey: Keys.username) as? String) ?? ""
+    }
+    
     static func xp() -> Double {
         return (UserDefaults.standard.value(forKey: Keys.xp) as? Double) ?? 0.0
     }
