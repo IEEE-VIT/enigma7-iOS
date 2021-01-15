@@ -69,6 +69,7 @@
 		5B59FB1A257F463000AD1E01 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B59FB19257F463000AD1E01 /* Storyboard.swift */; };
 		5B5BE3112566ACED00F12B51 /* HintPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5BE3102566ACED00F12B51 /* HintPreview.swift */; };
 		5B5BE31B2566AED000F12B51 /* HintPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B5BE31A2566AED000F12B51 /* HintPreview.xib */; };
+		5B5F2C7425B20D7200BFFEE9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5F2C7325B20D7200BFFEE9 /* Protocols.swift */; };
 		5B638E29256801DD008CD80B /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E28256801DD008CD80B /* StoryModel.swift */; };
 		5B638E3A2568048A008CD80B /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E28256801DD008CD80B /* StoryModel.swift */; };
 		5B638E3B2568048C008CD80B /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B638E28256801DD008CD80B /* StoryModel.swift */; };
@@ -353,6 +354,7 @@
 		5B59FB19257F463000AD1E01 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		5B5BE3102566ACED00F12B51 /* HintPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPreview.swift; sourceTree = "<group>"; };
 		5B5BE31A2566AED000F12B51 /* HintPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintPreview.xib; sourceTree = "<group>"; };
+		5B5F2C7325B20D7200BFFEE9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		5B638E28256801DD008CD80B /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		5B638E762568D20A008CD80B /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		5B638F1225698EBC008CD80B /* StorySnippetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorySnippetViewController.swift; sourceTree = "<group>"; };
@@ -779,6 +781,7 @@
 				5BC24E6425492948000A310A /* AppConstants.swift */,
 				5B921FDC250745A900B2AFF4 /* Network Constants.swift */,
 				5B921FDE250748BE00B2AFF4 /* Web Helper.swift */,
+				5B5F2C7325B20D7200BFFEE9 /* Protocols.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1280,6 +1283,7 @@
 				5B32868D24FBA02600FE2EEC /* View.swift in Sources */,
 				5B32868924FB949200FE2EEC /* CustomTextField.swift in Sources */,
 				5B1FB31B254FCB56009DCAF1 /* LaunchScreen.swift in Sources */,
+				5B5F2C7425B20D7200BFFEE9 /* Protocols.swift in Sources */,
 				5B59FB1A257F463000AD1E01 /* Storyboard.swift in Sources */,
 				5B32867B24FB6AA300FE2EEC /* CountdownViewController.swift in Sources */,
 				5B32867D24FB6AB400FE2EEC /* PlayViewController.swift in Sources */,

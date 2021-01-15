@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol CountdownDelegate: class {
-    func didSignin(_ token: String)
-}
-
 class CountdownViewController: UIViewController {
 
     @IBOutlet weak var dayLabel: UILabel!

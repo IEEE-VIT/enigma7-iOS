@@ -9,9 +9,8 @@
 import UIKit
 import WidgetKit
 
-protocol ShareDelegate : class {
-    func setShare(bool : Bool, image: UIImage?)
-}
+// MARK:- 
+
 
 class PlayViewController: UIViewController {
     

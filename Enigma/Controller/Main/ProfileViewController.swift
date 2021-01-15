@@ -10,10 +10,6 @@ import UIKit
 import WebKit
 import Intents
 
-protocol LogoutDelegate: class {
-    func logout()
-}
-
 class ProfileViewController: UIViewController {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var emailId: UILabel!

@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-
+//MARK: --- DEFAULTS: CONTROLLER FOR ALL USERDEFAULTS ---
 
 class  Defaults {
     
+    // shared group for common userdefaulst b/w ios app and widget
     public static let userDefaults = UserDefaults(suiteName: "group.widget.ak")
     
     static func token() -> String {
@@ -111,6 +112,7 @@ class  Defaults {
         return decode(data: data)
     }
     
+    //MARK: FETCH ALL
     static func fetchAll(){
         if Defaults.isLoggedin() {
         print("FETCHING ALL DATA")
@@ -122,7 +124,9 @@ class  Defaults {
         }
     }
     
+    //MARK: EMPTY ALL
     static func emptyAll(){
+        print("EMPTYING ALL DATA")
         UserDefaults.standard.set(false, forKey: Keys.login)
         UserDefaults.standard.set(nil, forKey: Keys.token)
         UserDefaults.standard.set(nil, forKey: Keys.hint)

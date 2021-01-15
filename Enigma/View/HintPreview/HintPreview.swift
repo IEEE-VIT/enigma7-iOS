@@ -8,9 +8,6 @@
 
 import UIKit
 
-protocol PreviewDelegate : class {
-    func hintPreviewed()
-}
 
 class HintPreview: UIViewController {
 

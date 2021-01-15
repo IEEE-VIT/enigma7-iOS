@@ -9,10 +9,6 @@
 import UIKit
 import GoogleSignIn
 
-protocol SigninDelegate: class {
-    func didSignin(_ token: String)
-}
-
 class HomeViewController: UIViewController {
     
     ///OUTLETS

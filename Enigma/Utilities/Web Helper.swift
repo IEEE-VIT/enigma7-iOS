@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+//MARK: WEBHELPER
+/// functions to send POST and GET requests
+
 class WebHelper {
         
     class func sendGETRequest<ResponseType: Decodable>(url: String,parameters : [String:String],responseType: ResponseType.Type,key : String? = nil, completion: @escaping (ResponseType?,Int) -> Void) {
@@ -28,7 +31,6 @@ class WebHelper {
                 token = UserDefaults.standard.value(forKey: "token") as? String
             #endif
             
-            print("TOKEN: ",token)
             request.setValue(token, forHTTPHeaderField: "Authorization")
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
