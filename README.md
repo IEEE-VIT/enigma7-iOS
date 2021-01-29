@@ -12,10 +12,10 @@ We aim to create a platform where people from all over the world come together a
 
 <br> <br>
 ## Features
---  iOS 14 Widgets displaying user stats and questions.
---  iPadOS compatibility.
---  WatchOS application covering all features of iOS app.
---   Siri can help you display your stats or the leaderboard.
---   Sign in with apple or google. 
+-  iOS 14 Widgets displaying user stats and questions.
+-  iPadOS compatibility.
+-  WatchOS application covering all features of iOS app.
+-  Siri can help you display your stats or the leaderboard.
+-  Sign in with apple or google. 
 
 <p align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </p>
