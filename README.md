@@ -13,7 +13,7 @@ We aim to create a platform where people from all over the world come together a
 <br>
 
 <h1 align = "center"> Features </h1>
-<p align = "left"><img src = "https://github.com/aaryankotharii/VIT-Hack-2020/blob/master/Assets/appstore.png" width = "40%" align = "right">
+<p align = "left"><img src = "/Assets/appstore.png" width = "50%" align = "right">
 <h4 align = "left"> Siri can help you display your stats or the leaderboard. </h4>
 <h4 align = "left"> WatchOS application covering all features of iOS app. </h4>
 <h4 align = "left">  iOS 14 Widgets displaying user stats and questions. </h4>
