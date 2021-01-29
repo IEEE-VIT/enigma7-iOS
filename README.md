@@ -14,11 +14,11 @@ We aim to create a platform where people from all over the world come together a
 
 <h1 align = "center"> Features </h1>
 <p align = "left"><img src = "/Assets/appstore.png" width = "50%" align = "right">
-<h4 align = "left"> Siri can help you display your stats or the leaderboard. </h4>
-<h4 align = "left"> WatchOS application covering all features of iOS app. </h4>
-<h4 align = "left">  iOS 14 Widgets displaying user stats and questions. </h4>
-<h4 align = "left"> Sign in with apple or google. </h4>
-<h4 align = "left">  iPadOS compatibility. </h4>
+<h5 align = "left"> Siri can help you display your stats or the leaderboard. </h5>
+<h5 align = "left"> WatchOS application covering all features of iOS app. </h5>
+<h5 align = "left">  iOS 14 Widgets displaying user stats and questions. </h5>
+<h5 align = "left"> Sign in with apple or google. </h5>
+<h5 align = "left">  iPadOS compatibility. </h5>
 </p>
 <br>
 <h2 align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </h2>
