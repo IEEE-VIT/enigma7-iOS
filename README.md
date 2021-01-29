@@ -8,9 +8,24 @@ We aim to create a platform where people from all over the world come together a
   </b>
 </p>
 <br> <br>
-<p align = "center"><img src = "Assets/screenshots.png" width = "100%"</p>
+<a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287"> <p align = "center"><img src = "Assets/screenshots1.png" width = "100%"</p> </a>
 
-<br> <br>
-<p align = "left"><img src = "Assets/feat.png" width = "90%"> </p>
+<br>
 
-<p align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </p>
+<h1 align = "center"> Features </h1>
+<p align = "center">  <h4 align = "center">
+Siri can help you display your stats or the leaderboard.
+      <br>
+  WatchOS application covering all features of iOS app.
+      <br>
+iOS 14 Widgets displaying user stats and questions.
+      <br>
+  Sign in with apple or google. 
+  <br>
+  iPadOS compatibility.
+    <br>
+  </h4>
+</p>
+<p align = "center"> <b> You can download the iOS application <a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287">here </a> </b> </p>
+
+<h2 align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </h2>
