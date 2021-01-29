@@ -12,13 +12,20 @@ We aim to create a platform where people from all over the world come together a
 
 <br>
 
-## Features
--  iOS 14 Widgets displaying user stats and questions.
--  iPadOS compatibility.
--  WatchOS application covering all features of iOS app.
--  Siri can help you display your stats or the leaderboard.
--  Sign in with apple or google. 
-
+<h1 align = "center"> Features </h1>
+<p align = "center">  <h4 align = "center">
+Siri can help you display your stats or the leaderboard.
+      <br>
+  WatchOS application covering all features of iOS app.
+      <br>
+iOS 14 Widgets displaying user stats and questions.
+      <br>
+  Sign in with apple or google. 
+  <br>
+  iPadOS compatibility.
+    <br>
+  </h4>
+</p>
 <p align = "center"> <b> You can download the iOS application <a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287">here </a> </b> </p>
 
-<p align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </p>
+<h2 align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </h2>
