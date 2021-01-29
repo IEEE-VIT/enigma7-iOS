@@ -8,3 +8,5 @@ Enigma 7.0 is an online cryptic hunt organized by the IEEE-VIT Student Chapter. 
 We aim to create a platform where people from all over the world come together and battle for points using their problem-solving skills and out-of-the-box methodologies to crack the code. Only the best will grace the topmost spots on the leaderboard!
   </b>
 </p>
+
+<p align = "center"><img src = "Assets/screenshots.png" width = "100%"</p>
