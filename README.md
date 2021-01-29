@@ -9,4 +9,5 @@ We aim to create a platform where people from all over the world come together a
   </b>
 </p>
 
+<br> <br> <br>
 <p align = "center"><img src = "Assets/screenshots.png" width = "100%"</p>
