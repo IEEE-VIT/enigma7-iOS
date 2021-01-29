@@ -20,5 +20,4 @@ We aim to create a platform where people from all over the world come together a
 <h4 align = "center">  iPadOS compatibility. </h4>
 <br>
 <p align = "center"> <b> You can download the iOS application <a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287">here </a> </b> </p>
-<br>
 <h2 align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </h2>
