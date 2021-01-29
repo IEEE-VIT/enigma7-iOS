@@ -11,4 +11,6 @@ We aim to create a platform where people from all over the world come together a
 <p align = "center"><img src = "Assets/screenshots.png" width = "100%"</p>
 
 <br> <br>
-<p align = "left"><img src = "Assets/feat.png" width = "80%"> </p>
+<p align = "left"><img src = "Assets/feat.png" width = "90%"> </p>
+
+<p align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </p>
