@@ -18,11 +18,7 @@ We aim to create a platform where people from all over the world come together a
 <h4 align = "center">  iOS 14 Widgets displaying user stats and questions. </h4>
 <h4 align = "center"> Sign in with apple or google. </h4>
 <h4 align = "center">  iPadOS compatibility. </h4>
-
-<br> <br>
-
+<br>
 <p align = "center"> <b> You can download the iOS application <a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287">here </a> </b> </p>
-
-<br> <br>
-
+<br>
 <h2 align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </h2>
