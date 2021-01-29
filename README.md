@@ -8,9 +8,14 @@ We aim to create a platform where people from all over the world come together a
   </b>
 </p>
 <br> <br>
-<p align = "center"><img src = "Assets/screenshots.png" width = "100%"</p>
+<p align = "center"><img src = "Assets/screenshots1.png" width = "100%"</p>
 
 <br> <br>
-<p align = "left"><img src = "Assets/feat.png" width = "90%"> </p>
+## Features
+--  iOS 14 Widgets displaying user stats and questions.
+--  iPadOS compatibility.
+--  WatchOS application covering all features of iOS app.
+--   Siri can help you display your stats or the leaderboard.
+--   Sign in with apple or google. 
 
 <p align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </p>
