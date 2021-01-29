@@ -13,7 +13,7 @@ We aim to create a platform where people from all over the world come together a
 <br>
 
 <h1 align = "center"> Features </h1>
-<p align = "left"><img src = "/Assets/appstore.png" width = "50%" align = "right">
+<p align = "left"> <a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287"> <img src = "/Assets/appstore.png" width = "50%" align = "right"> </a>
 <h5 align = "left"> Siri can help you display your stats or the leaderboard. </h5>
 <h5 align = "left"> WatchOS application covering all features of iOS app. </h5>
 <h5 align = "left">  iOS 14 Widgets displaying user stats and questions. </h5>
