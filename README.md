@@ -19,4 +19,6 @@ We aim to create a platform where people from all over the world come together a
 -  Siri can help you display your stats or the leaderboard.
 -  Sign in with apple or google. 
 
+<p align = "center"> <b> You can download the iOS application <a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287">here </a> </b> </p>
+
 <p align = "center"> <b> Made with ❤️ by IEEE-VIT </b> </p>
