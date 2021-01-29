@@ -11,6 +11,7 @@ We aim to create a platform where people from all over the world come together a
 <a href="https://apps.apple.com/in/app/enigma-7-0/id1534408287"> <p align = "center"><img src = "Assets/screenshots1.png" width = "100%"</p> </a>
 
 <br>
+
 ## Features
 -  iOS 14 Widgets displaying user stats and questions.
 -  iPadOS compatibility.
